@@ -1,4 +1,4 @@
-# IO.Swagger.Model.DeliveryIssue
+# IO.Swagger.ClickSend.Client.Model.DeliveryIssue
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Api.MasterEmailTemplatesApi
+# IO.Swagger.ClickSend.Client.Api.MasterEmailTemplatesApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -23,9 +23,9 @@ Get all master email template categories
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
+using IO.Swagger.ClickSend.Client.Api;
 using IO.Swagger.Client;
-using IO.Swagger.Model;
+using IO.Swagger.ClickSend.Client.Model;
 
 namespace Example
 {
@@ -90,9 +90,9 @@ Get specific master email template category
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
+using IO.Swagger.ClickSend.Client.Api;
 using IO.Swagger.Client;
-using IO.Swagger.Model;
+using IO.Swagger.ClickSend.Client.Model;
 
 namespace Example
 {
@@ -155,9 +155,9 @@ Get specific master email template
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
+using IO.Swagger.ClickSend.Client.Api;
 using IO.Swagger.Client;
-using IO.Swagger.Model;
+using IO.Swagger.ClickSend.Client.Model;
 
 namespace Example
 {
@@ -220,9 +220,9 @@ Get all master email templates
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
+using IO.Swagger.ClickSend.Client.Api;
 using IO.Swagger.Client;
-using IO.Swagger.Model;
+using IO.Swagger.ClickSend.Client.Model;
 
 namespace Example
 {
@@ -287,9 +287,9 @@ Get all master email templates in a category
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
+using IO.Swagger.ClickSend.Client.Api;
 using IO.Swagger.Client;
-using IO.Swagger.Model;
+using IO.Swagger.ClickSend.Client.Model;
 
 namespace Example
 {

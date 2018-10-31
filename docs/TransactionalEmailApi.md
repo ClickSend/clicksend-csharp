@@ -1,4 +1,4 @@
-# IO.Swagger.Api.TransactionalEmailApi
+# IO.Swagger.ClickSend.Client.Api.TransactionalEmailApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -22,9 +22,9 @@ Export all Transactional Email history
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
+using IO.Swagger.ClickSend.Client.Api;
 using IO.Swagger.Client;
-using IO.Swagger.Model;
+using IO.Swagger.ClickSend.Client.Model;
 
 namespace Example
 {
@@ -91,9 +91,9 @@ Get all transactional email history
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
+using IO.Swagger.ClickSend.Client.Api;
 using IO.Swagger.Client;
-using IO.Swagger.Model;
+using IO.Swagger.ClickSend.Client.Model;
 
 namespace Example
 {
@@ -162,9 +162,9 @@ Get transactional email price
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
+using IO.Swagger.ClickSend.Client.Api;
 using IO.Swagger.Client;
-using IO.Swagger.Model;
+using IO.Swagger.ClickSend.Client.Model;
 
 namespace Example
 {
@@ -227,9 +227,9 @@ Send transactional email
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
+using IO.Swagger.ClickSend.Client.Api;
 using IO.Swagger.Client;
-using IO.Swagger.Model;
+using IO.Swagger.ClickSend.Client.Model;
 
 namespace Example
 {

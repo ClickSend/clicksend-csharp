@@ -1,4 +1,4 @@
-# IO.Swagger.Api.PostReturnAddressApi
+# IO.Swagger.ClickSend.Client.Api.PostReturnAddressApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -23,9 +23,9 @@ Delete specific post return address
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
+using IO.Swagger.ClickSend.Client.Api;
 using IO.Swagger.Client;
-using IO.Swagger.Model;
+using IO.Swagger.ClickSend.Client.Model;
 
 namespace Example
 {
@@ -88,9 +88,9 @@ Get specific post return address
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
+using IO.Swagger.ClickSend.Client.Api;
 using IO.Swagger.Client;
-using IO.Swagger.Model;
+using IO.Swagger.ClickSend.Client.Model;
 
 namespace Example
 {
@@ -153,9 +153,9 @@ Update post return address
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
+using IO.Swagger.ClickSend.Client.Api;
 using IO.Swagger.Client;
-using IO.Swagger.Model;
+using IO.Swagger.ClickSend.Client.Model;
 
 namespace Example
 {
@@ -220,9 +220,9 @@ Get list of post return addresses
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
+using IO.Swagger.ClickSend.Client.Api;
 using IO.Swagger.Client;
-using IO.Swagger.Model;
+using IO.Swagger.ClickSend.Client.Model;
 
 namespace Example
 {
@@ -287,9 +287,9 @@ Create post return address
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
+using IO.Swagger.ClickSend.Client.Api;
 using IO.Swagger.Client;
-using IO.Swagger.Model;
+using IO.Swagger.ClickSend.Client.Model;
 
 namespace Example
 {

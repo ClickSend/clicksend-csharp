@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PostPostcard
+# IO.Swagger.ClickSend.Client.Model.PostPostcard
 ## Properties
 
 Name | Type | Description | Notes

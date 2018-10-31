@@ -1,4 +1,4 @@
-# IO.Swagger.Api.ContactApi
+# IO.Swagger.ClickSend.Client.Api.ContactApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -25,9 +25,9 @@ Delete a contact
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
+using IO.Swagger.ClickSend.Client.Api;
 using IO.Swagger.Client;
-using IO.Swagger.Model;
+using IO.Swagger.ClickSend.Client.Model;
 
 namespace Example
 {
@@ -92,9 +92,9 @@ Get a specific contact
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
+using IO.Swagger.ClickSend.Client.Api;
 using IO.Swagger.Client;
-using IO.Swagger.Model;
+using IO.Swagger.ClickSend.Client.Model;
 
 namespace Example
 {
@@ -159,9 +159,9 @@ Update specific contact
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
+using IO.Swagger.ClickSend.Client.Api;
 using IO.Swagger.Client;
-using IO.Swagger.Model;
+using IO.Swagger.ClickSend.Client.Model;
 
 namespace Example
 {
@@ -228,9 +228,9 @@ Get all contacts in a list
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
+using IO.Swagger.ClickSend.Client.Api;
 using IO.Swagger.Client;
-using IO.Swagger.Model;
+using IO.Swagger.ClickSend.Client.Model;
 
 namespace Example
 {
@@ -297,9 +297,9 @@ Create new contact
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
+using IO.Swagger.ClickSend.Client.Api;
 using IO.Swagger.Client;
-using IO.Swagger.Model;
+using IO.Swagger.ClickSend.Client.Model;
 
 namespace Example
 {
@@ -368,9 +368,9 @@ Remove all opted out contacts
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
+using IO.Swagger.ClickSend.Client.Api;
 using IO.Swagger.Client;
-using IO.Swagger.Model;
+using IO.Swagger.ClickSend.Client.Model;
 
 namespace Example
 {
@@ -435,9 +435,9 @@ Transfer contact to another list
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
+using IO.Swagger.ClickSend.Client.Api;
 using IO.Swagger.Client;
-using IO.Swagger.Model;
+using IO.Swagger.ClickSend.Client.Model;
 
 namespace Example
 {

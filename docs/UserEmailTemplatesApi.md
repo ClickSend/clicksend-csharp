@@ -1,4 +1,4 @@
-# IO.Swagger.Api.UserEmailTemplatesApi
+# IO.Swagger.ClickSend.Client.Api.UserEmailTemplatesApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -23,9 +23,9 @@ Delete user email template
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
+using IO.Swagger.ClickSend.Client.Api;
 using IO.Swagger.Client;
-using IO.Swagger.Model;
+using IO.Swagger.ClickSend.Client.Model;
 
 namespace Example
 {
@@ -88,9 +88,9 @@ Get specific user email templates
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
+using IO.Swagger.ClickSend.Client.Api;
 using IO.Swagger.Client;
-using IO.Swagger.Model;
+using IO.Swagger.ClickSend.Client.Model;
 
 namespace Example
 {
@@ -153,9 +153,9 @@ Create email template
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
+using IO.Swagger.ClickSend.Client.Api;
 using IO.Swagger.Client;
-using IO.Swagger.Model;
+using IO.Swagger.ClickSend.Client.Model;
 
 namespace Example
 {
@@ -218,9 +218,9 @@ Update email template
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
+using IO.Swagger.ClickSend.Client.Api;
 using IO.Swagger.Client;
-using IO.Swagger.Model;
+using IO.Swagger.ClickSend.Client.Model;
 
 namespace Example
 {
@@ -285,9 +285,9 @@ Get all user email templates
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
+using IO.Swagger.ClickSend.Client.Api;
 using IO.Swagger.Client;
-using IO.Swagger.Model;
+using IO.Swagger.ClickSend.Client.Model;
 
 namespace Example
 {

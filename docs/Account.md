@@ -1,4 +1,4 @@
-# IO.Swagger.Model.Account
+# IO.Swagger.ClickSend.Client.Model.Account
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.ContactListImport
+# IO.Swagger.ClickSend.Client.Model.ContactListImport
 ## Properties
 
 Name | Type | Description | Notes

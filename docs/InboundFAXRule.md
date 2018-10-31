@@ -1,4 +1,4 @@
-# IO.Swagger.Model.InboundFAXRule
+# IO.Swagger.ClickSend.Client.Model.InboundFAXRule
 ## Properties
 
 Name | Type | Description | Notes

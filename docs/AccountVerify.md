@@ -1,4 +1,4 @@
-# IO.Swagger.Model.AccountVerify
+# IO.Swagger.ClickSend.Client.Model.AccountVerify
 ## Properties
 
 Name | Type | Description | Notes
