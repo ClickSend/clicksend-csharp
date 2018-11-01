@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Client.Api.ResellerAccountApi
+# IO.Swagger.ClickSend.Api.ResellerAccountApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -22,9 +22,9 @@ Get Reseller clients Account
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Client.Api;
+using IO.Swagger.ClickSend.Api;
 using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Client.Model;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -87,9 +87,9 @@ Update Reseller clients Account
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Client.Api;
+using IO.Swagger.ClickSend.Api;
 using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Client.Model;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -154,9 +154,9 @@ Get list of reseller accounts
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Client.Api;
+using IO.Swagger.ClickSend.Api;
 using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Client.Model;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -221,9 +221,9 @@ Create reseller account
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Client.Api;
+using IO.Swagger.ClickSend.Api;
 using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Client.Model;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {

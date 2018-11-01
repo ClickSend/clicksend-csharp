@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Client.Api.FaxApi
+# IO.Swagger.ClickSend.Api.FaxApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -23,9 +23,9 @@ Get a list of Fax History.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Client.Api;
+using IO.Swagger.ClickSend.Api;
 using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Client.Model;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -98,9 +98,9 @@ Calculate Total Price for Fax Messages sent
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Client.Api;
+using IO.Swagger.ClickSend.Api;
 using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Client.Model;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -163,9 +163,9 @@ Get a single fax receipt based on message id.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Client.Api;
+using IO.Swagger.ClickSend.Api;
 using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Client.Model;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -228,9 +228,9 @@ Get List of Fax Receipts
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Client.Api;
+using IO.Swagger.ClickSend.Api;
 using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Client.Model;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -289,9 +289,9 @@ Send a fax using supplied supported file-types.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Client.Api;
+using IO.Swagger.ClickSend.Api;
 using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Client.Model;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {

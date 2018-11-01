@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Client.Api.TimezonesApi
+# IO.Swagger.ClickSend.Api.TimezonesApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -19,9 +19,9 @@ Get supported list of timezones.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Client.Api;
+using IO.Swagger.ClickSend.Api;
 using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Client.Model;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {

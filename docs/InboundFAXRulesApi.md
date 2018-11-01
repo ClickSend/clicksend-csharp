@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Client.Api.InboundFAXRulesApi
+# IO.Swagger.ClickSend.Api.InboundFAXRulesApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -23,9 +23,9 @@ Delete inbound fax automation
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Client.Api;
+using IO.Swagger.ClickSend.Api;
 using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Client.Model;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -88,9 +88,9 @@ Get specific inbound fax automation
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Client.Api;
+using IO.Swagger.ClickSend.Api;
 using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Client.Model;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -153,9 +153,9 @@ Create new inbound fax automation
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Client.Api;
+using IO.Swagger.ClickSend.Api;
 using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Client.Model;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -218,9 +218,9 @@ Update inbound fax automation
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Client.Api;
+using IO.Swagger.ClickSend.Api;
 using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Client.Model;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -285,9 +285,9 @@ Get all inbound fax automations
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Client.Api;
+using IO.Swagger.ClickSend.Api;
 using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Client.Model;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {

@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Client.Model.ResellerAccountTransferCredit
+# IO.Swagger.ClickSend.Model.ResellerAccountTransferCredit
 ## Properties
 
 Name | Type | Description | Notes

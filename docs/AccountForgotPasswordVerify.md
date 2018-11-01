@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Client.Model.AccountForgotPasswordVerify
+# IO.Swagger.ClickSend.Model.AccountForgotPasswordVerify
 ## Properties
 
 Name | Type | Description | Notes

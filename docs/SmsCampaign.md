@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Client.Model.SmsCampaign
+# IO.Swagger.ClickSend.Model.SmsCampaign
 ## Properties
 
 Name | Type | Description | Notes

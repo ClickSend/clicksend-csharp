@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Client.Model.EmailRecipient
+# IO.Swagger.ClickSend.Model.EmailRecipient
 ## Properties
 
 Name | Type | Description | Notes

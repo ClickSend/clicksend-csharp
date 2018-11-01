@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Client.Model.PostDirectMailArea
+# IO.Swagger.ClickSend.Model.PostDirectMailArea
 ## Properties
 
 Name | Type | Description | Notes

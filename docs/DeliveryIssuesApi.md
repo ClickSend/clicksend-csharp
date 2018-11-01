@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Client.Api.DeliveryIssuesApi
+# IO.Swagger.ClickSend.Api.DeliveryIssuesApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -20,9 +20,9 @@ Get all delivery issues
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Client.Api;
+using IO.Swagger.ClickSend.Api;
 using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Client.Model;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -87,9 +87,9 @@ Create delivery Issue
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Client.Api;
+using IO.Swagger.ClickSend.Api;
 using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Client.Model;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
