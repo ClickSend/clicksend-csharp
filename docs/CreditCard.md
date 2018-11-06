@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Model.CreditCard
+# IO.ClickSend.ClickSend.Model.CreditCard
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Api.MMSApi
+# IO.ClickSend.ClickSend.Api.MMSApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -20,9 +20,9 @@ Get Price for MMS sent
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -85,9 +85,9 @@ Send MMS
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {

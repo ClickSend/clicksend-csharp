@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Model.DeliveryReceiptRule
+# IO.ClickSend.ClickSend.Model.DeliveryReceiptRule
 ## Properties
 
 Name | Type | Description | Notes

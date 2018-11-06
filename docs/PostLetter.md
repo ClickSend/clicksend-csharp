@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Model.PostLetter
+# IO.ClickSend.ClickSend.Model.PostLetter
 ## Properties
 
 Name | Type | Description | Notes

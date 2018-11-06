@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Model.ResellerAccount
+# IO.ClickSend.ClickSend.Model.ResellerAccount
 ## Properties
 
 Name | Type | Description | Notes
