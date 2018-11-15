@@ -12,7 +12,7 @@
 using System;
 using RestSharp;
 
-namespace IO.Swagger.Client
+namespace IO.ClickSend.Client
 {
     /// <summary>
     /// A delegate to ExceptionFactory method

@@ -81,7 +81,7 @@ Contact: support@clicksend.com
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\IO.Swagger\IO.Swagger.csproj">
-          <Project>{0FF050F2-67DD-4549-90CE-D2019293372B}</Project>
+          <Project>{C69F7827-8823-4ABD-A3A6-3C5592BE44D8}</Project>
           <Name>IO.Swagger</Name>
       </ProjectReference>
   </ItemGroup>

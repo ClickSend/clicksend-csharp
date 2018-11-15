@@ -21,9 +21,9 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using JsonSubTypes;
 using System.ComponentModel.DataAnnotations;
-using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
+using ClickSendDateConverter = IO.ClickSend.Client.ClickSendDateConverter;
 
-namespace IO.Swagger.ClickSend.Model
+namespace IO.ClickSend.ClickSend.Model
 {
     /// <summary>
     /// PostDirectMailArea model

@@ -13,10 +13,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
-namespace IO.Swagger.ClickSend.Api
+namespace IO.ClickSend.ClickSend.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -30,7 +30,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get Credit Card info
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>string</returns>
         string RechargeCreditCardGet ();
 
@@ -40,7 +40,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get Credit Card info
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> RechargeCreditCardGetWithHttpInfo ();
         /// <summary>
@@ -49,7 +49,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update credit card info
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="creditCard">CreditCard model</param>
         /// <returns>string</returns>
         string RechargeCreditCardPut (CreditCard creditCard);
@@ -60,7 +60,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update credit card info
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="creditCard">CreditCard model</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> RechargeCreditCardPutWithHttpInfo (CreditCard creditCard);
@@ -70,7 +70,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get list of all packages
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Country code (optional)</param>
         /// <returns>string</returns>
         string RechargePackagesGet (string country = null);
@@ -81,7 +81,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get list of all packages
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Country code (optional)</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> RechargePackagesGetWithHttpInfo (string country = null);
@@ -91,7 +91,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Purchase a package
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageId">ID of package to purchase</param>
         /// <returns>string</returns>
         string RechargePurchaseByPackageIdPut (int? packageId);
@@ -102,7 +102,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Purchase a package
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageId">ID of package to purchase</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> RechargePurchaseByPackageIdPutWithHttpInfo (int? packageId);
@@ -112,7 +112,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific Transaction
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionId">ID of transaction to retrieve</param>
         /// <returns>string</returns>
         string RechargeTransactionsByTransactionIdGet (string transactionId);
@@ -123,7 +123,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific Transaction
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionId">ID of transaction to retrieve</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> RechargeTransactionsByTransactionIdGetWithHttpInfo (string transactionId);
@@ -133,7 +133,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all transactions
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -145,7 +145,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all transactions
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -158,7 +158,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get Credit Card info
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> RechargeCreditCardGetAsync ();
 
@@ -168,7 +168,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get Credit Card info
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> RechargeCreditCardGetAsyncWithHttpInfo ();
         /// <summary>
@@ -177,7 +177,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update credit card info
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="creditCard">CreditCard model</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> RechargeCreditCardPutAsync (CreditCard creditCard);
@@ -188,7 +188,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update credit card info
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="creditCard">CreditCard model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> RechargeCreditCardPutAsyncWithHttpInfo (CreditCard creditCard);
@@ -198,7 +198,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get list of all packages
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Country code (optional)</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> RechargePackagesGetAsync (string country = null);
@@ -209,7 +209,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get list of all packages
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Country code (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> RechargePackagesGetAsyncWithHttpInfo (string country = null);
@@ -219,7 +219,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Purchase a package
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageId">ID of package to purchase</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> RechargePurchaseByPackageIdPutAsync (int? packageId);
@@ -230,7 +230,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Purchase a package
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageId">ID of package to purchase</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> RechargePurchaseByPackageIdPutAsyncWithHttpInfo (int? packageId);
@@ -240,7 +240,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific Transaction
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionId">ID of transaction to retrieve</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> RechargeTransactionsByTransactionIdGetAsync (string transactionId);
@@ -251,7 +251,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific Transaction
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionId">ID of transaction to retrieve</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> RechargeTransactionsByTransactionIdGetAsyncWithHttpInfo (string transactionId);
@@ -261,7 +261,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all transactions
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -273,7 +273,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all transactions
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -286,7 +286,7 @@ namespace IO.Swagger.ClickSend.Api
     /// </summary>
     public partial class AccountRechargeApi : IAccountRechargeApi
     {
-        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private IO.ClickSend.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AccountRechargeApi"/> class.
@@ -294,9 +294,9 @@ namespace IO.Swagger.ClickSend.Api
         /// <returns></returns>
         public AccountRechargeApi(String basePath)
         {
-            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
+            this.Configuration = new IO.ClickSend.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -305,14 +305,14 @@ namespace IO.Swagger.ClickSend.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public AccountRechargeApi(IO.Swagger.Client.Configuration configuration = null)
+        public AccountRechargeApi(IO.ClickSend.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.Swagger.Client.Configuration.Default;
+                this.Configuration = IO.ClickSend.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -338,12 +338,12 @@ namespace IO.Swagger.ClickSend.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.Swagger.Client.Configuration Configuration {get; set;}
+        public IO.ClickSend.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
+        public IO.ClickSend.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -381,7 +381,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get Credit Card info Get Credit Card info
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>string</returns>
         public string RechargeCreditCardGet ()
         {
@@ -392,7 +392,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get Credit Card info Get Credit Card info
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > RechargeCreditCardGetWithHttpInfo ()
         {
@@ -448,7 +448,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get Credit Card info Get Credit Card info
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> RechargeCreditCardGetAsync ()
         {
@@ -460,7 +460,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get Credit Card info Get Credit Card info
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> RechargeCreditCardGetAsyncWithHttpInfo ()
         {
@@ -516,7 +516,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update credit card info Update credit card info
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="creditCard">CreditCard model</param>
         /// <returns>string</returns>
         public string RechargeCreditCardPut (CreditCard creditCard)
@@ -528,7 +528,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update credit card info Update credit card info
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="creditCard">CreditCard model</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > RechargeCreditCardPutWithHttpInfo (CreditCard creditCard)
@@ -596,7 +596,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update credit card info Update credit card info
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="creditCard">CreditCard model</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> RechargeCreditCardPutAsync (CreditCard creditCard)
@@ -609,7 +609,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update credit card info Update credit card info
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="creditCard">CreditCard model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> RechargeCreditCardPutAsyncWithHttpInfo (CreditCard creditCard)
@@ -677,7 +677,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get list of all packages Get list of all packages
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Country code (optional)</param>
         /// <returns>string</returns>
         public string RechargePackagesGet (string country = null)
@@ -689,7 +689,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get list of all packages Get list of all packages
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Country code (optional)</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > RechargePackagesGetWithHttpInfo (string country = null)
@@ -747,7 +747,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get list of all packages Get list of all packages
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Country code (optional)</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> RechargePackagesGetAsync (string country = null)
@@ -760,7 +760,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get list of all packages Get list of all packages
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="country">Country code (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> RechargePackagesGetAsyncWithHttpInfo (string country = null)
@@ -818,7 +818,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Purchase a package Purchase a package
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageId">ID of package to purchase</param>
         /// <returns>string</returns>
         public string RechargePurchaseByPackageIdPut (int? packageId)
@@ -830,7 +830,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Purchase a package Purchase a package
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageId">ID of package to purchase</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > RechargePurchaseByPackageIdPutWithHttpInfo (int? packageId)
@@ -891,7 +891,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Purchase a package Purchase a package
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageId">ID of package to purchase</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> RechargePurchaseByPackageIdPutAsync (int? packageId)
@@ -904,7 +904,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Purchase a package Purchase a package
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageId">ID of package to purchase</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> RechargePurchaseByPackageIdPutAsyncWithHttpInfo (int? packageId)
@@ -965,7 +965,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific Transaction Get specific Transaction
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionId">ID of transaction to retrieve</param>
         /// <returns>string</returns>
         public string RechargeTransactionsByTransactionIdGet (string transactionId)
@@ -977,7 +977,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific Transaction Get specific Transaction
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionId">ID of transaction to retrieve</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > RechargeTransactionsByTransactionIdGetWithHttpInfo (string transactionId)
@@ -1038,7 +1038,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific Transaction Get specific Transaction
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionId">ID of transaction to retrieve</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> RechargeTransactionsByTransactionIdGetAsync (string transactionId)
@@ -1051,7 +1051,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific Transaction Get specific Transaction
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionId">ID of transaction to retrieve</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> RechargeTransactionsByTransactionIdGetAsyncWithHttpInfo (string transactionId)
@@ -1112,7 +1112,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Purchase a package Get all transactions
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -1125,7 +1125,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Purchase a package Get all transactions
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -1185,7 +1185,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Purchase a package Get all transactions
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -1199,7 +1199,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Purchase a package Get all transactions
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>

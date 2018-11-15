@@ -13,9 +13,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.Swagger.Client;
+using IO.ClickSend.Client;
 
-namespace IO.Swagger.ClickSend.Api
+namespace IO.ClickSend.ClickSend.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -29,7 +29,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all master email template categories
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -41,7 +41,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all master email template categories
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -52,7 +52,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific master email template category
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryId">Email category id</param>
         /// <returns>string</returns>
         string MasterEmailTemplateCategoryGet (int? categoryId);
@@ -63,7 +63,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific master email template category
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryId">Email category id</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> MasterEmailTemplateCategoryGetWithHttpInfo (int? categoryId);
@@ -73,7 +73,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific master email template
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <returns>string</returns>
         string MasterEmailTemplateGet (int? templateId);
@@ -84,7 +84,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific master email template
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> MasterEmailTemplateGetWithHttpInfo (int? templateId);
@@ -94,7 +94,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all master email templates
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -106,7 +106,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all master email templates
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -117,7 +117,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all master email templates in a category
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryId">Email category id</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
@@ -130,7 +130,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all master email templates in a category
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryId">Email category id</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
@@ -144,7 +144,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all master email template categories
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -156,7 +156,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all master email template categories
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -167,7 +167,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific master email template category
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryId">Email category id</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> MasterEmailTemplateCategoryGetAsync (int? categoryId);
@@ -178,7 +178,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific master email template category
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryId">Email category id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> MasterEmailTemplateCategoryGetAsyncWithHttpInfo (int? categoryId);
@@ -188,7 +188,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific master email template
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> MasterEmailTemplateGetAsync (int? templateId);
@@ -199,7 +199,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific master email template
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> MasterEmailTemplateGetAsyncWithHttpInfo (int? templateId);
@@ -209,7 +209,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all master email templates
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -221,7 +221,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all master email templates
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -232,7 +232,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all master email templates in a category
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryId">Email category id</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
@@ -245,7 +245,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all master email templates in a category
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryId">Email category id</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
@@ -259,7 +259,7 @@ namespace IO.Swagger.ClickSend.Api
     /// </summary>
     public partial class MasterEmailTemplatesApi : IMasterEmailTemplatesApi
     {
-        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private IO.ClickSend.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MasterEmailTemplatesApi"/> class.
@@ -267,9 +267,9 @@ namespace IO.Swagger.ClickSend.Api
         /// <returns></returns>
         public MasterEmailTemplatesApi(String basePath)
         {
-            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
+            this.Configuration = new IO.ClickSend.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -278,14 +278,14 @@ namespace IO.Swagger.ClickSend.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public MasterEmailTemplatesApi(IO.Swagger.Client.Configuration configuration = null)
+        public MasterEmailTemplatesApi(IO.ClickSend.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.Swagger.Client.Configuration.Default;
+                this.Configuration = IO.ClickSend.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -311,12 +311,12 @@ namespace IO.Swagger.ClickSend.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.Swagger.Client.Configuration Configuration {get; set;}
+        public IO.ClickSend.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
+        public IO.ClickSend.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -354,7 +354,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all master email template categories Get all master email template categories
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -367,7 +367,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all master email template categories Get all master email template categories
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -427,7 +427,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all master email template categories Get all master email template categories
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -441,7 +441,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all master email template categories Get all master email template categories
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -501,7 +501,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific master email template category Get specific master email template category
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryId">Email category id</param>
         /// <returns>string</returns>
         public string MasterEmailTemplateCategoryGet (int? categoryId)
@@ -513,7 +513,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific master email template category Get specific master email template category
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryId">Email category id</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > MasterEmailTemplateCategoryGetWithHttpInfo (int? categoryId)
@@ -574,7 +574,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific master email template category Get specific master email template category
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryId">Email category id</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> MasterEmailTemplateCategoryGetAsync (int? categoryId)
@@ -587,7 +587,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific master email template category Get specific master email template category
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryId">Email category id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> MasterEmailTemplateCategoryGetAsyncWithHttpInfo (int? categoryId)
@@ -648,7 +648,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific master email template Get specific master email template
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <returns>string</returns>
         public string MasterEmailTemplateGet (int? templateId)
@@ -660,7 +660,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific master email template Get specific master email template
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > MasterEmailTemplateGetWithHttpInfo (int? templateId)
@@ -721,7 +721,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific master email template Get specific master email template
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> MasterEmailTemplateGetAsync (int? templateId)
@@ -734,7 +734,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific master email template Get specific master email template
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> MasterEmailTemplateGetAsyncWithHttpInfo (int? templateId)
@@ -795,7 +795,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all master email templates Get all master email templates
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -808,7 +808,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all master email templates Get all master email templates
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -868,7 +868,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all master email templates Get all master email templates
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -882,7 +882,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all master email templates Get all master email templates
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -942,7 +942,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all master email templates in a category Get all master email templates in a category
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryId">Email category id</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
@@ -956,7 +956,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all master email templates in a category Get all master email templates in a category
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryId">Email category id</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
@@ -1021,7 +1021,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all master email templates in a category Get all master email templates in a category
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryId">Email category id</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
@@ -1036,7 +1036,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all master email templates in a category Get all master email templates in a category
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryId">Email category id</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>

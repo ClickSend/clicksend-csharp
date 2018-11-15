@@ -10,18 +10,18 @@
 
 using Newtonsoft.Json.Converters;
 
-namespace IO.Swagger.Client
+namespace IO.ClickSend.Client
 {
     /// <summary>
     /// Formatter for 'date' swagger formats ss defined by full-date - RFC3339
     /// see https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#data-types
     /// </summary>
-    public class SwaggerDateConverter : IsoDateTimeConverter
+    public class ClickSendDateConverter : IsoDateTimeConverter
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SwaggerDateConverter" /> class.
+        /// Initializes a new instance of the <see cref="ClickSendDateConverter" /> class.
         /// </summary>
-        public SwaggerDateConverter()
+        public ClickSendDateConverter()
         {
             // full-date   = date-fullyear "-" date-month "-" date-mday
             DateTimeFormat = "yyyy-MM-dd";

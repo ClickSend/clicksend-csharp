@@ -13,10 +13,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
-namespace IO.Swagger.ClickSend.Api
+namespace IO.ClickSend.ClickSend.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -30,7 +30,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Delete sms delivery receipt automation
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>string</returns>
         string SmsDeliveryReceiptAutomationDelete (int? receiptRuleId);
@@ -41,7 +41,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Delete sms delivery receipt automation
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> SmsDeliveryReceiptAutomationDeleteWithHttpInfo (int? receiptRuleId);
@@ -51,7 +51,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific sms delivery receipt automation
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>string</returns>
         string SmsDeliveryReceiptAutomationGet (int? receiptRuleId);
@@ -62,7 +62,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific sms delivery receipt automation
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> SmsDeliveryReceiptAutomationGetWithHttpInfo (int? receiptRuleId);
@@ -72,7 +72,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Create sms delivery receipt automations
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryReceiptRule">sms delivery receipt rule model</param>
         /// <returns>string</returns>
         string SmsDeliveryReceiptAutomationPost (DeliveryReceiptRule deliveryReceiptRule);
@@ -83,7 +83,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Create sms delivery receipt automations
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryReceiptRule">sms delivery receipt rule model</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> SmsDeliveryReceiptAutomationPostWithHttpInfo (DeliveryReceiptRule deliveryReceiptRule);
@@ -93,7 +93,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update sms delivery receipt automation
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <param name="deliveryReceiptRule">Delivery receipt rule model</param>
         /// <returns>string</returns>
@@ -105,7 +105,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update sms delivery receipt automation
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <param name="deliveryReceiptRule">Delivery receipt rule model</param>
         /// <returns>ApiResponse of string</returns>
@@ -116,7 +116,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all sms delivery receipt automations
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -128,7 +128,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all sms delivery receipt automations
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -141,7 +141,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Delete sms delivery receipt automation
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> SmsDeliveryReceiptAutomationDeleteAsync (int? receiptRuleId);
@@ -152,7 +152,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Delete sms delivery receipt automation
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> SmsDeliveryReceiptAutomationDeleteAsyncWithHttpInfo (int? receiptRuleId);
@@ -162,7 +162,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific sms delivery receipt automation
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> SmsDeliveryReceiptAutomationGetAsync (int? receiptRuleId);
@@ -173,7 +173,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific sms delivery receipt automation
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> SmsDeliveryReceiptAutomationGetAsyncWithHttpInfo (int? receiptRuleId);
@@ -183,7 +183,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Create sms delivery receipt automations
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryReceiptRule">sms delivery receipt rule model</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> SmsDeliveryReceiptAutomationPostAsync (DeliveryReceiptRule deliveryReceiptRule);
@@ -194,7 +194,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Create sms delivery receipt automations
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryReceiptRule">sms delivery receipt rule model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> SmsDeliveryReceiptAutomationPostAsyncWithHttpInfo (DeliveryReceiptRule deliveryReceiptRule);
@@ -204,7 +204,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update sms delivery receipt automation
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <param name="deliveryReceiptRule">Delivery receipt rule model</param>
         /// <returns>Task of string</returns>
@@ -216,7 +216,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update sms delivery receipt automation
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <param name="deliveryReceiptRule">Delivery receipt rule model</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -227,7 +227,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all sms delivery receipt automations
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -239,7 +239,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all sms delivery receipt automations
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -252,7 +252,7 @@ namespace IO.Swagger.ClickSend.Api
     /// </summary>
     public partial class SMSDeliveryReceiptRulesApi : ISMSDeliveryReceiptRulesApi
     {
-        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private IO.ClickSend.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SMSDeliveryReceiptRulesApi"/> class.
@@ -260,9 +260,9 @@ namespace IO.Swagger.ClickSend.Api
         /// <returns></returns>
         public SMSDeliveryReceiptRulesApi(String basePath)
         {
-            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
+            this.Configuration = new IO.ClickSend.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -271,14 +271,14 @@ namespace IO.Swagger.ClickSend.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public SMSDeliveryReceiptRulesApi(IO.Swagger.Client.Configuration configuration = null)
+        public SMSDeliveryReceiptRulesApi(IO.ClickSend.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.Swagger.Client.Configuration.Default;
+                this.Configuration = IO.ClickSend.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -304,12 +304,12 @@ namespace IO.Swagger.ClickSend.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.Swagger.Client.Configuration Configuration {get; set;}
+        public IO.ClickSend.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
+        public IO.ClickSend.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -347,7 +347,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Delete sms delivery receipt automation Delete sms delivery receipt automation
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>string</returns>
         public string SmsDeliveryReceiptAutomationDelete (int? receiptRuleId)
@@ -359,7 +359,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Delete sms delivery receipt automation Delete sms delivery receipt automation
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > SmsDeliveryReceiptAutomationDeleteWithHttpInfo (int? receiptRuleId)
@@ -420,7 +420,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Delete sms delivery receipt automation Delete sms delivery receipt automation
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> SmsDeliveryReceiptAutomationDeleteAsync (int? receiptRuleId)
@@ -433,7 +433,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Delete sms delivery receipt automation Delete sms delivery receipt automation
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> SmsDeliveryReceiptAutomationDeleteAsyncWithHttpInfo (int? receiptRuleId)
@@ -494,7 +494,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific sms delivery receipt automation Get specific sms delivery receipt automation
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>string</returns>
         public string SmsDeliveryReceiptAutomationGet (int? receiptRuleId)
@@ -506,7 +506,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific sms delivery receipt automation Get specific sms delivery receipt automation
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > SmsDeliveryReceiptAutomationGetWithHttpInfo (int? receiptRuleId)
@@ -567,7 +567,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific sms delivery receipt automation Get specific sms delivery receipt automation
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> SmsDeliveryReceiptAutomationGetAsync (int? receiptRuleId)
@@ -580,7 +580,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific sms delivery receipt automation Get specific sms delivery receipt automation
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> SmsDeliveryReceiptAutomationGetAsyncWithHttpInfo (int? receiptRuleId)
@@ -641,7 +641,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Create sms delivery receipt automations Create sms delivery receipt automations
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryReceiptRule">sms delivery receipt rule model</param>
         /// <returns>string</returns>
         public string SmsDeliveryReceiptAutomationPost (DeliveryReceiptRule deliveryReceiptRule)
@@ -653,7 +653,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Create sms delivery receipt automations Create sms delivery receipt automations
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryReceiptRule">sms delivery receipt rule model</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > SmsDeliveryReceiptAutomationPostWithHttpInfo (DeliveryReceiptRule deliveryReceiptRule)
@@ -721,7 +721,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Create sms delivery receipt automations Create sms delivery receipt automations
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryReceiptRule">sms delivery receipt rule model</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> SmsDeliveryReceiptAutomationPostAsync (DeliveryReceiptRule deliveryReceiptRule)
@@ -734,7 +734,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Create sms delivery receipt automations Create sms delivery receipt automations
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryReceiptRule">sms delivery receipt rule model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> SmsDeliveryReceiptAutomationPostAsyncWithHttpInfo (DeliveryReceiptRule deliveryReceiptRule)
@@ -802,7 +802,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update sms delivery receipt automation Update sms delivery receipt automation
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <param name="deliveryReceiptRule">Delivery receipt rule model</param>
         /// <returns>string</returns>
@@ -815,7 +815,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update sms delivery receipt automation Update sms delivery receipt automation
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <param name="deliveryReceiptRule">Delivery receipt rule model</param>
         /// <returns>ApiResponse of string</returns>
@@ -888,7 +888,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update sms delivery receipt automation Update sms delivery receipt automation
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <param name="deliveryReceiptRule">Delivery receipt rule model</param>
         /// <returns>Task of string</returns>
@@ -902,7 +902,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update sms delivery receipt automation Update sms delivery receipt automation
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <param name="deliveryReceiptRule">Delivery receipt rule model</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -975,7 +975,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all sms delivery receipt automations Get all sms delivery receipt automations
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -988,7 +988,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all sms delivery receipt automations Get all sms delivery receipt automations
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -1048,7 +1048,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all sms delivery receipt automations Get all sms delivery receipt automations
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -1062,7 +1062,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all sms delivery receipt automations Get all sms delivery receipt automations
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>

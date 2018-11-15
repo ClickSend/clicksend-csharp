@@ -13,9 +13,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.Swagger.Client;
+using IO.ClickSend.Client;
 
-namespace IO.Swagger.ClickSend.Api
+namespace IO.ClickSend.ClickSend.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -29,7 +29,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Detects address in uploaded file.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="content">Base64-encoded file contents</param>
         /// <returns>string</returns>
         string DetectAddressPost (string content);
@@ -40,7 +40,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Detects address in uploaded file.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="content">Base64-encoded file contents</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> DetectAddressPostWithHttpInfo (string content);
@@ -52,7 +52,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Detects address in uploaded file.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="content">Base64-encoded file contents</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> DetectAddressPostAsync (string content);
@@ -63,7 +63,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Detects address in uploaded file.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="content">Base64-encoded file contents</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> DetectAddressPostAsyncWithHttpInfo (string content);
@@ -75,7 +75,7 @@ namespace IO.Swagger.ClickSend.Api
     /// </summary>
     public partial class DetectAddressApi : IDetectAddressApi
     {
-        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private IO.ClickSend.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DetectAddressApi"/> class.
@@ -83,9 +83,9 @@ namespace IO.Swagger.ClickSend.Api
         /// <returns></returns>
         public DetectAddressApi(String basePath)
         {
-            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
+            this.Configuration = new IO.ClickSend.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -94,14 +94,14 @@ namespace IO.Swagger.ClickSend.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public DetectAddressApi(IO.Swagger.Client.Configuration configuration = null)
+        public DetectAddressApi(IO.ClickSend.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.Swagger.Client.Configuration.Default;
+                this.Configuration = IO.ClickSend.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -127,12 +127,12 @@ namespace IO.Swagger.ClickSend.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.Swagger.Client.Configuration Configuration {get; set;}
+        public IO.ClickSend.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
+        public IO.ClickSend.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -170,7 +170,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Detects address in uploaded file. Detects address in uploaded file.
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="content">Base64-encoded file contents</param>
         /// <returns>string</returns>
         public string DetectAddressPost (string content)
@@ -182,7 +182,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Detects address in uploaded file. Detects address in uploaded file.
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="content">Base64-encoded file contents</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > DetectAddressPostWithHttpInfo (string content)
@@ -250,7 +250,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Detects address in uploaded file. Detects address in uploaded file.
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="content">Base64-encoded file contents</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> DetectAddressPostAsync (string content)
@@ -263,7 +263,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Detects address in uploaded file. Detects address in uploaded file.
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="content">Base64-encoded file contents</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> DetectAddressPostAsyncWithHttpInfo (string content)

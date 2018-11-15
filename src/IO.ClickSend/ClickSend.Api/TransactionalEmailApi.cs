@@ -13,10 +13,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
-namespace IO.Swagger.ClickSend.Api
+namespace IO.ClickSend.ClickSend.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -30,7 +30,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Export all Transactional Email history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to download history as</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
@@ -43,7 +43,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Export all Transactional Email history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to download history as</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
@@ -55,7 +55,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all transactional email history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -69,7 +69,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all transactional email history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -82,7 +82,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get transactional email price
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">Email model</param>
         /// <returns>string</returns>
         string EmailPricePost (Email email);
@@ -93,7 +93,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get transactional email price
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">Email model</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> EmailPricePostWithHttpInfo (Email email);
@@ -103,7 +103,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Send transactional email
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">Email model</param>
         /// <returns>string</returns>
         string EmailSendPost (Email email);
@@ -114,7 +114,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Send transactional email
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">Email model</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> EmailSendPostWithHttpInfo (Email email);
@@ -126,7 +126,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Export all Transactional Email history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to download history as</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
@@ -139,7 +139,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Export all Transactional Email history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to download history as</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
@@ -151,7 +151,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all transactional email history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -165,7 +165,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all transactional email history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -178,7 +178,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get transactional email price
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">Email model</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> EmailPricePostAsync (Email email);
@@ -189,7 +189,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get transactional email price
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">Email model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> EmailPricePostAsyncWithHttpInfo (Email email);
@@ -199,7 +199,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Send transactional email
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">Email model</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> EmailSendPostAsync (Email email);
@@ -210,7 +210,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Send transactional email
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">Email model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> EmailSendPostAsyncWithHttpInfo (Email email);
@@ -222,7 +222,7 @@ namespace IO.Swagger.ClickSend.Api
     /// </summary>
     public partial class TransactionalEmailApi : ITransactionalEmailApi
     {
-        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private IO.ClickSend.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="TransactionalEmailApi"/> class.
@@ -230,9 +230,9 @@ namespace IO.Swagger.ClickSend.Api
         /// <returns></returns>
         public TransactionalEmailApi(String basePath)
         {
-            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
+            this.Configuration = new IO.ClickSend.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -241,14 +241,14 @@ namespace IO.Swagger.ClickSend.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public TransactionalEmailApi(IO.Swagger.Client.Configuration configuration = null)
+        public TransactionalEmailApi(IO.ClickSend.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.Swagger.Client.Configuration.Default;
+                this.Configuration = IO.ClickSend.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -274,12 +274,12 @@ namespace IO.Swagger.ClickSend.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.Swagger.Client.Configuration Configuration {get; set;}
+        public IO.ClickSend.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
+        public IO.ClickSend.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -317,7 +317,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Export all Transactional Email history Export all Transactional Email history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to download history as</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
@@ -331,7 +331,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Export all Transactional Email history Export all Transactional Email history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to download history as</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
@@ -358,8 +358,7 @@ namespace IO.Swagger.ClickSend.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "application/csv"
+                "application/json"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -397,7 +396,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Export all Transactional Email history Export all Transactional Email history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to download history as</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
@@ -412,7 +411,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Export all Transactional Email history Export all Transactional Email history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to download history as</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
@@ -439,8 +438,7 @@ namespace IO.Swagger.ClickSend.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "application/csv"
+                "application/json"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -478,7 +476,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all transactional email history Get all transactional email history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -493,7 +491,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all transactional email history Get all transactional email history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -557,7 +555,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all transactional email history Get all transactional email history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -573,7 +571,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all transactional email history Get all transactional email history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -637,7 +635,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get transactional email price Get transactional email price
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">Email model</param>
         /// <returns>string</returns>
         public string EmailPricePost (Email email)
@@ -649,7 +647,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get transactional email price Get transactional email price
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">Email model</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > EmailPricePostWithHttpInfo (Email email)
@@ -717,7 +715,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get transactional email price Get transactional email price
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">Email model</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> EmailPricePostAsync (Email email)
@@ -730,7 +728,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get transactional email price Get transactional email price
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">Email model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> EmailPricePostAsyncWithHttpInfo (Email email)
@@ -798,7 +796,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Send transactional email Send transactional email
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">Email model</param>
         /// <returns>string</returns>
         public string EmailSendPost (Email email)
@@ -810,7 +808,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Send transactional email Send transactional email
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">Email model</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > EmailSendPostWithHttpInfo (Email email)
@@ -878,7 +876,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Send transactional email Send transactional email
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">Email model</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> EmailSendPostAsync (Email email)
@@ -891,7 +889,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Send transactional email Send transactional email
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">Email model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> EmailSendPostAsyncWithHttpInfo (Email email)

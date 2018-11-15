@@ -21,9 +21,9 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using JsonSubTypes;
 using System.ComponentModel.DataAnnotations;
-using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
+using ClickSendDateConverter = IO.ClickSend.Client.ClickSendDateConverter;
 
-namespace IO.Swagger.ClickSend.Model
+namespace IO.ClickSend.ClickSend.Model
 {
     /// <summary>
     /// Issues with message delivery
@@ -110,7 +110,7 @@ namespace IO.Swagger.ClickSend.Model
         /// The user&#39;s email address.
         /// </summary>
         /// <value>The user&#39;s email address.</value>
-        [DataMember(Name="email-address", EmitDefaultValue=false)]
+        [DataMember(Name="email_address", EmitDefaultValue=false)]
         public string EmailAddress { get; set; }
 
         /// <summary>

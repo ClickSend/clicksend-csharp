@@ -13,10 +13,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
-namespace IO.Swagger.ClickSend.Api
+namespace IO.ClickSend.ClickSend.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -30,7 +30,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get a list of Fax History.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Customize result by setting from date (timestsamp) Example: 1457572619. (optional)</param>
         /// <param name="dateTo">Customize result by setting to date (timestamp) Example: 1457573000. (optional)</param>
         /// <param name="q">Custom query Example: status:Sent,status_code:201. (optional)</param>
@@ -46,7 +46,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get a list of Fax History.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Customize result by setting from date (timestsamp) Example: 1457572619. (optional)</param>
         /// <param name="dateTo">Customize result by setting to date (timestamp) Example: 1457573000. (optional)</param>
         /// <param name="q">Custom query Example: status:Sent,status_code:201. (optional)</param>
@@ -61,7 +61,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Calculate Total Price for Fax Messages sent
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="faxMessage">FaxMessageCollection model</param>
         /// <returns>string</returns>
         string FaxPricePost (FaxMessageCollection faxMessage);
@@ -72,7 +72,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Calculate Total Price for Fax Messages sent
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="faxMessage">FaxMessageCollection model</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> FaxPricePostWithHttpInfo (FaxMessageCollection faxMessage);
@@ -82,7 +82,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get a single fax receipt based on message id.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">ID of the message receipt to retrieve</param>
         /// <returns>string</returns>
         string FaxReceiptsByMessageIdGet (string messageId);
@@ -93,7 +93,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get a single fax receipt based on message id.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">ID of the message receipt to retrieve</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> FaxReceiptsByMessageIdGetWithHttpInfo (string messageId);
@@ -103,7 +103,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get List of Fax Receipts
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>string</returns>
         string FaxReceiptsGet ();
 
@@ -113,7 +113,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get List of Fax Receipts
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> FaxReceiptsGetWithHttpInfo ();
         /// <summary>
@@ -122,7 +122,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Send a fax using supplied supported file-types.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="faxMessage">FaxMessageCollection model</param>
         /// <returns>string</returns>
         string FaxSendPost (FaxMessageCollection faxMessage);
@@ -133,7 +133,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Send a fax using supplied supported file-types.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="faxMessage">FaxMessageCollection model</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> FaxSendPostWithHttpInfo (FaxMessageCollection faxMessage);
@@ -145,7 +145,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get a list of Fax History.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Customize result by setting from date (timestsamp) Example: 1457572619. (optional)</param>
         /// <param name="dateTo">Customize result by setting to date (timestamp) Example: 1457573000. (optional)</param>
         /// <param name="q">Custom query Example: status:Sent,status_code:201. (optional)</param>
@@ -161,7 +161,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get a list of Fax History.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Customize result by setting from date (timestsamp) Example: 1457572619. (optional)</param>
         /// <param name="dateTo">Customize result by setting to date (timestamp) Example: 1457573000. (optional)</param>
         /// <param name="q">Custom query Example: status:Sent,status_code:201. (optional)</param>
@@ -176,7 +176,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Calculate Total Price for Fax Messages sent
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="faxMessage">FaxMessageCollection model</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> FaxPricePostAsync (FaxMessageCollection faxMessage);
@@ -187,7 +187,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Calculate Total Price for Fax Messages sent
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="faxMessage">FaxMessageCollection model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> FaxPricePostAsyncWithHttpInfo (FaxMessageCollection faxMessage);
@@ -197,7 +197,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get a single fax receipt based on message id.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">ID of the message receipt to retrieve</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> FaxReceiptsByMessageIdGetAsync (string messageId);
@@ -208,7 +208,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get a single fax receipt based on message id.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">ID of the message receipt to retrieve</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> FaxReceiptsByMessageIdGetAsyncWithHttpInfo (string messageId);
@@ -218,7 +218,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get List of Fax Receipts
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> FaxReceiptsGetAsync ();
 
@@ -228,7 +228,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get List of Fax Receipts
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> FaxReceiptsGetAsyncWithHttpInfo ();
         /// <summary>
@@ -237,7 +237,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Send a fax using supplied supported file-types.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="faxMessage">FaxMessageCollection model</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> FaxSendPostAsync (FaxMessageCollection faxMessage);
@@ -248,7 +248,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Send a fax using supplied supported file-types.
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="faxMessage">FaxMessageCollection model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> FaxSendPostAsyncWithHttpInfo (FaxMessageCollection faxMessage);
@@ -260,7 +260,7 @@ namespace IO.Swagger.ClickSend.Api
     /// </summary>
     public partial class FaxApi : IFaxApi
     {
-        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private IO.ClickSend.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="FaxApi"/> class.
@@ -268,9 +268,9 @@ namespace IO.Swagger.ClickSend.Api
         /// <returns></returns>
         public FaxApi(String basePath)
         {
-            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
+            this.Configuration = new IO.ClickSend.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -279,14 +279,14 @@ namespace IO.Swagger.ClickSend.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public FaxApi(IO.Swagger.Client.Configuration configuration = null)
+        public FaxApi(IO.ClickSend.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.Swagger.Client.Configuration.Default;
+                this.Configuration = IO.ClickSend.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -312,12 +312,12 @@ namespace IO.Swagger.ClickSend.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.Swagger.Client.Configuration Configuration {get; set;}
+        public IO.ClickSend.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
+        public IO.ClickSend.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -355,7 +355,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get a list of Fax History. Get a list of Fax History.
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Customize result by setting from date (timestsamp) Example: 1457572619. (optional)</param>
         /// <param name="dateTo">Customize result by setting to date (timestamp) Example: 1457573000. (optional)</param>
         /// <param name="q">Custom query Example: status:Sent,status_code:201. (optional)</param>
@@ -372,7 +372,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get a list of Fax History. Get a list of Fax History.
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Customize result by setting from date (timestsamp) Example: 1457572619. (optional)</param>
         /// <param name="dateTo">Customize result by setting to date (timestamp) Example: 1457573000. (optional)</param>
         /// <param name="q">Custom query Example: status:Sent,status_code:201. (optional)</param>
@@ -440,7 +440,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get a list of Fax History. Get a list of Fax History.
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Customize result by setting from date (timestsamp) Example: 1457572619. (optional)</param>
         /// <param name="dateTo">Customize result by setting to date (timestamp) Example: 1457573000. (optional)</param>
         /// <param name="q">Custom query Example: status:Sent,status_code:201. (optional)</param>
@@ -458,7 +458,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get a list of Fax History. Get a list of Fax History.
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Customize result by setting from date (timestsamp) Example: 1457572619. (optional)</param>
         /// <param name="dateTo">Customize result by setting to date (timestamp) Example: 1457573000. (optional)</param>
         /// <param name="q">Custom query Example: status:Sent,status_code:201. (optional)</param>
@@ -526,7 +526,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Calculate Total Price for Fax Messages sent Calculate Total Price for Fax Messages sent
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="faxMessage">FaxMessageCollection model</param>
         /// <returns>string</returns>
         public string FaxPricePost (FaxMessageCollection faxMessage)
@@ -538,7 +538,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Calculate Total Price for Fax Messages sent Calculate Total Price for Fax Messages sent
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="faxMessage">FaxMessageCollection model</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > FaxPricePostWithHttpInfo (FaxMessageCollection faxMessage)
@@ -606,7 +606,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Calculate Total Price for Fax Messages sent Calculate Total Price for Fax Messages sent
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="faxMessage">FaxMessageCollection model</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> FaxPricePostAsync (FaxMessageCollection faxMessage)
@@ -619,7 +619,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Calculate Total Price for Fax Messages sent Calculate Total Price for Fax Messages sent
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="faxMessage">FaxMessageCollection model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> FaxPricePostAsyncWithHttpInfo (FaxMessageCollection faxMessage)
@@ -687,7 +687,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get a single fax receipt based on message id. Get a single fax receipt based on message id.
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">ID of the message receipt to retrieve</param>
         /// <returns>string</returns>
         public string FaxReceiptsByMessageIdGet (string messageId)
@@ -699,7 +699,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get a single fax receipt based on message id. Get a single fax receipt based on message id.
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">ID of the message receipt to retrieve</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > FaxReceiptsByMessageIdGetWithHttpInfo (string messageId)
@@ -760,7 +760,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get a single fax receipt based on message id. Get a single fax receipt based on message id.
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">ID of the message receipt to retrieve</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> FaxReceiptsByMessageIdGetAsync (string messageId)
@@ -773,7 +773,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get a single fax receipt based on message id. Get a single fax receipt based on message id.
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">ID of the message receipt to retrieve</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> FaxReceiptsByMessageIdGetAsyncWithHttpInfo (string messageId)
@@ -834,7 +834,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get List of Fax Receipts Get List of Fax Receipts
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>string</returns>
         public string FaxReceiptsGet ()
         {
@@ -845,7 +845,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get List of Fax Receipts Get List of Fax Receipts
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > FaxReceiptsGetWithHttpInfo ()
         {
@@ -901,7 +901,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get List of Fax Receipts Get List of Fax Receipts
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> FaxReceiptsGetAsync ()
         {
@@ -913,7 +913,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get List of Fax Receipts Get List of Fax Receipts
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> FaxReceiptsGetAsyncWithHttpInfo ()
         {
@@ -969,7 +969,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Send a fax using supplied supported file-types. Send a fax using supplied supported file-types.
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="faxMessage">FaxMessageCollection model</param>
         /// <returns>string</returns>
         public string FaxSendPost (FaxMessageCollection faxMessage)
@@ -981,7 +981,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Send a fax using supplied supported file-types. Send a fax using supplied supported file-types.
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="faxMessage">FaxMessageCollection model</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > FaxSendPostWithHttpInfo (FaxMessageCollection faxMessage)
@@ -1049,7 +1049,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Send a fax using supplied supported file-types. Send a fax using supplied supported file-types.
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="faxMessage">FaxMessageCollection model</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> FaxSendPostAsync (FaxMessageCollection faxMessage)
@@ -1062,7 +1062,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Send a fax using supplied supported file-types. Send a fax using supplied supported file-types.
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="faxMessage">FaxMessageCollection model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> FaxSendPostAsyncWithHttpInfo (FaxMessageCollection faxMessage)

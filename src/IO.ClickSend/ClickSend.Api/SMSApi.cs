@@ -13,10 +13,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
-namespace IO.Swagger.ClickSend.Api
+namespace IO.ClickSend.ClickSend.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -30,7 +30,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update all scheduled message as cancelled
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>string</returns>
         string SmsCancelAllPut ();
 
@@ -40,7 +40,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update all scheduled message as cancelled
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> SmsCancelAllPutWithHttpInfo ();
         /// <summary>
@@ -49,7 +49,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update scheduled message as cancelled
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">The message ID you want to cancel</param>
         /// <returns>string</returns>
         string SmsCancelByMessageIdPut (string messageId);
@@ -60,7 +60,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update scheduled message as cancelled
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">The message ID you want to cancel</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> SmsCancelByMessageIdPutWithHttpInfo (string messageId);
@@ -70,7 +70,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Export all sms history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to download history as</param>
         /// <returns>System.IO.Stream</returns>
         System.IO.Stream SmsHistoryExportGet (string filename);
@@ -81,7 +81,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Export all sms history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to download history as</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
         ApiResponse<System.IO.Stream> SmsHistoryExportGetWithHttpInfo (string filename);
@@ -91,7 +91,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all sms history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -105,7 +105,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all sms history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -118,7 +118,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all inbound sms
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -130,7 +130,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all inbound sms
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -141,7 +141,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Create inbound sms
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="url">Your url</param>
         /// <returns>string</returns>
         string SmsInboundPost (string url);
@@ -152,7 +152,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Create inbound sms
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="url">Your url</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> SmsInboundPostWithHttpInfo (string url);
@@ -162,7 +162,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Mark all inbound SMS as read optionally before a certain date
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)</param>
         /// <returns>string</returns>
         string SmsInboundReadPut (string dateBefore = null);
@@ -173,7 +173,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Mark all inbound SMS as read optionally before a certain date
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> SmsInboundReadPutWithHttpInfo (string dateBefore = null);
@@ -183,7 +183,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Calculate sms price
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsMessages">SmsMessageCollection model</param>
         /// <returns>string</returns>
         string SmsPricePost (SmsMessageCollection smsMessages);
@@ -194,7 +194,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Calculate sms price
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsMessages">SmsMessageCollection model</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> SmsPricePostWithHttpInfo (SmsMessageCollection smsMessages);
@@ -204,7 +204,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get a Specific Delivery Receipt
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <returns>string</returns>
         string SmsReceiptsByMessageIdGet (string messageId);
@@ -215,7 +215,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get a Specific Delivery Receipt
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> SmsReceiptsByMessageIdGetWithHttpInfo (string messageId);
@@ -225,7 +225,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all delivery receipts
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -237,7 +237,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all delivery receipts
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -248,7 +248,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Add a delivery receipt
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="url">Your url</param>
         /// <returns>string</returns>
         string SmsReceiptsPost (string url);
@@ -259,7 +259,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Add a delivery receipt
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="url">Your url</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> SmsReceiptsPostWithHttpInfo (string url);
@@ -269,7 +269,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Mark delivery receipts as read
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">Mark all as read before this timestamp (optional)</param>
         /// <returns>string</returns>
         string SmsReceiptsReadPut (string dateBefore = null);
@@ -280,7 +280,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Mark delivery receipts as read
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">Mark all as read before this timestamp (optional)</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> SmsReceiptsReadPutWithHttpInfo (string dateBefore = null);
@@ -290,7 +290,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         ///  # Send one or more SMS messages  You can post up to 1000 messages with each API call. You can send to a mix of contacts and contact lists, as long as the total number of recipients is up to 1000.  The response contains status and details for each recipient.  *Refer to [Application Status Codes](https://dashboard.clicksend.com/#/signup/step1/) for the possible response message status strings.* 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsMessages">SmsMessageCollection model</param>
         /// <returns>string</returns>
         string SmsSendPost (SmsMessageCollection smsMessages);
@@ -301,7 +301,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         ///  # Send one or more SMS messages  You can post up to 1000 messages with each API call. You can send to a mix of contacts and contact lists, as long as the total number of recipients is up to 1000.  The response contains status and details for each recipient.  *Refer to [Application Status Codes](https://dashboard.clicksend.com/#/signup/step1/) for the possible response message status strings.* 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsMessages">SmsMessageCollection model</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> SmsSendPostWithHttpInfo (SmsMessageCollection smsMessages);
@@ -311,7 +311,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Delete sms template
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Template id</param>
         /// <returns>string</returns>
         string SmsTemplatesByTemplateIdDelete (int? templateId);
@@ -322,7 +322,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Delete sms template
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Template id</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> SmsTemplatesByTemplateIdDeleteWithHttpInfo (int? templateId);
@@ -332,7 +332,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update sms template
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Template id</param>
         /// <param name="smsTemplate">Template item</param>
         /// <returns>string</returns>
@@ -344,7 +344,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update sms template
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Template id</param>
         /// <param name="smsTemplate">Template item</param>
         /// <returns>ApiResponse of string</returns>
@@ -355,7 +355,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get lists of all sms templates
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -367,7 +367,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get lists of all sms templates
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -378,7 +378,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Create sms template
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsTemplate">SmsTemplate model</param>
         /// <returns>string</returns>
         string SmsTemplatesPost (SmsTemplate smsTemplate);
@@ -389,7 +389,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Create sms template
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsTemplate">SmsTemplate model</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> SmsTemplatesPostWithHttpInfo (SmsTemplate smsTemplate);
@@ -401,7 +401,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update all scheduled message as cancelled
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> SmsCancelAllPutAsync ();
 
@@ -411,7 +411,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update all scheduled message as cancelled
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> SmsCancelAllPutAsyncWithHttpInfo ();
         /// <summary>
@@ -420,7 +420,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update scheduled message as cancelled
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">The message ID you want to cancel</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> SmsCancelByMessageIdPutAsync (string messageId);
@@ -431,7 +431,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update scheduled message as cancelled
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">The message ID you want to cancel</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> SmsCancelByMessageIdPutAsyncWithHttpInfo (string messageId);
@@ -441,7 +441,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Export all sms history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to download history as</param>
         /// <returns>Task of System.IO.Stream</returns>
         System.Threading.Tasks.Task<System.IO.Stream> SmsHistoryExportGetAsync (string filename);
@@ -452,7 +452,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Export all sms history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to download history as</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
         System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> SmsHistoryExportGetAsyncWithHttpInfo (string filename);
@@ -462,7 +462,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all sms history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -476,7 +476,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all sms history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -489,7 +489,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all inbound sms
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -501,7 +501,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all inbound sms
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -512,7 +512,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Create inbound sms
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="url">Your url</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> SmsInboundPostAsync (string url);
@@ -523,7 +523,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Create inbound sms
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="url">Your url</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> SmsInboundPostAsyncWithHttpInfo (string url);
@@ -533,7 +533,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Mark all inbound SMS as read optionally before a certain date
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> SmsInboundReadPutAsync (string dateBefore = null);
@@ -544,7 +544,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Mark all inbound SMS as read optionally before a certain date
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> SmsInboundReadPutAsyncWithHttpInfo (string dateBefore = null);
@@ -554,7 +554,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Calculate sms price
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsMessages">SmsMessageCollection model</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> SmsPricePostAsync (SmsMessageCollection smsMessages);
@@ -565,7 +565,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Calculate sms price
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsMessages">SmsMessageCollection model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> SmsPricePostAsyncWithHttpInfo (SmsMessageCollection smsMessages);
@@ -575,7 +575,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get a Specific Delivery Receipt
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> SmsReceiptsByMessageIdGetAsync (string messageId);
@@ -586,7 +586,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get a Specific Delivery Receipt
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptsByMessageIdGetAsyncWithHttpInfo (string messageId);
@@ -596,7 +596,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all delivery receipts
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -608,7 +608,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all delivery receipts
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -619,7 +619,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Add a delivery receipt
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="url">Your url</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> SmsReceiptsPostAsync (string url);
@@ -630,7 +630,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Add a delivery receipt
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="url">Your url</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptsPostAsyncWithHttpInfo (string url);
@@ -640,7 +640,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Mark delivery receipts as read
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">Mark all as read before this timestamp (optional)</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> SmsReceiptsReadPutAsync (string dateBefore = null);
@@ -651,7 +651,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Mark delivery receipts as read
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">Mark all as read before this timestamp (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptsReadPutAsyncWithHttpInfo (string dateBefore = null);
@@ -661,7 +661,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         ///  # Send one or more SMS messages  You can post up to 1000 messages with each API call. You can send to a mix of contacts and contact lists, as long as the total number of recipients is up to 1000.  The response contains status and details for each recipient.  *Refer to [Application Status Codes](https://dashboard.clicksend.com/#/signup/step1/) for the possible response message status strings.* 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsMessages">SmsMessageCollection model</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> SmsSendPostAsync (SmsMessageCollection smsMessages);
@@ -672,7 +672,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         ///  # Send one or more SMS messages  You can post up to 1000 messages with each API call. You can send to a mix of contacts and contact lists, as long as the total number of recipients is up to 1000.  The response contains status and details for each recipient.  *Refer to [Application Status Codes](https://dashboard.clicksend.com/#/signup/step1/) for the possible response message status strings.* 
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsMessages">SmsMessageCollection model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> SmsSendPostAsyncWithHttpInfo (SmsMessageCollection smsMessages);
@@ -682,7 +682,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Delete sms template
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Template id</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> SmsTemplatesByTemplateIdDeleteAsync (int? templateId);
@@ -693,7 +693,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Delete sms template
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Template id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> SmsTemplatesByTemplateIdDeleteAsyncWithHttpInfo (int? templateId);
@@ -703,7 +703,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update sms template
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Template id</param>
         /// <param name="smsTemplate">Template item</param>
         /// <returns>Task of string</returns>
@@ -715,7 +715,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update sms template
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Template id</param>
         /// <param name="smsTemplate">Template item</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -726,7 +726,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get lists of all sms templates
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -738,7 +738,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get lists of all sms templates
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -749,7 +749,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Create sms template
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsTemplate">SmsTemplate model</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> SmsTemplatesPostAsync (SmsTemplate smsTemplate);
@@ -760,7 +760,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Create sms template
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsTemplate">SmsTemplate model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> SmsTemplatesPostAsyncWithHttpInfo (SmsTemplate smsTemplate);
@@ -772,7 +772,7 @@ namespace IO.Swagger.ClickSend.Api
     /// </summary>
     public partial class SMSApi : ISMSApi
     {
-        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private IO.ClickSend.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SMSApi"/> class.
@@ -780,9 +780,9 @@ namespace IO.Swagger.ClickSend.Api
         /// <returns></returns>
         public SMSApi(String basePath)
         {
-            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
+            this.Configuration = new IO.ClickSend.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -791,14 +791,14 @@ namespace IO.Swagger.ClickSend.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public SMSApi(IO.Swagger.Client.Configuration configuration = null)
+        public SMSApi(IO.ClickSend.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.Swagger.Client.Configuration.Default;
+                this.Configuration = IO.ClickSend.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -824,12 +824,12 @@ namespace IO.Swagger.ClickSend.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.Swagger.Client.Configuration Configuration {get; set;}
+        public IO.ClickSend.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
+        public IO.ClickSend.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -867,7 +867,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update all scheduled message as cancelled Update all scheduled message as cancelled
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>string</returns>
         public string SmsCancelAllPut ()
         {
@@ -878,7 +878,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update all scheduled message as cancelled Update all scheduled message as cancelled
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > SmsCancelAllPutWithHttpInfo ()
         {
@@ -934,7 +934,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update all scheduled message as cancelled Update all scheduled message as cancelled
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> SmsCancelAllPutAsync ()
         {
@@ -946,7 +946,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update all scheduled message as cancelled Update all scheduled message as cancelled
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> SmsCancelAllPutAsyncWithHttpInfo ()
         {
@@ -1002,7 +1002,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update scheduled message as cancelled Update scheduled message as cancelled
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">The message ID you want to cancel</param>
         /// <returns>string</returns>
         public string SmsCancelByMessageIdPut (string messageId)
@@ -1014,7 +1014,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update scheduled message as cancelled Update scheduled message as cancelled
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">The message ID you want to cancel</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > SmsCancelByMessageIdPutWithHttpInfo (string messageId)
@@ -1075,7 +1075,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update scheduled message as cancelled Update scheduled message as cancelled
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">The message ID you want to cancel</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> SmsCancelByMessageIdPutAsync (string messageId)
@@ -1088,7 +1088,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update scheduled message as cancelled Update scheduled message as cancelled
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">The message ID you want to cancel</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> SmsCancelByMessageIdPutAsyncWithHttpInfo (string messageId)
@@ -1149,7 +1149,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Export all sms history Export all sms history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to download history as</param>
         /// <returns>System.IO.Stream</returns>
         public System.IO.Stream SmsHistoryExportGet (string filename)
@@ -1161,7 +1161,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Export all sms history Export all sms history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to download history as</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
         public ApiResponse< System.IO.Stream > SmsHistoryExportGetWithHttpInfo (string filename)
@@ -1186,8 +1186,7 @@ namespace IO.Swagger.ClickSend.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "application/csv"
+                "application/json"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1223,7 +1222,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Export all sms history Export all sms history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to download history as</param>
         /// <returns>Task of System.IO.Stream</returns>
         public async System.Threading.Tasks.Task<System.IO.Stream> SmsHistoryExportGetAsync (string filename)
@@ -1236,7 +1235,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Export all sms history Export all sms history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to download history as</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> SmsHistoryExportGetAsyncWithHttpInfo (string filename)
@@ -1261,8 +1260,7 @@ namespace IO.Swagger.ClickSend.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "application/csv"
+                "application/json"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1298,7 +1296,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all sms history Get all sms history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -1313,7 +1311,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all sms history Get all sms history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -1377,7 +1375,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all sms history Get all sms history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -1393,7 +1391,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all sms history Get all sms history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -1457,7 +1455,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all inbound sms Get all inbound sms
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -1470,7 +1468,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all inbound sms Get all inbound sms
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -1530,7 +1528,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all inbound sms Get all inbound sms
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -1544,7 +1542,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all inbound sms Get all inbound sms
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -1604,7 +1602,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Create inbound sms Create inbound sms
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="url">Your url</param>
         /// <returns>string</returns>
         public string SmsInboundPost (string url)
@@ -1616,7 +1614,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Create inbound sms Create inbound sms
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="url">Your url</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > SmsInboundPostWithHttpInfo (string url)
@@ -1684,7 +1682,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Create inbound sms Create inbound sms
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="url">Your url</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> SmsInboundPostAsync (string url)
@@ -1697,7 +1695,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Create inbound sms Create inbound sms
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="url">Your url</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> SmsInboundPostAsyncWithHttpInfo (string url)
@@ -1765,7 +1763,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Mark inbound SMS as read Mark all inbound SMS as read optionally before a certain date
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)</param>
         /// <returns>string</returns>
         public string SmsInboundReadPut (string dateBefore = null)
@@ -1777,7 +1775,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Mark inbound SMS as read Mark all inbound SMS as read optionally before a certain date
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > SmsInboundReadPutWithHttpInfo (string dateBefore = null)
@@ -1842,7 +1840,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Mark inbound SMS as read Mark all inbound SMS as read optionally before a certain date
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> SmsInboundReadPutAsync (string dateBefore = null)
@@ -1855,7 +1853,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Mark inbound SMS as read Mark all inbound SMS as read optionally before a certain date
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> SmsInboundReadPutAsyncWithHttpInfo (string dateBefore = null)
@@ -1920,7 +1918,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Calculate sms price Calculate sms price
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsMessages">SmsMessageCollection model</param>
         /// <returns>string</returns>
         public string SmsPricePost (SmsMessageCollection smsMessages)
@@ -1932,7 +1930,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Calculate sms price Calculate sms price
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsMessages">SmsMessageCollection model</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > SmsPricePostWithHttpInfo (SmsMessageCollection smsMessages)
@@ -2000,7 +1998,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Calculate sms price Calculate sms price
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsMessages">SmsMessageCollection model</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> SmsPricePostAsync (SmsMessageCollection smsMessages)
@@ -2013,7 +2011,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Calculate sms price Calculate sms price
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsMessages">SmsMessageCollection model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> SmsPricePostAsyncWithHttpInfo (SmsMessageCollection smsMessages)
@@ -2081,7 +2079,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get a Specific Delivery Receipt Get a Specific Delivery Receipt
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <returns>string</returns>
         public string SmsReceiptsByMessageIdGet (string messageId)
@@ -2093,7 +2091,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get a Specific Delivery Receipt Get a Specific Delivery Receipt
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > SmsReceiptsByMessageIdGetWithHttpInfo (string messageId)
@@ -2154,7 +2152,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get a Specific Delivery Receipt Get a Specific Delivery Receipt
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> SmsReceiptsByMessageIdGetAsync (string messageId)
@@ -2167,7 +2165,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get a Specific Delivery Receipt Get a Specific Delivery Receipt
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptsByMessageIdGetAsyncWithHttpInfo (string messageId)
@@ -2228,7 +2226,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all delivery receipts Get all delivery receipts
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -2241,7 +2239,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all delivery receipts Get all delivery receipts
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -2301,7 +2299,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all delivery receipts Get all delivery receipts
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -2315,7 +2313,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all delivery receipts Get all delivery receipts
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -2375,7 +2373,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Add a delivery receipt Add a delivery receipt
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="url">Your url</param>
         /// <returns>string</returns>
         public string SmsReceiptsPost (string url)
@@ -2387,7 +2385,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Add a delivery receipt Add a delivery receipt
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="url">Your url</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > SmsReceiptsPostWithHttpInfo (string url)
@@ -2455,7 +2453,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Add a delivery receipt Add a delivery receipt
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="url">Your url</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> SmsReceiptsPostAsync (string url)
@@ -2468,7 +2466,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Add a delivery receipt Add a delivery receipt
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="url">Your url</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptsPostAsyncWithHttpInfo (string url)
@@ -2536,7 +2534,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Mark delivery receipts as read Mark delivery receipts as read
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">Mark all as read before this timestamp (optional)</param>
         /// <returns>string</returns>
         public string SmsReceiptsReadPut (string dateBefore = null)
@@ -2548,7 +2546,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Mark delivery receipts as read Mark delivery receipts as read
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">Mark all as read before this timestamp (optional)</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > SmsReceiptsReadPutWithHttpInfo (string dateBefore = null)
@@ -2613,7 +2611,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Mark delivery receipts as read Mark delivery receipts as read
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">Mark all as read before this timestamp (optional)</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> SmsReceiptsReadPutAsync (string dateBefore = null)
@@ -2626,7 +2624,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Mark delivery receipts as read Mark delivery receipts as read
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">Mark all as read before this timestamp (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptsReadPutAsyncWithHttpInfo (string dateBefore = null)
@@ -2691,7 +2689,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Send sms message(s)  # Send one or more SMS messages  You can post up to 1000 messages with each API call. You can send to a mix of contacts and contact lists, as long as the total number of recipients is up to 1000.  The response contains status and details for each recipient.  *Refer to [Application Status Codes](https://dashboard.clicksend.com/#/signup/step1/) for the possible response message status strings.* 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsMessages">SmsMessageCollection model</param>
         /// <returns>string</returns>
         public string SmsSendPost (SmsMessageCollection smsMessages)
@@ -2703,7 +2701,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Send sms message(s)  # Send one or more SMS messages  You can post up to 1000 messages with each API call. You can send to a mix of contacts and contact lists, as long as the total number of recipients is up to 1000.  The response contains status and details for each recipient.  *Refer to [Application Status Codes](https://dashboard.clicksend.com/#/signup/step1/) for the possible response message status strings.* 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsMessages">SmsMessageCollection model</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > SmsSendPostWithHttpInfo (SmsMessageCollection smsMessages)
@@ -2771,7 +2769,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Send sms message(s)  # Send one or more SMS messages  You can post up to 1000 messages with each API call. You can send to a mix of contacts and contact lists, as long as the total number of recipients is up to 1000.  The response contains status and details for each recipient.  *Refer to [Application Status Codes](https://dashboard.clicksend.com/#/signup/step1/) for the possible response message status strings.* 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsMessages">SmsMessageCollection model</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> SmsSendPostAsync (SmsMessageCollection smsMessages)
@@ -2784,7 +2782,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Send sms message(s)  # Send one or more SMS messages  You can post up to 1000 messages with each API call. You can send to a mix of contacts and contact lists, as long as the total number of recipients is up to 1000.  The response contains status and details for each recipient.  *Refer to [Application Status Codes](https://dashboard.clicksend.com/#/signup/step1/) for the possible response message status strings.* 
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsMessages">SmsMessageCollection model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> SmsSendPostAsyncWithHttpInfo (SmsMessageCollection smsMessages)
@@ -2852,7 +2850,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Delete sms template Delete sms template
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Template id</param>
         /// <returns>string</returns>
         public string SmsTemplatesByTemplateIdDelete (int? templateId)
@@ -2864,7 +2862,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Delete sms template Delete sms template
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Template id</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > SmsTemplatesByTemplateIdDeleteWithHttpInfo (int? templateId)
@@ -2925,7 +2923,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Delete sms template Delete sms template
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Template id</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> SmsTemplatesByTemplateIdDeleteAsync (int? templateId)
@@ -2938,7 +2936,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Delete sms template Delete sms template
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Template id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> SmsTemplatesByTemplateIdDeleteAsyncWithHttpInfo (int? templateId)
@@ -2999,7 +2997,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update sms template Update sms template
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Template id</param>
         /// <param name="smsTemplate">Template item</param>
         /// <returns>string</returns>
@@ -3012,7 +3010,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update sms template Update sms template
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Template id</param>
         /// <param name="smsTemplate">Template item</param>
         /// <returns>ApiResponse of string</returns>
@@ -3085,7 +3083,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update sms template Update sms template
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Template id</param>
         /// <param name="smsTemplate">Template item</param>
         /// <returns>Task of string</returns>
@@ -3099,7 +3097,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update sms template Update sms template
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Template id</param>
         /// <param name="smsTemplate">Template item</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -3172,7 +3170,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get lists of all sms templates Get lists of all sms templates
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -3185,7 +3183,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get lists of all sms templates Get lists of all sms templates
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -3245,7 +3243,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get lists of all sms templates Get lists of all sms templates
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -3259,7 +3257,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get lists of all sms templates Get lists of all sms templates
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -3319,7 +3317,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Create sms template Create sms template
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsTemplate">SmsTemplate model</param>
         /// <returns>string</returns>
         public string SmsTemplatesPost (SmsTemplate smsTemplate)
@@ -3331,7 +3329,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Create sms template Create sms template
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsTemplate">SmsTemplate model</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > SmsTemplatesPostWithHttpInfo (SmsTemplate smsTemplate)
@@ -3399,7 +3397,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Create sms template Create sms template
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsTemplate">SmsTemplate model</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> SmsTemplatesPostAsync (SmsTemplate smsTemplate)
@@ -3412,7 +3410,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Create sms template Create sms template
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsTemplate">SmsTemplate model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> SmsTemplatesPostAsyncWithHttpInfo (SmsTemplate smsTemplate)
