@@ -32,8 +32,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
-        /// <returns>System.IO.Stream</returns>
-        System.IO.Stream PostLettersExportGet (string filename);
+        /// <returns>string</returns>
+        string PostLettersExportGet (string filename);
 
         /// <summary>
         /// export post letter history
@@ -43,8 +43,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
-        /// <returns>ApiResponse of System.IO.Stream</returns>
-        ApiResponse<System.IO.Stream> PostLettersExportGetWithHttpInfo (string filename);
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> PostLettersExportGetWithHttpInfo (string filename);
         /// <summary>
         /// Get all post letter history
         /// </summary>
@@ -120,8 +120,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
-        /// <returns>Task of System.IO.Stream</returns>
-        System.Threading.Tasks.Task<System.IO.Stream> PostLettersExportGetAsync (string filename);
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> PostLettersExportGetAsync (string filename);
 
         /// <summary>
         /// export post letter history
@@ -131,8 +131,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
-        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PostLettersExportGetAsyncWithHttpInfo (string filename);
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> PostLettersExportGetAsyncWithHttpInfo (string filename);
         /// <summary>
         /// Get all post letter history
         /// </summary>
@@ -303,10 +303,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
-        /// <returns>System.IO.Stream</returns>
-        public System.IO.Stream PostLettersExportGet (string filename)
+        /// <returns>string</returns>
+        public string PostLettersExportGet (string filename)
         {
-             ApiResponse<System.IO.Stream> localVarResponse = PostLettersExportGetWithHttpInfo(filename);
+             ApiResponse<string> localVarResponse = PostLettersExportGetWithHttpInfo(filename);
              return localVarResponse.Data;
         }
 
@@ -315,8 +315,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
-        /// <returns>ApiResponse of System.IO.Stream</returns>
-        public ApiResponse< System.IO.Stream > PostLettersExportGetWithHttpInfo (string filename)
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > PostLettersExportGetWithHttpInfo (string filename)
         {
             // verify the required parameter 'filename' is set
             if (filename == null)
@@ -366,9 +366,9 @@ namespace IO.ClickSend.ClickSend.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+            return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (System.IO.Stream) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
         /// <summary>
@@ -376,10 +376,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
-        /// <returns>Task of System.IO.Stream</returns>
-        public async System.Threading.Tasks.Task<System.IO.Stream> PostLettersExportGetAsync (string filename)
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> PostLettersExportGetAsync (string filename)
         {
-             ApiResponse<System.IO.Stream> localVarResponse = await PostLettersExportGetAsyncWithHttpInfo(filename);
+             ApiResponse<string> localVarResponse = await PostLettersExportGetAsyncWithHttpInfo(filename);
              return localVarResponse.Data;
 
         }
@@ -389,8 +389,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
-        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PostLettersExportGetAsyncWithHttpInfo (string filename)
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> PostLettersExportGetAsyncWithHttpInfo (string filename)
         {
             // verify the required parameter 'filename' is set
             if (filename == null)
@@ -440,9 +440,9 @@ namespace IO.ClickSend.ClickSend.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+            return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (System.IO.Stream) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
         /// <summary>

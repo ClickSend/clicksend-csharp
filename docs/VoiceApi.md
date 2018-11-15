@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 
 <a name="voicehistoryexportget"></a>
 # **VoiceHistoryExportGet**
-> System.IO.Stream VoiceHistoryExportGet (string filename)
+> string VoiceHistoryExportGet (string filename)
 
 Export voice history
 
@@ -172,7 +172,7 @@ namespace Example
             try
             {
                 // Export voice history
-                System.IO.Stream result = apiInstance.VoiceHistoryExportGet(filename);
+                string result = apiInstance.VoiceHistoryExportGet(filename);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -192,7 +192,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**System.IO.Stream**
+**string**
 
 ### Authorization
 

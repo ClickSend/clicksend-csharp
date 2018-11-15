@@ -34,8 +34,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="filename">Filename to download history as</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
-        /// <returns>System.IO.Stream</returns>
-        System.IO.Stream EmailHistoryExportGet (string filename, int? dateFrom = null, int? dateTo = null);
+        /// <returns>string</returns>
+        string EmailHistoryExportGet (string filename, int? dateFrom = null, int? dateTo = null);
 
         /// <summary>
         /// Export all Transactional Email history
@@ -47,8 +47,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="filename">Filename to download history as</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
-        /// <returns>ApiResponse of System.IO.Stream</returns>
-        ApiResponse<System.IO.Stream> EmailHistoryExportGetWithHttpInfo (string filename, int? dateFrom = null, int? dateTo = null);
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> EmailHistoryExportGetWithHttpInfo (string filename, int? dateFrom = null, int? dateTo = null);
         /// <summary>
         /// Get all transactional email history
         /// </summary>
@@ -130,8 +130,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="filename">Filename to download history as</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
-        /// <returns>Task of System.IO.Stream</returns>
-        System.Threading.Tasks.Task<System.IO.Stream> EmailHistoryExportGetAsync (string filename, int? dateFrom = null, int? dateTo = null);
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> EmailHistoryExportGetAsync (string filename, int? dateFrom = null, int? dateTo = null);
 
         /// <summary>
         /// Export all Transactional Email history
@@ -143,8 +143,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="filename">Filename to download history as</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
-        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> EmailHistoryExportGetAsyncWithHttpInfo (string filename, int? dateFrom = null, int? dateTo = null);
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> EmailHistoryExportGetAsyncWithHttpInfo (string filename, int? dateFrom = null, int? dateTo = null);
         /// <summary>
         /// Get all transactional email history
         /// </summary>
@@ -321,10 +321,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="filename">Filename to download history as</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
-        /// <returns>System.IO.Stream</returns>
-        public System.IO.Stream EmailHistoryExportGet (string filename, int? dateFrom = null, int? dateTo = null)
+        /// <returns>string</returns>
+        public string EmailHistoryExportGet (string filename, int? dateFrom = null, int? dateTo = null)
         {
-             ApiResponse<System.IO.Stream> localVarResponse = EmailHistoryExportGetWithHttpInfo(filename, dateFrom, dateTo);
+             ApiResponse<string> localVarResponse = EmailHistoryExportGetWithHttpInfo(filename, dateFrom, dateTo);
              return localVarResponse.Data;
         }
 
@@ -335,8 +335,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="filename">Filename to download history as</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
-        /// <returns>ApiResponse of System.IO.Stream</returns>
-        public ApiResponse< System.IO.Stream > EmailHistoryExportGetWithHttpInfo (string filename, int? dateFrom = null, int? dateTo = null)
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > EmailHistoryExportGetWithHttpInfo (string filename, int? dateFrom = null, int? dateTo = null)
         {
             // verify the required parameter 'filename' is set
             if (filename == null)
@@ -388,9 +388,9 @@ namespace IO.ClickSend.ClickSend.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+            return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (System.IO.Stream) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
         /// <summary>
@@ -400,10 +400,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="filename">Filename to download history as</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
-        /// <returns>Task of System.IO.Stream</returns>
-        public async System.Threading.Tasks.Task<System.IO.Stream> EmailHistoryExportGetAsync (string filename, int? dateFrom = null, int? dateTo = null)
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> EmailHistoryExportGetAsync (string filename, int? dateFrom = null, int? dateTo = null)
         {
-             ApiResponse<System.IO.Stream> localVarResponse = await EmailHistoryExportGetAsyncWithHttpInfo(filename, dateFrom, dateTo);
+             ApiResponse<string> localVarResponse = await EmailHistoryExportGetAsyncWithHttpInfo(filename, dateFrom, dateTo);
              return localVarResponse.Data;
 
         }
@@ -415,8 +415,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="filename">Filename to download history as</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
-        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> EmailHistoryExportGetAsyncWithHttpInfo (string filename, int? dateFrom = null, int? dateTo = null)
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> EmailHistoryExportGetAsyncWithHttpInfo (string filename, int? dateFrom = null, int? dateTo = null)
         {
             // verify the required parameter 'filename' is set
             if (filename == null)
@@ -468,9 +468,9 @@ namespace IO.ClickSend.ClickSend.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+            return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (System.IO.Stream) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
         /// <summary>

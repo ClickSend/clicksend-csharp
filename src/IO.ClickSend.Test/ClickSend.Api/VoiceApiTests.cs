@@ -96,7 +96,7 @@ namespace IO.ClickSend.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string filename = null;
             //var response = instance.VoiceHistoryExportGet(filename);
-            //Assert.IsInstanceOf<System.IO.Stream> (response, "response is System.IO.Stream");
+            //Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>

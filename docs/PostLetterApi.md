@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="postlettersexportget"></a>
 # **PostLettersExportGet**
-> System.IO.Stream PostLettersExportGet (string filename)
+> string PostLettersExportGet (string filename)
 
 export post letter history
 
@@ -42,7 +42,7 @@ namespace Example
             try
             {
                 // export post letter history
-                System.IO.Stream result = apiInstance.PostLettersExportGet(filename);
+                string result = apiInstance.PostLettersExportGet(filename);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**System.IO.Stream**
+**string**
 
 ### Authorization
 

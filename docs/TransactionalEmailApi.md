@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="emailhistoryexportget"></a>
 # **EmailHistoryExportGet**
-> System.IO.Stream EmailHistoryExportGet (string filename, int? dateFrom = null, int? dateTo = null)
+> string EmailHistoryExportGet (string filename, int? dateFrom = null, int? dateTo = null)
 
 Export all Transactional Email history
 
@@ -44,7 +44,7 @@ namespace Example
             try
             {
                 // Export all Transactional Email history
-                System.IO.Stream result = apiInstance.EmailHistoryExportGet(filename, dateFrom, dateTo);
+                string result = apiInstance.EmailHistoryExportGet(filename, dateFrom, dateTo);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**System.IO.Stream**
+**string**
 
 ### Authorization
 

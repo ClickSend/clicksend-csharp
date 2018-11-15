@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 
 <a name="smshistoryexportget"></a>
 # **SmsHistoryExportGet**
-> System.IO.Stream SmsHistoryExportGet (string filename)
+> string SmsHistoryExportGet (string filename)
 
 Export all sms history
 
@@ -181,7 +181,7 @@ namespace Example
             try
             {
                 // Export all sms history
-                System.IO.Stream result = apiInstance.SmsHistoryExportGet(filename);
+                string result = apiInstance.SmsHistoryExportGet(filename);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -201,7 +201,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**System.IO.Stream**
+**string**
 
 ### Authorization
 

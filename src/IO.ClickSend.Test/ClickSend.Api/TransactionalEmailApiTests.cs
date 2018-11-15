@@ -75,7 +75,7 @@ namespace IO.ClickSend.Test
             //int? dateFrom = null;
             //int? dateTo = null;
             //var response = instance.EmailHistoryExportGet(filename, dateFrom, dateTo);
-            //Assert.IsInstanceOf<System.IO.Stream> (response, "response is System.IO.Stream");
+            //Assert.IsInstanceOf<string> (response, "response is string");
         }
         
         /// <summary>

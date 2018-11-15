@@ -120,8 +120,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
-        /// <returns>System.IO.Stream</returns>
-        System.IO.Stream EmailCampaignHistoryExportGet (int? emailCampaignId, int? dateFrom = null, int? dateTo = null);
+        /// <returns>string</returns>
+        string EmailCampaignHistoryExportGet (int? emailCampaignId, int? dateFrom = null, int? dateTo = null);
 
         /// <summary>
         /// Export specific email campaign history
@@ -133,8 +133,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
-        /// <returns>ApiResponse of System.IO.Stream</returns>
-        ApiResponse<System.IO.Stream> EmailCampaignHistoryExportGetWithHttpInfo (int? emailCampaignId, int? dateFrom = null, int? dateTo = null);
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> EmailCampaignHistoryExportGetWithHttpInfo (int? emailCampaignId, int? dateFrom = null, int? dateTo = null);
         /// <summary>
         /// Get specific email campaign history
         /// </summary>
@@ -434,8 +434,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
-        /// <returns>Task of System.IO.Stream</returns>
-        System.Threading.Tasks.Task<System.IO.Stream> EmailCampaignHistoryExportGetAsync (int? emailCampaignId, int? dateFrom = null, int? dateTo = null);
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> EmailCampaignHistoryExportGetAsync (int? emailCampaignId, int? dateFrom = null, int? dateTo = null);
 
         /// <summary>
         /// Export specific email campaign history
@@ -447,8 +447,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
-        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> EmailCampaignHistoryExportGetAsyncWithHttpInfo (int? emailCampaignId, int? dateFrom = null, int? dateTo = null);
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> EmailCampaignHistoryExportGetAsyncWithHttpInfo (int? emailCampaignId, int? dateFrom = null, int? dateTo = null);
         /// <summary>
         /// Get specific email campaign history
         /// </summary>
@@ -1359,10 +1359,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
-        /// <returns>System.IO.Stream</returns>
-        public System.IO.Stream EmailCampaignHistoryExportGet (int? emailCampaignId, int? dateFrom = null, int? dateTo = null)
+        /// <returns>string</returns>
+        public string EmailCampaignHistoryExportGet (int? emailCampaignId, int? dateFrom = null, int? dateTo = null)
         {
-             ApiResponse<System.IO.Stream> localVarResponse = EmailCampaignHistoryExportGetWithHttpInfo(emailCampaignId, dateFrom, dateTo);
+             ApiResponse<string> localVarResponse = EmailCampaignHistoryExportGetWithHttpInfo(emailCampaignId, dateFrom, dateTo);
              return localVarResponse.Data;
         }
 
@@ -1373,8 +1373,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
-        /// <returns>ApiResponse of System.IO.Stream</returns>
-        public ApiResponse< System.IO.Stream > EmailCampaignHistoryExportGetWithHttpInfo (int? emailCampaignId, int? dateFrom = null, int? dateTo = null)
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > EmailCampaignHistoryExportGetWithHttpInfo (int? emailCampaignId, int? dateFrom = null, int? dateTo = null)
         {
             // verify the required parameter 'emailCampaignId' is set
             if (emailCampaignId == null)
@@ -1426,9 +1426,9 @@ namespace IO.ClickSend.ClickSend.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+            return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (System.IO.Stream) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
         /// <summary>
@@ -1438,10 +1438,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
-        /// <returns>Task of System.IO.Stream</returns>
-        public async System.Threading.Tasks.Task<System.IO.Stream> EmailCampaignHistoryExportGetAsync (int? emailCampaignId, int? dateFrom = null, int? dateTo = null)
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> EmailCampaignHistoryExportGetAsync (int? emailCampaignId, int? dateFrom = null, int? dateTo = null)
         {
-             ApiResponse<System.IO.Stream> localVarResponse = await EmailCampaignHistoryExportGetAsyncWithHttpInfo(emailCampaignId, dateFrom, dateTo);
+             ApiResponse<string> localVarResponse = await EmailCampaignHistoryExportGetAsyncWithHttpInfo(emailCampaignId, dateFrom, dateTo);
              return localVarResponse.Data;
 
         }
@@ -1453,8 +1453,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
-        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> EmailCampaignHistoryExportGetAsyncWithHttpInfo (int? emailCampaignId, int? dateFrom = null, int? dateTo = null)
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> EmailCampaignHistoryExportGetAsyncWithHttpInfo (int? emailCampaignId, int? dateFrom = null, int? dateTo = null)
         {
             // verify the required parameter 'emailCampaignId' is set
             if (emailCampaignId == null)
@@ -1506,9 +1506,9 @@ namespace IO.ClickSend.ClickSend.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+            return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (System.IO.Stream) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
         /// <summary>

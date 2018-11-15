@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="postpostcardshistoryexportget"></a>
 # **PostPostcardsHistoryExportGet**
-> System.IO.Stream PostPostcardsHistoryExportGet (string filename)
+> string PostPostcardsHistoryExportGet (string filename)
 
 Export postcard history to a CSV file
 
@@ -42,7 +42,7 @@ namespace Example
             try
             {
                 // Export postcard history to a CSV file
-                System.IO.Stream result = apiInstance.PostPostcardsHistoryExportGet(filename);
+                string result = apiInstance.PostPostcardsHistoryExportGet(filename);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**System.IO.Stream**
+**string**
 
 ### Authorization
 

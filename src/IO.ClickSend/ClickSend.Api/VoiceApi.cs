@@ -72,8 +72,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
-        /// <returns>System.IO.Stream</returns>
-        System.IO.Stream VoiceHistoryExportGet (string filename);
+        /// <returns>string</returns>
+        string VoiceHistoryExportGet (string filename);
 
         /// <summary>
         /// Export voice history
@@ -83,8 +83,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
-        /// <returns>ApiResponse of System.IO.Stream</returns>
-        ApiResponse<System.IO.Stream> VoiceHistoryExportGetWithHttpInfo (string filename);
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> VoiceHistoryExportGetWithHttpInfo (string filename);
         /// <summary>
         /// Get all voice history
         /// </summary>
@@ -246,8 +246,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
-        /// <returns>Task of System.IO.Stream</returns>
-        System.Threading.Tasks.Task<System.IO.Stream> VoiceHistoryExportGetAsync (string filename);
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> VoiceHistoryExportGetAsync (string filename);
 
         /// <summary>
         /// Export voice history
@@ -257,8 +257,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
-        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> VoiceHistoryExportGetAsyncWithHttpInfo (string filename);
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> VoiceHistoryExportGetAsyncWithHttpInfo (string filename);
         /// <summary>
         /// Get all voice history
         /// </summary>
@@ -757,10 +757,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
-        /// <returns>System.IO.Stream</returns>
-        public System.IO.Stream VoiceHistoryExportGet (string filename)
+        /// <returns>string</returns>
+        public string VoiceHistoryExportGet (string filename)
         {
-             ApiResponse<System.IO.Stream> localVarResponse = VoiceHistoryExportGetWithHttpInfo(filename);
+             ApiResponse<string> localVarResponse = VoiceHistoryExportGetWithHttpInfo(filename);
              return localVarResponse.Data;
         }
 
@@ -769,8 +769,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
-        /// <returns>ApiResponse of System.IO.Stream</returns>
-        public ApiResponse< System.IO.Stream > VoiceHistoryExportGetWithHttpInfo (string filename)
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > VoiceHistoryExportGetWithHttpInfo (string filename)
         {
             // verify the required parameter 'filename' is set
             if (filename == null)
@@ -820,9 +820,9 @@ namespace IO.ClickSend.ClickSend.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+            return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (System.IO.Stream) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
         /// <summary>
@@ -830,10 +830,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
-        /// <returns>Task of System.IO.Stream</returns>
-        public async System.Threading.Tasks.Task<System.IO.Stream> VoiceHistoryExportGetAsync (string filename)
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> VoiceHistoryExportGetAsync (string filename)
         {
-             ApiResponse<System.IO.Stream> localVarResponse = await VoiceHistoryExportGetAsyncWithHttpInfo(filename);
+             ApiResponse<string> localVarResponse = await VoiceHistoryExportGetAsyncWithHttpInfo(filename);
              return localVarResponse.Data;
 
         }
@@ -843,8 +843,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
-        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> VoiceHistoryExportGetAsyncWithHttpInfo (string filename)
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> VoiceHistoryExportGetAsyncWithHttpInfo (string filename)
         {
             // verify the required parameter 'filename' is set
             if (filename == null)
@@ -894,9 +894,9 @@ namespace IO.ClickSend.ClickSend.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+            return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (System.IO.Stream) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
         /// <summary>

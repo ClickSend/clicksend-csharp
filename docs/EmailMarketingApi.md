@@ -284,7 +284,7 @@ Name | Type | Description  | Notes
 
 <a name="emailcampaignhistoryexportget"></a>
 # **EmailCampaignHistoryExportGet**
-> System.IO.Stream EmailCampaignHistoryExportGet (int? emailCampaignId, int? dateFrom = null, int? dateTo = null)
+> string EmailCampaignHistoryExportGet (int? emailCampaignId, int? dateFrom = null, int? dateTo = null)
 
 Export specific email campaign history
 
@@ -316,7 +316,7 @@ namespace Example
             try
             {
                 // Export specific email campaign history
-                System.IO.Stream result = apiInstance.EmailCampaignHistoryExportGet(emailCampaignId, dateFrom, dateTo);
+                string result = apiInstance.EmailCampaignHistoryExportGet(emailCampaignId, dateFrom, dateTo);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**System.IO.Stream**
+**string**
 
 ### Authorization
 
