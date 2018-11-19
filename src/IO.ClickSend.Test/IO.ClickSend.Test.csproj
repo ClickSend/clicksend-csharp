@@ -14,8 +14,8 @@ Contact: support@clicksend.com
     <ProjectGuid>{19F1DEBC-DE5E-4517-8062-F000CD499087}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IO.Swagger.Test</RootNamespace>
-    <AssemblyName>IO.Swagger.Test</AssemblyName>
+    <RootNamespace>IO.ClickSend.Test</RootNamespace>
+    <AssemblyName>IO.ClickSend.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -80,9 +80,9 @@ Contact: support@clicksend.com
   </ItemGroup>
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-      <ProjectReference Include="..\IO.Swagger\IO.Swagger.csproj">
-          <Project>{9BF1DC84-A5B2-40B4-8BCC-CCD3AE499BB1}</Project>
-          <Name>IO.Swagger</Name>
+      <ProjectReference Include="..\IO.ClickSend\IO.ClickSend.csproj">
+          <Project>{D34AD803-8C8D-4301-88ED-2BA6DE12DB6D}</Project>
+          <Name>IO.ClickSend</Name>
       </ProjectReference>
   </ItemGroup>
 </Project>

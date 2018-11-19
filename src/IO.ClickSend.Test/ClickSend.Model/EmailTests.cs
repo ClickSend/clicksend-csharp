@@ -99,6 +99,14 @@ namespace IO.ClickSend.Test
             // TODO unit test for the property 'From'
         }
         /// <summary>
+        /// Test the property 'Subject'
+        /// </summary>
+        [Test]
+        public void SubjectTest()
+        {
+            // TODO unit test for the property 'Subject'
+        }
+        /// <summary>
         /// Test the property 'Body'
         /// </summary>
         [Test]

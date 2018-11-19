@@ -42,7 +42,8 @@ namespace IO.ClickSend.ClickSend.Model
         /// </summary>
         /// <param name="emailAddress">Your email address (required).</param>
         /// <param name="from">Your sender id (required).</param>
-        public EmailSMSAddress(string emailAddress = default(string), string from = default(string))
+        /// <param name="subaccountId">Your subaccount id.</param>
+        public EmailSMSAddress(string emailAddress = default(string), string from = default(string), string subaccountId = default(string))
         {
             // to ensure "emailAddress" is required (not null)
             if (emailAddress == null)
@@ -62,6 +63,7 @@ namespace IO.ClickSend.ClickSend.Model
             {
                 this.From = from;
             }
+            this.SubaccountId = subaccountId;
         }
         
         /// <summary>
@@ -79,6 +81,13 @@ namespace IO.ClickSend.ClickSend.Model
         public string From { get; set; }
 
         /// <summary>
+        /// Your subaccount id
+        /// </summary>
+        /// <value>Your subaccount id</value>
+        [DataMember(Name="subaccount_id", EmitDefaultValue=false)]
+        public string SubaccountId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -88,6 +97,7 @@ namespace IO.ClickSend.ClickSend.Model
             sb.Append("class EmailSMSAddress {\n");
             sb.Append("  EmailAddress: ").Append(EmailAddress).Append("\n");
             sb.Append("  From: ").Append(From).Append("\n");
+            sb.Append("  SubaccountId: ").Append(SubaccountId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -131,6 +141,11 @@ namespace IO.ClickSend.ClickSend.Model
                     this.From == input.From ||
                     (this.From != null &&
                     this.From.Equals(input.From))
+                ) && 
+                (
+                    this.SubaccountId == input.SubaccountId ||
+                    (this.SubaccountId != null &&
+                    this.SubaccountId.Equals(input.SubaccountId))
                 );
         }
 
@@ -147,6 +162,8 @@ namespace IO.ClickSend.ClickSend.Model
                     hashCode = hashCode * 59 + this.EmailAddress.GetHashCode();
                 if (this.From != null)
                     hashCode = hashCode * 59 + this.From.GetHashCode();
+                if (this.SubaccountId != null)
+                    hashCode = hashCode * 59 + this.SubaccountId.GetHashCode();
                 return hashCode;
             }
         }

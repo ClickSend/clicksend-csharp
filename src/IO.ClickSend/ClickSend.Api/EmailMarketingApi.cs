@@ -214,8 +214,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
+        /// <param name="emailCampaign">Email model</param>
         /// <returns>string</returns>
-        string EmailCampaignPut (int? emailCampaignId);
+        string EmailCampaignPut (int? emailCampaignId, EmailCampaign emailCampaign);
 
         /// <summary>
         /// Edit email campaign
@@ -225,8 +226,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
+        /// <param name="emailCampaign">Email model</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> EmailCampaignPutWithHttpInfo (int? emailCampaignId);
+        ApiResponse<string> EmailCampaignPutWithHttpInfo (int? emailCampaignId, EmailCampaign emailCampaign);
         /// <summary>
         /// Get all email campaigns
         /// </summary>
@@ -528,8 +530,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
+        /// <param name="emailCampaign">Email model</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> EmailCampaignPutAsync (int? emailCampaignId);
+        System.Threading.Tasks.Task<string> EmailCampaignPutAsync (int? emailCampaignId, EmailCampaign emailCampaign);
 
         /// <summary>
         /// Edit email campaign
@@ -539,8 +542,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
+        /// <param name="emailCampaign">Email model</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> EmailCampaignPutAsyncWithHttpInfo (int? emailCampaignId);
+        System.Threading.Tasks.Task<ApiResponse<string>> EmailCampaignPutAsyncWithHttpInfo (int? emailCampaignId, EmailCampaign emailCampaign);
         /// <summary>
         /// Get all email campaigns
         /// </summary>
@@ -2009,10 +2013,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
+        /// <param name="emailCampaign">Email model</param>
         /// <returns>string</returns>
-        public string EmailCampaignPut (int? emailCampaignId)
+        public string EmailCampaignPut (int? emailCampaignId, EmailCampaign emailCampaign)
         {
-             ApiResponse<string> localVarResponse = EmailCampaignPutWithHttpInfo(emailCampaignId);
+             ApiResponse<string> localVarResponse = EmailCampaignPutWithHttpInfo(emailCampaignId, emailCampaign);
              return localVarResponse.Data;
         }
 
@@ -2021,12 +2026,16 @@ namespace IO.ClickSend.ClickSend.Api
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
+        /// <param name="emailCampaign">Email model</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > EmailCampaignPutWithHttpInfo (int? emailCampaignId)
+        public ApiResponse< string > EmailCampaignPutWithHttpInfo (int? emailCampaignId, EmailCampaign emailCampaign)
         {
             // verify the required parameter 'emailCampaignId' is set
             if (emailCampaignId == null)
                 throw new ApiException(400, "Missing required parameter 'emailCampaignId' when calling EmailMarketingApi->EmailCampaignPut");
+            // verify the required parameter 'emailCampaign' is set
+            if (emailCampaign == null)
+                throw new ApiException(400, "Missing required parameter 'emailCampaign' when calling EmailMarketingApi->EmailCampaignPut");
 
             var localVarPath = "/email-campaigns/{email_campaign_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2051,6 +2060,14 @@ namespace IO.ClickSend.ClickSend.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (emailCampaignId != null) localVarPathParams.Add("email_campaign_id", this.Configuration.ApiClient.ParameterToString(emailCampaignId)); // path parameter
+            if (emailCampaign != null && emailCampaign.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(emailCampaign); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = emailCampaign; // byte array
+            }
 
             // authentication (BasicAuth) required
             // http basic authentication required
@@ -2082,10 +2099,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
+        /// <param name="emailCampaign">Email model</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> EmailCampaignPutAsync (int? emailCampaignId)
+        public async System.Threading.Tasks.Task<string> EmailCampaignPutAsync (int? emailCampaignId, EmailCampaign emailCampaign)
         {
-             ApiResponse<string> localVarResponse = await EmailCampaignPutAsyncWithHttpInfo(emailCampaignId);
+             ApiResponse<string> localVarResponse = await EmailCampaignPutAsyncWithHttpInfo(emailCampaignId, emailCampaign);
              return localVarResponse.Data;
 
         }
@@ -2095,12 +2113,16 @@ namespace IO.ClickSend.ClickSend.Api
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
+        /// <param name="emailCampaign">Email model</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> EmailCampaignPutAsyncWithHttpInfo (int? emailCampaignId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> EmailCampaignPutAsyncWithHttpInfo (int? emailCampaignId, EmailCampaign emailCampaign)
         {
             // verify the required parameter 'emailCampaignId' is set
             if (emailCampaignId == null)
                 throw new ApiException(400, "Missing required parameter 'emailCampaignId' when calling EmailMarketingApi->EmailCampaignPut");
+            // verify the required parameter 'emailCampaign' is set
+            if (emailCampaign == null)
+                throw new ApiException(400, "Missing required parameter 'emailCampaign' when calling EmailMarketingApi->EmailCampaignPut");
 
             var localVarPath = "/email-campaigns/{email_campaign_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2125,6 +2147,14 @@ namespace IO.ClickSend.ClickSend.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (emailCampaignId != null) localVarPathParams.Add("email_campaign_id", this.Configuration.ApiClient.ParameterToString(emailCampaignId)); // path parameter
+            if (emailCampaign != null && emailCampaign.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(emailCampaign); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = emailCampaign; // byte array
+            }
 
             // authentication (BasicAuth) required
             // http basic authentication required
@@ -2355,7 +2385,7 @@ namespace IO.ClickSend.ClickSend.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -2429,7 +2459,7 @@ namespace IO.ClickSend.ClickSend.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -2802,7 +2832,7 @@ namespace IO.ClickSend.ClickSend.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -2882,7 +2912,7 @@ namespace IO.ClickSend.ClickSend.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;

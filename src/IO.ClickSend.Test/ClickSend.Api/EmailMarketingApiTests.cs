@@ -175,7 +175,8 @@ namespace IO.ClickSend.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? emailCampaignId = null;
-            //var response = instance.EmailCampaignPut(emailCampaignId);
+            //EmailCampaign emailCampaign = null;
+            //var response = instance.EmailCampaignPut(emailCampaignId, emailCampaign);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }
         

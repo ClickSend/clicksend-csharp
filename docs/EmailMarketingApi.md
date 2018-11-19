@@ -14,10 +14,10 @@ Method | HTTP request | Description
 [**EmailCampaignPricePost**](EmailMarketingApi.md#emailcampaignpricepost) | **POST** /email-campaigns/price | Calculate email campaign price
 [**EmailCampaignPut**](EmailMarketingApi.md#emailcampaignput) | **PUT** /email-campaigns/{email_campaign_id} | Edit email campaign
 [**EmailCampaignsGet**](EmailMarketingApi.md#emailcampaignsget) | **GET** /email-campaigns | Get all email campaigns
-[**SendVerificationTokenGet**](EmailMarketingApi.md#sendverificationtokenget) | **GET** /email/address-verify/{email_address_id}/send | Send verification token
+[**SendVerificationTokenGet**](EmailMarketingApi.md#sendverificationtokenget) | **PUT** /email/address-verify/{email_address_id}/send | Send verification token
 [**SpecificAllowedEmailAddressDelete**](EmailMarketingApi.md#specificallowedemailaddressdelete) | **DELETE** /email/addresses/{email_address_id} | Delete specific email address
 [**SpecificAllowedEmailAddressGet**](EmailMarketingApi.md#specificallowedemailaddressget) | **GET** /email/addresses/{email_address_id} | Get specific email address
-[**VerifyAllowedEmailAddressGet**](EmailMarketingApi.md#verifyallowedemailaddressget) | **GET** /email/address-verify/{email_address_id}/verify/{activation_token} | Verify email address using verification token
+[**VerifyAllowedEmailAddressGet**](EmailMarketingApi.md#verifyallowedemailaddressget) | **PUT** /email/address-verify/{email_address_id}/verify/{activation_token} | Verify email address using verification token
 
 
 <a name="allowedemailaddressget"></a>
@@ -556,7 +556,7 @@ Name | Type | Description  | Notes
 
 <a name="emailcampaignput"></a>
 # **EmailCampaignPut**
-> string EmailCampaignPut (int? emailCampaignId)
+> string EmailCampaignPut (int? emailCampaignId, EmailCampaign emailCampaign)
 
 Edit email campaign
 
@@ -582,11 +582,12 @@ namespace Example
 
             var apiInstance = new EmailMarketingApi();
             var emailCampaignId = 56;  // int? | Allowed email campaign id
+            var emailCampaign = new EmailCampaign(); // EmailCampaign | Email model
 
             try
             {
                 // Edit email campaign
-                string result = apiInstance.EmailCampaignPut(emailCampaignId);
+                string result = apiInstance.EmailCampaignPut(emailCampaignId, emailCampaign);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -603,6 +604,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **emailCampaignId** | **int?**| Allowed email campaign id | 
+ **emailCampaign** | [**EmailCampaign**](EmailCampaign.md)| Email model | 
 
 ### Return type
 

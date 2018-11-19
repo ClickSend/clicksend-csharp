@@ -82,6 +82,14 @@ namespace IO.ClickSend.Test
         {
             // TODO unit test for the property 'From'
         }
+        /// <summary>
+        /// Test the property 'SubaccountId'
+        /// </summary>
+        [Test]
+        public void SubaccountIdTest()
+        {
+            // TODO unit test for the property 'SubaccountId'
+        }
 
     }
 

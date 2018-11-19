@@ -12,11 +12,11 @@ Contact: support@clicksend.com
     
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9BF1DC84-A5B2-40B4-8BCC-CCD3AE499BB1}</ProjectGuid>
+    <ProjectGuid>{D34AD803-8C8D-4301-88ED-2BA6DE12DB6D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IO.Swagger</RootNamespace>
-    <AssemblyName>IO.Swagger</AssemblyName>
+    <RootNamespace>IO.ClickSend</RootNamespace>
+    <AssemblyName>IO.ClickSend</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

@@ -44,10 +44,11 @@ namespace IO.ClickSend.ClickSend.Model
         /// <param name="cc">Array of Cc Recipient items..</param>
         /// <param name="bcc">Array of Bcc Recipient items..</param>
         /// <param name="from">From Email object. (required).</param>
+        /// <param name="subject">Subject of the email..</param>
         /// <param name="body">Body of the email. (required).</param>
         /// <param name="attachments">Array of Attachment items..</param>
         /// <param name="schedule">Schedule..</param>
-        public Email(List<EmailRecipient> to = default(List<EmailRecipient>), List<EmailRecipient> cc = default(List<EmailRecipient>), List<EmailRecipient> bcc = default(List<EmailRecipient>), List<EmailFrom> from = default(List<EmailFrom>), string body = default(string), List<Attachment> attachments = default(List<Attachment>), decimal? schedule = default(decimal?))
+        public Email(List<EmailRecipient> to = default(List<EmailRecipient>), List<EmailRecipient> cc = default(List<EmailRecipient>), List<EmailRecipient> bcc = default(List<EmailRecipient>), List<EmailFrom> from = default(List<EmailFrom>), string subject = default(string), string body = default(string), List<Attachment> attachments = default(List<Attachment>), decimal? schedule = default(decimal?))
         {
             // to ensure "to" is required (not null)
             if (to == null)
@@ -78,6 +79,7 @@ namespace IO.ClickSend.ClickSend.Model
             }
             this.Cc = cc;
             this.Bcc = bcc;
+            this.Subject = subject;
             this.Attachments = attachments;
             this.Schedule = schedule;
         }
@@ -109,6 +111,13 @@ namespace IO.ClickSend.ClickSend.Model
         /// <value>From Email object.</value>
         [DataMember(Name="from", EmitDefaultValue=false)]
         public List<EmailFrom> From { get; set; }
+
+        /// <summary>
+        /// Subject of the email.
+        /// </summary>
+        /// <value>Subject of the email.</value>
+        [DataMember(Name="subject", EmitDefaultValue=false)]
+        public string Subject { get; set; }
 
         /// <summary>
         /// Body of the email.
@@ -143,6 +152,7 @@ namespace IO.ClickSend.ClickSend.Model
             sb.Append("  Cc: ").Append(Cc).Append("\n");
             sb.Append("  Bcc: ").Append(Bcc).Append("\n");
             sb.Append("  From: ").Append(From).Append("\n");
+            sb.Append("  Subject: ").Append(Subject).Append("\n");
             sb.Append("  Body: ").Append(Body).Append("\n");
             sb.Append("  Attachments: ").Append(Attachments).Append("\n");
             sb.Append("  Schedule: ").Append(Schedule).Append("\n");
@@ -201,6 +211,11 @@ namespace IO.ClickSend.ClickSend.Model
                     this.From.SequenceEqual(input.From)
                 ) && 
                 (
+                    this.Subject == input.Subject ||
+                    (this.Subject != null &&
+                    this.Subject.Equals(input.Subject))
+                ) && 
+                (
                     this.Body == input.Body ||
                     (this.Body != null &&
                     this.Body.Equals(input.Body))
@@ -234,6 +249,8 @@ namespace IO.ClickSend.ClickSend.Model
                     hashCode = hashCode * 59 + this.Bcc.GetHashCode();
                 if (this.From != null)
                     hashCode = hashCode * 59 + this.From.GetHashCode();
+                if (this.Subject != null)
+                    hashCode = hashCode * 59 + this.Subject.GetHashCode();
                 if (this.Body != null)
                     hashCode = hashCode * 59 + this.Body.GetHashCode();
                 if (this.Attachments != null)
