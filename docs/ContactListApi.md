@@ -411,7 +411,7 @@ Name | Type | Description  | Notes
 
 <a name="listsremoveduplicatesbylistidput"></a>
 # **ListsRemoveDuplicatesByListIdPut**
-> string ListsRemoveDuplicatesByListIdPut (int? listId)
+> string ListsRemoveDuplicatesByListIdPut (int? listId, Fields fields)
 
 Remove duplicate contacts
 
@@ -437,11 +437,12 @@ namespace Example
 
             var apiInstance = new ContactListApi();
             var listId = 56;  // int? | Your list id
+            var fields = new Fields(); // Fields | Fields model
 
             try
             {
                 // Remove duplicate contacts
-                string result = apiInstance.ListsRemoveDuplicatesByListIdPut(listId);
+                string result = apiInstance.ListsRemoveDuplicatesByListIdPut(listId, fields);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -458,6 +459,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **listId** | **int?**| Your list id | 
+ **fields** | [**Fields**](Fields.md)| Fields model | 
 
 ### Return type
 

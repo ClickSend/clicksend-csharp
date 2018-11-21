@@ -296,7 +296,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new AccountApi();
-            var username = username_example;  // string | Username belonging to account
+            var username = username_example;  // string | Username belonging to account.
 
             try
             {
@@ -317,7 +317,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **string**| Username belonging to account | 
+ **username** | **string**| Username belonging to account. | 
 
 ### Return type
 
@@ -329,7 +329,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -401,7 +401,7 @@ Name | Type | Description  | Notes
 
 <a name="forgotusernameput"></a>
 # **ForgotUsernamePut**
-> string ForgotUsernamePut (string email)
+> string ForgotUsernamePut (string email = null, string phoneNumber = null)
 
 Forgot username
 
@@ -422,12 +422,13 @@ namespace Example
         public void main()
         {
             var apiInstance = new AccountApi();
-            var email = email_example;  // string | Email belonging to account
+            var email = email_example;  // string | Email belonging to account. (optional) 
+            var phoneNumber = phoneNumber_example;  // string | Phone number belonging to account. (optional) 
 
             try
             {
                 // Forgot username
-                string result = apiInstance.ForgotUsernamePut(email);
+                string result = apiInstance.ForgotUsernamePut(email, phoneNumber);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -443,7 +444,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email** | **string**| Email belonging to account | 
+ **email** | **string**| Email belonging to account. | [optional] 
+ **phoneNumber** | **string**| Phone number belonging to account. | [optional] 
 
 ### Return type
 
@@ -455,7 +457,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

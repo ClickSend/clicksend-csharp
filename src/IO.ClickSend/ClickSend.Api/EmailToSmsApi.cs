@@ -117,9 +117,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create email to sms stripped string rules
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="strippedString">String to be stripped.</param>
+        /// <param name="stripString">String to be stripped.</param>
         /// <returns>string</returns>
-        string SmsEmailSmsStrippedStringPost (string strippedString);
+        string SmsEmailSmsStrippedStringPost (string stripString);
 
         /// <summary>
         /// Create email to sms stripped string rule
@@ -128,9 +128,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create email to sms stripped string rules
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="strippedString">String to be stripped.</param>
+        /// <param name="stripString">String to be stripped.</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> SmsEmailSmsStrippedStringPostWithHttpInfo (string strippedString);
+        ApiResponse<string> SmsEmailSmsStrippedStringPostWithHttpInfo (string stripString);
         /// <summary>
         /// Update email to sms stripped string rule
         /// </summary>
@@ -138,10 +138,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// Update email to sms stripped string rule
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="stripString">String to be stripped.</param>
         /// <param name="ruleId">Your rule id</param>
-        /// <param name="strippedString">String to be stripped.</param>
         /// <returns>string</returns>
-        string SmsEmailSmsStrippedStringPut (int? ruleId, string strippedString);
+        string SmsEmailSmsStrippedStringPut (string stripString, int? ruleId);
 
         /// <summary>
         /// Update email to sms stripped string rule
@@ -150,10 +150,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// Update email to sms stripped string rule
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="stripString">String to be stripped.</param>
         /// <param name="ruleId">Your rule id</param>
-        /// <param name="strippedString">String to be stripped.</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> SmsEmailSmsStrippedStringPutWithHttpInfo (int? ruleId, string strippedString);
+        ApiResponse<string> SmsEmailSmsStrippedStringPutWithHttpInfo (string stripString, int? ruleId);
         /// <summary>
         /// Get list of email to sms stripped string rules
         /// </summary>
@@ -272,9 +272,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create email to sms stripped string rules
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="strippedString">String to be stripped.</param>
+        /// <param name="stripString">String to be stripped.</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> SmsEmailSmsStrippedStringPostAsync (string strippedString);
+        System.Threading.Tasks.Task<string> SmsEmailSmsStrippedStringPostAsync (string stripString);
 
         /// <summary>
         /// Create email to sms stripped string rule
@@ -283,9 +283,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create email to sms stripped string rules
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="strippedString">String to be stripped.</param>
+        /// <param name="stripString">String to be stripped.</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> SmsEmailSmsStrippedStringPostAsyncWithHttpInfo (string strippedString);
+        System.Threading.Tasks.Task<ApiResponse<string>> SmsEmailSmsStrippedStringPostAsyncWithHttpInfo (string stripString);
         /// <summary>
         /// Update email to sms stripped string rule
         /// </summary>
@@ -293,10 +293,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// Update email to sms stripped string rule
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="stripString">String to be stripped.</param>
         /// <param name="ruleId">Your rule id</param>
-        /// <param name="strippedString">String to be stripped.</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> SmsEmailSmsStrippedStringPutAsync (int? ruleId, string strippedString);
+        System.Threading.Tasks.Task<string> SmsEmailSmsStrippedStringPutAsync (string stripString, int? ruleId);
 
         /// <summary>
         /// Update email to sms stripped string rule
@@ -305,10 +305,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// Update email to sms stripped string rule
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="stripString">String to be stripped.</param>
         /// <param name="ruleId">Your rule id</param>
-        /// <param name="strippedString">String to be stripped.</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> SmsEmailSmsStrippedStringPutAsyncWithHttpInfo (int? ruleId, string strippedString);
+        System.Threading.Tasks.Task<ApiResponse<string>> SmsEmailSmsStrippedStringPutAsyncWithHttpInfo (string stripString, int? ruleId);
         /// <summary>
         /// Get list of email to sms stripped string rules
         /// </summary>
@@ -1038,11 +1038,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create email to sms stripped string rule Create email to sms stripped string rules
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="strippedString">String to be stripped.</param>
+        /// <param name="stripString">String to be stripped.</param>
         /// <returns>string</returns>
-        public string SmsEmailSmsStrippedStringPost (string strippedString)
+        public string SmsEmailSmsStrippedStringPost (string stripString)
         {
-             ApiResponse<string> localVarResponse = SmsEmailSmsStrippedStringPostWithHttpInfo(strippedString);
+             ApiResponse<string> localVarResponse = SmsEmailSmsStrippedStringPostWithHttpInfo(stripString);
              return localVarResponse.Data;
         }
 
@@ -1050,13 +1050,13 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create email to sms stripped string rule Create email to sms stripped string rules
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="strippedString">String to be stripped.</param>
+        /// <param name="stripString">String to be stripped.</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > SmsEmailSmsStrippedStringPostWithHttpInfo (string strippedString)
+        public ApiResponse< string > SmsEmailSmsStrippedStringPostWithHttpInfo (string stripString)
         {
-            // verify the required parameter 'strippedString' is set
-            if (strippedString == null)
-                throw new ApiException(400, "Missing required parameter 'strippedString' when calling EmailToSmsApi->SmsEmailSmsStrippedStringPost");
+            // verify the required parameter 'stripString' is set
+            if (stripString == null)
+                throw new ApiException(400, "Missing required parameter 'stripString' when calling EmailToSmsApi->SmsEmailSmsStrippedStringPost");
 
             var localVarPath = "/sms/email-sms-stripped-strings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1068,7 +1068,7 @@ namespace IO.ClickSend.ClickSend.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
+                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1080,14 +1080,7 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (strippedString != null && strippedString.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(strippedString); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = strippedString; // byte array
-            }
+            if (stripString != null) localVarFormParams.Add("strip-string", this.Configuration.ApiClient.ParameterToString(stripString)); // form parameter
 
             // authentication (BasicAuth) required
             // http basic authentication required
@@ -1118,11 +1111,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create email to sms stripped string rule Create email to sms stripped string rules
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="strippedString">String to be stripped.</param>
+        /// <param name="stripString">String to be stripped.</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> SmsEmailSmsStrippedStringPostAsync (string strippedString)
+        public async System.Threading.Tasks.Task<string> SmsEmailSmsStrippedStringPostAsync (string stripString)
         {
-             ApiResponse<string> localVarResponse = await SmsEmailSmsStrippedStringPostAsyncWithHttpInfo(strippedString);
+             ApiResponse<string> localVarResponse = await SmsEmailSmsStrippedStringPostAsyncWithHttpInfo(stripString);
              return localVarResponse.Data;
 
         }
@@ -1131,13 +1124,13 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create email to sms stripped string rule Create email to sms stripped string rules
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="strippedString">String to be stripped.</param>
+        /// <param name="stripString">String to be stripped.</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> SmsEmailSmsStrippedStringPostAsyncWithHttpInfo (string strippedString)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> SmsEmailSmsStrippedStringPostAsyncWithHttpInfo (string stripString)
         {
-            // verify the required parameter 'strippedString' is set
-            if (strippedString == null)
-                throw new ApiException(400, "Missing required parameter 'strippedString' when calling EmailToSmsApi->SmsEmailSmsStrippedStringPost");
+            // verify the required parameter 'stripString' is set
+            if (stripString == null)
+                throw new ApiException(400, "Missing required parameter 'stripString' when calling EmailToSmsApi->SmsEmailSmsStrippedStringPost");
 
             var localVarPath = "/sms/email-sms-stripped-strings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1149,7 +1142,7 @@ namespace IO.ClickSend.ClickSend.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
+                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1161,14 +1154,7 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (strippedString != null && strippedString.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(strippedString); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = strippedString; // byte array
-            }
+            if (stripString != null) localVarFormParams.Add("strip-string", this.Configuration.ApiClient.ParameterToString(stripString)); // form parameter
 
             // authentication (BasicAuth) required
             // http basic authentication required
@@ -1199,12 +1185,12 @@ namespace IO.ClickSend.ClickSend.Api
         /// Update email to sms stripped string rule Update email to sms stripped string rule
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="stripString">String to be stripped.</param>
         /// <param name="ruleId">Your rule id</param>
-        /// <param name="strippedString">String to be stripped.</param>
         /// <returns>string</returns>
-        public string SmsEmailSmsStrippedStringPut (int? ruleId, string strippedString)
+        public string SmsEmailSmsStrippedStringPut (string stripString, int? ruleId)
         {
-             ApiResponse<string> localVarResponse = SmsEmailSmsStrippedStringPutWithHttpInfo(ruleId, strippedString);
+             ApiResponse<string> localVarResponse = SmsEmailSmsStrippedStringPutWithHttpInfo(stripString, ruleId);
              return localVarResponse.Data;
         }
 
@@ -1212,17 +1198,17 @@ namespace IO.ClickSend.ClickSend.Api
         /// Update email to sms stripped string rule Update email to sms stripped string rule
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="stripString">String to be stripped.</param>
         /// <param name="ruleId">Your rule id</param>
-        /// <param name="strippedString">String to be stripped.</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > SmsEmailSmsStrippedStringPutWithHttpInfo (int? ruleId, string strippedString)
+        public ApiResponse< string > SmsEmailSmsStrippedStringPutWithHttpInfo (string stripString, int? ruleId)
         {
+            // verify the required parameter 'stripString' is set
+            if (stripString == null)
+                throw new ApiException(400, "Missing required parameter 'stripString' when calling EmailToSmsApi->SmsEmailSmsStrippedStringPut");
             // verify the required parameter 'ruleId' is set
             if (ruleId == null)
                 throw new ApiException(400, "Missing required parameter 'ruleId' when calling EmailToSmsApi->SmsEmailSmsStrippedStringPut");
-            // verify the required parameter 'strippedString' is set
-            if (strippedString == null)
-                throw new ApiException(400, "Missing required parameter 'strippedString' when calling EmailToSmsApi->SmsEmailSmsStrippedStringPut");
 
             var localVarPath = "/sms/email-sms-stripped-strings/{rule_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1234,7 +1220,7 @@ namespace IO.ClickSend.ClickSend.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
+                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1247,14 +1233,7 @@ namespace IO.ClickSend.ClickSend.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (ruleId != null) localVarPathParams.Add("rule_id", this.Configuration.ApiClient.ParameterToString(ruleId)); // path parameter
-            if (strippedString != null && strippedString.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(strippedString); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = strippedString; // byte array
-            }
+            if (stripString != null) localVarFormParams.Add("strip-string", this.Configuration.ApiClient.ParameterToString(stripString)); // form parameter
 
             // authentication (BasicAuth) required
             // http basic authentication required
@@ -1285,12 +1264,12 @@ namespace IO.ClickSend.ClickSend.Api
         /// Update email to sms stripped string rule Update email to sms stripped string rule
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="stripString">String to be stripped.</param>
         /// <param name="ruleId">Your rule id</param>
-        /// <param name="strippedString">String to be stripped.</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> SmsEmailSmsStrippedStringPutAsync (int? ruleId, string strippedString)
+        public async System.Threading.Tasks.Task<string> SmsEmailSmsStrippedStringPutAsync (string stripString, int? ruleId)
         {
-             ApiResponse<string> localVarResponse = await SmsEmailSmsStrippedStringPutAsyncWithHttpInfo(ruleId, strippedString);
+             ApiResponse<string> localVarResponse = await SmsEmailSmsStrippedStringPutAsyncWithHttpInfo(stripString, ruleId);
              return localVarResponse.Data;
 
         }
@@ -1299,17 +1278,17 @@ namespace IO.ClickSend.ClickSend.Api
         /// Update email to sms stripped string rule Update email to sms stripped string rule
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="stripString">String to be stripped.</param>
         /// <param name="ruleId">Your rule id</param>
-        /// <param name="strippedString">String to be stripped.</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> SmsEmailSmsStrippedStringPutAsyncWithHttpInfo (int? ruleId, string strippedString)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> SmsEmailSmsStrippedStringPutAsyncWithHttpInfo (string stripString, int? ruleId)
         {
+            // verify the required parameter 'stripString' is set
+            if (stripString == null)
+                throw new ApiException(400, "Missing required parameter 'stripString' when calling EmailToSmsApi->SmsEmailSmsStrippedStringPut");
             // verify the required parameter 'ruleId' is set
             if (ruleId == null)
                 throw new ApiException(400, "Missing required parameter 'ruleId' when calling EmailToSmsApi->SmsEmailSmsStrippedStringPut");
-            // verify the required parameter 'strippedString' is set
-            if (strippedString == null)
-                throw new ApiException(400, "Missing required parameter 'strippedString' when calling EmailToSmsApi->SmsEmailSmsStrippedStringPut");
 
             var localVarPath = "/sms/email-sms-stripped-strings/{rule_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1321,7 +1300,7 @@ namespace IO.ClickSend.ClickSend.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
+                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1334,14 +1313,7 @@ namespace IO.ClickSend.ClickSend.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (ruleId != null) localVarPathParams.Add("rule_id", this.Configuration.ApiClient.ParameterToString(ruleId)); // path parameter
-            if (strippedString != null && strippedString.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(strippedString); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = strippedString; // byte array
-            }
+            if (stripString != null) localVarFormParams.Add("strip-string", this.Configuration.ApiClient.ParameterToString(stripString)); // form parameter
 
             // authentication (BasicAuth) required
             // http basic authentication required

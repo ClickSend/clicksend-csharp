@@ -113,7 +113,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// Forgot password
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username belonging to account</param>
+        /// <param name="username">Username belonging to account.</param>
         /// <returns>string</returns>
         string ForgotPasswordPut (string username);
 
@@ -124,7 +124,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// Forgot password
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username belonging to account</param>
+        /// <param name="username">Username belonging to account.</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> ForgotPasswordPutWithHttpInfo (string username);
         /// <summary>
@@ -155,9 +155,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// Forgot username
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="email">Email belonging to account</param>
+        /// <param name="email">Email belonging to account. (optional)</param>
+        /// <param name="phoneNumber">Phone number belonging to account. (optional)</param>
         /// <returns>string</returns>
-        string ForgotUsernamePut (string email);
+        string ForgotUsernamePut (string email = null, string phoneNumber = null);
 
         /// <summary>
         /// Forgot username
@@ -166,9 +167,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// Forgot username
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="email">Email belonging to account</param>
+        /// <param name="email">Email belonging to account. (optional)</param>
+        /// <param name="phoneNumber">Phone number belonging to account. (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> ForgotUsernamePutWithHttpInfo (string email);
+        ApiResponse<string> ForgotUsernamePutWithHttpInfo (string email = null, string phoneNumber = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -260,7 +262,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// Forgot password
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username belonging to account</param>
+        /// <param name="username">Username belonging to account.</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> ForgotPasswordPutAsync (string username);
 
@@ -271,7 +273,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// Forgot password
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username belonging to account</param>
+        /// <param name="username">Username belonging to account.</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> ForgotPasswordPutAsyncWithHttpInfo (string username);
         /// <summary>
@@ -302,9 +304,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// Forgot username
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="email">Email belonging to account</param>
+        /// <param name="email">Email belonging to account. (optional)</param>
+        /// <param name="phoneNumber">Phone number belonging to account. (optional)</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> ForgotUsernamePutAsync (string email);
+        System.Threading.Tasks.Task<string> ForgotUsernamePutAsync (string email = null, string phoneNumber = null);
 
         /// <summary>
         /// Forgot username
@@ -313,9 +316,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// Forgot username
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="email">Email belonging to account</param>
+        /// <param name="email">Email belonging to account. (optional)</param>
+        /// <param name="phoneNumber">Phone number belonging to account. (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> ForgotUsernamePutAsyncWithHttpInfo (string email);
+        System.Threading.Tasks.Task<ApiResponse<string>> ForgotUsernamePutAsyncWithHttpInfo (string email = null, string phoneNumber = null);
         #endregion Asynchronous Operations
     }
 
@@ -1024,7 +1028,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// Forgot password Forgot password
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username belonging to account</param>
+        /// <param name="username">Username belonging to account.</param>
         /// <returns>string</returns>
         public string ForgotPasswordPut (string username)
         {
@@ -1036,7 +1040,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// Forgot password Forgot password
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username belonging to account</param>
+        /// <param name="username">Username belonging to account.</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > ForgotPasswordPutWithHttpInfo (string username)
         {
@@ -1054,7 +1058,7 @@ namespace IO.ClickSend.ClickSend.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
+                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1066,14 +1070,7 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (username != null && username.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(username); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = username; // byte array
-            }
+            if (username != null) localVarFormParams.Add("username", this.Configuration.ApiClient.ParameterToString(username)); // form parameter
 
             // authentication (BasicAuth) required
             // http basic authentication required
@@ -1104,7 +1101,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// Forgot password Forgot password
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username belonging to account</param>
+        /// <param name="username">Username belonging to account.</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> ForgotPasswordPutAsync (string username)
         {
@@ -1117,7 +1114,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// Forgot password Forgot password
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username belonging to account</param>
+        /// <param name="username">Username belonging to account.</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> ForgotPasswordPutAsyncWithHttpInfo (string username)
         {
@@ -1135,7 +1132,7 @@ namespace IO.ClickSend.ClickSend.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
+                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1147,14 +1144,7 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (username != null && username.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(username); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = username; // byte array
-            }
+            if (username != null) localVarFormParams.Add("username", this.Configuration.ApiClient.ParameterToString(username)); // form parameter
 
             // authentication (BasicAuth) required
             // http basic authentication required
@@ -1346,11 +1336,12 @@ namespace IO.ClickSend.ClickSend.Api
         /// Forgot username Forgot username
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="email">Email belonging to account</param>
+        /// <param name="email">Email belonging to account. (optional)</param>
+        /// <param name="phoneNumber">Phone number belonging to account. (optional)</param>
         /// <returns>string</returns>
-        public string ForgotUsernamePut (string email)
+        public string ForgotUsernamePut (string email = null, string phoneNumber = null)
         {
-             ApiResponse<string> localVarResponse = ForgotUsernamePutWithHttpInfo(email);
+             ApiResponse<string> localVarResponse = ForgotUsernamePutWithHttpInfo(email, phoneNumber);
              return localVarResponse.Data;
         }
 
@@ -1358,13 +1349,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Forgot username Forgot username
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="email">Email belonging to account</param>
+        /// <param name="email">Email belonging to account. (optional)</param>
+        /// <param name="phoneNumber">Phone number belonging to account. (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > ForgotUsernamePutWithHttpInfo (string email)
+        public ApiResponse< string > ForgotUsernamePutWithHttpInfo (string email = null, string phoneNumber = null)
         {
-            // verify the required parameter 'email' is set
-            if (email == null)
-                throw new ApiException(400, "Missing required parameter 'email' when calling AccountApi->ForgotUsernamePut");
 
             var localVarPath = "/forgot-username";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1376,7 +1365,7 @@ namespace IO.ClickSend.ClickSend.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
+                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1388,14 +1377,8 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (email != null && email.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(email); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = email; // byte array
-            }
+            if (email != null) localVarFormParams.Add("email", this.Configuration.ApiClient.ParameterToString(email)); // form parameter
+            if (phoneNumber != null) localVarFormParams.Add("phone_number", this.Configuration.ApiClient.ParameterToString(phoneNumber)); // form parameter
 
 
             // make the HTTP request
@@ -1420,11 +1403,12 @@ namespace IO.ClickSend.ClickSend.Api
         /// Forgot username Forgot username
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="email">Email belonging to account</param>
+        /// <param name="email">Email belonging to account. (optional)</param>
+        /// <param name="phoneNumber">Phone number belonging to account. (optional)</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> ForgotUsernamePutAsync (string email)
+        public async System.Threading.Tasks.Task<string> ForgotUsernamePutAsync (string email = null, string phoneNumber = null)
         {
-             ApiResponse<string> localVarResponse = await ForgotUsernamePutAsyncWithHttpInfo(email);
+             ApiResponse<string> localVarResponse = await ForgotUsernamePutAsyncWithHttpInfo(email, phoneNumber);
              return localVarResponse.Data;
 
         }
@@ -1433,13 +1417,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Forgot username Forgot username
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="email">Email belonging to account</param>
+        /// <param name="email">Email belonging to account. (optional)</param>
+        /// <param name="phoneNumber">Phone number belonging to account. (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> ForgotUsernamePutAsyncWithHttpInfo (string email)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> ForgotUsernamePutAsyncWithHttpInfo (string email = null, string phoneNumber = null)
         {
-            // verify the required parameter 'email' is set
-            if (email == null)
-                throw new ApiException(400, "Missing required parameter 'email' when calling AccountApi->ForgotUsernamePut");
 
             var localVarPath = "/forgot-username";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1451,7 +1433,7 @@ namespace IO.ClickSend.ClickSend.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
+                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1463,14 +1445,8 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (email != null && email.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(email); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = email; // byte array
-            }
+            if (email != null) localVarFormParams.Add("email", this.Configuration.ApiClient.ParameterToString(email)); // form parameter
+            if (phoneNumber != null) localVarFormParams.Add("phone_number", this.Configuration.ApiClient.ParameterToString(phoneNumber)); // form parameter
 
 
             // make the HTTP request

@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**EmailTemplateDelete**](UserEmailTemplatesApi.md#emailtemplatedelete) | **DELETE** /email/templates/{template_id} | Delete user email template
 [**EmailTemplateGet**](UserEmailTemplatesApi.md#emailtemplateget) | **GET** /email/templates/{template_id} | Get specific user email template
 [**EmailTemplatePost**](UserEmailTemplatesApi.md#emailtemplatepost) | **POST** /email/templates | Create email template
-[**EmailTemplatePut**](UserEmailTemplatesApi.md#emailtemplateput) | **POST** /email/templates/{template_id} | Update email template
+[**EmailTemplatePut**](UserEmailTemplatesApi.md#emailtemplateput) | **PUT** /email/templates/{template_id} | Update email template
 [**EmailTemplatesGet**](UserEmailTemplatesApi.md#emailtemplatesget) | **GET** /email/templates | Get all user email templates
 
 

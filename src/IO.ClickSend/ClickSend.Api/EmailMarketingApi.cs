@@ -935,7 +935,7 @@ namespace IO.ClickSend.ClickSend.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
+                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -947,14 +947,7 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (emailAddress != null && emailAddress.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(emailAddress); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = emailAddress; // byte array
-            }
+            if (emailAddress != null) localVarFormParams.Add("email_address", this.Configuration.ApiClient.ParameterToString(emailAddress)); // form parameter
 
             // authentication (BasicAuth) required
             // http basic authentication required
@@ -1016,7 +1009,7 @@ namespace IO.ClickSend.ClickSend.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
+                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1028,14 +1021,7 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (emailAddress != null && emailAddress.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(emailAddress); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = emailAddress; // byte array
-            }
+            if (emailAddress != null) localVarFormParams.Add("email_address", this.Configuration.ApiClient.ParameterToString(emailAddress)); // form parameter
 
             // authentication (BasicAuth) required
             // http basic authentication required

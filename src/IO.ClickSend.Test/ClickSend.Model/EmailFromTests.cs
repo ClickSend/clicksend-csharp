@@ -67,12 +67,12 @@ namespace IO.ClickSend.Test
 
 
         /// <summary>
-        /// Test the property 'Email'
+        /// Test the property 'EmailAddressId'
         /// </summary>
         [Test]
-        public void EmailTest()
+        public void EmailAddressIdTest()
         {
-            // TODO unit test for the property 'Email'
+            // TODO unit test for the property 'EmailAddressId'
         }
         /// <summary>
         /// Test the property 'Name'

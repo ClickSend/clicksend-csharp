@@ -40,28 +40,28 @@ namespace IO.ClickSend.ClickSend.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailFrom" /> class.
         /// </summary>
-        /// <param name="email">Email of the recipient. (required).</param>
+        /// <param name="emailAddressId">Email address id of the recipient. (required).</param>
         /// <param name="name">Name of the recipient..</param>
-        public EmailFrom(string email = default(string), string name = default(string))
+        public EmailFrom(string emailAddressId = default(string), string name = default(string))
         {
-            // to ensure "email" is required (not null)
-            if (email == null)
+            // to ensure "emailAddressId" is required (not null)
+            if (emailAddressId == null)
             {
-                throw new InvalidDataException("email is a required property for EmailFrom and cannot be null");
+                throw new InvalidDataException("emailAddressId is a required property for EmailFrom and cannot be null");
             }
             else
             {
-                this.Email = email;
+                this.EmailAddressId = emailAddressId;
             }
             this.Name = name;
         }
         
         /// <summary>
-        /// Email of the recipient.
+        /// Email address id of the recipient.
         /// </summary>
-        /// <value>Email of the recipient.</value>
-        [DataMember(Name="email", EmitDefaultValue=false)]
-        public string Email { get; set; }
+        /// <value>Email address id of the recipient.</value>
+        [DataMember(Name="email_address_id", EmitDefaultValue=false)]
+        public string EmailAddressId { get; set; }
 
         /// <summary>
         /// Name of the recipient.
@@ -78,7 +78,7 @@ namespace IO.ClickSend.ClickSend.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EmailFrom {\n");
-            sb.Append("  Email: ").Append(Email).Append("\n");
+            sb.Append("  EmailAddressId: ").Append(EmailAddressId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -115,9 +115,9 @@ namespace IO.ClickSend.ClickSend.Model
 
             return 
                 (
-                    this.Email == input.Email ||
-                    (this.Email != null &&
-                    this.Email.Equals(input.Email))
+                    this.EmailAddressId == input.EmailAddressId ||
+                    (this.EmailAddressId != null &&
+                    this.EmailAddressId.Equals(input.EmailAddressId))
                 ) && 
                 (
                     this.Name == input.Name ||
@@ -135,8 +135,8 @@ namespace IO.ClickSend.ClickSend.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Email != null)
-                    hashCode = hashCode * 59 + this.Email.GetHashCode();
+                if (this.EmailAddressId != null)
+                    hashCode = hashCode * 59 + this.EmailAddressId.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 return hashCode;

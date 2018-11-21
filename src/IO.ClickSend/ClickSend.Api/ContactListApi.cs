@@ -164,8 +164,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your list id</param>
+        /// <param name="fields">Fields model</param>
         /// <returns>string</returns>
-        string ListsRemoveDuplicatesByListIdPut (int? listId);
+        string ListsRemoveDuplicatesByListIdPut (int? listId, Fields fields);
 
         /// <summary>
         /// Remove duplicate contacts
@@ -175,8 +176,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your list id</param>
+        /// <param name="fields">Fields model</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> ListsRemoveDuplicatesByListIdPutWithHttpInfo (int? listId);
+        ApiResponse<string> ListsRemoveDuplicatesByListIdPutWithHttpInfo (int? listId, Fields fields);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -319,8 +321,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your list id</param>
+        /// <param name="fields">Fields model</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> ListsRemoveDuplicatesByListIdPutAsync (int? listId);
+        System.Threading.Tasks.Task<string> ListsRemoveDuplicatesByListIdPutAsync (int? listId, Fields fields);
 
         /// <summary>
         /// Remove duplicate contacts
@@ -330,8 +333,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your list id</param>
+        /// <param name="fields">Fields model</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> ListsRemoveDuplicatesByListIdPutAsyncWithHttpInfo (int? listId);
+        System.Threading.Tasks.Task<ApiResponse<string>> ListsRemoveDuplicatesByListIdPutAsyncWithHttpInfo (int? listId, Fields fields);
         #endregion Asynchronous Operations
     }
 
@@ -1385,10 +1389,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your list id</param>
+        /// <param name="fields">Fields model</param>
         /// <returns>string</returns>
-        public string ListsRemoveDuplicatesByListIdPut (int? listId)
+        public string ListsRemoveDuplicatesByListIdPut (int? listId, Fields fields)
         {
-             ApiResponse<string> localVarResponse = ListsRemoveDuplicatesByListIdPutWithHttpInfo(listId);
+             ApiResponse<string> localVarResponse = ListsRemoveDuplicatesByListIdPutWithHttpInfo(listId, fields);
              return localVarResponse.Data;
         }
 
@@ -1397,12 +1402,16 @@ namespace IO.ClickSend.ClickSend.Api
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your list id</param>
+        /// <param name="fields">Fields model</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > ListsRemoveDuplicatesByListIdPutWithHttpInfo (int? listId)
+        public ApiResponse< string > ListsRemoveDuplicatesByListIdPutWithHttpInfo (int? listId, Fields fields)
         {
             // verify the required parameter 'listId' is set
             if (listId == null)
                 throw new ApiException(400, "Missing required parameter 'listId' when calling ContactListApi->ListsRemoveDuplicatesByListIdPut");
+            // verify the required parameter 'fields' is set
+            if (fields == null)
+                throw new ApiException(400, "Missing required parameter 'fields' when calling ContactListApi->ListsRemoveDuplicatesByListIdPut");
 
             var localVarPath = "/lists/{list_id}/remove-duplicates";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1427,6 +1436,14 @@ namespace IO.ClickSend.ClickSend.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (listId != null) localVarPathParams.Add("list_id", this.Configuration.ApiClient.ParameterToString(listId)); // path parameter
+            if (fields != null && fields.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(fields); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = fields; // byte array
+            }
 
             // authentication (BasicAuth) required
             // http basic authentication required
@@ -1458,10 +1475,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your list id</param>
+        /// <param name="fields">Fields model</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> ListsRemoveDuplicatesByListIdPutAsync (int? listId)
+        public async System.Threading.Tasks.Task<string> ListsRemoveDuplicatesByListIdPutAsync (int? listId, Fields fields)
         {
-             ApiResponse<string> localVarResponse = await ListsRemoveDuplicatesByListIdPutAsyncWithHttpInfo(listId);
+             ApiResponse<string> localVarResponse = await ListsRemoveDuplicatesByListIdPutAsyncWithHttpInfo(listId, fields);
              return localVarResponse.Data;
 
         }
@@ -1471,12 +1489,16 @@ namespace IO.ClickSend.ClickSend.Api
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your list id</param>
+        /// <param name="fields">Fields model</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> ListsRemoveDuplicatesByListIdPutAsyncWithHttpInfo (int? listId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> ListsRemoveDuplicatesByListIdPutAsyncWithHttpInfo (int? listId, Fields fields)
         {
             // verify the required parameter 'listId' is set
             if (listId == null)
                 throw new ApiException(400, "Missing required parameter 'listId' when calling ContactListApi->ListsRemoveDuplicatesByListIdPut");
+            // verify the required parameter 'fields' is set
+            if (fields == null)
+                throw new ApiException(400, "Missing required parameter 'fields' when calling ContactListApi->ListsRemoveDuplicatesByListIdPut");
 
             var localVarPath = "/lists/{list_id}/remove-duplicates";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1501,6 +1523,14 @@ namespace IO.ClickSend.ClickSend.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (listId != null) localVarPathParams.Add("list_id", this.Configuration.ApiClient.ParameterToString(listId)); // path parameter
+            if (fields != null && fields.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(fields); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = fields; // byte array
+            }
 
             // authentication (BasicAuth) required
             // http basic authentication required

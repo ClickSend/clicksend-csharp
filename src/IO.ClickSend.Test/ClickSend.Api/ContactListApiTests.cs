@@ -147,7 +147,8 @@ namespace IO.ClickSend.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? listId = null;
-            //var response = instance.ListsRemoveDuplicatesByListIdPut(listId);
+            //Fields fields = null;
+            //var response = instance.ListsRemoveDuplicatesByListIdPut(listId, fields);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }
         

@@ -143,7 +143,8 @@ namespace IO.ClickSend.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string email = null;
-            //var response = instance.ForgotUsernamePut(email);
+            //string phoneNumber = null;
+            //var response = instance.ForgotUsernamePut(email, phoneNumber);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }
         
