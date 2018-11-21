@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="uploadspost"></a>
 # **UploadsPost**
-> string UploadsPost (string content, string convert)
+> string UploadsPost (string convert, UploadFile uploadFile = null)
 
 Upload File
 
@@ -34,13 +34,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new UploadApi();
-            var content = content_example;  // string | Your base64 encoded file.
             var convert = convert_example;  // string | 
+            var uploadFile = new UploadFile(); // UploadFile |  (optional) 
 
             try
             {
                 // Upload File
-                string result = apiInstance.UploadsPost(content, convert);
+                string result = apiInstance.UploadsPost(convert, uploadFile);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -56,8 +56,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **content** | **string**| Your base64 encoded file. | 
  **convert** | **string**|  | 
+ **uploadFile** | [**UploadFile**](UploadFile.md)|  | [optional] 
 
 ### Return type
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

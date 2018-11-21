@@ -142,9 +142,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create inbound sms
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="url">Your url.</param>
+        /// <param name="url">Url model</param>
         /// <returns>string</returns>
-        string SmsInboundPost (string url);
+        string SmsInboundPost (Url url);
 
         /// <summary>
         /// Create inbound sms
@@ -153,9 +153,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create inbound sms
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="url">Your url.</param>
+        /// <param name="url">Url model</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> SmsInboundPostWithHttpInfo (string url);
+        ApiResponse<string> SmsInboundPostWithHttpInfo (Url url);
         /// <summary>
         /// Mark inbound SMS as read
         /// </summary>
@@ -249,9 +249,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Add a delivery receipt
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="url">Your url.</param>
+        /// <param name="url">Url model</param>
         /// <returns>string</returns>
-        string SmsReceiptsPost (string url);
+        string SmsReceiptsPost (Url url);
 
         /// <summary>
         /// Add a delivery receipt
@@ -260,9 +260,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Add a delivery receipt
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="url">Your url.</param>
+        /// <param name="url">Url model</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> SmsReceiptsPostWithHttpInfo (string url);
+        ApiResponse<string> SmsReceiptsPostWithHttpInfo (Url url);
         /// <summary>
         /// Mark delivery receipts as read
         /// </summary>
@@ -513,9 +513,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create inbound sms
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="url">Your url.</param>
+        /// <param name="url">Url model</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> SmsInboundPostAsync (string url);
+        System.Threading.Tasks.Task<string> SmsInboundPostAsync (Url url);
 
         /// <summary>
         /// Create inbound sms
@@ -524,9 +524,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create inbound sms
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="url">Your url.</param>
+        /// <param name="url">Url model</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> SmsInboundPostAsyncWithHttpInfo (string url);
+        System.Threading.Tasks.Task<ApiResponse<string>> SmsInboundPostAsyncWithHttpInfo (Url url);
         /// <summary>
         /// Mark inbound SMS as read
         /// </summary>
@@ -620,9 +620,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Add a delivery receipt
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="url">Your url.</param>
+        /// <param name="url">Url model</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> SmsReceiptsPostAsync (string url);
+        System.Threading.Tasks.Task<string> SmsReceiptsPostAsync (Url url);
 
         /// <summary>
         /// Add a delivery receipt
@@ -631,9 +631,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Add a delivery receipt
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="url">Your url.</param>
+        /// <param name="url">Url model</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptsPostAsyncWithHttpInfo (string url);
+        System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptsPostAsyncWithHttpInfo (Url url);
         /// <summary>
         /// Mark delivery receipts as read
         /// </summary>
@@ -1603,9 +1603,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create inbound sms Create inbound sms
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="url">Your url.</param>
+        /// <param name="url">Url model</param>
         /// <returns>string</returns>
-        public string SmsInboundPost (string url)
+        public string SmsInboundPost (Url url)
         {
              ApiResponse<string> localVarResponse = SmsInboundPostWithHttpInfo(url);
              return localVarResponse.Data;
@@ -1615,9 +1615,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create inbound sms Create inbound sms
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="url">Your url.</param>
+        /// <param name="url">Url model</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > SmsInboundPostWithHttpInfo (string url)
+        public ApiResponse< string > SmsInboundPostWithHttpInfo (Url url)
         {
             // verify the required parameter 'url' is set
             if (url == null)
@@ -1633,7 +1633,7 @@ namespace IO.ClickSend.ClickSend.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/x-www-form-urlencoded"
+                "application/json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1645,7 +1645,14 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (url != null) localVarFormParams.Add("url", this.Configuration.ApiClient.ParameterToString(url)); // form parameter
+            if (url != null && url.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(url); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = url; // byte array
+            }
 
             // authentication (BasicAuth) required
             // http basic authentication required
@@ -1676,9 +1683,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create inbound sms Create inbound sms
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="url">Your url.</param>
+        /// <param name="url">Url model</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> SmsInboundPostAsync (string url)
+        public async System.Threading.Tasks.Task<string> SmsInboundPostAsync (Url url)
         {
              ApiResponse<string> localVarResponse = await SmsInboundPostAsyncWithHttpInfo(url);
              return localVarResponse.Data;
@@ -1689,9 +1696,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create inbound sms Create inbound sms
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="url">Your url.</param>
+        /// <param name="url">Url model</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> SmsInboundPostAsyncWithHttpInfo (string url)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> SmsInboundPostAsyncWithHttpInfo (Url url)
         {
             // verify the required parameter 'url' is set
             if (url == null)
@@ -1707,7 +1714,7 @@ namespace IO.ClickSend.ClickSend.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/x-www-form-urlencoded"
+                "application/json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1719,7 +1726,14 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (url != null) localVarFormParams.Add("url", this.Configuration.ApiClient.ParameterToString(url)); // form parameter
+            if (url != null && url.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(url); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = url; // byte array
+            }
 
             // authentication (BasicAuth) required
             // http basic authentication required
@@ -2360,9 +2374,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Add a delivery receipt Add a delivery receipt
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="url">Your url.</param>
+        /// <param name="url">Url model</param>
         /// <returns>string</returns>
-        public string SmsReceiptsPost (string url)
+        public string SmsReceiptsPost (Url url)
         {
              ApiResponse<string> localVarResponse = SmsReceiptsPostWithHttpInfo(url);
              return localVarResponse.Data;
@@ -2372,9 +2386,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Add a delivery receipt Add a delivery receipt
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="url">Your url.</param>
+        /// <param name="url">Url model</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > SmsReceiptsPostWithHttpInfo (string url)
+        public ApiResponse< string > SmsReceiptsPostWithHttpInfo (Url url)
         {
             // verify the required parameter 'url' is set
             if (url == null)
@@ -2390,7 +2404,7 @@ namespace IO.ClickSend.ClickSend.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/x-www-form-urlencoded"
+                "application/json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -2402,7 +2416,14 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (url != null) localVarFormParams.Add("url", this.Configuration.ApiClient.ParameterToString(url)); // form parameter
+            if (url != null && url.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(url); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = url; // byte array
+            }
 
             // authentication (BasicAuth) required
             // http basic authentication required
@@ -2433,9 +2454,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Add a delivery receipt Add a delivery receipt
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="url">Your url.</param>
+        /// <param name="url">Url model</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> SmsReceiptsPostAsync (string url)
+        public async System.Threading.Tasks.Task<string> SmsReceiptsPostAsync (Url url)
         {
              ApiResponse<string> localVarResponse = await SmsReceiptsPostAsyncWithHttpInfo(url);
              return localVarResponse.Data;
@@ -2446,9 +2467,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Add a delivery receipt Add a delivery receipt
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="url">Your url.</param>
+        /// <param name="url">Url model</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptsPostAsyncWithHttpInfo (string url)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptsPostAsyncWithHttpInfo (Url url)
         {
             // verify the required parameter 'url' is set
             if (url == null)
@@ -2464,7 +2485,7 @@ namespace IO.ClickSend.ClickSend.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/x-www-form-urlencoded"
+                "application/json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -2476,7 +2497,14 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (url != null) localVarFormParams.Add("url", this.Configuration.ApiClient.ParameterToString(url)); // form parameter
+            if (url != null && url.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(url); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = url; // byte array
+            }
 
             // authentication (BasicAuth) required
             // http basic authentication required

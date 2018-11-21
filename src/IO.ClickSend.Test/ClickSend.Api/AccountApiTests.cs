@@ -118,8 +118,8 @@ namespace IO.ClickSend.Test
         public void ForgotPasswordPutTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string username = null;
-            //var response = instance.ForgotPasswordPut(username);
+            //ForgotPassword forgotPassword = null;
+            //var response = instance.ForgotPasswordPut(forgotPassword);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }
         
@@ -142,9 +142,8 @@ namespace IO.ClickSend.Test
         public void ForgotUsernamePutTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string email = null;
-            //string phoneNumber = null;
-            //var response = instance.ForgotUsernamePut(email, phoneNumber);
+            //ForgotUsername forgotUsername = null;
+            //var response = instance.ForgotUsernamePut(forgotUsername);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }
         

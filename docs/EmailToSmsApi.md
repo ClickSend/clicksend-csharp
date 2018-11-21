@@ -277,7 +277,7 @@ Name | Type | Description  | Notes
 
 <a name="smsemailsmsstrippedstringpost"></a>
 # **SmsEmailSmsStrippedStringPost**
-> string SmsEmailSmsStrippedStringPost (string stripString)
+> string SmsEmailSmsStrippedStringPost (StrippedString strippedString)
 
 Create email to sms stripped string rule
 
@@ -302,12 +302,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new EmailToSmsApi();
-            var stripString = stripString_example;  // string | String to be stripped.
+            var strippedString = new StrippedString(); // StrippedString | StrippedString model
 
             try
             {
                 // Create email to sms stripped string rule
-                string result = apiInstance.SmsEmailSmsStrippedStringPost(stripString);
+                string result = apiInstance.SmsEmailSmsStrippedStringPost(strippedString);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -323,7 +323,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **stripString** | **string**| String to be stripped. | 
+ **strippedString** | [**StrippedString**](StrippedString.md)| StrippedString model | 
 
 ### Return type
 
@@ -335,14 +335,14 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="smsemailsmsstrippedstringput"></a>
 # **SmsEmailSmsStrippedStringPut**
-> string SmsEmailSmsStrippedStringPut (string stripString, int? ruleId)
+> string SmsEmailSmsStrippedStringPut (Url url, int? ruleId)
 
 Update email to sms stripped string rule
 
@@ -367,13 +367,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new EmailToSmsApi();
-            var stripString = stripString_example;  // string | String to be stripped.
+            var url = new Url(); // Url | Url model
             var ruleId = 56;  // int? | Your rule id
 
             try
             {
                 // Update email to sms stripped string rule
-                string result = apiInstance.SmsEmailSmsStrippedStringPut(stripString, ruleId);
+                string result = apiInstance.SmsEmailSmsStrippedStringPut(url, ruleId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -389,7 +389,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **stripString** | **string**| String to be stripped. | 
+ **url** | [**Url**](Url.md)| Url model | 
  **ruleId** | **int?**| Your rule id | 
 
 ### Return type
@@ -402,7 +402,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

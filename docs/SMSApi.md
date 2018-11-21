@@ -354,7 +354,7 @@ Name | Type | Description  | Notes
 
 <a name="smsinboundpost"></a>
 # **SmsInboundPost**
-> string SmsInboundPost (string url)
+> string SmsInboundPost (Url url)
 
 Create inbound sms
 
@@ -379,7 +379,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SMSApi();
-            var url = url_example;  // string | Your url.
+            var url = new Url(); // Url | Url model
 
             try
             {
@@ -400,7 +400,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **url** | **string**| Your url. | 
+ **url** | [**Url**](Url.md)| Url model | 
 
 ### Return type
 
@@ -412,7 +412,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -681,7 +681,7 @@ Name | Type | Description  | Notes
 
 <a name="smsreceiptspost"></a>
 # **SmsReceiptsPost**
-> string SmsReceiptsPost (string url)
+> string SmsReceiptsPost (Url url)
 
 Add a delivery receipt
 
@@ -706,7 +706,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SMSApi();
-            var url = url_example;  // string | Your url.
+            var url = new Url(); // Url | Url model
 
             try
             {
@@ -727,7 +727,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **url** | **string**| Your url. | 
+ **url** | [**Url**](Url.md)| Url model | 
 
 ### Return type
 
@@ -739,7 +739,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

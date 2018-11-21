@@ -14,6 +14,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace IO.ClickSend.ClickSend.Api
 {
@@ -30,10 +31,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// Upload File
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="content">Your base64 encoded file.</param>
         /// <param name="convert"></param>
+        /// <param name="uploadFile"> (optional)</param>
         /// <returns>string</returns>
-        string UploadsPost (string content, string convert);
+        string UploadsPost (string convert, UploadFile uploadFile = null);
 
         /// <summary>
         /// Upload File
@@ -42,10 +43,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// Upload File
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="content">Your base64 encoded file.</param>
         /// <param name="convert"></param>
+        /// <param name="uploadFile"> (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> UploadsPostWithHttpInfo (string content, string convert);
+        ApiResponse<string> UploadsPostWithHttpInfo (string convert, UploadFile uploadFile = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -55,10 +56,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// Upload File
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="content">Your base64 encoded file.</param>
         /// <param name="convert"></param>
+        /// <param name="uploadFile"> (optional)</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> UploadsPostAsync (string content, string convert);
+        System.Threading.Tasks.Task<string> UploadsPostAsync (string convert, UploadFile uploadFile = null);
 
         /// <summary>
         /// Upload File
@@ -67,10 +68,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// Upload File
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="content">Your base64 encoded file.</param>
         /// <param name="convert"></param>
+        /// <param name="uploadFile"> (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> UploadsPostAsyncWithHttpInfo (string content, string convert);
+        System.Threading.Tasks.Task<ApiResponse<string>> UploadsPostAsyncWithHttpInfo (string convert, UploadFile uploadFile = null);
         #endregion Asynchronous Operations
     }
 
@@ -175,12 +176,12 @@ namespace IO.ClickSend.ClickSend.Api
         /// Upload File Upload File
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="content">Your base64 encoded file.</param>
         /// <param name="convert"></param>
+        /// <param name="uploadFile"> (optional)</param>
         /// <returns>string</returns>
-        public string UploadsPost (string content, string convert)
+        public string UploadsPost (string convert, UploadFile uploadFile = null)
         {
-             ApiResponse<string> localVarResponse = UploadsPostWithHttpInfo(content, convert);
+             ApiResponse<string> localVarResponse = UploadsPostWithHttpInfo(convert, uploadFile);
              return localVarResponse.Data;
         }
 
@@ -188,14 +189,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Upload File Upload File
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="content">Your base64 encoded file.</param>
         /// <param name="convert"></param>
+        /// <param name="uploadFile"> (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > UploadsPostWithHttpInfo (string content, string convert)
+        public ApiResponse< string > UploadsPostWithHttpInfo (string convert, UploadFile uploadFile = null)
         {
-            // verify the required parameter 'content' is set
-            if (content == null)
-                throw new ApiException(400, "Missing required parameter 'content' when calling UploadApi->UploadsPost");
             // verify the required parameter 'convert' is set
             if (convert == null)
                 throw new ApiException(400, "Missing required parameter 'convert' when calling UploadApi->UploadsPost");
@@ -210,7 +208,7 @@ namespace IO.ClickSend.ClickSend.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/x-www-form-urlencoded"
+                "application/json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -223,7 +221,14 @@ namespace IO.ClickSend.ClickSend.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (convert != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "convert", convert)); // query parameter
-            if (content != null) localVarFormParams.Add("content", this.Configuration.ApiClient.ParameterToString(content)); // form parameter
+            if (uploadFile != null && uploadFile.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(uploadFile); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = uploadFile; // byte array
+            }
 
             // authentication (BasicAuth) required
             // http basic authentication required
@@ -254,12 +259,12 @@ namespace IO.ClickSend.ClickSend.Api
         /// Upload File Upload File
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="content">Your base64 encoded file.</param>
         /// <param name="convert"></param>
+        /// <param name="uploadFile"> (optional)</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> UploadsPostAsync (string content, string convert)
+        public async System.Threading.Tasks.Task<string> UploadsPostAsync (string convert, UploadFile uploadFile = null)
         {
-             ApiResponse<string> localVarResponse = await UploadsPostAsyncWithHttpInfo(content, convert);
+             ApiResponse<string> localVarResponse = await UploadsPostAsyncWithHttpInfo(convert, uploadFile);
              return localVarResponse.Data;
 
         }
@@ -268,14 +273,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Upload File Upload File
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="content">Your base64 encoded file.</param>
         /// <param name="convert"></param>
+        /// <param name="uploadFile"> (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> UploadsPostAsyncWithHttpInfo (string content, string convert)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> UploadsPostAsyncWithHttpInfo (string convert, UploadFile uploadFile = null)
         {
-            // verify the required parameter 'content' is set
-            if (content == null)
-                throw new ApiException(400, "Missing required parameter 'content' when calling UploadApi->UploadsPost");
             // verify the required parameter 'convert' is set
             if (convert == null)
                 throw new ApiException(400, "Missing required parameter 'convert' when calling UploadApi->UploadsPost");
@@ -290,7 +292,7 @@ namespace IO.ClickSend.ClickSend.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/x-www-form-urlencoded"
+                "application/json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -303,7 +305,14 @@ namespace IO.ClickSend.ClickSend.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (convert != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "convert", convert)); // query parameter
-            if (content != null) localVarFormParams.Add("content", this.Configuration.ApiClient.ParameterToString(content)); // form parameter
+            if (uploadFile != null && uploadFile.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(uploadFile); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = uploadFile; // byte array
+            }
 
             // authentication (BasicAuth) required
             // http basic authentication required

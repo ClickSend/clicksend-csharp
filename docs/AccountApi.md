@@ -271,7 +271,7 @@ Name | Type | Description  | Notes
 
 <a name="forgotpasswordput"></a>
 # **ForgotPasswordPut**
-> string ForgotPasswordPut (string username)
+> string ForgotPasswordPut (ForgotPassword forgotPassword = null)
 
 Forgot password
 
@@ -296,12 +296,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new AccountApi();
-            var username = username_example;  // string | Username belonging to account.
+            var forgotPassword = new ForgotPassword(); // ForgotPassword |  (optional) 
 
             try
             {
                 // Forgot password
-                string result = apiInstance.ForgotPasswordPut(username);
+                string result = apiInstance.ForgotPasswordPut(forgotPassword);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -317,7 +317,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **string**| Username belonging to account. | 
+ **forgotPassword** | [**ForgotPassword**](ForgotPassword.md)|  | [optional] 
 
 ### Return type
 
@@ -329,7 +329,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -401,7 +401,7 @@ Name | Type | Description  | Notes
 
 <a name="forgotusernameput"></a>
 # **ForgotUsernamePut**
-> string ForgotUsernamePut (string email = null, string phoneNumber = null)
+> string ForgotUsernamePut (ForgotUsername forgotUsername = null)
 
 Forgot username
 
@@ -422,13 +422,12 @@ namespace Example
         public void main()
         {
             var apiInstance = new AccountApi();
-            var email = email_example;  // string | Email belonging to account. (optional) 
-            var phoneNumber = phoneNumber_example;  // string | Phone number belonging to account. (optional) 
+            var forgotUsername = new ForgotUsername(); // ForgotUsername |  (optional) 
 
             try
             {
                 // Forgot username
-                string result = apiInstance.ForgotUsernamePut(email, phoneNumber);
+                string result = apiInstance.ForgotUsernamePut(forgotUsername);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -444,8 +443,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email** | **string**| Email belonging to account. | [optional] 
- **phoneNumber** | **string**| Phone number belonging to account. | [optional] 
+ **forgotUsername** | [**ForgotUsername**](ForgotUsername.md)|  | [optional] 
 
 ### Return type
 
@@ -457,7 +455,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

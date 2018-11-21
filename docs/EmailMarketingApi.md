@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 <a name="allowedemailaddresspost"></a>
 # **AllowedEmailAddressPost**
-> string AllowedEmailAddressPost (string emailAddress)
+> string AllowedEmailAddressPost (EmailAddress emailAddress = null)
 
 Create allowed Email Address
 
@@ -114,7 +114,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new EmailMarketingApi();
-            var emailAddress = emailAddress_example;  // string | Email to be allowed.
+            var emailAddress = new EmailAddress(); // EmailAddress |  (optional) 
 
             try
             {
@@ -135,7 +135,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **emailAddress** | **string**| Email to be allowed. | 
+ **emailAddress** | [**EmailAddress**](EmailAddress.md)|  | [optional] 
 
 ### Return type
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

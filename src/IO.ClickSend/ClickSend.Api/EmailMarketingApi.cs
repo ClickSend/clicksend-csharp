@@ -54,9 +54,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create allowed Email Address
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailAddress">Email to be allowed.</param>
+        /// <param name="emailAddress"> (optional)</param>
         /// <returns>string</returns>
-        string AllowedEmailAddressPost (string emailAddress);
+        string AllowedEmailAddressPost (EmailAddress emailAddress = null);
 
         /// <summary>
         /// Create allowed Email Address
@@ -65,9 +65,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create allowed Email Address
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailAddress">Email to be allowed.</param>
+        /// <param name="emailAddress"> (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> AllowedEmailAddressPostWithHttpInfo (string emailAddress);
+        ApiResponse<string> AllowedEmailAddressPostWithHttpInfo (EmailAddress emailAddress = null);
         /// <summary>
         /// Cancel email campaign
         /// </summary>
@@ -370,9 +370,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create allowed Email Address
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailAddress">Email to be allowed.</param>
+        /// <param name="emailAddress"> (optional)</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> AllowedEmailAddressPostAsync (string emailAddress);
+        System.Threading.Tasks.Task<string> AllowedEmailAddressPostAsync (EmailAddress emailAddress = null);
 
         /// <summary>
         /// Create allowed Email Address
@@ -381,9 +381,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create allowed Email Address
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailAddress">Email to be allowed.</param>
+        /// <param name="emailAddress"> (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> AllowedEmailAddressPostAsyncWithHttpInfo (string emailAddress);
+        System.Threading.Tasks.Task<ApiResponse<string>> AllowedEmailAddressPostAsyncWithHttpInfo (EmailAddress emailAddress = null);
         /// <summary>
         /// Cancel email campaign
         /// </summary>
@@ -905,9 +905,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create allowed Email Address Create allowed Email Address
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailAddress">Email to be allowed.</param>
+        /// <param name="emailAddress"> (optional)</param>
         /// <returns>string</returns>
-        public string AllowedEmailAddressPost (string emailAddress)
+        public string AllowedEmailAddressPost (EmailAddress emailAddress = null)
         {
              ApiResponse<string> localVarResponse = AllowedEmailAddressPostWithHttpInfo(emailAddress);
              return localVarResponse.Data;
@@ -917,13 +917,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create allowed Email Address Create allowed Email Address
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailAddress">Email to be allowed.</param>
+        /// <param name="emailAddress"> (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > AllowedEmailAddressPostWithHttpInfo (string emailAddress)
+        public ApiResponse< string > AllowedEmailAddressPostWithHttpInfo (EmailAddress emailAddress = null)
         {
-            // verify the required parameter 'emailAddress' is set
-            if (emailAddress == null)
-                throw new ApiException(400, "Missing required parameter 'emailAddress' when calling EmailMarketingApi->AllowedEmailAddressPost");
 
             var localVarPath = "/email/addresses";
             var localVarPathParams = new Dictionary<String, String>();
@@ -935,7 +932,7 @@ namespace IO.ClickSend.ClickSend.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/x-www-form-urlencoded"
+                "application/json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -947,7 +944,14 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (emailAddress != null) localVarFormParams.Add("email_address", this.Configuration.ApiClient.ParameterToString(emailAddress)); // form parameter
+            if (emailAddress != null && emailAddress.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(emailAddress); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = emailAddress; // byte array
+            }
 
             // authentication (BasicAuth) required
             // http basic authentication required
@@ -978,9 +982,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create allowed Email Address Create allowed Email Address
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailAddress">Email to be allowed.</param>
+        /// <param name="emailAddress"> (optional)</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> AllowedEmailAddressPostAsync (string emailAddress)
+        public async System.Threading.Tasks.Task<string> AllowedEmailAddressPostAsync (EmailAddress emailAddress = null)
         {
              ApiResponse<string> localVarResponse = await AllowedEmailAddressPostAsyncWithHttpInfo(emailAddress);
              return localVarResponse.Data;
@@ -991,13 +995,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create allowed Email Address Create allowed Email Address
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="emailAddress">Email to be allowed.</param>
+        /// <param name="emailAddress"> (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> AllowedEmailAddressPostAsyncWithHttpInfo (string emailAddress)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> AllowedEmailAddressPostAsyncWithHttpInfo (EmailAddress emailAddress = null)
         {
-            // verify the required parameter 'emailAddress' is set
-            if (emailAddress == null)
-                throw new ApiException(400, "Missing required parameter 'emailAddress' when calling EmailMarketingApi->AllowedEmailAddressPost");
 
             var localVarPath = "/email/addresses";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1009,7 +1010,7 @@ namespace IO.ClickSend.ClickSend.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/x-www-form-urlencoded"
+                "application/json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1021,7 +1022,14 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (emailAddress != null) localVarFormParams.Add("email_address", this.Configuration.ApiClient.ParameterToString(emailAddress)); // form parameter
+            if (emailAddress != null && emailAddress.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(emailAddress); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = emailAddress; // byte array
+            }
 
             // authentication (BasicAuth) required
             // http basic authentication required

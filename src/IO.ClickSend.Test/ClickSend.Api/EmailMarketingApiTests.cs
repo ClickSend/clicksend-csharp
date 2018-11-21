@@ -84,7 +84,7 @@ namespace IO.ClickSend.Test
         public void AllowedEmailAddressPostTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string emailAddress = null;
+            //EmailAddress emailAddress = null;
             //var response = instance.AllowedEmailAddressPost(emailAddress);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }

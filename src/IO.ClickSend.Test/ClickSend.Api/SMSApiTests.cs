@@ -134,7 +134,7 @@ namespace IO.ClickSend.Test
         public void SmsInboundPostTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string url = null;
+            //Url url = null;
             //var response = instance.SmsInboundPost(url);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }
@@ -195,7 +195,7 @@ namespace IO.ClickSend.Test
         public void SmsReceiptsPostTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string url = null;
+            //Url url = null;
             //var response = instance.SmsReceiptsPost(url);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }
