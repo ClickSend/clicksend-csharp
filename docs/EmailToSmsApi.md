@@ -342,7 +342,7 @@ Name | Type | Description  | Notes
 
 <a name="smsemailsmsstrippedstringput"></a>
 # **SmsEmailSmsStrippedStringPut**
-> string SmsEmailSmsStrippedStringPut (Url url, int? ruleId)
+> string SmsEmailSmsStrippedStringPut (StrippedString strippedString, int? ruleId)
 
 Update email to sms stripped string rule
 
@@ -367,13 +367,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new EmailToSmsApi();
-            var url = new Url(); // Url | Url model
+            var strippedString = new StrippedString(); // StrippedString | StrippedString model
             var ruleId = 56;  // int? | Your rule id
 
             try
             {
                 // Update email to sms stripped string rule
-                string result = apiInstance.SmsEmailSmsStrippedStringPut(url, ruleId);
+                string result = apiInstance.SmsEmailSmsStrippedStringPut(strippedString, ruleId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -389,7 +389,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **url** | [**Url**](Url.md)| Url model | 
+ **strippedString** | [**StrippedString**](StrippedString.md)| StrippedString model | 
  **ruleId** | **int?**| Your rule id | 
 
 ### Return type

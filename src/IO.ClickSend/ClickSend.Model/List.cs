@@ -19,54 +19,47 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using JsonSubTypes;
 using System.ComponentModel.DataAnnotations;
 using ClickSendDateConverter = IO.ClickSend.Client.ClickSendDateConverter;
 
 namespace IO.ClickSend.ClickSend.Model
 {
     /// <summary>
-    /// From Email object.
+    /// Your list.
     /// </summary>
     [DataContract]
-    public partial class EmailFrom :  IEquatable<EmailFrom>, IValidatableObject
+    [JsonConverter(typeof(JsonSubtypes), "classType")]
+    public partial class List :  IEquatable<List>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="EmailFrom" /> class.
+        /// Initializes a new instance of the <see cref="List" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected EmailFrom() { }
+        protected List() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="EmailFrom" /> class.
+        /// Initializes a new instance of the <see cref="List" /> class.
         /// </summary>
-        /// <param name="emailAddressId">Email address id of the recipient. (required).</param>
-        /// <param name="name">Name of the recipient..</param>
-        public EmailFrom(string emailAddressId = default(string), string name = default(string))
+        /// <param name="listName">Your list name. (required).</param>
+        public List(string listName = default(string))
         {
-            // to ensure "emailAddressId" is required (not null)
-            if (emailAddressId == null)
+            // to ensure "listName" is required (not null)
+            if (listName == null)
             {
-                throw new InvalidDataException("emailAddressId is a required property for EmailFrom and cannot be null");
+                throw new InvalidDataException("listName is a required property for List and cannot be null");
             }
             else
             {
-                this.EmailAddressId = emailAddressId;
+                this.ListName = listName;
             }
-            this.Name = name;
         }
         
         /// <summary>
-        /// Email address id of the recipient.
+        /// Your list name.
         /// </summary>
-        /// <value>Email address id of the recipient.</value>
-        [DataMember(Name="email_address_id", EmitDefaultValue=false)]
-        public string EmailAddressId { get; set; }
-
-        /// <summary>
-        /// Name of the recipient.
-        /// </summary>
-        /// <value>Name of the recipient.</value>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
+        /// <value>Your list name.</value>
+        [DataMember(Name="list_name", EmitDefaultValue=false)]
+        public string ListName { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -75,9 +68,8 @@ namespace IO.ClickSend.ClickSend.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class EmailFrom {\n");
-            sb.Append("  EmailAddressId: ").Append(EmailAddressId).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("class List {\n");
+            sb.Append("  ListName: ").Append(ListName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -98,29 +90,24 @@ namespace IO.ClickSend.ClickSend.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as EmailFrom);
+            return this.Equals(input as List);
         }
 
         /// <summary>
-        /// Returns true if EmailFrom instances are equal
+        /// Returns true if List instances are equal
         /// </summary>
-        /// <param name="input">Instance of EmailFrom to be compared</param>
+        /// <param name="input">Instance of List to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(EmailFrom input)
+        public bool Equals(List input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.EmailAddressId == input.EmailAddressId ||
-                    (this.EmailAddressId != null &&
-                    this.EmailAddressId.Equals(input.EmailAddressId))
-                ) && 
-                (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    this.ListName == input.ListName ||
+                    (this.ListName != null &&
+                    this.ListName.Equals(input.ListName))
                 );
         }
 
@@ -133,10 +120,8 @@ namespace IO.ClickSend.ClickSend.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.EmailAddressId != null)
-                    hashCode = hashCode * 59 + this.EmailAddressId.GetHashCode();
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.ListName != null)
+                    hashCode = hashCode * 59 + this.ListName.GetHashCode();
                 return hashCode;
             }
         }
@@ -147,6 +132,16 @@ namespace IO.ClickSend.ClickSend.Model
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> BaseValidate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -74,9 +74,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your list id</param>
-        /// <param name="listName">Your new list name</param>
+        /// <param name="list">List model</param>
         /// <returns>string</returns>
-        string ListsByListIdPut (int? listId, string listName);
+        string ListsByListIdPut (int? listId, List list);
 
         /// <summary>
         /// Update specific contact list
@@ -86,9 +86,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your list id</param>
-        /// <param name="listName">Your new list name</param>
+        /// <param name="list">List model</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> ListsByListIdPutWithHttpInfo (int? listId, string listName);
+        ApiResponse<string> ListsByListIdPutWithHttpInfo (int? listId, List list);
         /// <summary>
         /// Get all contact lists
         /// </summary>
@@ -142,9 +142,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create new contact list
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="listName">Your contact list name</param>
+        /// <param name="list">List model</param>
         /// <returns>string</returns>
-        string ListsPost (string listName);
+        string ListsPost (List list);
 
         /// <summary>
         /// Create new contact list
@@ -153,9 +153,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create new contact list
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="listName">Your contact list name</param>
+        /// <param name="list">List model</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> ListsPostWithHttpInfo (string listName);
+        ApiResponse<string> ListsPostWithHttpInfo (List list);
         /// <summary>
         /// Remove duplicate contacts
         /// </summary>
@@ -231,9 +231,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your list id</param>
-        /// <param name="listName">Your new list name</param>
+        /// <param name="list">List model</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> ListsByListIdPutAsync (int? listId, string listName);
+        System.Threading.Tasks.Task<string> ListsByListIdPutAsync (int? listId, List list);
 
         /// <summary>
         /// Update specific contact list
@@ -243,9 +243,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your list id</param>
-        /// <param name="listName">Your new list name</param>
+        /// <param name="list">List model</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> ListsByListIdPutAsyncWithHttpInfo (int? listId, string listName);
+        System.Threading.Tasks.Task<ApiResponse<string>> ListsByListIdPutAsyncWithHttpInfo (int? listId, List list);
         /// <summary>
         /// Get all contact lists
         /// </summary>
@@ -299,9 +299,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create new contact list
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="listName">Your contact list name</param>
+        /// <param name="list">List model</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> ListsPostAsync (string listName);
+        System.Threading.Tasks.Task<string> ListsPostAsync (List list);
 
         /// <summary>
         /// Create new contact list
@@ -310,9 +310,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create new contact list
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="listName">Your contact list name</param>
+        /// <param name="list">List model</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> ListsPostAsyncWithHttpInfo (string listName);
+        System.Threading.Tasks.Task<ApiResponse<string>> ListsPostAsyncWithHttpInfo (List list);
         /// <summary>
         /// Remove duplicate contacts
         /// </summary>
@@ -735,11 +735,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your list id</param>
-        /// <param name="listName">Your new list name</param>
+        /// <param name="list">List model</param>
         /// <returns>string</returns>
-        public string ListsByListIdPut (int? listId, string listName)
+        public string ListsByListIdPut (int? listId, List list)
         {
-             ApiResponse<string> localVarResponse = ListsByListIdPutWithHttpInfo(listId, listName);
+             ApiResponse<string> localVarResponse = ListsByListIdPutWithHttpInfo(listId, list);
              return localVarResponse.Data;
         }
 
@@ -748,16 +748,16 @@ namespace IO.ClickSend.ClickSend.Api
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your list id</param>
-        /// <param name="listName">Your new list name</param>
+        /// <param name="list">List model</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > ListsByListIdPutWithHttpInfo (int? listId, string listName)
+        public ApiResponse< string > ListsByListIdPutWithHttpInfo (int? listId, List list)
         {
             // verify the required parameter 'listId' is set
             if (listId == null)
                 throw new ApiException(400, "Missing required parameter 'listId' when calling ContactListApi->ListsByListIdPut");
-            // verify the required parameter 'listName' is set
-            if (listName == null)
-                throw new ApiException(400, "Missing required parameter 'listName' when calling ContactListApi->ListsByListIdPut");
+            // verify the required parameter 'list' is set
+            if (list == null)
+                throw new ApiException(400, "Missing required parameter 'list' when calling ContactListApi->ListsByListIdPut");
 
             var localVarPath = "/lists/{list_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -782,13 +782,13 @@ namespace IO.ClickSend.ClickSend.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (listId != null) localVarPathParams.Add("list_id", this.Configuration.ApiClient.ParameterToString(listId)); // path parameter
-            if (listName != null && listName.GetType() != typeof(byte[]))
+            if (list != null && list.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(listName); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(list); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = listName; // byte array
+                localVarPostBody = list; // byte array
             }
 
             // authentication (BasicAuth) required
@@ -821,11 +821,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your list id</param>
-        /// <param name="listName">Your new list name</param>
+        /// <param name="list">List model</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> ListsByListIdPutAsync (int? listId, string listName)
+        public async System.Threading.Tasks.Task<string> ListsByListIdPutAsync (int? listId, List list)
         {
-             ApiResponse<string> localVarResponse = await ListsByListIdPutAsyncWithHttpInfo(listId, listName);
+             ApiResponse<string> localVarResponse = await ListsByListIdPutAsyncWithHttpInfo(listId, list);
              return localVarResponse.Data;
 
         }
@@ -835,16 +835,16 @@ namespace IO.ClickSend.ClickSend.Api
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your list id</param>
-        /// <param name="listName">Your new list name</param>
+        /// <param name="list">List model</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> ListsByListIdPutAsyncWithHttpInfo (int? listId, string listName)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> ListsByListIdPutAsyncWithHttpInfo (int? listId, List list)
         {
             // verify the required parameter 'listId' is set
             if (listId == null)
                 throw new ApiException(400, "Missing required parameter 'listId' when calling ContactListApi->ListsByListIdPut");
-            // verify the required parameter 'listName' is set
-            if (listName == null)
-                throw new ApiException(400, "Missing required parameter 'listName' when calling ContactListApi->ListsByListIdPut");
+            // verify the required parameter 'list' is set
+            if (list == null)
+                throw new ApiException(400, "Missing required parameter 'list' when calling ContactListApi->ListsByListIdPut");
 
             var localVarPath = "/lists/{list_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -869,13 +869,13 @@ namespace IO.ClickSend.ClickSend.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (listId != null) localVarPathParams.Add("list_id", this.Configuration.ApiClient.ParameterToString(listId)); // path parameter
-            if (listName != null && listName.GetType() != typeof(byte[]))
+            if (list != null && list.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(listName); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(list); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = listName; // byte array
+                localVarPostBody = list; // byte array
             }
 
             // authentication (BasicAuth) required
@@ -1227,11 +1227,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create new contact list Create new contact list
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="listName">Your contact list name</param>
+        /// <param name="list">List model</param>
         /// <returns>string</returns>
-        public string ListsPost (string listName)
+        public string ListsPost (List list)
         {
-             ApiResponse<string> localVarResponse = ListsPostWithHttpInfo(listName);
+             ApiResponse<string> localVarResponse = ListsPostWithHttpInfo(list);
              return localVarResponse.Data;
         }
 
@@ -1239,13 +1239,13 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create new contact list Create new contact list
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="listName">Your contact list name</param>
+        /// <param name="list">List model</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > ListsPostWithHttpInfo (string listName)
+        public ApiResponse< string > ListsPostWithHttpInfo (List list)
         {
-            // verify the required parameter 'listName' is set
-            if (listName == null)
-                throw new ApiException(400, "Missing required parameter 'listName' when calling ContactListApi->ListsPost");
+            // verify the required parameter 'list' is set
+            if (list == null)
+                throw new ApiException(400, "Missing required parameter 'list' when calling ContactListApi->ListsPost");
 
             var localVarPath = "/lists";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1269,13 +1269,13 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (listName != null && listName.GetType() != typeof(byte[]))
+            if (list != null && list.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(listName); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(list); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = listName; // byte array
+                localVarPostBody = list; // byte array
             }
 
             // authentication (BasicAuth) required
@@ -1307,11 +1307,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create new contact list Create new contact list
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="listName">Your contact list name</param>
+        /// <param name="list">List model</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> ListsPostAsync (string listName)
+        public async System.Threading.Tasks.Task<string> ListsPostAsync (List list)
         {
-             ApiResponse<string> localVarResponse = await ListsPostAsyncWithHttpInfo(listName);
+             ApiResponse<string> localVarResponse = await ListsPostAsyncWithHttpInfo(list);
              return localVarResponse.Data;
 
         }
@@ -1320,13 +1320,13 @@ namespace IO.ClickSend.ClickSend.Api
         /// Create new contact list Create new contact list
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="listName">Your contact list name</param>
+        /// <param name="list">List model</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> ListsPostAsyncWithHttpInfo (string listName)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> ListsPostAsyncWithHttpInfo (List list)
         {
-            // verify the required parameter 'listName' is set
-            if (listName == null)
-                throw new ApiException(400, "Missing required parameter 'listName' when calling ContactListApi->ListsPost");
+            // verify the required parameter 'list' is set
+            if (list == null)
+                throw new ApiException(400, "Missing required parameter 'list' when calling ContactListApi->ListsPost");
 
             var localVarPath = "/lists";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1350,13 +1350,13 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (listName != null && listName.GetType() != typeof(byte[]))
+            if (list != null && list.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(listName); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(list); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = listName; // byte array
+                localVarPostBody = list; // byte array
             }
 
             // authentication (BasicAuth) required

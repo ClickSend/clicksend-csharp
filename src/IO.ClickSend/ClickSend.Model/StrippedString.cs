@@ -58,7 +58,7 @@ namespace IO.ClickSend.ClickSend.Model
         /// String to be.
         /// </summary>
         /// <value>String to be.</value>
-        [DataMember(Name="strip-string", EmitDefaultValue=false)]
+        [DataMember(Name="strip_string", EmitDefaultValue=false)]
         public string StripString { get; set; }
 
         /// <summary>

@@ -322,7 +322,7 @@ namespace IO.ClickSend.ClickSend.Api
             if (filename == null)
                 throw new ApiException(400, "Missing required parameter 'filename' when calling PostLetterApi->PostLettersExportGet");
 
-            var localVarPath = "/post/letters/export";
+            var localVarPath = "/post/letters/history/export";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -396,7 +396,7 @@ namespace IO.ClickSend.ClickSend.Api
             if (filename == null)
                 throw new ApiException(400, "Missing required parameter 'filename' when calling PostLetterApi->PostLettersExportGet");
 
-            var localVarPath = "/post/letters/export";
+            var localVarPath = "/post/letters/history/export";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);

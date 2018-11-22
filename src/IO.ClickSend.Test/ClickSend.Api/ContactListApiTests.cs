@@ -96,8 +96,8 @@ namespace IO.ClickSend.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? listId = null;
-            //string listName = null;
-            //var response = instance.ListsByListIdPut(listId, listName);
+            //List list = null;
+            //var response = instance.ListsByListIdPut(listId, list);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }
         
@@ -134,8 +134,8 @@ namespace IO.ClickSend.Test
         public void ListsPostTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string listName = null;
-            //var response = instance.ListsPost(listName);
+            //List list = null;
+            //var response = instance.ListsPost(list);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }
         

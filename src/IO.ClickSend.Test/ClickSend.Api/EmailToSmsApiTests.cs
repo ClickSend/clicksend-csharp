@@ -132,9 +132,9 @@ namespace IO.ClickSend.Test
         public void SmsEmailSmsStrippedStringPutTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //Url url = null;
+            //StrippedString strippedString = null;
             //int? ruleId = null;
-            //var response = instance.SmsEmailSmsStrippedStringPut(url, ruleId);
+            //var response = instance.SmsEmailSmsStrippedStringPut(strippedString, ruleId);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }
         

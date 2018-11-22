@@ -43,12 +43,12 @@ namespace IO.ClickSend.ClickSend.Model
         /// <param name="to">Array of To Recipient items. (required).</param>
         /// <param name="cc">Array of Cc Recipient items..</param>
         /// <param name="bcc">Array of Bcc Recipient items..</param>
-        /// <param name="from">From Email object. (required).</param>
+        /// <param name="from">from (required).</param>
         /// <param name="subject">Subject of the email..</param>
         /// <param name="body">Body of the email. (required).</param>
         /// <param name="attachments">Array of Attachment items..</param>
         /// <param name="schedule">Schedule..</param>
-        public Email(List<EmailRecipient> to = default(List<EmailRecipient>), List<EmailRecipient> cc = default(List<EmailRecipient>), List<EmailRecipient> bcc = default(List<EmailRecipient>), List<EmailFrom> from = default(List<EmailFrom>), string subject = default(string), string body = default(string), List<Attachment> attachments = default(List<Attachment>), decimal? schedule = default(decimal?))
+        public Email(List<EmailRecipient> to = default(List<EmailRecipient>), List<EmailRecipient> cc = default(List<EmailRecipient>), List<EmailRecipient> bcc = default(List<EmailRecipient>), EmailFrom from = default(EmailFrom), string subject = default(string), string body = default(string), List<Attachment> attachments = default(List<Attachment>), decimal? schedule = default(decimal?))
         {
             // to ensure "to" is required (not null)
             if (to == null)
@@ -106,11 +106,10 @@ namespace IO.ClickSend.ClickSend.Model
         public List<EmailRecipient> Bcc { get; set; }
 
         /// <summary>
-        /// From Email object.
+        /// Gets or Sets From
         /// </summary>
-        /// <value>From Email object.</value>
         [DataMember(Name="from", EmitDefaultValue=false)]
-        public List<EmailFrom> From { get; set; }
+        public EmailFrom From { get; set; }
 
         /// <summary>
         /// Subject of the email.
@@ -207,8 +206,8 @@ namespace IO.ClickSend.ClickSend.Model
                 ) && 
                 (
                     this.From == input.From ||
-                    this.From != null &&
-                    this.From.SequenceEqual(input.From)
+                    (this.From != null &&
+                    this.From.Equals(input.From))
                 ) && 
                 (
                     this.Subject == input.Subject ||
