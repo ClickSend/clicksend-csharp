@@ -410,7 +410,7 @@ namespace IO.ClickSend.ClickSend.Api
             if (smsCampaignId == null)
                 throw new ApiException(400, "Missing required parameter 'smsCampaignId' when calling SmsCampaignApi->SmsCampaignBySmsCampaignIdGet");
 
-            var localVarPath = "/sms-campaign/{sms_campaign_id}";
+            var localVarPath = "/sms-campaigns/{sms_campaign_id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -484,7 +484,7 @@ namespace IO.ClickSend.ClickSend.Api
             if (smsCampaignId == null)
                 throw new ApiException(400, "Missing required parameter 'smsCampaignId' when calling SmsCampaignApi->SmsCampaignBySmsCampaignIdGet");
 
-            var localVarPath = "/sms-campaign/{sms_campaign_id}";
+            var localVarPath = "/sms-campaigns/{sms_campaign_id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
