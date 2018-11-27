@@ -12,7 +12,7 @@ Contact: support@clicksend.com
     
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F07BDEF6-5623-42E2-9583-495712E8656D}</ProjectGuid>
+    <ProjectGuid>{A41CB4AC-1C6D-4D0D-B086-CCDFCF95729E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>IO.ClickSend</RootNamespace>
