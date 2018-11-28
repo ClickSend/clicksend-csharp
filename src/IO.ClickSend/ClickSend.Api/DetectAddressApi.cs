@@ -14,6 +14,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace IO.ClickSend.ClickSend.Api
 {
@@ -30,9 +31,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Detects address in uploaded file.
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="content">Base64-encoded file contents</param>
+        /// <param name="uploadFile">Your file to be uploaded</param>
         /// <returns>string</returns>
-        string DetectAddressPost (string content);
+        string DetectAddressPost (UploadFile uploadFile);
 
         /// <summary>
         /// Detects address in uploaded file.
@@ -41,9 +42,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Detects address in uploaded file.
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="content">Base64-encoded file contents</param>
+        /// <param name="uploadFile">Your file to be uploaded</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DetectAddressPostWithHttpInfo (string content);
+        ApiResponse<string> DetectAddressPostWithHttpInfo (UploadFile uploadFile);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -53,9 +54,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Detects address in uploaded file.
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="content">Base64-encoded file contents</param>
+        /// <param name="uploadFile">Your file to be uploaded</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DetectAddressPostAsync (string content);
+        System.Threading.Tasks.Task<string> DetectAddressPostAsync (UploadFile uploadFile);
 
         /// <summary>
         /// Detects address in uploaded file.
@@ -64,9 +65,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Detects address in uploaded file.
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="content">Base64-encoded file contents</param>
+        /// <param name="uploadFile">Your file to be uploaded</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DetectAddressPostAsyncWithHttpInfo (string content);
+        System.Threading.Tasks.Task<ApiResponse<string>> DetectAddressPostAsyncWithHttpInfo (UploadFile uploadFile);
         #endregion Asynchronous Operations
     }
 
@@ -171,11 +172,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Detects address in uploaded file. Detects address in uploaded file.
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="content">Base64-encoded file contents</param>
+        /// <param name="uploadFile">Your file to be uploaded</param>
         /// <returns>string</returns>
-        public string DetectAddressPost (string content)
+        public string DetectAddressPost (UploadFile uploadFile)
         {
-             ApiResponse<string> localVarResponse = DetectAddressPostWithHttpInfo(content);
+             ApiResponse<string> localVarResponse = DetectAddressPostWithHttpInfo(uploadFile);
              return localVarResponse.Data;
         }
 
@@ -183,13 +184,13 @@ namespace IO.ClickSend.ClickSend.Api
         /// Detects address in uploaded file. Detects address in uploaded file.
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="content">Base64-encoded file contents</param>
+        /// <param name="uploadFile">Your file to be uploaded</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DetectAddressPostWithHttpInfo (string content)
+        public ApiResponse< string > DetectAddressPostWithHttpInfo (UploadFile uploadFile)
         {
-            // verify the required parameter 'content' is set
-            if (content == null)
-                throw new ApiException(400, "Missing required parameter 'content' when calling DetectAddressApi->DetectAddressPost");
+            // verify the required parameter 'uploadFile' is set
+            if (uploadFile == null)
+                throw new ApiException(400, "Missing required parameter 'uploadFile' when calling DetectAddressApi->DetectAddressPost");
 
             var localVarPath = "/post/letters/detect-address";
             var localVarPathParams = new Dictionary<String, String>();
@@ -213,13 +214,13 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (content != null && content.GetType() != typeof(byte[]))
+            if (uploadFile != null && uploadFile.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(content); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(uploadFile); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = content; // byte array
+                localVarPostBody = uploadFile; // byte array
             }
 
             // authentication (BasicAuth) required
@@ -251,11 +252,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Detects address in uploaded file. Detects address in uploaded file.
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="content">Base64-encoded file contents</param>
+        /// <param name="uploadFile">Your file to be uploaded</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DetectAddressPostAsync (string content)
+        public async System.Threading.Tasks.Task<string> DetectAddressPostAsync (UploadFile uploadFile)
         {
-             ApiResponse<string> localVarResponse = await DetectAddressPostAsyncWithHttpInfo(content);
+             ApiResponse<string> localVarResponse = await DetectAddressPostAsyncWithHttpInfo(uploadFile);
              return localVarResponse.Data;
 
         }
@@ -264,13 +265,13 @@ namespace IO.ClickSend.ClickSend.Api
         /// Detects address in uploaded file. Detects address in uploaded file.
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="content">Base64-encoded file contents</param>
+        /// <param name="uploadFile">Your file to be uploaded</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DetectAddressPostAsyncWithHttpInfo (string content)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DetectAddressPostAsyncWithHttpInfo (UploadFile uploadFile)
         {
-            // verify the required parameter 'content' is set
-            if (content == null)
-                throw new ApiException(400, "Missing required parameter 'content' when calling DetectAddressApi->DetectAddressPost");
+            // verify the required parameter 'uploadFile' is set
+            if (uploadFile == null)
+                throw new ApiException(400, "Missing required parameter 'uploadFile' when calling DetectAddressApi->DetectAddressPost");
 
             var localVarPath = "/post/letters/detect-address";
             var localVarPathParams = new Dictionary<String, String>();
@@ -294,13 +295,13 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (content != null && content.GetType() != typeof(byte[]))
+            if (uploadFile != null && uploadFile.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(content); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(uploadFile); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = content; // byte array
+                localVarPostBody = uploadFile; // byte array
             }
 
             // authentication (BasicAuth) required

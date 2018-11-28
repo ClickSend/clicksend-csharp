@@ -19,15 +19,17 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using JsonSubTypes;
 using System.ComponentModel.DataAnnotations;
 using ClickSendDateConverter = IO.ClickSend.Client.ClickSendDateConverter;
 
 namespace IO.ClickSend.ClickSend.Model
 {
     /// <summary>
-    /// UploadFile
+    /// Your file to be uploaded.
     /// </summary>
     [DataContract]
+    [JsonConverter(typeof(JsonSubtypes), "classType")]
     public partial class UploadFile :  IEquatable<UploadFile>, IValidatableObject
     {
         /// <summary>
@@ -38,7 +40,7 @@ namespace IO.ClickSend.ClickSend.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UploadFile" /> class.
         /// </summary>
-        /// <param name="content">Your base64 encoded file. (required).</param>
+        /// <param name="content">Your base64 encoded file string. (required).</param>
         public UploadFile(string content = default(string))
         {
             // to ensure "content" is required (not null)
@@ -53,9 +55,9 @@ namespace IO.ClickSend.ClickSend.Model
         }
         
         /// <summary>
-        /// Your base64 encoded file.
+        /// Your base64 encoded file string.
         /// </summary>
-        /// <value>Your base64 encoded file.</value>
+        /// <value>Your base64 encoded file string.</value>
         [DataMember(Name="content", EmitDefaultValue=false)]
         public string Content { get; set; }
 
@@ -130,6 +132,16 @@ namespace IO.ClickSend.ClickSend.Model
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> BaseValidate(ValidationContext validationContext)
         {
             yield break;
         }

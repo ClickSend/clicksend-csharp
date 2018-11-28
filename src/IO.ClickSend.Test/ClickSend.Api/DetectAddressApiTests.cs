@@ -19,6 +19,7 @@ using NUnit.Framework;
 
 using IO.ClickSend.Client;
 using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.ClickSend.Model;
 
 namespace IO.ClickSend.Test
 {
@@ -70,8 +71,8 @@ namespace IO.ClickSend.Test
         public void DetectAddressPostTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string content = null;
-            //var response = instance.DetectAddressPost(content);
+            //UploadFile uploadFile = null;
+            //var response = instance.DetectAddressPost(uploadFile);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }
         

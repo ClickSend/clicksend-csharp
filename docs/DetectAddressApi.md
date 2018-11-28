@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="detectaddresspost"></a>
 # **DetectAddressPost**
-> string DetectAddressPost (string content)
+> string DetectAddressPost (UploadFile uploadFile)
 
 Detects address in uploaded file.
 
@@ -34,12 +34,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new DetectAddressApi();
-            var content = content_example;  // string | Base64-encoded file contents
+            var uploadFile = new UploadFile(); // UploadFile | Your file to be uploaded
 
             try
             {
                 // Detects address in uploaded file.
-                string result = apiInstance.DetectAddressPost(content);
+                string result = apiInstance.DetectAddressPost(uploadFile);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -55,7 +55,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **content** | **string**| Base64-encoded file contents | 
+ **uploadFile** | [**UploadFile**](UploadFile.md)| Your file to be uploaded | 
 
 ### Return type
 
