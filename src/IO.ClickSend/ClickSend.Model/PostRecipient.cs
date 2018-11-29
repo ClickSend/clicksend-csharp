@@ -42,7 +42,7 @@ namespace IO.ClickSend.ClickSend.Model
         /// </summary>
         /// <param name="addressName">Name of address (required).</param>
         /// <param name="addressLine1">First line of address (required).</param>
-        /// <param name="addressLine2">Second line of address (required).</param>
+        /// <param name="addressLine2">Second line of address.</param>
         /// <param name="addressCity">City (required).</param>
         /// <param name="addressState">State (required).</param>
         /// <param name="addressPostalCode">Postal code (required).</param>
@@ -68,15 +68,6 @@ namespace IO.ClickSend.ClickSend.Model
             else
             {
                 this.AddressLine1 = addressLine1;
-            }
-            // to ensure "addressLine2" is required (not null)
-            if (addressLine2 == null)
-            {
-                throw new InvalidDataException("addressLine2 is a required property for PostRecipient and cannot be null");
-            }
-            else
-            {
-                this.AddressLine2 = addressLine2;
             }
             // to ensure "addressCity" is required (not null)
             if (addressCity == null)
@@ -123,6 +114,7 @@ namespace IO.ClickSend.ClickSend.Model
             {
                 this.ReturnAddressId = returnAddressId;
             }
+            this.AddressLine2 = addressLine2;
             // use default value if no "schedule" provided
             if (schedule == null)
             {
