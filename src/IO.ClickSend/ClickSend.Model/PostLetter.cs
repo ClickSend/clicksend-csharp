@@ -45,8 +45,9 @@ namespace IO.ClickSend.ClickSend.Model
         /// <param name="templateUsed">Whether using our template (default to 0).</param>
         /// <param name="duplex">Whether letter is duplex (default to 0).</param>
         /// <param name="colour">Whether letter is in colour (default to 0).</param>
+        /// <param name="priorityPost">Whether letter is priority (default to 0).</param>
         /// <param name="source">Source being sent from (default to &quot;sdk&quot;).</param>
-        public PostLetter(string fileUrl = default(string), List<PostRecipient> recipients = default(List<PostRecipient>), int? templateUsed = 0, int? duplex = 0, int? colour = 0, string source = "sdk")
+        public PostLetter(string fileUrl = default(string), List<PostRecipient> recipients = default(List<PostRecipient>), int? templateUsed = 0, int? duplex = 0, int? colour = 0, int? priorityPost = 0, string source = "sdk")
         {
             // to ensure "fileUrl" is required (not null)
             if (fileUrl == null)
@@ -92,6 +93,15 @@ namespace IO.ClickSend.ClickSend.Model
             else
             {
                 this.Colour = colour;
+            }
+            // use default value if no "priorityPost" provided
+            if (priorityPost == null)
+            {
+                this.PriorityPost = 0;
+            }
+            else
+            {
+                this.PriorityPost = priorityPost;
             }
             // use default value if no "source" provided
             if (source == null)
@@ -140,6 +150,13 @@ namespace IO.ClickSend.ClickSend.Model
         public int? Colour { get; set; }
 
         /// <summary>
+        /// Whether letter is priority
+        /// </summary>
+        /// <value>Whether letter is priority</value>
+        [DataMember(Name="priority_post", EmitDefaultValue=false)]
+        public int? PriorityPost { get; set; }
+
+        /// <summary>
         /// Source being sent from
         /// </summary>
         /// <value>Source being sent from</value>
@@ -159,6 +176,7 @@ namespace IO.ClickSend.ClickSend.Model
             sb.Append("  TemplateUsed: ").Append(TemplateUsed).Append("\n");
             sb.Append("  Duplex: ").Append(Duplex).Append("\n");
             sb.Append("  Colour: ").Append(Colour).Append("\n");
+            sb.Append("  PriorityPost: ").Append(PriorityPost).Append("\n");
             sb.Append("  Source: ").Append(Source).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -220,6 +238,11 @@ namespace IO.ClickSend.ClickSend.Model
                     this.Colour.Equals(input.Colour))
                 ) && 
                 (
+                    this.PriorityPost == input.PriorityPost ||
+                    (this.PriorityPost != null &&
+                    this.PriorityPost.Equals(input.PriorityPost))
+                ) && 
+                (
                     this.Source == input.Source ||
                     (this.Source != null &&
                     this.Source.Equals(input.Source))
@@ -245,6 +268,8 @@ namespace IO.ClickSend.ClickSend.Model
                     hashCode = hashCode * 59 + this.Duplex.GetHashCode();
                 if (this.Colour != null)
                     hashCode = hashCode * 59 + this.Colour.GetHashCode();
+                if (this.PriorityPost != null)
+                    hashCode = hashCode * 59 + this.PriorityPost.GetHashCode();
                 if (this.Source != null)
                     hashCode = hashCode * 59 + this.Source.GetHashCode();
                 return hashCode;
