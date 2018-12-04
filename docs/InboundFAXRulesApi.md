@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 
 <a name="faxinboundautomationsget"></a>
 # **FaxInboundAutomationsGet**
-> string FaxInboundAutomationsGet (int? page = null, int? limit = null)
+> string FaxInboundAutomationsGet (string q, int? page = null, int? limit = null)
 
 Get all inbound fax automations
 
@@ -300,13 +300,14 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new InboundFAXRulesApi();
+            var q = q_example;  // string | Your keyword or query.
             var page = 56;  // int? | Page number (optional)  (default to 1)
             var limit = 56;  // int? | Number of records per page (optional)  (default to 10)
 
             try
             {
                 // Get all inbound fax automations
-                string result = apiInstance.FaxInboundAutomationsGet(page, limit);
+                string result = apiInstance.FaxInboundAutomationsGet(q, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -322,6 +323,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **q** | **string**| Your keyword or query. | 
  **page** | **int?**| Page number | [optional] [default to 1]
  **limit** | **int?**| Number of records per page | [optional] [default to 10]
 

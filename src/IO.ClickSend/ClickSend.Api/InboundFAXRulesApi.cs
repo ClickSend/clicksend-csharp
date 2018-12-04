@@ -117,10 +117,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all inbound fax automations
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
-        string FaxInboundAutomationsGet (int? page = null, int? limit = null);
+        string FaxInboundAutomationsGet (string q, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all inbound fax automations
@@ -129,10 +130,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all inbound fax automations
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> FaxInboundAutomationsGetWithHttpInfo (int? page = null, int? limit = null);
+        ApiResponse<string> FaxInboundAutomationsGetWithHttpInfo (string q, int? page = null, int? limit = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -228,10 +230,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all inbound fax automations
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> FaxInboundAutomationsGetAsync (int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<string> FaxInboundAutomationsGetAsync (string q, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all inbound fax automations
@@ -240,10 +243,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all inbound fax automations
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> FaxInboundAutomationsGetAsyncWithHttpInfo (int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<string>> FaxInboundAutomationsGetAsyncWithHttpInfo (string q, int? page = null, int? limit = null);
         #endregion Asynchronous Operations
     }
 
@@ -976,12 +980,13 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all inbound fax automations Get all inbound fax automations
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
-        public string FaxInboundAutomationsGet (int? page = null, int? limit = null)
+        public string FaxInboundAutomationsGet (string q, int? page = null, int? limit = null)
         {
-             ApiResponse<string> localVarResponse = FaxInboundAutomationsGetWithHttpInfo(page, limit);
+             ApiResponse<string> localVarResponse = FaxInboundAutomationsGetWithHttpInfo(q, page, limit);
              return localVarResponse.Data;
         }
 
@@ -989,11 +994,15 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all inbound fax automations Get all inbound fax automations
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > FaxInboundAutomationsGetWithHttpInfo (int? page = null, int? limit = null)
+        public ApiResponse< string > FaxInboundAutomationsGetWithHttpInfo (string q, int? page = null, int? limit = null)
         {
+            // verify the required parameter 'q' is set
+            if (q == null)
+                throw new ApiException(400, "Missing required parameter 'q' when calling InboundFAXRulesApi->FaxInboundAutomationsGet");
 
             var localVarPath = "/automations/fax/inbound";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1017,6 +1026,7 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (q != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "q", q)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
@@ -1049,12 +1059,13 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all inbound fax automations Get all inbound fax automations
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> FaxInboundAutomationsGetAsync (int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<string> FaxInboundAutomationsGetAsync (string q, int? page = null, int? limit = null)
         {
-             ApiResponse<string> localVarResponse = await FaxInboundAutomationsGetAsyncWithHttpInfo(page, limit);
+             ApiResponse<string> localVarResponse = await FaxInboundAutomationsGetAsyncWithHttpInfo(q, page, limit);
              return localVarResponse.Data;
 
         }
@@ -1063,11 +1074,15 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all inbound fax automations Get all inbound fax automations
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> FaxInboundAutomationsGetAsyncWithHttpInfo (int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> FaxInboundAutomationsGetAsyncWithHttpInfo (string q, int? page = null, int? limit = null)
         {
+            // verify the required parameter 'q' is set
+            if (q == null)
+                throw new ApiException(400, "Missing required parameter 'q' when calling InboundFAXRulesApi->FaxInboundAutomationsGet");
 
             var localVarPath = "/automations/fax/inbound";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1091,6 +1106,7 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (q != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "q", q)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 

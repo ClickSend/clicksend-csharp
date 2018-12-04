@@ -127,9 +127,7 @@ namespace IO.ClickSend.Test
             // TODO uncomment below to test the method and replace null with proper value
             //Contact contact = null;
             //int? listId = null;
-            //int? page = null;
-            //int? limit = null;
-            //var response = instance.ListsContactsByListIdPost(contact, listId, page, limit);
+            //var response = instance.ListsContactsByListIdPost(contact, listId);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }
         

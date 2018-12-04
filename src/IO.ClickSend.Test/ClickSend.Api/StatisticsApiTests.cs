@@ -64,17 +64,6 @@ namespace IO.ClickSend.Test
 
         
         /// <summary>
-        /// Test StatisticsMmsGet
-        /// </summary>
-        [Test]
-        public void StatisticsMmsGetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.StatisticsMmsGet();
-            //Assert.IsInstanceOf<string> (response, "response is string");
-        }
-        
-        /// <summary>
         /// Test StatisticsSmsGet
         /// </summary>
         [Test]

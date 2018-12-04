@@ -120,9 +120,10 @@ namespace IO.ClickSend.Test
         public void FaxDeliveryReceiptAutomationsGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string q = null;
             //int? page = null;
             //int? limit = null;
-            //var response = instance.FaxDeliveryReceiptAutomationsGet(page, limit);
+            //var response = instance.FaxDeliveryReceiptAutomationsGet(q, page, limit);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }
         

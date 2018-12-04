@@ -4,71 +4,9 @@ All URIs are relative to *https://rest.clicksend.com/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**StatisticsMmsGet**](StatisticsApi.md#statisticsmmsget) | **GET** /statistics/mms | Get mms statistics
 [**StatisticsSmsGet**](StatisticsApi.md#statisticssmsget) | **GET** /statistics/sms | Get sms statistics
 [**StatisticsVoiceGet**](StatisticsApi.md#statisticsvoiceget) | **GET** /statistics/voice | Get voice statistics
 
-
-<a name="statisticsmmsget"></a>
-# **StatisticsMmsGet**
-> string StatisticsMmsGet ()
-
-Get mms statistics
-
-Get mms statistics
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using IO.ClickSend.ClickSend.Api;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
-
-namespace Example
-{
-    public class StatisticsMmsGetExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new StatisticsApi();
-
-            try
-            {
-                // Get mms statistics
-                string result = apiInstance.StatisticsMmsGet();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling StatisticsApi.StatisticsMmsGet: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-**string**
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="statisticssmsget"></a>
 # **StatisticsSmsGet**

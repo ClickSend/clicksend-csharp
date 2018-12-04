@@ -120,9 +120,10 @@ namespace IO.ClickSend.Test
         public void SmsDeliveryReceiptAutomationsGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string q = null;
             //int? page = null;
             //int? limit = null;
-            //var response = instance.SmsDeliveryReceiptAutomationsGet(page, limit);
+            //var response = instance.SmsDeliveryReceiptAutomationsGet(q, page, limit);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }
         

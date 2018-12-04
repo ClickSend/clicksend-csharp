@@ -121,9 +121,10 @@ namespace IO.ClickSend.Test
         public void SmsInboundGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string q = null;
             //int? page = null;
             //int? limit = null;
-            //var response = instance.SmsInboundGet(page, limit);
+            //var response = instance.SmsInboundGet(q, page, limit);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }
         
@@ -182,9 +183,10 @@ namespace IO.ClickSend.Test
         public void SmsReceiptsGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string q = null;
             //int? page = null;
             //int? limit = null;
-            //var response = instance.SmsReceiptsGet(page, limit);
+            //var response = instance.SmsReceiptsGet(q, page, limit);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }
         

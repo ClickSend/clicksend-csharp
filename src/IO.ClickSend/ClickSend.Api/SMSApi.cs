@@ -119,10 +119,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all inbound sms
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
-        string SmsInboundGet (int? page = null, int? limit = null);
+        string SmsInboundGet (string q, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all inbound sms
@@ -131,10 +132,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all inbound sms
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> SmsInboundGetWithHttpInfo (int? page = null, int? limit = null);
+        ApiResponse<string> SmsInboundGetWithHttpInfo (string q, int? page = null, int? limit = null);
         /// <summary>
         /// Create inbound sms
         /// </summary>
@@ -226,10 +228,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all delivery receipts
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
-        string SmsReceiptsGet (int? page = null, int? limit = null);
+        string SmsReceiptsGet (string q, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all delivery receipts
@@ -238,10 +241,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all delivery receipts
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> SmsReceiptsGetWithHttpInfo (int? page = null, int? limit = null);
+        ApiResponse<string> SmsReceiptsGetWithHttpInfo (string q, int? page = null, int? limit = null);
         /// <summary>
         /// Add a delivery receipt
         /// </summary>
@@ -490,10 +494,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all inbound sms
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> SmsInboundGetAsync (int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<string> SmsInboundGetAsync (string q, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all inbound sms
@@ -502,10 +507,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all inbound sms
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> SmsInboundGetAsyncWithHttpInfo (int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<string>> SmsInboundGetAsyncWithHttpInfo (string q, int? page = null, int? limit = null);
         /// <summary>
         /// Create inbound sms
         /// </summary>
@@ -597,10 +603,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all delivery receipts
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> SmsReceiptsGetAsync (int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<string> SmsReceiptsGetAsync (string q, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all delivery receipts
@@ -609,10 +616,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all delivery receipts
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptsGetAsyncWithHttpInfo (int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptsGetAsyncWithHttpInfo (string q, int? page = null, int? limit = null);
         /// <summary>
         /// Add a delivery receipt
         /// </summary>
@@ -1456,12 +1464,13 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all inbound sms Get all inbound sms
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
-        public string SmsInboundGet (int? page = null, int? limit = null)
+        public string SmsInboundGet (string q, int? page = null, int? limit = null)
         {
-             ApiResponse<string> localVarResponse = SmsInboundGetWithHttpInfo(page, limit);
+             ApiResponse<string> localVarResponse = SmsInboundGetWithHttpInfo(q, page, limit);
              return localVarResponse.Data;
         }
 
@@ -1469,11 +1478,15 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all inbound sms Get all inbound sms
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > SmsInboundGetWithHttpInfo (int? page = null, int? limit = null)
+        public ApiResponse< string > SmsInboundGetWithHttpInfo (string q, int? page = null, int? limit = null)
         {
+            // verify the required parameter 'q' is set
+            if (q == null)
+                throw new ApiException(400, "Missing required parameter 'q' when calling SMSApi->SmsInboundGet");
 
             var localVarPath = "/sms/inbound";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1497,6 +1510,7 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (q != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "q", q)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
@@ -1529,12 +1543,13 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all inbound sms Get all inbound sms
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> SmsInboundGetAsync (int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<string> SmsInboundGetAsync (string q, int? page = null, int? limit = null)
         {
-             ApiResponse<string> localVarResponse = await SmsInboundGetAsyncWithHttpInfo(page, limit);
+             ApiResponse<string> localVarResponse = await SmsInboundGetAsyncWithHttpInfo(q, page, limit);
              return localVarResponse.Data;
 
         }
@@ -1543,11 +1558,15 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all inbound sms Get all inbound sms
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> SmsInboundGetAsyncWithHttpInfo (int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> SmsInboundGetAsyncWithHttpInfo (string q, int? page = null, int? limit = null)
         {
+            // verify the required parameter 'q' is set
+            if (q == null)
+                throw new ApiException(400, "Missing required parameter 'q' when calling SMSApi->SmsInboundGet");
 
             var localVarPath = "/sms/inbound";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1571,6 +1590,7 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (q != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "q", q)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
@@ -2227,12 +2247,13 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all delivery receipts Get all delivery receipts
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
-        public string SmsReceiptsGet (int? page = null, int? limit = null)
+        public string SmsReceiptsGet (string q, int? page = null, int? limit = null)
         {
-             ApiResponse<string> localVarResponse = SmsReceiptsGetWithHttpInfo(page, limit);
+             ApiResponse<string> localVarResponse = SmsReceiptsGetWithHttpInfo(q, page, limit);
              return localVarResponse.Data;
         }
 
@@ -2240,11 +2261,15 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all delivery receipts Get all delivery receipts
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > SmsReceiptsGetWithHttpInfo (int? page = null, int? limit = null)
+        public ApiResponse< string > SmsReceiptsGetWithHttpInfo (string q, int? page = null, int? limit = null)
         {
+            // verify the required parameter 'q' is set
+            if (q == null)
+                throw new ApiException(400, "Missing required parameter 'q' when calling SMSApi->SmsReceiptsGet");
 
             var localVarPath = "/sms/receipts";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2268,6 +2293,7 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (q != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "q", q)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
@@ -2300,12 +2326,13 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all delivery receipts Get all delivery receipts
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> SmsReceiptsGetAsync (int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<string> SmsReceiptsGetAsync (string q, int? page = null, int? limit = null)
         {
-             ApiResponse<string> localVarResponse = await SmsReceiptsGetAsyncWithHttpInfo(page, limit);
+             ApiResponse<string> localVarResponse = await SmsReceiptsGetAsyncWithHttpInfo(q, page, limit);
              return localVarResponse.Data;
 
         }
@@ -2314,11 +2341,15 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all delivery receipts Get all delivery receipts
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptsGetAsyncWithHttpInfo (int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptsGetAsyncWithHttpInfo (string q, int? page = null, int? limit = null)
         {
+            // verify the required parameter 'q' is set
+            if (q == null)
+                throw new ApiException(400, "Missing required parameter 'q' when calling SMSApi->SmsReceiptsGet");
 
             var localVarPath = "/sms/receipts";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2342,6 +2373,7 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (q != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "q", q)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 

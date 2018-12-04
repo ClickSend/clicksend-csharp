@@ -117,10 +117,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all email delivery receipt automations
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
-        string EmailDeliveryReceiptAutomationsGet (int? page = null, int? limit = null);
+        string EmailDeliveryReceiptAutomationsGet (string q, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all email delivery receipt automations
@@ -129,10 +130,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all email delivery receipt automations
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> EmailDeliveryReceiptAutomationsGetWithHttpInfo (int? page = null, int? limit = null);
+        ApiResponse<string> EmailDeliveryReceiptAutomationsGetWithHttpInfo (string q, int? page = null, int? limit = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -228,10 +230,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all email delivery receipt automations
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> EmailDeliveryReceiptAutomationsGetAsync (int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<string> EmailDeliveryReceiptAutomationsGetAsync (string q, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all email delivery receipt automations
@@ -240,10 +243,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all email delivery receipt automations
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> EmailDeliveryReceiptAutomationsGetAsyncWithHttpInfo (int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<string>> EmailDeliveryReceiptAutomationsGetAsyncWithHttpInfo (string q, int? page = null, int? limit = null);
         #endregion Asynchronous Operations
     }
 
@@ -976,12 +980,13 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all email delivery receipt automations Get all email delivery receipt automations
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
-        public string EmailDeliveryReceiptAutomationsGet (int? page = null, int? limit = null)
+        public string EmailDeliveryReceiptAutomationsGet (string q, int? page = null, int? limit = null)
         {
-             ApiResponse<string> localVarResponse = EmailDeliveryReceiptAutomationsGetWithHttpInfo(page, limit);
+             ApiResponse<string> localVarResponse = EmailDeliveryReceiptAutomationsGetWithHttpInfo(q, page, limit);
              return localVarResponse.Data;
         }
 
@@ -989,11 +994,15 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all email delivery receipt automations Get all email delivery receipt automations
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > EmailDeliveryReceiptAutomationsGetWithHttpInfo (int? page = null, int? limit = null)
+        public ApiResponse< string > EmailDeliveryReceiptAutomationsGetWithHttpInfo (string q, int? page = null, int? limit = null)
         {
+            // verify the required parameter 'q' is set
+            if (q == null)
+                throw new ApiException(400, "Missing required parameter 'q' when calling EmailDeliveryReceiptRulesApi->EmailDeliveryReceiptAutomationsGet");
 
             var localVarPath = "/automations/email/receipts";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1017,6 +1026,7 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (q != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "q", q)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
@@ -1049,12 +1059,13 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all email delivery receipt automations Get all email delivery receipt automations
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> EmailDeliveryReceiptAutomationsGetAsync (int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<string> EmailDeliveryReceiptAutomationsGetAsync (string q, int? page = null, int? limit = null)
         {
-             ApiResponse<string> localVarResponse = await EmailDeliveryReceiptAutomationsGetAsyncWithHttpInfo(page, limit);
+             ApiResponse<string> localVarResponse = await EmailDeliveryReceiptAutomationsGetAsyncWithHttpInfo(q, page, limit);
              return localVarResponse.Data;
 
         }
@@ -1063,11 +1074,15 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all email delivery receipt automations Get all email delivery receipt automations
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> EmailDeliveryReceiptAutomationsGetAsyncWithHttpInfo (int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> EmailDeliveryReceiptAutomationsGetAsyncWithHttpInfo (string q, int? page = null, int? limit = null)
         {
+            // verify the required parameter 'q' is set
+            if (q == null)
+                throw new ApiException(400, "Missing required parameter 'q' when calling EmailDeliveryReceiptRulesApi->EmailDeliveryReceiptAutomationsGet");
 
             var localVarPath = "/automations/email/receipts";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1091,6 +1106,7 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (q != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "q", q)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 

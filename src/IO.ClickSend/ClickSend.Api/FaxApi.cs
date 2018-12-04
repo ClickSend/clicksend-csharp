@@ -104,8 +104,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get List of Fax Receipts
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
-        string FaxReceiptsGet ();
+        string FaxReceiptsGet (string q, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get List of Fax Receipts
@@ -114,8 +117,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get List of Fax Receipts
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> FaxReceiptsGetWithHttpInfo ();
+        ApiResponse<string> FaxReceiptsGetWithHttpInfo (string q, int? page = null, int? limit = null);
         /// <summary>
         /// Send a fax using supplied supported file-types.
         /// </summary>
@@ -219,8 +225,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get List of Fax Receipts
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> FaxReceiptsGetAsync ();
+        System.Threading.Tasks.Task<string> FaxReceiptsGetAsync (string q, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get List of Fax Receipts
@@ -229,8 +238,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get List of Fax Receipts
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> FaxReceiptsGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<string>> FaxReceiptsGetAsyncWithHttpInfo (string q, int? page = null, int? limit = null);
         /// <summary>
         /// Send a fax using supplied supported file-types.
         /// </summary>
@@ -835,10 +847,13 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get List of Fax Receipts Get List of Fax Receipts
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
-        public string FaxReceiptsGet ()
+        public string FaxReceiptsGet (string q, int? page = null, int? limit = null)
         {
-             ApiResponse<string> localVarResponse = FaxReceiptsGetWithHttpInfo();
+             ApiResponse<string> localVarResponse = FaxReceiptsGetWithHttpInfo(q, page, limit);
              return localVarResponse.Data;
         }
 
@@ -846,9 +861,15 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get List of Fax Receipts Get List of Fax Receipts
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > FaxReceiptsGetWithHttpInfo ()
+        public ApiResponse< string > FaxReceiptsGetWithHttpInfo (string q, int? page = null, int? limit = null)
         {
+            // verify the required parameter 'q' is set
+            if (q == null)
+                throw new ApiException(400, "Missing required parameter 'q' when calling FaxApi->FaxReceiptsGet");
 
             var localVarPath = "/fax/receipts";
             var localVarPathParams = new Dictionary<String, String>();
@@ -872,6 +893,9 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (q != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "q", q)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
             // authentication (BasicAuth) required
             // http basic authentication required
@@ -902,10 +926,13 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get List of Fax Receipts Get List of Fax Receipts
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> FaxReceiptsGetAsync ()
+        public async System.Threading.Tasks.Task<string> FaxReceiptsGetAsync (string q, int? page = null, int? limit = null)
         {
-             ApiResponse<string> localVarResponse = await FaxReceiptsGetAsyncWithHttpInfo();
+             ApiResponse<string> localVarResponse = await FaxReceiptsGetAsyncWithHttpInfo(q, page, limit);
              return localVarResponse.Data;
 
         }
@@ -914,9 +941,15 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get List of Fax Receipts Get List of Fax Receipts
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Your keyword or query.</param>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> FaxReceiptsGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<string>> FaxReceiptsGetAsyncWithHttpInfo (string q, int? page = null, int? limit = null)
         {
+            // verify the required parameter 'q' is set
+            if (q == null)
+                throw new ApiException(400, "Missing required parameter 'q' when calling FaxApi->FaxReceiptsGet");
 
             var localVarPath = "/fax/receipts";
             var localVarPathParams = new Dictionary<String, String>();
@@ -940,6 +973,9 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (q != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "q", q)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
             // authentication (BasicAuth) required
             // http basic authentication required

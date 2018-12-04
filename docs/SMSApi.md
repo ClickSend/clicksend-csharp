@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
 
 <a name="smsinboundget"></a>
 # **SmsInboundGet**
-> string SmsInboundGet (int? page = null, int? limit = null)
+> string SmsInboundGet (string q, int? page = null, int? limit = null)
 
 Get all inbound sms
 
@@ -312,13 +312,14 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SMSApi();
+            var q = q_example;  // string | Your keyword or query.
             var page = 56;  // int? | Page number (optional)  (default to 1)
             var limit = 56;  // int? | Number of records per page (optional)  (default to 10)
 
             try
             {
                 // Get all inbound sms
-                string result = apiInstance.SmsInboundGet(page, limit);
+                string result = apiInstance.SmsInboundGet(q, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -334,6 +335,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **q** | **string**| Your keyword or query. | 
  **page** | **int?**| Page number | [optional] [default to 1]
  **limit** | **int?**| Number of records per page | [optional] [default to 10]
 
@@ -614,7 +616,7 @@ Name | Type | Description  | Notes
 
 <a name="smsreceiptsget"></a>
 # **SmsReceiptsGet**
-> string SmsReceiptsGet (int? page = null, int? limit = null)
+> string SmsReceiptsGet (string q, int? page = null, int? limit = null)
 
 Get all delivery receipts
 
@@ -639,13 +641,14 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SMSApi();
+            var q = q_example;  // string | Your keyword or query.
             var page = 56;  // int? | Page number (optional)  (default to 1)
             var limit = 56;  // int? | Number of records per page (optional)  (default to 10)
 
             try
             {
                 // Get all delivery receipts
-                string result = apiInstance.SmsReceiptsGet(page, limit);
+                string result = apiInstance.SmsReceiptsGet(q, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -661,6 +664,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **q** | **string**| Your keyword or query. | 
  **page** | **int?**| Page number | [optional] [default to 1]
  **limit** | **int?**| Number of records per page | [optional] [default to 10]
 

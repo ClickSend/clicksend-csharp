@@ -75,6 +75,14 @@ namespace IO.ClickSend.Test
             // TODO unit test for the property 'FileUrl'
         }
         /// <summary>
+        /// Test the property 'PriorityPost'
+        /// </summary>
+        [Test]
+        public void PriorityPostTest()
+        {
+            // TODO unit test for the property 'PriorityPost'
+        }
+        /// <summary>
         /// Test the property 'Recipients'
         /// </summary>
         [Test]
@@ -105,14 +113,6 @@ namespace IO.ClickSend.Test
         public void ColourTest()
         {
             // TODO unit test for the property 'Colour'
-        }
-        /// <summary>
-        /// Test the property 'PriorityPost'
-        /// </summary>
-        [Test]
-        public void PriorityPostTest()
-        {
-            // TODO unit test for the property 'PriorityPost'
         }
         /// <summary>
         /// Test the property 'Source'

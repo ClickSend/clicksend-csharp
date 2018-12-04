@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
 
 <a name="listscontactsbylistidpost"></a>
 # **ListsContactsByListIdPost**
-> string ListsContactsByListIdPost (Contact contact, int? listId, int? page = null, int? limit = null)
+> string ListsContactsByListIdPost (Contact contact, int? listId)
 
 Create new contact
 
@@ -314,13 +314,11 @@ namespace Example
             var apiInstance = new ContactApi();
             var contact = new Contact(); // Contact | Contact model
             var listId = 56;  // int? | List id
-            var page = 56;  // int? | Page number (optional)  (default to 1)
-            var limit = 56;  // int? | Number of records per page (optional)  (default to 10)
 
             try
             {
                 // Create new contact
-                string result = apiInstance.ListsContactsByListIdPost(contact, listId, page, limit);
+                string result = apiInstance.ListsContactsByListIdPost(contact, listId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -338,8 +336,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contact** | [**Contact**](Contact.md)| Contact model | 
  **listId** | **int?**| List id | 
- **page** | **int?**| Page number | [optional] [default to 1]
- **limit** | **int?**| Number of records per page | [optional] [default to 10]
 
 ### Return type
 

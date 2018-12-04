@@ -129,10 +129,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contact">Contact model</param>
         /// <param name="listId">List id</param>
-        /// <param name="page">Page number (optional, default to 1)</param>
-        /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
-        string ListsContactsByListIdPost (Contact contact, int? listId, int? page = null, int? limit = null);
+        string ListsContactsByListIdPost (Contact contact, int? listId);
 
         /// <summary>
         /// Create new contact
@@ -143,10 +141,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contact">Contact model</param>
         /// <param name="listId">List id</param>
-        /// <param name="page">Page number (optional, default to 1)</param>
-        /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> ListsContactsByListIdPostWithHttpInfo (Contact contact, int? listId, int? page = null, int? limit = null);
+        ApiResponse<string> ListsContactsByListIdPostWithHttpInfo (Contact contact, int? listId);
         /// <summary>
         /// Remove all opted out contacts
         /// </summary>
@@ -302,10 +298,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contact">Contact model</param>
         /// <param name="listId">List id</param>
-        /// <param name="page">Page number (optional, default to 1)</param>
-        /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> ListsContactsByListIdPostAsync (Contact contact, int? listId, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<string> ListsContactsByListIdPostAsync (Contact contact, int? listId);
 
         /// <summary>
         /// Create new contact
@@ -316,10 +310,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contact">Contact model</param>
         /// <param name="listId">List id</param>
-        /// <param name="page">Page number (optional, default to 1)</param>
-        /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> ListsContactsByListIdPostAsyncWithHttpInfo (Contact contact, int? listId, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<string>> ListsContactsByListIdPostAsyncWithHttpInfo (Contact contact, int? listId);
         /// <summary>
         /// Remove all opted out contacts
         /// </summary>
@@ -1136,12 +1128,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contact">Contact model</param>
         /// <param name="listId">List id</param>
-        /// <param name="page">Page number (optional, default to 1)</param>
-        /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
-        public string ListsContactsByListIdPost (Contact contact, int? listId, int? page = null, int? limit = null)
+        public string ListsContactsByListIdPost (Contact contact, int? listId)
         {
-             ApiResponse<string> localVarResponse = ListsContactsByListIdPostWithHttpInfo(contact, listId, page, limit);
+             ApiResponse<string> localVarResponse = ListsContactsByListIdPostWithHttpInfo(contact, listId);
              return localVarResponse.Data;
         }
 
@@ -1151,10 +1141,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contact">Contact model</param>
         /// <param name="listId">List id</param>
-        /// <param name="page">Page number (optional, default to 1)</param>
-        /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > ListsContactsByListIdPostWithHttpInfo (Contact contact, int? listId, int? page = null, int? limit = null)
+        public ApiResponse< string > ListsContactsByListIdPostWithHttpInfo (Contact contact, int? listId)
         {
             // verify the required parameter 'contact' is set
             if (contact == null)
@@ -1186,8 +1174,6 @@ namespace IO.ClickSend.ClickSend.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (listId != null) localVarPathParams.Add("list_id", this.Configuration.ApiClient.ParameterToString(listId)); // path parameter
-            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
-            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
             if (contact != null && contact.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(contact); // http body (model) parameter
@@ -1228,12 +1214,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contact">Contact model</param>
         /// <param name="listId">List id</param>
-        /// <param name="page">Page number (optional, default to 1)</param>
-        /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> ListsContactsByListIdPostAsync (Contact contact, int? listId, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<string> ListsContactsByListIdPostAsync (Contact contact, int? listId)
         {
-             ApiResponse<string> localVarResponse = await ListsContactsByListIdPostAsyncWithHttpInfo(contact, listId, page, limit);
+             ApiResponse<string> localVarResponse = await ListsContactsByListIdPostAsyncWithHttpInfo(contact, listId);
              return localVarResponse.Data;
 
         }
@@ -1244,10 +1228,8 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contact">Contact model</param>
         /// <param name="listId">List id</param>
-        /// <param name="page">Page number (optional, default to 1)</param>
-        /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> ListsContactsByListIdPostAsyncWithHttpInfo (Contact contact, int? listId, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> ListsContactsByListIdPostAsyncWithHttpInfo (Contact contact, int? listId)
         {
             // verify the required parameter 'contact' is set
             if (contact == null)
@@ -1279,8 +1261,6 @@ namespace IO.ClickSend.ClickSend.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (listId != null) localVarPathParams.Add("list_id", this.Configuration.ApiClient.ParameterToString(listId)); // path parameter
-            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
-            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
             if (contact != null && contact.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(contact); // http body (model) parameter
