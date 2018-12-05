@@ -1,6 +1,6 @@
-# The official C# library for the ClickSend v3 REST API
+# The official C# library for the ClickSend v3 API
 
- This is the official [ClickSend](https://clicksend.com) SDK.  *You'll need to create a free account to use the API. You can register [here](https://www.clicksend.com/signup).*  You can use our API documentation along with the SDK. Our API docs can be found [here](https://developers.clicksend.com). 
+ This is an official SDK for [ClickSend](https://clicksend.com)  Below you will find a current list of the available methods for clicksend.  *NOTE: You will need to create a free account to use the API. You can register [here](https://dashboard.clicksend.com/#/signup/step1/)..* 
 
 <a name="frameworks-supported"></a>
 ## Frameworks supported

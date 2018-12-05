@@ -404,7 +404,7 @@ Name | Type | Description  | Notes
 
 <a name="voicereceiptsget"></a>
 # **VoiceReceiptsGet**
-> string VoiceReceiptsGet (string q, int? page = null, int? limit = null)
+> string VoiceReceiptsGet (string q = null, int? page = null, int? limit = null)
 
 Get all voice receipts
 
@@ -429,7 +429,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new VoiceApi();
-            var q = q_example;  // string | Your keyword or query.
+            var q = q_example;  // string | Your keyword or query. (optional) 
             var page = 56;  // int? | Page number (optional)  (default to 1)
             var limit = 56;  // int? | Number of records per page (optional)  (default to 10)
 
@@ -452,7 +452,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **q** | **string**| Your keyword or query. | 
+ **q** | **string**| Your keyword or query. | [optional] 
  **page** | **int?**| Page number | [optional] [default to 1]
  **limit** | **int?**| Number of records per page | [optional] [default to 10]
 

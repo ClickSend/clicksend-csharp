@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
 
 <a name="smsinboundget"></a>
 # **SmsInboundGet**
-> string SmsInboundGet (string q, int? page = null, int? limit = null)
+> string SmsInboundGet (string q = null, int? page = null, int? limit = null)
 
 Get all inbound sms
 
@@ -312,7 +312,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SMSApi();
-            var q = q_example;  // string | Your keyword or query.
+            var q = q_example;  // string | Your keyword or query. (optional) 
             var page = 56;  // int? | Page number (optional)  (default to 1)
             var limit = 56;  // int? | Number of records per page (optional)  (default to 10)
 
@@ -335,7 +335,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **q** | **string**| Your keyword or query. | 
+ **q** | **string**| Your keyword or query. | [optional] 
  **page** | **int?**| Page number | [optional] [default to 1]
  **limit** | **int?**| Number of records per page | [optional] [default to 10]
 
@@ -616,7 +616,7 @@ Name | Type | Description  | Notes
 
 <a name="smsreceiptsget"></a>
 # **SmsReceiptsGet**
-> string SmsReceiptsGet (string q, int? page = null, int? limit = null)
+> string SmsReceiptsGet (string q = null, int? page = null, int? limit = null)
 
 Get all delivery receipts
 
@@ -641,7 +641,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SMSApi();
-            var q = q_example;  // string | Your keyword or query.
+            var q = q_example;  // string | Your keyword or query. (optional) 
             var page = 56;  // int? | Page number (optional)  (default to 1)
             var limit = 56;  // int? | Number of records per page (optional)  (default to 10)
 
@@ -664,7 +664,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **q** | **string**| Your keyword or query. | 
+ **q** | **string**| Your keyword or query. | [optional] 
  **page** | **int?**| Page number | [optional] [default to 1]
  **limit** | **int?**| Number of records per page | [optional] [default to 10]
 

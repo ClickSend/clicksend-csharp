@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-ClickSend v3 REST API
+ClickSend v3 API
 
- This is the official [ClickSend](https://clicksend.com) SDK.  *You'll need to create a free account to use the API. You can register [here](https://www.clicksend.com/signup).*  You can use our API documentation along with the SDK. Our API docs can be found [here](https://developers.clicksend.com). 
+ This is an official SDK for [ClickSend](https://clicksend.com)  Below you will find a current list of the available methods for clicksend.  *NOTE: You will need to create a free account to use the API. You can register [here](https://dashboard.clicksend.com/#/signup/step1/)..* 
 
-OpenAPI spec version: 3.1.0
+OpenAPI spec version: 3.1
 Contact: support@clicksend.com
 -->
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -81,7 +81,7 @@ Contact: support@clicksend.com
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\IO.ClickSend\IO.ClickSend.csproj">
-          <Project>{928F1A13-F6AD-4B8A-9D5E-9B0439CB34E7}</Project>
+          <Project>{43C7AAC1-7250-42E8-A375-EAA007AF8051}</Project>
           <Name>IO.ClickSend</Name>
       </ProjectReference>
   </ItemGroup>
