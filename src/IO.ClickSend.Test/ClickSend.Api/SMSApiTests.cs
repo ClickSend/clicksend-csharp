@@ -159,7 +159,7 @@ namespace IO.ClickSend.Test
         public void SmsInboundReadPutTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //decimal? dateBefore = null;
+            //DateBefore dateBefore = null;
             //var response = instance.SmsInboundReadPut(dateBefore);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }
@@ -220,7 +220,7 @@ namespace IO.ClickSend.Test
         public void SmsReceiptsReadPutTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //decimal? dateBefore = null;
+            //DateBefore dateBefore = null;
             //var response = instance.SmsReceiptsReadPut(dateBefore);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }

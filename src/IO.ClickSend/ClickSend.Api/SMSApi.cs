@@ -186,9 +186,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Mark all inbound SMS as read optionally before a certain date
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="dateBefore">An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)</param>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
         /// <returns>string</returns>
-        string SmsInboundReadPut (decimal? dateBefore = null);
+        string SmsInboundReadPut (DateBefore dateBefore = null);
 
         /// <summary>
         /// Mark inbound SMS as read
@@ -197,9 +197,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Mark all inbound SMS as read optionally before a certain date
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="dateBefore">An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)</param>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> SmsInboundReadPutWithHttpInfo (decimal? dateBefore = null);
+        ApiResponse<string> SmsInboundReadPutWithHttpInfo (DateBefore dateBefore = null);
         /// <summary>
         /// Calculate sms price
         /// </summary>
@@ -293,9 +293,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Mark delivery receipts as read
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="dateBefore">Mark all as read before this timestamp (optional)</param>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
         /// <returns>string</returns>
-        string SmsReceiptsReadPut (decimal? dateBefore = null);
+        string SmsReceiptsReadPut (DateBefore dateBefore = null);
 
         /// <summary>
         /// Mark delivery receipts as read
@@ -304,9 +304,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Mark delivery receipts as read
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="dateBefore">Mark all as read before this timestamp (optional)</param>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> SmsReceiptsReadPutWithHttpInfo (decimal? dateBefore = null);
+        ApiResponse<string> SmsReceiptsReadPutWithHttpInfo (DateBefore dateBefore = null);
         /// <summary>
         /// Send sms message(s)
         /// </summary>
@@ -580,9 +580,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Mark all inbound SMS as read optionally before a certain date
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="dateBefore">An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)</param>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> SmsInboundReadPutAsync (decimal? dateBefore = null);
+        System.Threading.Tasks.Task<string> SmsInboundReadPutAsync (DateBefore dateBefore = null);
 
         /// <summary>
         /// Mark inbound SMS as read
@@ -591,9 +591,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Mark all inbound SMS as read optionally before a certain date
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="dateBefore">An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)</param>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> SmsInboundReadPutAsyncWithHttpInfo (decimal? dateBefore = null);
+        System.Threading.Tasks.Task<ApiResponse<string>> SmsInboundReadPutAsyncWithHttpInfo (DateBefore dateBefore = null);
         /// <summary>
         /// Calculate sms price
         /// </summary>
@@ -687,9 +687,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Mark delivery receipts as read
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="dateBefore">Mark all as read before this timestamp (optional)</param>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> SmsReceiptsReadPutAsync (decimal? dateBefore = null);
+        System.Threading.Tasks.Task<string> SmsReceiptsReadPutAsync (DateBefore dateBefore = null);
 
         /// <summary>
         /// Mark delivery receipts as read
@@ -698,9 +698,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Mark delivery receipts as read
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="dateBefore">Mark all as read before this timestamp (optional)</param>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptsReadPutAsyncWithHttpInfo (decimal? dateBefore = null);
+        System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptsReadPutAsyncWithHttpInfo (DateBefore dateBefore = null);
         /// <summary>
         /// Send sms message(s)
         /// </summary>
@@ -1963,9 +1963,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Mark inbound SMS as read Mark all inbound SMS as read optionally before a certain date
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="dateBefore">An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)</param>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
         /// <returns>string</returns>
-        public string SmsInboundReadPut (decimal? dateBefore = null)
+        public string SmsInboundReadPut (DateBefore dateBefore = null)
         {
              ApiResponse<string> localVarResponse = SmsInboundReadPutWithHttpInfo(dateBefore);
              return localVarResponse.Data;
@@ -1975,9 +1975,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Mark inbound SMS as read Mark all inbound SMS as read optionally before a certain date
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="dateBefore">An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)</param>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > SmsInboundReadPutWithHttpInfo (decimal? dateBefore = null)
+        public ApiResponse< string > SmsInboundReadPutWithHttpInfo (DateBefore dateBefore = null)
         {
 
             var localVarPath = "/sms/inbound-read";
@@ -2040,9 +2040,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Mark inbound SMS as read Mark all inbound SMS as read optionally before a certain date
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="dateBefore">An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)</param>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> SmsInboundReadPutAsync (decimal? dateBefore = null)
+        public async System.Threading.Tasks.Task<string> SmsInboundReadPutAsync (DateBefore dateBefore = null)
         {
              ApiResponse<string> localVarResponse = await SmsInboundReadPutAsyncWithHttpInfo(dateBefore);
              return localVarResponse.Data;
@@ -2053,9 +2053,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Mark inbound SMS as read Mark all inbound SMS as read optionally before a certain date
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="dateBefore">An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)</param>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> SmsInboundReadPutAsyncWithHttpInfo (decimal? dateBefore = null)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> SmsInboundReadPutAsyncWithHttpInfo (DateBefore dateBefore = null)
         {
 
             var localVarPath = "/sms/inbound-read";
@@ -2734,9 +2734,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Mark delivery receipts as read Mark delivery receipts as read
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="dateBefore">Mark all as read before this timestamp (optional)</param>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
         /// <returns>string</returns>
-        public string SmsReceiptsReadPut (decimal? dateBefore = null)
+        public string SmsReceiptsReadPut (DateBefore dateBefore = null)
         {
              ApiResponse<string> localVarResponse = SmsReceiptsReadPutWithHttpInfo(dateBefore);
              return localVarResponse.Data;
@@ -2746,9 +2746,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Mark delivery receipts as read Mark delivery receipts as read
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="dateBefore">Mark all as read before this timestamp (optional)</param>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > SmsReceiptsReadPutWithHttpInfo (decimal? dateBefore = null)
+        public ApiResponse< string > SmsReceiptsReadPutWithHttpInfo (DateBefore dateBefore = null)
         {
 
             var localVarPath = "/sms/receipts-read";
@@ -2811,9 +2811,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Mark delivery receipts as read Mark delivery receipts as read
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="dateBefore">Mark all as read before this timestamp (optional)</param>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> SmsReceiptsReadPutAsync (decimal? dateBefore = null)
+        public async System.Threading.Tasks.Task<string> SmsReceiptsReadPutAsync (DateBefore dateBefore = null)
         {
              ApiResponse<string> localVarResponse = await SmsReceiptsReadPutAsyncWithHttpInfo(dateBefore);
              return localVarResponse.Data;
@@ -2824,9 +2824,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// Mark delivery receipts as read Mark delivery receipts as read
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="dateBefore">Mark all as read before this timestamp (optional)</param>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptsReadPutAsyncWithHttpInfo (decimal? dateBefore = null)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptsReadPutAsyncWithHttpInfo (DateBefore dateBefore = null)
         {
 
             var localVarPath = "/sms/receipts-read";

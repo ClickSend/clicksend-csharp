@@ -487,7 +487,7 @@ Name | Type | Description  | Notes
 
 <a name="smsinboundreadput"></a>
 # **SmsInboundReadPut**
-> string SmsInboundReadPut (decimal? dateBefore = null)
+> string SmsInboundReadPut (DateBefore dateBefore = null)
 
 Mark inbound SMS as read
 
@@ -512,7 +512,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SMSApi();
-            var dateBefore = 8.14;  // decimal? | An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional) 
+            var dateBefore = new DateBefore(); // DateBefore | DateBefore model (optional) 
 
             try
             {
@@ -533,7 +533,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dateBefore** | **decimal?**| An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. | [optional] 
+ **dateBefore** | [**DateBefore**](DateBefore.md)| DateBefore model | [optional] 
 
 ### Return type
 
@@ -814,7 +814,7 @@ Name | Type | Description  | Notes
 
 <a name="smsreceiptsreadput"></a>
 # **SmsReceiptsReadPut**
-> string SmsReceiptsReadPut (decimal? dateBefore = null)
+> string SmsReceiptsReadPut (DateBefore dateBefore = null)
 
 Mark delivery receipts as read
 
@@ -839,7 +839,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SMSApi();
-            var dateBefore = 8.14;  // decimal? | Mark all as read before this timestamp (optional) 
+            var dateBefore = new DateBefore(); // DateBefore | DateBefore model (optional) 
 
             try
             {
@@ -860,7 +860,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dateBefore** | **decimal?**| Mark all as read before this timestamp | [optional] 
+ **dateBefore** | [**DateBefore**](DateBefore.md)| DateBefore model | [optional] 
 
 ### Return type
 
