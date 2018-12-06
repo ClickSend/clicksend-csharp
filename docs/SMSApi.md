@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**SmsHistoryGet**](SMSApi.md#smshistoryget) | **GET** /sms/history | Get all sms history
 [**SmsInboundGet**](SMSApi.md#smsinboundget) | **GET** /sms/inbound | Get all inbound sms
 [**SmsInboundPost**](SMSApi.md#smsinboundpost) | **POST** /sms/inbound | Create inbound sms
+[**SmsInboundReadByMessageIdPut**](SMSApi.md#smsinboundreadbymessageidput) | **PUT** /sms/inbound-read/{message_id} | Mark inbound SMS as read
 [**SmsInboundReadPut**](SMSApi.md#smsinboundreadput) | **PUT** /sms/inbound-read | Mark inbound SMS as read
 [**SmsPricePost**](SMSApi.md#smspricepost) | **POST** /sms/price | Calculate sms price
 [**SmsReceiptsByMessageIdGet**](SMSApi.md#smsreceiptsbymessageidget) | **GET** /sms/receipts/{message_id} | Get a Specific Delivery Receipt
@@ -419,9 +420,74 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="smsinboundreadbymessageidput"></a>
+# **SmsInboundReadByMessageIdPut**
+> string SmsInboundReadByMessageIdPut (string messageId)
+
+Mark inbound SMS as read
+
+Mark specific inbound SMS as read
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
+
+namespace Example
+{
+    public class SmsInboundReadByMessageIdPutExample
+    {
+        public void main()
+        {
+            // Configure HTTP basic authorization: BasicAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new SMSApi();
+            var messageId = messageId_example;  // string | Message ID
+
+            try
+            {
+                // Mark inbound SMS as read
+                string result = apiInstance.SmsInboundReadByMessageIdPut(messageId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SMSApi.SmsInboundReadByMessageIdPut: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **messageId** | **string**| Message ID | 
+
+### Return type
+
+**string**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="smsinboundreadput"></a>
 # **SmsInboundReadPut**
-> string SmsInboundReadPut (string dateBefore = null)
+> string SmsInboundReadPut (decimal? dateBefore = null)
 
 Mark inbound SMS as read
 
@@ -446,7 +512,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SMSApi();
-            var dateBefore = dateBefore_example;  // string | An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional) 
+            var dateBefore = 8.14;  // decimal? | An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional) 
 
             try
             {
@@ -467,7 +533,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dateBefore** | **string**| An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. | [optional] 
+ **dateBefore** | **decimal?**| An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. | [optional] 
 
 ### Return type
 
@@ -616,7 +682,7 @@ Name | Type | Description  | Notes
 
 <a name="smsreceiptsget"></a>
 # **SmsReceiptsGet**
-> string SmsReceiptsGet (string q = null, int? page = null, int? limit = null)
+> string SmsReceiptsGet (int? page = null, int? limit = null)
 
 Get all delivery receipts
 
@@ -641,14 +707,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SMSApi();
-            var q = q_example;  // string | Your keyword or query. (optional) 
             var page = 56;  // int? | Page number (optional)  (default to 1)
             var limit = 56;  // int? | Number of records per page (optional)  (default to 10)
 
             try
             {
                 // Get all delivery receipts
-                string result = apiInstance.SmsReceiptsGet(q, page, limit);
+                string result = apiInstance.SmsReceiptsGet(page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -664,7 +729,6 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **q** | **string**| Your keyword or query. | [optional] 
  **page** | **int?**| Page number | [optional] [default to 1]
  **limit** | **int?**| Number of records per page | [optional] [default to 10]
 
@@ -750,7 +814,7 @@ Name | Type | Description  | Notes
 
 <a name="smsreceiptsreadput"></a>
 # **SmsReceiptsReadPut**
-> string SmsReceiptsReadPut (string dateBefore = null)
+> string SmsReceiptsReadPut (decimal? dateBefore = null)
 
 Mark delivery receipts as read
 
@@ -775,7 +839,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SMSApi();
-            var dateBefore = dateBefore_example;  // string | Mark all as read before this timestamp (optional) 
+            var dateBefore = 8.14;  // decimal? | Mark all as read before this timestamp (optional) 
 
             try
             {
@@ -796,7 +860,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dateBefore** | **string**| Mark all as read before this timestamp | [optional] 
+ **dateBefore** | **decimal?**| Mark all as read before this timestamp | [optional] 
 
 ### Return type
 

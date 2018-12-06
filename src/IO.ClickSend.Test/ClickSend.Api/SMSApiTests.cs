@@ -141,13 +141,25 @@ namespace IO.ClickSend.Test
         }
         
         /// <summary>
+        /// Test SmsInboundReadByMessageIdPut
+        /// </summary>
+        [Test]
+        public void SmsInboundReadByMessageIdPutTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string messageId = null;
+            //var response = instance.SmsInboundReadByMessageIdPut(messageId);
+            //Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
         /// Test SmsInboundReadPut
         /// </summary>
         [Test]
         public void SmsInboundReadPutTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string dateBefore = null;
+            //decimal? dateBefore = null;
             //var response = instance.SmsInboundReadPut(dateBefore);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }
@@ -183,10 +195,9 @@ namespace IO.ClickSend.Test
         public void SmsReceiptsGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string q = null;
             //int? page = null;
             //int? limit = null;
-            //var response = instance.SmsReceiptsGet(q, page, limit);
+            //var response = instance.SmsReceiptsGet(page, limit);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }
         
@@ -209,7 +220,7 @@ namespace IO.ClickSend.Test
         public void SmsReceiptsReadPutTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string dateBefore = null;
+            //decimal? dateBefore = null;
             //var response = instance.SmsReceiptsReadPut(dateBefore);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }

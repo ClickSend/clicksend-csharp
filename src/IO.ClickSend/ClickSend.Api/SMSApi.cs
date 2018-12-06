@@ -162,12 +162,33 @@ namespace IO.ClickSend.ClickSend.Api
         /// Mark inbound SMS as read
         /// </summary>
         /// <remarks>
+        /// Mark specific inbound SMS as read
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">Message ID</param>
+        /// <returns>string</returns>
+        string SmsInboundReadByMessageIdPut (string messageId);
+
+        /// <summary>
+        /// Mark inbound SMS as read
+        /// </summary>
+        /// <remarks>
+        /// Mark specific inbound SMS as read
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">Message ID</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> SmsInboundReadByMessageIdPutWithHttpInfo (string messageId);
+        /// <summary>
+        /// Mark inbound SMS as read
+        /// </summary>
+        /// <remarks>
         /// Mark all inbound SMS as read optionally before a certain date
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)</param>
         /// <returns>string</returns>
-        string SmsInboundReadPut (string dateBefore = null);
+        string SmsInboundReadPut (decimal? dateBefore = null);
 
         /// <summary>
         /// Mark inbound SMS as read
@@ -178,7 +199,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> SmsInboundReadPutWithHttpInfo (string dateBefore = null);
+        ApiResponse<string> SmsInboundReadPutWithHttpInfo (decimal? dateBefore = null);
         /// <summary>
         /// Calculate sms price
         /// </summary>
@@ -228,11 +249,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all delivery receipts
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q">Your keyword or query. (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
-        string SmsReceiptsGet (string q = null, int? page = null, int? limit = null);
+        string SmsReceiptsGet (int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all delivery receipts
@@ -241,11 +261,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all delivery receipts
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q">Your keyword or query. (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> SmsReceiptsGetWithHttpInfo (string q = null, int? page = null, int? limit = null);
+        ApiResponse<string> SmsReceiptsGetWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
         /// Add a delivery receipt
         /// </summary>
@@ -276,7 +295,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">Mark all as read before this timestamp (optional)</param>
         /// <returns>string</returns>
-        string SmsReceiptsReadPut (string dateBefore = null);
+        string SmsReceiptsReadPut (decimal? dateBefore = null);
 
         /// <summary>
         /// Mark delivery receipts as read
@@ -287,7 +306,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">Mark all as read before this timestamp (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> SmsReceiptsReadPutWithHttpInfo (string dateBefore = null);
+        ApiResponse<string> SmsReceiptsReadPutWithHttpInfo (decimal? dateBefore = null);
         /// <summary>
         /// Send sms message(s)
         /// </summary>
@@ -537,12 +556,33 @@ namespace IO.ClickSend.ClickSend.Api
         /// Mark inbound SMS as read
         /// </summary>
         /// <remarks>
+        /// Mark specific inbound SMS as read
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">Message ID</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> SmsInboundReadByMessageIdPutAsync (string messageId);
+
+        /// <summary>
+        /// Mark inbound SMS as read
+        /// </summary>
+        /// <remarks>
+        /// Mark specific inbound SMS as read
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">Message ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> SmsInboundReadByMessageIdPutAsyncWithHttpInfo (string messageId);
+        /// <summary>
+        /// Mark inbound SMS as read
+        /// </summary>
+        /// <remarks>
         /// Mark all inbound SMS as read optionally before a certain date
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> SmsInboundReadPutAsync (string dateBefore = null);
+        System.Threading.Tasks.Task<string> SmsInboundReadPutAsync (decimal? dateBefore = null);
 
         /// <summary>
         /// Mark inbound SMS as read
@@ -553,7 +593,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> SmsInboundReadPutAsyncWithHttpInfo (string dateBefore = null);
+        System.Threading.Tasks.Task<ApiResponse<string>> SmsInboundReadPutAsyncWithHttpInfo (decimal? dateBefore = null);
         /// <summary>
         /// Calculate sms price
         /// </summary>
@@ -603,11 +643,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all delivery receipts
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q">Your keyword or query. (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> SmsReceiptsGetAsync (string q = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<string> SmsReceiptsGetAsync (int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all delivery receipts
@@ -616,11 +655,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all delivery receipts
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q">Your keyword or query. (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptsGetAsyncWithHttpInfo (string q = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptsGetAsyncWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
         /// Add a delivery receipt
         /// </summary>
@@ -651,7 +689,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">Mark all as read before this timestamp (optional)</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> SmsReceiptsReadPutAsync (string dateBefore = null);
+        System.Threading.Tasks.Task<string> SmsReceiptsReadPutAsync (decimal? dateBefore = null);
 
         /// <summary>
         /// Mark delivery receipts as read
@@ -662,7 +700,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">Mark all as read before this timestamp (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptsReadPutAsyncWithHttpInfo (string dateBefore = null);
+        System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptsReadPutAsyncWithHttpInfo (decimal? dateBefore = null);
         /// <summary>
         /// Send sms message(s)
         /// </summary>
@@ -1775,12 +1813,159 @@ namespace IO.ClickSend.ClickSend.Api
         }
 
         /// <summary>
+        /// Mark inbound SMS as read Mark specific inbound SMS as read
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">Message ID</param>
+        /// <returns>string</returns>
+        public string SmsInboundReadByMessageIdPut (string messageId)
+        {
+             ApiResponse<string> localVarResponse = SmsInboundReadByMessageIdPutWithHttpInfo(messageId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Mark inbound SMS as read Mark specific inbound SMS as read
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">Message ID</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > SmsInboundReadByMessageIdPutWithHttpInfo (string messageId)
+        {
+            // verify the required parameter 'messageId' is set
+            if (messageId == null)
+                throw new ApiException(400, "Missing required parameter 'messageId' when calling SMSApi->SmsInboundReadByMessageIdPut");
+
+            var localVarPath = "/sms/inbound-read/{message_id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (messageId != null) localVarPathParams.Add("message_id", this.Configuration.ApiClient.ParameterToString(messageId)); // path parameter
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SmsInboundReadByMessageIdPut", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Mark inbound SMS as read Mark specific inbound SMS as read
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">Message ID</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> SmsInboundReadByMessageIdPutAsync (string messageId)
+        {
+             ApiResponse<string> localVarResponse = await SmsInboundReadByMessageIdPutAsyncWithHttpInfo(messageId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Mark inbound SMS as read Mark specific inbound SMS as read
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">Message ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> SmsInboundReadByMessageIdPutAsyncWithHttpInfo (string messageId)
+        {
+            // verify the required parameter 'messageId' is set
+            if (messageId == null)
+                throw new ApiException(400, "Missing required parameter 'messageId' when calling SMSApi->SmsInboundReadByMessageIdPut");
+
+            var localVarPath = "/sms/inbound-read/{message_id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (messageId != null) localVarPathParams.Add("message_id", this.Configuration.ApiClient.ParameterToString(messageId)); // path parameter
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SmsInboundReadByMessageIdPut", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
         /// Mark inbound SMS as read Mark all inbound SMS as read optionally before a certain date
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)</param>
         /// <returns>string</returns>
-        public string SmsInboundReadPut (string dateBefore = null)
+        public string SmsInboundReadPut (decimal? dateBefore = null)
         {
              ApiResponse<string> localVarResponse = SmsInboundReadPutWithHttpInfo(dateBefore);
              return localVarResponse.Data;
@@ -1792,7 +1977,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > SmsInboundReadPutWithHttpInfo (string dateBefore = null)
+        public ApiResponse< string > SmsInboundReadPutWithHttpInfo (decimal? dateBefore = null)
         {
 
             var localVarPath = "/sms/inbound-read";
@@ -1857,7 +2042,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> SmsInboundReadPutAsync (string dateBefore = null)
+        public async System.Threading.Tasks.Task<string> SmsInboundReadPutAsync (decimal? dateBefore = null)
         {
              ApiResponse<string> localVarResponse = await SmsInboundReadPutAsyncWithHttpInfo(dateBefore);
              return localVarResponse.Data;
@@ -1870,7 +2055,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> SmsInboundReadPutAsyncWithHttpInfo (string dateBefore = null)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> SmsInboundReadPutAsyncWithHttpInfo (decimal? dateBefore = null)
         {
 
             var localVarPath = "/sms/inbound-read";
@@ -2241,13 +2426,12 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all delivery receipts Get all delivery receipts
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q">Your keyword or query. (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
-        public string SmsReceiptsGet (string q = null, int? page = null, int? limit = null)
+        public string SmsReceiptsGet (int? page = null, int? limit = null)
         {
-             ApiResponse<string> localVarResponse = SmsReceiptsGetWithHttpInfo(q, page, limit);
+             ApiResponse<string> localVarResponse = SmsReceiptsGetWithHttpInfo(page, limit);
              return localVarResponse.Data;
         }
 
@@ -2255,11 +2439,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all delivery receipts Get all delivery receipts
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q">Your keyword or query. (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > SmsReceiptsGetWithHttpInfo (string q = null, int? page = null, int? limit = null)
+        public ApiResponse< string > SmsReceiptsGetWithHttpInfo (int? page = null, int? limit = null)
         {
 
             var localVarPath = "/sms/receipts";
@@ -2284,7 +2467,6 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (q != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "q", q)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
@@ -2317,13 +2499,12 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all delivery receipts Get all delivery receipts
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q">Your keyword or query. (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> SmsReceiptsGetAsync (string q = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<string> SmsReceiptsGetAsync (int? page = null, int? limit = null)
         {
-             ApiResponse<string> localVarResponse = await SmsReceiptsGetAsyncWithHttpInfo(q, page, limit);
+             ApiResponse<string> localVarResponse = await SmsReceiptsGetAsyncWithHttpInfo(page, limit);
              return localVarResponse.Data;
 
         }
@@ -2332,11 +2513,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all delivery receipts Get all delivery receipts
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q">Your keyword or query. (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptsGetAsyncWithHttpInfo (string q = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptsGetAsyncWithHttpInfo (int? page = null, int? limit = null)
         {
 
             var localVarPath = "/sms/receipts";
@@ -2361,7 +2541,6 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (q != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "q", q)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
@@ -2557,7 +2736,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">Mark all as read before this timestamp (optional)</param>
         /// <returns>string</returns>
-        public string SmsReceiptsReadPut (string dateBefore = null)
+        public string SmsReceiptsReadPut (decimal? dateBefore = null)
         {
              ApiResponse<string> localVarResponse = SmsReceiptsReadPutWithHttpInfo(dateBefore);
              return localVarResponse.Data;
@@ -2569,7 +2748,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">Mark all as read before this timestamp (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > SmsReceiptsReadPutWithHttpInfo (string dateBefore = null)
+        public ApiResponse< string > SmsReceiptsReadPutWithHttpInfo (decimal? dateBefore = null)
         {
 
             var localVarPath = "/sms/receipts-read";
@@ -2634,7 +2813,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">Mark all as read before this timestamp (optional)</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> SmsReceiptsReadPutAsync (string dateBefore = null)
+        public async System.Threading.Tasks.Task<string> SmsReceiptsReadPutAsync (decimal? dateBefore = null)
         {
              ApiResponse<string> localVarResponse = await SmsReceiptsReadPutAsyncWithHttpInfo(dateBefore);
              return localVarResponse.Data;
@@ -2647,7 +2826,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">Mark all as read before this timestamp (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptsReadPutAsyncWithHttpInfo (string dateBefore = null)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptsReadPutAsyncWithHttpInfo (decimal? dateBefore = null)
         {
 
             var localVarPath = "/sms/receipts-read";

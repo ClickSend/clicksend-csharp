@@ -144,10 +144,9 @@ namespace IO.ClickSend.Test
         public void VoiceReceiptsGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string q = null;
             //int? page = null;
             //int? limit = null;
-            //var response = instance.VoiceReceiptsGet(q, page, limit);
+            //var response = instance.VoiceReceiptsGet(page, limit);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }
         

@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 <a name="faxreceiptsget"></a>
 # **FaxReceiptsGet**
-> string FaxReceiptsGet (string q = null, int? page = null, int? limit = null)
+> string FaxReceiptsGet (int? page = null, int? limit = null)
 
 Get List of Fax Receipts
 
@@ -243,14 +243,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new FaxApi();
-            var q = q_example;  // string | Your keyword or query. (optional) 
             var page = 56;  // int? | Page number (optional)  (default to 1)
             var limit = 56;  // int? | Number of records per page (optional)  (default to 10)
 
             try
             {
                 // Get List of Fax Receipts
-                string result = apiInstance.FaxReceiptsGet(q, page, limit);
+                string result = apiInstance.FaxReceiptsGet(page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -266,7 +265,6 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **q** | **string**| Your keyword or query. | [optional] 
  **page** | **int?**| Page number | [optional] [default to 1]
  **limit** | **int?**| Number of records per page | [optional] [default to 10]
 

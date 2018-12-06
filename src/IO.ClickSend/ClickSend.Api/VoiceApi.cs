@@ -159,11 +159,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all voice receipts
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q">Your keyword or query. (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
-        string VoiceReceiptsGet (string q = null, int? page = null, int? limit = null);
+        string VoiceReceiptsGet (int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all voice receipts
@@ -172,11 +171,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all voice receipts
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q">Your keyword or query. (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> VoiceReceiptsGetWithHttpInfo (string q = null, int? page = null, int? limit = null);
+        ApiResponse<string> VoiceReceiptsGetWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
         /// Send voice message(s)
         /// </summary>
@@ -335,11 +333,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all voice receipts
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q">Your keyword or query. (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> VoiceReceiptsGetAsync (string q = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<string> VoiceReceiptsGetAsync (int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all voice receipts
@@ -348,11 +345,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all voice receipts
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q">Your keyword or query. (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> VoiceReceiptsGetAsyncWithHttpInfo (string q = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<string>> VoiceReceiptsGetAsyncWithHttpInfo (int? page = null, int? limit = null);
         /// <summary>
         /// Send voice message(s)
         /// </summary>
@@ -1362,13 +1358,12 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all voice receipts Get all voice receipts
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q">Your keyword or query. (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
-        public string VoiceReceiptsGet (string q = null, int? page = null, int? limit = null)
+        public string VoiceReceiptsGet (int? page = null, int? limit = null)
         {
-             ApiResponse<string> localVarResponse = VoiceReceiptsGetWithHttpInfo(q, page, limit);
+             ApiResponse<string> localVarResponse = VoiceReceiptsGetWithHttpInfo(page, limit);
              return localVarResponse.Data;
         }
 
@@ -1376,11 +1371,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all voice receipts Get all voice receipts
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q">Your keyword or query. (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > VoiceReceiptsGetWithHttpInfo (string q = null, int? page = null, int? limit = null)
+        public ApiResponse< string > VoiceReceiptsGetWithHttpInfo (int? page = null, int? limit = null)
         {
 
             var localVarPath = "/voice/receipts";
@@ -1405,7 +1399,6 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (q != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "q", q)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
@@ -1438,13 +1431,12 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all voice receipts Get all voice receipts
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q">Your keyword or query. (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> VoiceReceiptsGetAsync (string q = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<string> VoiceReceiptsGetAsync (int? page = null, int? limit = null)
         {
-             ApiResponse<string> localVarResponse = await VoiceReceiptsGetAsyncWithHttpInfo(q, page, limit);
+             ApiResponse<string> localVarResponse = await VoiceReceiptsGetAsyncWithHttpInfo(page, limit);
              return localVarResponse.Data;
 
         }
@@ -1453,11 +1445,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all voice receipts Get all voice receipts
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="q">Your keyword or query. (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> VoiceReceiptsGetAsyncWithHttpInfo (string q = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> VoiceReceiptsGetAsyncWithHttpInfo (int? page = null, int? limit = null)
         {
 
             var localVarPath = "/voice/receipts";
@@ -1482,7 +1473,6 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (q != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "q", q)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
 
