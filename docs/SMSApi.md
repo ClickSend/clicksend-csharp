@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 <a name="smshistoryget"></a>
 # **SmsHistoryGet**
-> string SmsHistoryGet (int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null)
+> string SmsHistoryGet (string q = null, int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null)
 
 Get all sms history
 
@@ -242,6 +242,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SMSApi();
+            var q = q_example;  // string | Custom query Example: from:{number},status_code:201. (optional) 
             var dateFrom = 56;  // int? | Start date (optional) 
             var dateTo = 56;  // int? | End date (optional) 
             var page = 56;  // int? | Page number (optional)  (default to 1)
@@ -250,7 +251,7 @@ namespace Example
             try
             {
                 // Get all sms history
-                string result = apiInstance.SmsHistoryGet(dateFrom, dateTo, page, limit);
+                string result = apiInstance.SmsHistoryGet(q, dateFrom, dateTo, page, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -266,6 +267,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **q** | **string**| Custom query Example: from:{number},status_code:201. | [optional] 
  **dateFrom** | **int?**| Start date | [optional] 
  **dateTo** | **int?**| End date | [optional] 
  **page** | **int?**| Page number | [optional] [default to 1]

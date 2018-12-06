@@ -106,11 +106,12 @@ namespace IO.ClickSend.Test
         public void SmsHistoryGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string q = null;
             //int? dateFrom = null;
             //int? dateTo = null;
             //int? page = null;
             //int? limit = null;
-            //var response = instance.SmsHistoryGet(dateFrom, dateTo, page, limit);
+            //var response = instance.SmsHistoryGet(q, dateFrom, dateTo, page, limit);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }
         

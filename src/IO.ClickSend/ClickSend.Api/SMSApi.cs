@@ -92,12 +92,13 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all sms history
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Custom query Example: from:{number},status_code:201. (optional)</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
-        string SmsHistoryGet (int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null);
+        string SmsHistoryGet (string q = null, int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all sms history
@@ -106,12 +107,13 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all sms history
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Custom query Example: from:{number},status_code:201. (optional)</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> SmsHistoryGetWithHttpInfo (int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null);
+        ApiResponse<string> SmsHistoryGetWithHttpInfo (string q = null, int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null);
         /// <summary>
         /// Get all inbound sms
         /// </summary>
@@ -486,12 +488,13 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all sms history
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Custom query Example: from:{number},status_code:201. (optional)</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> SmsHistoryGetAsync (int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<string> SmsHistoryGetAsync (string q = null, int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Get all sms history
@@ -500,12 +503,13 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all sms history
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Custom query Example: from:{number},status_code:201. (optional)</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> SmsHistoryGetAsyncWithHttpInfo (int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<string>> SmsHistoryGetAsyncWithHttpInfo (string q = null, int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null);
         /// <summary>
         /// Get all inbound sms
         /// </summary>
@@ -1343,14 +1347,15 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all sms history Get all sms history
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Custom query Example: from:{number},status_code:201. (optional)</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
-        public string SmsHistoryGet (int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null)
+        public string SmsHistoryGet (string q = null, int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null)
         {
-             ApiResponse<string> localVarResponse = SmsHistoryGetWithHttpInfo(dateFrom, dateTo, page, limit);
+             ApiResponse<string> localVarResponse = SmsHistoryGetWithHttpInfo(q, dateFrom, dateTo, page, limit);
              return localVarResponse.Data;
         }
 
@@ -1358,12 +1363,13 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all sms history Get all sms history
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Custom query Example: from:{number},status_code:201. (optional)</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > SmsHistoryGetWithHttpInfo (int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null)
+        public ApiResponse< string > SmsHistoryGetWithHttpInfo (string q = null, int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null)
         {
 
             var localVarPath = "/sms/history";
@@ -1388,6 +1394,7 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (q != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "q", q)); // query parameter
             if (dateFrom != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "date_from", dateFrom)); // query parameter
             if (dateTo != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "date_to", dateTo)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
@@ -1422,14 +1429,15 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all sms history Get all sms history
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Custom query Example: from:{number},status_code:201. (optional)</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> SmsHistoryGetAsync (int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<string> SmsHistoryGetAsync (string q = null, int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null)
         {
-             ApiResponse<string> localVarResponse = await SmsHistoryGetAsyncWithHttpInfo(dateFrom, dateTo, page, limit);
+             ApiResponse<string> localVarResponse = await SmsHistoryGetAsyncWithHttpInfo(q, dateFrom, dateTo, page, limit);
              return localVarResponse.Data;
 
         }
@@ -1438,12 +1446,13 @@ namespace IO.ClickSend.ClickSend.Api
         /// Get all sms history Get all sms history
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Custom query Example: from:{number},status_code:201. (optional)</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> SmsHistoryGetAsyncWithHttpInfo (int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> SmsHistoryGetAsyncWithHttpInfo (string q = null, int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null)
         {
 
             var localVarPath = "/sms/history";
@@ -1468,6 +1477,7 @@ namespace IO.ClickSend.ClickSend.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (q != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "q", q)); // query parameter
             if (dateFrom != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "date_from", dateFrom)); // query parameter
             if (dateTo != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "date_to", dateTo)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
