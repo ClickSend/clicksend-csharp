@@ -36,7 +36,7 @@ namespace IO.ClickSend.ClickSend.Model
         /// Initializes a new instance of the <see cref="DateBefore" /> class.
         /// </summary>
         /// <param name="dateBefore">An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read..</param>
-        public DateBefore(string dateBefore = default(string))
+        public DateBefore(decimal? dateBefore = default(decimal?))
         {
             this._DateBefore = dateBefore;
         }
@@ -46,7 +46,7 @@ namespace IO.ClickSend.ClickSend.Model
         /// </summary>
         /// <value>An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.</value>
         [DataMember(Name="date_before", EmitDefaultValue=false)]
-        public string _DateBefore { get; set; }
+        public decimal? _DateBefore { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
