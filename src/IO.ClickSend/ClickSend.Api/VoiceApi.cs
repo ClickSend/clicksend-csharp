@@ -153,10 +153,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> VoicePricePostWithHttpInfo (VoiceMessageCollection voiceMessages);
         /// <summary>
-        /// Get all voice receipts
+        /// Get all delivery receipts
         /// </summary>
         /// <remarks>
-        /// Get all voice receipts
+        /// Get all delivery receipts
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -165,16 +165,58 @@ namespace IO.ClickSend.ClickSend.Api
         string VoiceReceiptsGet (int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get all voice receipts
+        /// Get all delivery receipts
         /// </summary>
         /// <remarks>
-        /// Get all voice receipts
+        /// Get all delivery receipts
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> VoiceReceiptsGetWithHttpInfo (int? page = null, int? limit = null);
+        /// <summary>
+        /// Add a delivery receipt
+        /// </summary>
+        /// <remarks>
+        /// Add a delivery receipt
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="url">Url model</param>
+        /// <returns>string</returns>
+        string VoiceReceiptsPost (Url url);
+
+        /// <summary>
+        /// Add a delivery receipt
+        /// </summary>
+        /// <remarks>
+        /// Add a delivery receipt
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="url">Url model</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> VoiceReceiptsPostWithHttpInfo (Url url);
+        /// <summary>
+        /// Mark delivery receipts as read
+        /// </summary>
+        /// <remarks>
+        /// Mark delivery receipts as read
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
+        /// <returns>string</returns>
+        string VoiceReceiptsReadPut (DateBefore dateBefore = null);
+
+        /// <summary>
+        /// Mark delivery receipts as read
+        /// </summary>
+        /// <remarks>
+        /// Mark delivery receipts as read
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> VoiceReceiptsReadPutWithHttpInfo (DateBefore dateBefore = null);
         /// <summary>
         /// Send voice message(s)
         /// </summary>
@@ -327,10 +369,10 @@ namespace IO.ClickSend.ClickSend.Api
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> VoicePricePostAsyncWithHttpInfo (VoiceMessageCollection voiceMessages);
         /// <summary>
-        /// Get all voice receipts
+        /// Get all delivery receipts
         /// </summary>
         /// <remarks>
-        /// Get all voice receipts
+        /// Get all delivery receipts
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -339,16 +381,58 @@ namespace IO.ClickSend.ClickSend.Api
         System.Threading.Tasks.Task<string> VoiceReceiptsGetAsync (int? page = null, int? limit = null);
 
         /// <summary>
-        /// Get all voice receipts
+        /// Get all delivery receipts
         /// </summary>
         /// <remarks>
-        /// Get all voice receipts
+        /// Get all delivery receipts
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> VoiceReceiptsGetAsyncWithHttpInfo (int? page = null, int? limit = null);
+        /// <summary>
+        /// Add a delivery receipt
+        /// </summary>
+        /// <remarks>
+        /// Add a delivery receipt
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="url">Url model</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> VoiceReceiptsPostAsync (Url url);
+
+        /// <summary>
+        /// Add a delivery receipt
+        /// </summary>
+        /// <remarks>
+        /// Add a delivery receipt
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="url">Url model</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> VoiceReceiptsPostAsyncWithHttpInfo (Url url);
+        /// <summary>
+        /// Mark delivery receipts as read
+        /// </summary>
+        /// <remarks>
+        /// Mark delivery receipts as read
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> VoiceReceiptsReadPutAsync (DateBefore dateBefore = null);
+
+        /// <summary>
+        /// Mark delivery receipts as read
+        /// </summary>
+        /// <remarks>
+        /// Mark delivery receipts as read
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> VoiceReceiptsReadPutAsyncWithHttpInfo (DateBefore dateBefore = null);
         /// <summary>
         /// Send voice message(s)
         /// </summary>
@@ -1355,7 +1439,7 @@ namespace IO.ClickSend.ClickSend.Api
         }
 
         /// <summary>
-        /// Get all voice receipts Get all voice receipts
+        /// Get all delivery receipts Get all delivery receipts
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -1368,7 +1452,7 @@ namespace IO.ClickSend.ClickSend.Api
         }
 
         /// <summary>
-        /// Get all voice receipts Get all voice receipts
+        /// Get all delivery receipts Get all delivery receipts
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -1428,7 +1512,7 @@ namespace IO.ClickSend.ClickSend.Api
         }
 
         /// <summary>
-        /// Get all voice receipts Get all voice receipts
+        /// Get all delivery receipts Get all delivery receipts
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -1442,7 +1526,7 @@ namespace IO.ClickSend.ClickSend.Api
         }
 
         /// <summary>
-        /// Get all voice receipts Get all voice receipts
+        /// Get all delivery receipts Get all delivery receipts
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -1493,6 +1577,322 @@ namespace IO.ClickSend.ClickSend.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("VoiceReceiptsGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Add a delivery receipt Add a delivery receipt
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="url">Url model</param>
+        /// <returns>string</returns>
+        public string VoiceReceiptsPost (Url url)
+        {
+             ApiResponse<string> localVarResponse = VoiceReceiptsPostWithHttpInfo(url);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add a delivery receipt Add a delivery receipt
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="url">Url model</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > VoiceReceiptsPostWithHttpInfo (Url url)
+        {
+            // verify the required parameter 'url' is set
+            if (url == null)
+                throw new ApiException(400, "Missing required parameter 'url' when calling VoiceApi->VoiceReceiptsPost");
+
+            var localVarPath = "/voice/receipts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (url != null && url.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(url); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = url; // byte array
+            }
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("VoiceReceiptsPost", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Add a delivery receipt Add a delivery receipt
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="url">Url model</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> VoiceReceiptsPostAsync (Url url)
+        {
+             ApiResponse<string> localVarResponse = await VoiceReceiptsPostAsyncWithHttpInfo(url);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add a delivery receipt Add a delivery receipt
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="url">Url model</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> VoiceReceiptsPostAsyncWithHttpInfo (Url url)
+        {
+            // verify the required parameter 'url' is set
+            if (url == null)
+                throw new ApiException(400, "Missing required parameter 'url' when calling VoiceApi->VoiceReceiptsPost");
+
+            var localVarPath = "/voice/receipts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (url != null && url.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(url); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = url; // byte array
+            }
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("VoiceReceiptsPost", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Mark delivery receipts as read Mark delivery receipts as read
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
+        /// <returns>string</returns>
+        public string VoiceReceiptsReadPut (DateBefore dateBefore = null)
+        {
+             ApiResponse<string> localVarResponse = VoiceReceiptsReadPutWithHttpInfo(dateBefore);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Mark delivery receipts as read Mark delivery receipts as read
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > VoiceReceiptsReadPutWithHttpInfo (DateBefore dateBefore = null)
+        {
+
+            var localVarPath = "/voice/receipts-read";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (dateBefore != null && dateBefore.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(dateBefore); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = dateBefore; // byte array
+            }
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("VoiceReceiptsReadPut", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Mark delivery receipts as read Mark delivery receipts as read
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> VoiceReceiptsReadPutAsync (DateBefore dateBefore = null)
+        {
+             ApiResponse<string> localVarResponse = await VoiceReceiptsReadPutAsyncWithHttpInfo(dateBefore);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Mark delivery receipts as read Mark delivery receipts as read
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> VoiceReceiptsReadPutAsyncWithHttpInfo (DateBefore dateBefore = null)
+        {
+
+            var localVarPath = "/voice/receipts-read";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (dateBefore != null && dateBefore.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(dateBefore); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = dateBefore; // byte array
+            }
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("VoiceReceiptsReadPut", localVarResponse);
                 if (exception != null) throw exception;
             }
 

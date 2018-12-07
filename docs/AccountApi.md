@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**AccountGet**](AccountApi.md#accountget) | **GET** /account | Get account information
 [**AccountPost**](AccountApi.md#accountpost) | **POST** /account | Create a new account
+[**AccountUseageBySubaccountGet**](AccountApi.md#accountuseagebysubaccountget) | **GET** /account/usage/{year}/{month}/subaccount | Get account useage by subaccount
 [**AccountVerifySendPut**](AccountApi.md#accountverifysendput) | **PUT** /account-verify/send | Send account activation token
 [**AccountVerifyVerifyByActivationTokenPut**](AccountApi.md#accountverifyverifybyactivationtokenput) | **PUT** /account-verify/verify/{activation_token} | Verify new account
 [**ForgotPasswordPut**](AccountApi.md#forgotpasswordput) | **PUT** /forgot-password | Forgot password
@@ -123,6 +124,73 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account** | [**Account**](Account.md)| Account model | 
+
+### Return type
+
+**string**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="accountuseagebysubaccountget"></a>
+# **AccountUseageBySubaccountGet**
+> string AccountUseageBySubaccountGet (int? year, int? month)
+
+Get account useage by subaccount
+
+Get account useage by subaccount
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
+
+namespace Example
+{
+    public class AccountUseageBySubaccountGetExample
+    {
+        public void main()
+        {
+            // Configure HTTP basic authorization: BasicAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new AccountApi();
+            var year = 56;  // int? | Year to filter by (yyyy)
+            var month = 56;  // int? | Month to filter by (mm)
+
+            try
+            {
+                // Get account useage by subaccount
+                string result = apiInstance.AccountUseageBySubaccountGet(year, month);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AccountApi.AccountUseageBySubaccountGet: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **year** | **int?**| Year to filter by (yyyy) | 
+ **month** | **int?**| Month to filter by (mm) | 
 
 ### Return type
 

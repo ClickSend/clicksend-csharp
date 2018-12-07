@@ -151,6 +151,30 @@ namespace IO.ClickSend.Test
         }
         
         /// <summary>
+        /// Test VoiceReceiptsPost
+        /// </summary>
+        [Test]
+        public void VoiceReceiptsPostTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //Url url = null;
+            //var response = instance.VoiceReceiptsPost(url);
+            //Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
+        /// Test VoiceReceiptsReadPut
+        /// </summary>
+        [Test]
+        public void VoiceReceiptsReadPutTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DateBefore dateBefore = null;
+            //var response = instance.VoiceReceiptsReadPut(dateBefore);
+            //Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
         /// Test VoiceSendPost
         /// </summary>
         [Test]

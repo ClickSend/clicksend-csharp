@@ -88,6 +88,19 @@ namespace IO.ClickSend.Test
         }
         
         /// <summary>
+        /// Test AccountUseageBySubaccountGet
+        /// </summary>
+        [Test]
+        public void AccountUseageBySubaccountGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? year = null;
+            //int? month = null;
+            //var response = instance.AccountUseageBySubaccountGet(year, month);
+            //Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
         /// Test AccountVerifySendPut
         /// </summary>
         [Test]

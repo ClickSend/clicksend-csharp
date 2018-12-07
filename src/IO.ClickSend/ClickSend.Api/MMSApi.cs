@@ -46,6 +46,50 @@ namespace IO.ClickSend.ClickSend.Api
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> MmsPricePostWithHttpInfo (MmsMessageCollection mmsMessages);
         /// <summary>
+        /// Get all delivery receipts
+        /// </summary>
+        /// <remarks>
+        /// Get all delivery receipts
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <returns>string</returns>
+        string MmsReceiptsGet (int? page = null, int? limit = null);
+
+        /// <summary>
+        /// Get all delivery receipts
+        /// </summary>
+        /// <remarks>
+        /// Get all delivery receipts
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> MmsReceiptsGetWithHttpInfo (int? page = null, int? limit = null);
+        /// <summary>
+        /// Mark delivery receipts as read
+        /// </summary>
+        /// <remarks>
+        /// Mark delivery receipts as read
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
+        /// <returns>string</returns>
+        string MmsReceiptsReadPut (DateBefore dateBefore = null);
+
+        /// <summary>
+        /// Mark delivery receipts as read
+        /// </summary>
+        /// <remarks>
+        /// Mark delivery receipts as read
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> MmsReceiptsReadPutWithHttpInfo (DateBefore dateBefore = null);
+        /// <summary>
         /// Send MMS
         /// </summary>
         /// <remarks>
@@ -89,6 +133,50 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="mmsMessages">MmsMessageCollection model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> MmsPricePostAsyncWithHttpInfo (MmsMessageCollection mmsMessages);
+        /// <summary>
+        /// Get all delivery receipts
+        /// </summary>
+        /// <remarks>
+        /// Get all delivery receipts
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> MmsReceiptsGetAsync (int? page = null, int? limit = null);
+
+        /// <summary>
+        /// Get all delivery receipts
+        /// </summary>
+        /// <remarks>
+        /// Get all delivery receipts
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> MmsReceiptsGetAsyncWithHttpInfo (int? page = null, int? limit = null);
+        /// <summary>
+        /// Mark delivery receipts as read
+        /// </summary>
+        /// <remarks>
+        /// Mark delivery receipts as read
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> MmsReceiptsReadPutAsync (DateBefore dateBefore = null);
+
+        /// <summary>
+        /// Mark delivery receipts as read
+        /// </summary>
+        /// <remarks>
+        /// Mark delivery receipts as read
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> MmsReceiptsReadPutAsyncWithHttpInfo (DateBefore dateBefore = null);
         /// <summary>
         /// Send MMS
         /// </summary>
@@ -363,6 +451,308 @@ namespace IO.ClickSend.ClickSend.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("MmsPricePost", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Get all delivery receipts Get all delivery receipts
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <returns>string</returns>
+        public string MmsReceiptsGet (int? page = null, int? limit = null)
+        {
+             ApiResponse<string> localVarResponse = MmsReceiptsGetWithHttpInfo(page, limit);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get all delivery receipts Get all delivery receipts
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > MmsReceiptsGetWithHttpInfo (int? page = null, int? limit = null)
+        {
+
+            var localVarPath = "/mms/receipts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MmsReceiptsGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Get all delivery receipts Get all delivery receipts
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> MmsReceiptsGetAsync (int? page = null, int? limit = null)
+        {
+             ApiResponse<string> localVarResponse = await MmsReceiptsGetAsyncWithHttpInfo(page, limit);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get all delivery receipts Get all delivery receipts
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> MmsReceiptsGetAsyncWithHttpInfo (int? page = null, int? limit = null)
+        {
+
+            var localVarPath = "/mms/receipts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MmsReceiptsGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Mark delivery receipts as read Mark delivery receipts as read
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
+        /// <returns>string</returns>
+        public string MmsReceiptsReadPut (DateBefore dateBefore = null)
+        {
+             ApiResponse<string> localVarResponse = MmsReceiptsReadPutWithHttpInfo(dateBefore);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Mark delivery receipts as read Mark delivery receipts as read
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > MmsReceiptsReadPutWithHttpInfo (DateBefore dateBefore = null)
+        {
+
+            var localVarPath = "/mms/receipts-read";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (dateBefore != null && dateBefore.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(dateBefore); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = dateBefore; // byte array
+            }
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MmsReceiptsReadPut", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Mark delivery receipts as read Mark delivery receipts as read
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> MmsReceiptsReadPutAsync (DateBefore dateBefore = null)
+        {
+             ApiResponse<string> localVarResponse = await MmsReceiptsReadPutAsyncWithHttpInfo(dateBefore);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Mark delivery receipts as read Mark delivery receipts as read
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dateBefore">DateBefore model (optional)</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> MmsReceiptsReadPutAsyncWithHttpInfo (DateBefore dateBefore = null)
+        {
+
+            var localVarPath = "/mms/receipts-read";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (dateBefore != null && dateBefore.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(dateBefore); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = dateBefore; // byte array
+            }
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MmsReceiptsReadPut", localVarResponse);
                 if (exception != null) throw exception;
             }
 

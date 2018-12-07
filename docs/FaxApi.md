@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**FaxHistoryGet**](FaxApi.md#faxhistoryget) | **GET** /fax/history | Get a list of Fax History.
 [**FaxPricePost**](FaxApi.md#faxpricepost) | **POST** /fax/price | Calculate Total Price for Fax Messages sent
 [**FaxReceiptsByMessageIdGet**](FaxApi.md#faxreceiptsbymessageidget) | **GET** /fax/receipts/{message_id} | Get a single fax receipt based on message id.
-[**FaxReceiptsGet**](FaxApi.md#faxreceiptsget) | **GET** /fax/receipts | Get List of Fax Receipts
 [**FaxSendPost**](FaxApi.md#faxsendpost) | **POST** /fax/send | Send a fax using supplied supported file-types.
 
 
@@ -200,73 +199,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **messageId** | **string**| ID of the message receipt to retrieve | 
-
-### Return type
-
-**string**
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="faxreceiptsget"></a>
-# **FaxReceiptsGet**
-> string FaxReceiptsGet (int? page = null, int? limit = null)
-
-Get List of Fax Receipts
-
-Get List of Fax Receipts
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using IO.ClickSend.ClickSend.Api;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
-
-namespace Example
-{
-    public class FaxReceiptsGetExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: BasicAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new FaxApi();
-            var page = 56;  // int? | Page number (optional)  (default to 1)
-            var limit = 56;  // int? | Number of records per page (optional)  (default to 10)
-
-            try
-            {
-                // Get List of Fax Receipts
-                string result = apiInstance.FaxReceiptsGet(page, limit);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling FaxApi.FaxReceiptsGet: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **int?**| Page number | [optional] [default to 1]
- **limit** | **int?**| Number of records per page | [optional] [default to 10]
 
 ### Return type
 

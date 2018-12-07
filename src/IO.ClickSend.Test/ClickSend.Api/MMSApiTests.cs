@@ -77,6 +77,31 @@ namespace IO.ClickSend.Test
         }
         
         /// <summary>
+        /// Test MmsReceiptsGet
+        /// </summary>
+        [Test]
+        public void MmsReceiptsGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? page = null;
+            //int? limit = null;
+            //var response = instance.MmsReceiptsGet(page, limit);
+            //Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
+        /// Test MmsReceiptsReadPut
+        /// </summary>
+        [Test]
+        public void MmsReceiptsReadPutTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DateBefore dateBefore = null;
+            //var response = instance.MmsReceiptsReadPut(dateBefore);
+            //Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
         /// Test MmsSendPost
         /// </summary>
         [Test]

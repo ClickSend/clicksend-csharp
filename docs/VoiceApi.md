@@ -10,7 +10,9 @@ Method | HTTP request | Description
 [**VoiceHistoryGet**](VoiceApi.md#voicehistoryget) | **GET** /voice/history | Get all voice history
 [**VoiceLangGet**](VoiceApi.md#voicelangget) | **GET** /voice/lang | Get all voice languages
 [**VoicePricePost**](VoiceApi.md#voicepricepost) | **POST** /voice/price | Calculate voice price
-[**VoiceReceiptsGet**](VoiceApi.md#voicereceiptsget) | **GET** /voice/receipts | Get all voice receipts
+[**VoiceReceiptsGet**](VoiceApi.md#voicereceiptsget) | **GET** /voice/receipts | Get all delivery receipts
+[**VoiceReceiptsPost**](VoiceApi.md#voicereceiptspost) | **POST** /voice/receipts | Add a delivery receipt
+[**VoiceReceiptsReadPut**](VoiceApi.md#voicereceiptsreadput) | **PUT** /voice/receipts-read | Mark delivery receipts as read
 [**VoiceSendPost**](VoiceApi.md#voicesendpost) | **POST** /voice/send | Send voice message(s)
 
 
@@ -406,9 +408,9 @@ Name | Type | Description  | Notes
 # **VoiceReceiptsGet**
 > string VoiceReceiptsGet (int? page = null, int? limit = null)
 
-Get all voice receipts
+Get all delivery receipts
 
-Get all voice receipts
+Get all delivery receipts
 
 ### Example
 ```csharp
@@ -434,7 +436,7 @@ namespace Example
 
             try
             {
-                // Get all voice receipts
+                // Get all delivery receipts
                 string result = apiInstance.VoiceReceiptsGet(page, limit);
                 Debug.WriteLine(result);
             }
@@ -453,6 +455,136 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int?**| Page number | [optional] [default to 1]
  **limit** | **int?**| Number of records per page | [optional] [default to 10]
+
+### Return type
+
+**string**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="voicereceiptspost"></a>
+# **VoiceReceiptsPost**
+> string VoiceReceiptsPost (Url url)
+
+Add a delivery receipt
+
+Add a delivery receipt
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
+
+namespace Example
+{
+    public class VoiceReceiptsPostExample
+    {
+        public void main()
+        {
+            // Configure HTTP basic authorization: BasicAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new VoiceApi();
+            var url = new Url(); // Url | Url model
+
+            try
+            {
+                // Add a delivery receipt
+                string result = apiInstance.VoiceReceiptsPost(url);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling VoiceApi.VoiceReceiptsPost: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **url** | [**Url**](Url.md)| Url model | 
+
+### Return type
+
+**string**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="voicereceiptsreadput"></a>
+# **VoiceReceiptsReadPut**
+> string VoiceReceiptsReadPut (DateBefore dateBefore = null)
+
+Mark delivery receipts as read
+
+Mark delivery receipts as read
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
+
+namespace Example
+{
+    public class VoiceReceiptsReadPutExample
+    {
+        public void main()
+        {
+            // Configure HTTP basic authorization: BasicAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new VoiceApi();
+            var dateBefore = new DateBefore(); // DateBefore | DateBefore model (optional) 
+
+            try
+            {
+                // Mark delivery receipts as read
+                string result = apiInstance.VoiceReceiptsReadPut(dateBefore);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling VoiceApi.VoiceReceiptsReadPut: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **dateBefore** | [**DateBefore**](DateBefore.md)| DateBefore model | [optional] 
 
 ### Return type
 

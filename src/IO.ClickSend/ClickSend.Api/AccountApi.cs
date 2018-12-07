@@ -65,6 +65,29 @@ namespace IO.ClickSend.ClickSend.Api
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> AccountPostWithHttpInfo (Account account);
         /// <summary>
+        /// Get account useage by subaccount
+        /// </summary>
+        /// <remarks>
+        /// Get account useage by subaccount
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="year">Year to filter by (yyyy)</param>
+        /// <param name="month">Month to filter by (mm)</param>
+        /// <returns>string</returns>
+        string AccountUseageBySubaccountGet (int? year, int? month);
+
+        /// <summary>
+        /// Get account useage by subaccount
+        /// </summary>
+        /// <remarks>
+        /// Get account useage by subaccount
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="year">Year to filter by (yyyy)</param>
+        /// <param name="month">Month to filter by (mm)</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> AccountUseageBySubaccountGetWithHttpInfo (int? year, int? month);
+        /// <summary>
         /// Send account activation token
         /// </summary>
         /// <remarks>
@@ -211,6 +234,29 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="account">Account model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> AccountPostAsyncWithHttpInfo (Account account);
+        /// <summary>
+        /// Get account useage by subaccount
+        /// </summary>
+        /// <remarks>
+        /// Get account useage by subaccount
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="year">Year to filter by (yyyy)</param>
+        /// <param name="month">Month to filter by (mm)</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> AccountUseageBySubaccountGetAsync (int? year, int? month);
+
+        /// <summary>
+        /// Get account useage by subaccount
+        /// </summary>
+        /// <remarks>
+        /// Get account useage by subaccount
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="year">Year to filter by (yyyy)</param>
+        /// <param name="month">Month to filter by (mm)</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> AccountUseageBySubaccountGetAsyncWithHttpInfo (int? year, int? month);
         /// <summary>
         /// Send account activation token
         /// </summary>
@@ -704,6 +750,165 @@ namespace IO.ClickSend.ClickSend.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("AccountPost", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Get account useage by subaccount Get account useage by subaccount
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="year">Year to filter by (yyyy)</param>
+        /// <param name="month">Month to filter by (mm)</param>
+        /// <returns>string</returns>
+        public string AccountUseageBySubaccountGet (int? year, int? month)
+        {
+             ApiResponse<string> localVarResponse = AccountUseageBySubaccountGetWithHttpInfo(year, month);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get account useage by subaccount Get account useage by subaccount
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="year">Year to filter by (yyyy)</param>
+        /// <param name="month">Month to filter by (mm)</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > AccountUseageBySubaccountGetWithHttpInfo (int? year, int? month)
+        {
+            // verify the required parameter 'year' is set
+            if (year == null)
+                throw new ApiException(400, "Missing required parameter 'year' when calling AccountApi->AccountUseageBySubaccountGet");
+            // verify the required parameter 'month' is set
+            if (month == null)
+                throw new ApiException(400, "Missing required parameter 'month' when calling AccountApi->AccountUseageBySubaccountGet");
+
+            var localVarPath = "/account/usage/{year}/{month}/subaccount";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (year != null) localVarPathParams.Add("year", this.Configuration.ApiClient.ParameterToString(year)); // path parameter
+            if (month != null) localVarPathParams.Add("month", this.Configuration.ApiClient.ParameterToString(month)); // path parameter
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AccountUseageBySubaccountGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Get account useage by subaccount Get account useage by subaccount
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="year">Year to filter by (yyyy)</param>
+        /// <param name="month">Month to filter by (mm)</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> AccountUseageBySubaccountGetAsync (int? year, int? month)
+        {
+             ApiResponse<string> localVarResponse = await AccountUseageBySubaccountGetAsyncWithHttpInfo(year, month);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get account useage by subaccount Get account useage by subaccount
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="year">Year to filter by (yyyy)</param>
+        /// <param name="month">Month to filter by (mm)</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> AccountUseageBySubaccountGetAsyncWithHttpInfo (int? year, int? month)
+        {
+            // verify the required parameter 'year' is set
+            if (year == null)
+                throw new ApiException(400, "Missing required parameter 'year' when calling AccountApi->AccountUseageBySubaccountGet");
+            // verify the required parameter 'month' is set
+            if (month == null)
+                throw new ApiException(400, "Missing required parameter 'month' when calling AccountApi->AccountUseageBySubaccountGet");
+
+            var localVarPath = "/account/usage/{year}/{month}/subaccount";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (year != null) localVarPathParams.Add("year", this.Configuration.ApiClient.ParameterToString(year)); // path parameter
+            if (month != null) localVarPathParams.Add("month", this.Configuration.ApiClient.ParameterToString(month)); // path parameter
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AccountUseageBySubaccountGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
