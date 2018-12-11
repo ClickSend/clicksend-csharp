@@ -30,27 +30,27 @@ namespace IO.ClickSend.ClickSend.Model
     /// </summary>
     [DataContract]
     [JsonConverter(typeof(JsonSubtypes), "classType")]
-    public partial class InboundFAXRule :  IEquatable<InboundFAXRule>, IValidatableObject
+    public partial class InboundFaxRule :  IEquatable<InboundFaxRule>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="InboundFAXRule" /> class.
+        /// Initializes a new instance of the <see cref="InboundFaxRule" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected InboundFAXRule() { }
+        protected InboundFaxRule() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="InboundFAXRule" /> class.
+        /// Initializes a new instance of the <see cref="InboundFaxRule" /> class.
         /// </summary>
         /// <param name="dedicatedNumber">Dedicated Number. Can be &#39;*&#39; to apply to all numbers. (required).</param>
         /// <param name="ruleName">Rule Name. (required).</param>
         /// <param name="action">Action to be taken (AUTO_REPLY, EMAIL_USER, EMAIL_FIXED, URL, SMS, POLL, GROUP_SMS, MOVE_CONTACT, CREATE_CONTACT, CREATE_CONTACT_PLUS_EMAIL, CREATE_CONTACT_PLUS_NAME_EMAIL CREATE_CONTACT_PLUS_NAME, SMPP, NONE). (required).</param>
         /// <param name="actionAddress">Action address. (required).</param>
         /// <param name="enabled">Enabled: Disabled&#x3D;0 or Enabled&#x3D;1. (required).</param>
-        public InboundFAXRule(string dedicatedNumber = default(string), string ruleName = default(string), string action = default(string), string actionAddress = default(string), decimal? enabled = default(decimal?))
+        public InboundFaxRule(string dedicatedNumber = default(string), string ruleName = default(string), string action = default(string), string actionAddress = default(string), decimal? enabled = default(decimal?))
         {
             // to ensure "dedicatedNumber" is required (not null)
             if (dedicatedNumber == null)
             {
-                throw new InvalidDataException("dedicatedNumber is a required property for InboundFAXRule and cannot be null");
+                throw new InvalidDataException("dedicatedNumber is a required property for InboundFaxRule and cannot be null");
             }
             else
             {
@@ -59,7 +59,7 @@ namespace IO.ClickSend.ClickSend.Model
             // to ensure "ruleName" is required (not null)
             if (ruleName == null)
             {
-                throw new InvalidDataException("ruleName is a required property for InboundFAXRule and cannot be null");
+                throw new InvalidDataException("ruleName is a required property for InboundFaxRule and cannot be null");
             }
             else
             {
@@ -68,7 +68,7 @@ namespace IO.ClickSend.ClickSend.Model
             // to ensure "action" is required (not null)
             if (action == null)
             {
-                throw new InvalidDataException("action is a required property for InboundFAXRule and cannot be null");
+                throw new InvalidDataException("action is a required property for InboundFaxRule and cannot be null");
             }
             else
             {
@@ -77,7 +77,7 @@ namespace IO.ClickSend.ClickSend.Model
             // to ensure "actionAddress" is required (not null)
             if (actionAddress == null)
             {
-                throw new InvalidDataException("actionAddress is a required property for InboundFAXRule and cannot be null");
+                throw new InvalidDataException("actionAddress is a required property for InboundFaxRule and cannot be null");
             }
             else
             {
@@ -86,7 +86,7 @@ namespace IO.ClickSend.ClickSend.Model
             // to ensure "enabled" is required (not null)
             if (enabled == null)
             {
-                throw new InvalidDataException("enabled is a required property for InboundFAXRule and cannot be null");
+                throw new InvalidDataException("enabled is a required property for InboundFaxRule and cannot be null");
             }
             else
             {
@@ -136,7 +136,7 @@ namespace IO.ClickSend.ClickSend.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class InboundFAXRule {\n");
+            sb.Append("class InboundFaxRule {\n");
             sb.Append("  DedicatedNumber: ").Append(DedicatedNumber).Append("\n");
             sb.Append("  RuleName: ").Append(RuleName).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
@@ -162,15 +162,15 @@ namespace IO.ClickSend.ClickSend.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as InboundFAXRule);
+            return this.Equals(input as InboundFaxRule);
         }
 
         /// <summary>
-        /// Returns true if InboundFAXRule instances are equal
+        /// Returns true if InboundFaxRule instances are equal
         /// </summary>
-        /// <param name="input">Instance of InboundFAXRule to be compared</param>
+        /// <param name="input">Instance of InboundFaxRule to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(InboundFAXRule input)
+        public bool Equals(InboundFaxRule input)
         {
             if (input == null)
                 return false;

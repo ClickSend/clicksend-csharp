@@ -25,6 +25,79 @@ namespace IO.ClickSend.ClickSend.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Get a list of Fax History.
+        /// </summary>
+        /// <remarks>
+        /// Get a list of Fax History.
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dateFrom">Customize result by setting from date (timestsamp) Example: 1457572619. (optional)</param>
+        /// <param name="dateTo">Customize result by setting to date (timestamp) Example: 1457573000. (optional)</param>
+        /// <param name="q">Custom query Example: status:Sent,status_code:201. (optional)</param>
+        /// <param name="order">Order result by Example: date_added:desc,list_id:desc. (optional)</param>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <returns>string</returns>
+        string FaxHistoryGet (int? dateFrom = null, int? dateTo = null, string q = null, string order = null, int? page = null, int? limit = null);
+
+        /// <summary>
+        /// Get a list of Fax History.
+        /// </summary>
+        /// <remarks>
+        /// Get a list of Fax History.
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dateFrom">Customize result by setting from date (timestsamp) Example: 1457572619. (optional)</param>
+        /// <param name="dateTo">Customize result by setting to date (timestamp) Example: 1457573000. (optional)</param>
+        /// <param name="q">Custom query Example: status:Sent,status_code:201. (optional)</param>
+        /// <param name="order">Order result by Example: date_added:desc,list_id:desc. (optional)</param>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> FaxHistoryGetWithHttpInfo (int? dateFrom = null, int? dateTo = null, string q = null, string order = null, int? page = null, int? limit = null);
+        /// <summary>
+        /// Calculate Total Price for Fax Messages sent
+        /// </summary>
+        /// <remarks>
+        /// Calculate Total Price for Fax Messages sent
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="faxMessage">FaxMessageCollection model</param>
+        /// <returns>string</returns>
+        string FaxPricePost (FaxMessageCollection faxMessage);
+
+        /// <summary>
+        /// Calculate Total Price for Fax Messages sent
+        /// </summary>
+        /// <remarks>
+        /// Calculate Total Price for Fax Messages sent
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="faxMessage">FaxMessageCollection model</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> FaxPricePostWithHttpInfo (FaxMessageCollection faxMessage);
+        /// <summary>
+        /// Get a single fax receipt based on message id.
+        /// </summary>
+        /// <remarks>
+        /// Get a single fax receipt based on message id.
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">ID of the message receipt to retrieve</param>
+        /// <returns>string</returns>
+        string FaxReceiptsByMessageIdGet (string messageId);
+
+        /// <summary>
+        /// Get a single fax receipt based on message id.
+        /// </summary>
+        /// <remarks>
+        /// Get a single fax receipt based on message id.
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">ID of the message receipt to retrieve</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> FaxReceiptsByMessageIdGetWithHttpInfo (string messageId);
+        /// <summary>
         /// Get all delivery receipts
         /// </summary>
         /// <remarks>
@@ -89,8 +162,102 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="dateBefore">DateBefore model (optional)</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> FaxReceiptsReadPutWithHttpInfo (DateBefore dateBefore = null);
+        /// <summary>
+        /// Send a fax using supplied supported file-types.
+        /// </summary>
+        /// <remarks>
+        /// Send a fax using supplied supported file-types.
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="faxMessage">FaxMessageCollection model</param>
+        /// <returns>string</returns>
+        string FaxSendPost (FaxMessageCollection faxMessage);
+
+        /// <summary>
+        /// Send a fax using supplied supported file-types.
+        /// </summary>
+        /// <remarks>
+        /// Send a fax using supplied supported file-types.
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="faxMessage">FaxMessageCollection model</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> FaxSendPostWithHttpInfo (FaxMessageCollection faxMessage);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Get a list of Fax History.
+        /// </summary>
+        /// <remarks>
+        /// Get a list of Fax History.
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dateFrom">Customize result by setting from date (timestsamp) Example: 1457572619. (optional)</param>
+        /// <param name="dateTo">Customize result by setting to date (timestamp) Example: 1457573000. (optional)</param>
+        /// <param name="q">Custom query Example: status:Sent,status_code:201. (optional)</param>
+        /// <param name="order">Order result by Example: date_added:desc,list_id:desc. (optional)</param>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> FaxHistoryGetAsync (int? dateFrom = null, int? dateTo = null, string q = null, string order = null, int? page = null, int? limit = null);
+
+        /// <summary>
+        /// Get a list of Fax History.
+        /// </summary>
+        /// <remarks>
+        /// Get a list of Fax History.
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dateFrom">Customize result by setting from date (timestsamp) Example: 1457572619. (optional)</param>
+        /// <param name="dateTo">Customize result by setting to date (timestamp) Example: 1457573000. (optional)</param>
+        /// <param name="q">Custom query Example: status:Sent,status_code:201. (optional)</param>
+        /// <param name="order">Order result by Example: date_added:desc,list_id:desc. (optional)</param>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> FaxHistoryGetAsyncWithHttpInfo (int? dateFrom = null, int? dateTo = null, string q = null, string order = null, int? page = null, int? limit = null);
+        /// <summary>
+        /// Calculate Total Price for Fax Messages sent
+        /// </summary>
+        /// <remarks>
+        /// Calculate Total Price for Fax Messages sent
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="faxMessage">FaxMessageCollection model</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> FaxPricePostAsync (FaxMessageCollection faxMessage);
+
+        /// <summary>
+        /// Calculate Total Price for Fax Messages sent
+        /// </summary>
+        /// <remarks>
+        /// Calculate Total Price for Fax Messages sent
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="faxMessage">FaxMessageCollection model</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> FaxPricePostAsyncWithHttpInfo (FaxMessageCollection faxMessage);
+        /// <summary>
+        /// Get a single fax receipt based on message id.
+        /// </summary>
+        /// <remarks>
+        /// Get a single fax receipt based on message id.
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">ID of the message receipt to retrieve</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> FaxReceiptsByMessageIdGetAsync (string messageId);
+
+        /// <summary>
+        /// Get a single fax receipt based on message id.
+        /// </summary>
+        /// <remarks>
+        /// Get a single fax receipt based on message id.
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">ID of the message receipt to retrieve</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> FaxReceiptsByMessageIdGetAsyncWithHttpInfo (string messageId);
         /// <summary>
         /// Get all delivery receipts
         /// </summary>
@@ -156,6 +323,27 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="dateBefore">DateBefore model (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> FaxReceiptsReadPutAsyncWithHttpInfo (DateBefore dateBefore = null);
+        /// <summary>
+        /// Send a fax using supplied supported file-types.
+        /// </summary>
+        /// <remarks>
+        /// Send a fax using supplied supported file-types.
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="faxMessage">FaxMessageCollection model</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> FaxSendPostAsync (FaxMessageCollection faxMessage);
+
+        /// <summary>
+        /// Send a fax using supplied supported file-types.
+        /// </summary>
+        /// <remarks>
+        /// Send a fax using supplied supported file-types.
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="faxMessage">FaxMessageCollection model</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> FaxSendPostAsyncWithHttpInfo (FaxMessageCollection faxMessage);
         #endregion Asynchronous Operations
     }
 
@@ -254,6 +442,485 @@ namespace IO.ClickSend.ClickSend.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Get a list of Fax History. Get a list of Fax History.
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dateFrom">Customize result by setting from date (timestsamp) Example: 1457572619. (optional)</param>
+        /// <param name="dateTo">Customize result by setting to date (timestamp) Example: 1457573000. (optional)</param>
+        /// <param name="q">Custom query Example: status:Sent,status_code:201. (optional)</param>
+        /// <param name="order">Order result by Example: date_added:desc,list_id:desc. (optional)</param>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <returns>string</returns>
+        public string FaxHistoryGet (int? dateFrom = null, int? dateTo = null, string q = null, string order = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<string> localVarResponse = FaxHistoryGetWithHttpInfo(dateFrom, dateTo, q, order, page, limit);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of Fax History. Get a list of Fax History.
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dateFrom">Customize result by setting from date (timestsamp) Example: 1457572619. (optional)</param>
+        /// <param name="dateTo">Customize result by setting to date (timestamp) Example: 1457573000. (optional)</param>
+        /// <param name="q">Custom query Example: status:Sent,status_code:201. (optional)</param>
+        /// <param name="order">Order result by Example: date_added:desc,list_id:desc. (optional)</param>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > FaxHistoryGetWithHttpInfo (int? dateFrom = null, int? dateTo = null, string q = null, string order = null, int? page = null, int? limit = null)
+        {
+
+            var localVarPath = "/fax/history";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (dateFrom != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "date_from", dateFrom)); // query parameter
+            if (dateTo != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "date_to", dateTo)); // query parameter
+            if (q != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "q", q)); // query parameter
+            if (order != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "order", order)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FaxHistoryGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Get a list of Fax History. Get a list of Fax History.
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dateFrom">Customize result by setting from date (timestsamp) Example: 1457572619. (optional)</param>
+        /// <param name="dateTo">Customize result by setting to date (timestamp) Example: 1457573000. (optional)</param>
+        /// <param name="q">Custom query Example: status:Sent,status_code:201. (optional)</param>
+        /// <param name="order">Order result by Example: date_added:desc,list_id:desc. (optional)</param>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> FaxHistoryGetAsync (int? dateFrom = null, int? dateTo = null, string q = null, string order = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<string> localVarResponse = await FaxHistoryGetAsyncWithHttpInfo(dateFrom, dateTo, q, order, page, limit);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of Fax History. Get a list of Fax History.
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dateFrom">Customize result by setting from date (timestsamp) Example: 1457572619. (optional)</param>
+        /// <param name="dateTo">Customize result by setting to date (timestamp) Example: 1457573000. (optional)</param>
+        /// <param name="q">Custom query Example: status:Sent,status_code:201. (optional)</param>
+        /// <param name="order">Order result by Example: date_added:desc,list_id:desc. (optional)</param>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> FaxHistoryGetAsyncWithHttpInfo (int? dateFrom = null, int? dateTo = null, string q = null, string order = null, int? page = null, int? limit = null)
+        {
+
+            var localVarPath = "/fax/history";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (dateFrom != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "date_from", dateFrom)); // query parameter
+            if (dateTo != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "date_to", dateTo)); // query parameter
+            if (q != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "q", q)); // query parameter
+            if (order != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "order", order)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FaxHistoryGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Calculate Total Price for Fax Messages sent Calculate Total Price for Fax Messages sent
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="faxMessage">FaxMessageCollection model</param>
+        /// <returns>string</returns>
+        public string FaxPricePost (FaxMessageCollection faxMessage)
+        {
+             ApiResponse<string> localVarResponse = FaxPricePostWithHttpInfo(faxMessage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Calculate Total Price for Fax Messages sent Calculate Total Price for Fax Messages sent
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="faxMessage">FaxMessageCollection model</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > FaxPricePostWithHttpInfo (FaxMessageCollection faxMessage)
+        {
+            // verify the required parameter 'faxMessage' is set
+            if (faxMessage == null)
+                throw new ApiException(400, "Missing required parameter 'faxMessage' when calling FAXApi->FaxPricePost");
+
+            var localVarPath = "/fax/price";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (faxMessage != null && faxMessage.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(faxMessage); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = faxMessage; // byte array
+            }
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FaxPricePost", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Calculate Total Price for Fax Messages sent Calculate Total Price for Fax Messages sent
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="faxMessage">FaxMessageCollection model</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> FaxPricePostAsync (FaxMessageCollection faxMessage)
+        {
+             ApiResponse<string> localVarResponse = await FaxPricePostAsyncWithHttpInfo(faxMessage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Calculate Total Price for Fax Messages sent Calculate Total Price for Fax Messages sent
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="faxMessage">FaxMessageCollection model</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> FaxPricePostAsyncWithHttpInfo (FaxMessageCollection faxMessage)
+        {
+            // verify the required parameter 'faxMessage' is set
+            if (faxMessage == null)
+                throw new ApiException(400, "Missing required parameter 'faxMessage' when calling FAXApi->FaxPricePost");
+
+            var localVarPath = "/fax/price";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (faxMessage != null && faxMessage.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(faxMessage); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = faxMessage; // byte array
+            }
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FaxPricePost", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Get a single fax receipt based on message id. Get a single fax receipt based on message id.
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">ID of the message receipt to retrieve</param>
+        /// <returns>string</returns>
+        public string FaxReceiptsByMessageIdGet (string messageId)
+        {
+             ApiResponse<string> localVarResponse = FaxReceiptsByMessageIdGetWithHttpInfo(messageId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a single fax receipt based on message id. Get a single fax receipt based on message id.
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">ID of the message receipt to retrieve</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > FaxReceiptsByMessageIdGetWithHttpInfo (string messageId)
+        {
+            // verify the required parameter 'messageId' is set
+            if (messageId == null)
+                throw new ApiException(400, "Missing required parameter 'messageId' when calling FAXApi->FaxReceiptsByMessageIdGet");
+
+            var localVarPath = "/fax/receipts/{message_id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (messageId != null) localVarPathParams.Add("message_id", this.Configuration.ApiClient.ParameterToString(messageId)); // path parameter
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FaxReceiptsByMessageIdGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Get a single fax receipt based on message id. Get a single fax receipt based on message id.
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">ID of the message receipt to retrieve</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> FaxReceiptsByMessageIdGetAsync (string messageId)
+        {
+             ApiResponse<string> localVarResponse = await FaxReceiptsByMessageIdGetAsyncWithHttpInfo(messageId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a single fax receipt based on message id. Get a single fax receipt based on message id.
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">ID of the message receipt to retrieve</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> FaxReceiptsByMessageIdGetAsyncWithHttpInfo (string messageId)
+        {
+            // verify the required parameter 'messageId' is set
+            if (messageId == null)
+                throw new ApiException(400, "Missing required parameter 'messageId' when calling FAXApi->FaxReceiptsByMessageIdGet");
+
+            var localVarPath = "/fax/receipts/{message_id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (messageId != null) localVarPathParams.Add("message_id", this.Configuration.ApiClient.ParameterToString(messageId)); // path parameter
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FaxReceiptsByMessageIdGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
         /// <summary>
@@ -711,6 +1378,167 @@ namespace IO.ClickSend.ClickSend.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("FaxReceiptsReadPut", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Send a fax using supplied supported file-types. Send a fax using supplied supported file-types.
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="faxMessage">FaxMessageCollection model</param>
+        /// <returns>string</returns>
+        public string FaxSendPost (FaxMessageCollection faxMessage)
+        {
+             ApiResponse<string> localVarResponse = FaxSendPostWithHttpInfo(faxMessage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Send a fax using supplied supported file-types. Send a fax using supplied supported file-types.
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="faxMessage">FaxMessageCollection model</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > FaxSendPostWithHttpInfo (FaxMessageCollection faxMessage)
+        {
+            // verify the required parameter 'faxMessage' is set
+            if (faxMessage == null)
+                throw new ApiException(400, "Missing required parameter 'faxMessage' when calling FAXApi->FaxSendPost");
+
+            var localVarPath = "/fax/send";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (faxMessage != null && faxMessage.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(faxMessage); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = faxMessage; // byte array
+            }
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FaxSendPost", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Send a fax using supplied supported file-types. Send a fax using supplied supported file-types.
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="faxMessage">FaxMessageCollection model</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> FaxSendPostAsync (FaxMessageCollection faxMessage)
+        {
+             ApiResponse<string> localVarResponse = await FaxSendPostAsyncWithHttpInfo(faxMessage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Send a fax using supplied supported file-types. Send a fax using supplied supported file-types.
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="faxMessage">FaxMessageCollection model</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> FaxSendPostAsyncWithHttpInfo (FaxMessageCollection faxMessage)
+        {
+            // verify the required parameter 'faxMessage' is set
+            if (faxMessage == null)
+                throw new ApiException(400, "Missing required parameter 'faxMessage' when calling FAXApi->FaxSendPost");
+
+            var localVarPath = "/fax/send";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (faxMessage != null && faxMessage.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(faxMessage); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = faxMessage; // byte array
+            }
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FaxSendPost", localVarResponse);
                 if (exception != null) throw exception;
             }
 

@@ -95,7 +95,7 @@ namespace IO.ClickSend.Test
         public void FaxInboundAutomationPostTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //InboundFAXRule inboundFaxRule = null;
+            //InboundFaxRule inboundFaxRule = null;
             //var response = instance.FaxInboundAutomationPost(inboundFaxRule);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }
@@ -108,7 +108,7 @@ namespace IO.ClickSend.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? inboundRuleId = null;
-            //InboundFAXRule inboundFaxRule = null;
+            //InboundFaxRule inboundFaxRule = null;
             //var response = instance.FaxInboundAutomationPut(inboundRuleId, inboundFaxRule);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }

@@ -65,6 +65,47 @@ namespace IO.ClickSend.Test
 
         
         /// <summary>
+        /// Test FaxHistoryGet
+        /// </summary>
+        [Test]
+        public void FaxHistoryGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? dateFrom = null;
+            //int? dateTo = null;
+            //string q = null;
+            //string order = null;
+            //int? page = null;
+            //int? limit = null;
+            //var response = instance.FaxHistoryGet(dateFrom, dateTo, q, order, page, limit);
+            //Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
+        /// Test FaxPricePost
+        /// </summary>
+        [Test]
+        public void FaxPricePostTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //FaxMessageCollection faxMessage = null;
+            //var response = instance.FaxPricePost(faxMessage);
+            //Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
+        /// Test FaxReceiptsByMessageIdGet
+        /// </summary>
+        [Test]
+        public void FaxReceiptsByMessageIdGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string messageId = null;
+            //var response = instance.FaxReceiptsByMessageIdGet(messageId);
+            //Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
         /// Test FaxReceiptsGet
         /// </summary>
         [Test]
@@ -98,6 +139,18 @@ namespace IO.ClickSend.Test
             // TODO uncomment below to test the method and replace null with proper value
             //DateBefore dateBefore = null;
             //var response = instance.FaxReceiptsReadPut(dateBefore);
+            //Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
+        /// Test FaxSendPost
+        /// </summary>
+        [Test]
+        public void FaxSendPostTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //FaxMessageCollection faxMessage = null;
+            //var response = instance.FaxSendPost(faxMessage);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }
         

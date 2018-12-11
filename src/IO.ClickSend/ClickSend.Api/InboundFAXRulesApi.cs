@@ -75,7 +75,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inboundFaxRule">Inbound fax rule model</param>
         /// <returns>string</returns>
-        string FaxInboundAutomationPost (InboundFAXRule inboundFaxRule);
+        string FaxInboundAutomationPost (InboundFaxRule inboundFaxRule);
 
         /// <summary>
         /// Create new inbound fax automation
@@ -86,7 +86,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inboundFaxRule">Inbound fax rule model</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> FaxInboundAutomationPostWithHttpInfo (InboundFAXRule inboundFaxRule);
+        ApiResponse<string> FaxInboundAutomationPostWithHttpInfo (InboundFaxRule inboundFaxRule);
         /// <summary>
         /// Update inbound fax automation
         /// </summary>
@@ -97,7 +97,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="inboundRuleId">Inbound rule id</param>
         /// <param name="inboundFaxRule">Inbound fax rule model</param>
         /// <returns>string</returns>
-        string FaxInboundAutomationPut (int? inboundRuleId, InboundFAXRule inboundFaxRule);
+        string FaxInboundAutomationPut (int? inboundRuleId, InboundFaxRule inboundFaxRule);
 
         /// <summary>
         /// Update inbound fax automation
@@ -109,7 +109,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="inboundRuleId">Inbound rule id</param>
         /// <param name="inboundFaxRule">Inbound fax rule model</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> FaxInboundAutomationPutWithHttpInfo (int? inboundRuleId, InboundFAXRule inboundFaxRule);
+        ApiResponse<string> FaxInboundAutomationPutWithHttpInfo (int? inboundRuleId, InboundFaxRule inboundFaxRule);
         /// <summary>
         /// Get all inbound fax automations
         /// </summary>
@@ -188,7 +188,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inboundFaxRule">Inbound fax rule model</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> FaxInboundAutomationPostAsync (InboundFAXRule inboundFaxRule);
+        System.Threading.Tasks.Task<string> FaxInboundAutomationPostAsync (InboundFaxRule inboundFaxRule);
 
         /// <summary>
         /// Create new inbound fax automation
@@ -199,7 +199,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inboundFaxRule">Inbound fax rule model</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> FaxInboundAutomationPostAsyncWithHttpInfo (InboundFAXRule inboundFaxRule);
+        System.Threading.Tasks.Task<ApiResponse<string>> FaxInboundAutomationPostAsyncWithHttpInfo (InboundFaxRule inboundFaxRule);
         /// <summary>
         /// Update inbound fax automation
         /// </summary>
@@ -210,7 +210,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="inboundRuleId">Inbound rule id</param>
         /// <param name="inboundFaxRule">Inbound fax rule model</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> FaxInboundAutomationPutAsync (int? inboundRuleId, InboundFAXRule inboundFaxRule);
+        System.Threading.Tasks.Task<string> FaxInboundAutomationPutAsync (int? inboundRuleId, InboundFaxRule inboundFaxRule);
 
         /// <summary>
         /// Update inbound fax automation
@@ -222,7 +222,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="inboundRuleId">Inbound rule id</param>
         /// <param name="inboundFaxRule">Inbound fax rule model</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> FaxInboundAutomationPutAsyncWithHttpInfo (int? inboundRuleId, InboundFAXRule inboundFaxRule);
+        System.Threading.Tasks.Task<ApiResponse<string>> FaxInboundAutomationPutAsyncWithHttpInfo (int? inboundRuleId, InboundFaxRule inboundFaxRule);
         /// <summary>
         /// Get all inbound fax automations
         /// </summary>
@@ -648,7 +648,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inboundFaxRule">Inbound fax rule model</param>
         /// <returns>string</returns>
-        public string FaxInboundAutomationPost (InboundFAXRule inboundFaxRule)
+        public string FaxInboundAutomationPost (InboundFaxRule inboundFaxRule)
         {
              ApiResponse<string> localVarResponse = FaxInboundAutomationPostWithHttpInfo(inboundFaxRule);
              return localVarResponse.Data;
@@ -660,7 +660,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inboundFaxRule">Inbound fax rule model</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > FaxInboundAutomationPostWithHttpInfo (InboundFAXRule inboundFaxRule)
+        public ApiResponse< string > FaxInboundAutomationPostWithHttpInfo (InboundFaxRule inboundFaxRule)
         {
             // verify the required parameter 'inboundFaxRule' is set
             if (inboundFaxRule == null)
@@ -728,7 +728,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inboundFaxRule">Inbound fax rule model</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> FaxInboundAutomationPostAsync (InboundFAXRule inboundFaxRule)
+        public async System.Threading.Tasks.Task<string> FaxInboundAutomationPostAsync (InboundFaxRule inboundFaxRule)
         {
              ApiResponse<string> localVarResponse = await FaxInboundAutomationPostAsyncWithHttpInfo(inboundFaxRule);
              return localVarResponse.Data;
@@ -741,7 +741,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inboundFaxRule">Inbound fax rule model</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> FaxInboundAutomationPostAsyncWithHttpInfo (InboundFAXRule inboundFaxRule)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> FaxInboundAutomationPostAsyncWithHttpInfo (InboundFaxRule inboundFaxRule)
         {
             // verify the required parameter 'inboundFaxRule' is set
             if (inboundFaxRule == null)
@@ -810,7 +810,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="inboundRuleId">Inbound rule id</param>
         /// <param name="inboundFaxRule">Inbound fax rule model</param>
         /// <returns>string</returns>
-        public string FaxInboundAutomationPut (int? inboundRuleId, InboundFAXRule inboundFaxRule)
+        public string FaxInboundAutomationPut (int? inboundRuleId, InboundFaxRule inboundFaxRule)
         {
              ApiResponse<string> localVarResponse = FaxInboundAutomationPutWithHttpInfo(inboundRuleId, inboundFaxRule);
              return localVarResponse.Data;
@@ -823,7 +823,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="inboundRuleId">Inbound rule id</param>
         /// <param name="inboundFaxRule">Inbound fax rule model</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > FaxInboundAutomationPutWithHttpInfo (int? inboundRuleId, InboundFAXRule inboundFaxRule)
+        public ApiResponse< string > FaxInboundAutomationPutWithHttpInfo (int? inboundRuleId, InboundFaxRule inboundFaxRule)
         {
             // verify the required parameter 'inboundRuleId' is set
             if (inboundRuleId == null)
@@ -896,7 +896,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="inboundRuleId">Inbound rule id</param>
         /// <param name="inboundFaxRule">Inbound fax rule model</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> FaxInboundAutomationPutAsync (int? inboundRuleId, InboundFAXRule inboundFaxRule)
+        public async System.Threading.Tasks.Task<string> FaxInboundAutomationPutAsync (int? inboundRuleId, InboundFaxRule inboundFaxRule)
         {
              ApiResponse<string> localVarResponse = await FaxInboundAutomationPutAsyncWithHttpInfo(inboundRuleId, inboundFaxRule);
              return localVarResponse.Data;
@@ -910,7 +910,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="inboundRuleId">Inbound rule id</param>
         /// <param name="inboundFaxRule">Inbound fax rule model</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> FaxInboundAutomationPutAsyncWithHttpInfo (int? inboundRuleId, InboundFAXRule inboundFaxRule)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> FaxInboundAutomationPutAsyncWithHttpInfo (int? inboundRuleId, InboundFaxRule inboundFaxRule)
         {
             // verify the required parameter 'inboundRuleId' is set
             if (inboundRuleId == null)

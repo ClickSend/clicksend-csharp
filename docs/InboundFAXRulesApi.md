@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 <a name="faxinboundautomationpost"></a>
 # **FaxInboundAutomationPost**
-> string FaxInboundAutomationPost (InboundFAXRule inboundFaxRule)
+> string FaxInboundAutomationPost (InboundFaxRule inboundFaxRule)
 
 Create new inbound fax automation
 
@@ -168,7 +168,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new InboundFAXRulesApi();
-            var inboundFaxRule = new InboundFAXRule(); // InboundFAXRule | Inbound fax rule model
+            var inboundFaxRule = new InboundFaxRule(); // InboundFaxRule | Inbound fax rule model
 
             try
             {
@@ -189,7 +189,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inboundFaxRule** | [**InboundFAXRule**](InboundFAXRule.md)| Inbound fax rule model | 
+ **inboundFaxRule** | [**InboundFaxRule**](InboundFaxRule.md)| Inbound fax rule model | 
 
 ### Return type
 
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 <a name="faxinboundautomationput"></a>
 # **FaxInboundAutomationPut**
-> string FaxInboundAutomationPut (int? inboundRuleId, InboundFAXRule inboundFaxRule)
+> string FaxInboundAutomationPut (int? inboundRuleId, InboundFaxRule inboundFaxRule)
 
 Update inbound fax automation
 
@@ -234,7 +234,7 @@ namespace Example
 
             var apiInstance = new InboundFAXRulesApi();
             var inboundRuleId = 56;  // int? | Inbound rule id
-            var inboundFaxRule = new InboundFAXRule(); // InboundFAXRule | Inbound fax rule model
+            var inboundFaxRule = new InboundFaxRule(); // InboundFaxRule | Inbound fax rule model
 
             try
             {
@@ -256,7 +256,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inboundRuleId** | **int?**| Inbound rule id | 
- **inboundFaxRule** | [**InboundFAXRule**](InboundFAXRule.md)| Inbound fax rule model | 
+ **inboundFaxRule** | [**InboundFaxRule**](InboundFaxRule.md)| Inbound fax rule model | 
 
 ### Return type
 
