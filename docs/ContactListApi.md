@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 <a name="listsbylistidput"></a>
 # **ListsByListIdPut**
-> string ListsByListIdPut (int? listId, List list)
+> string ListsByListIdPut (int? listId, ContactList contactList)
 
 Update specific contact list
 
@@ -171,12 +171,12 @@ namespace Example
 
             var apiInstance = new ContactListApi();
             var listId = 56;  // int? | Your list id
-            var list = new List(); // List | List model
+            var contactList = new ContactList(); // ContactList | Contact list model
 
             try
             {
                 // Update specific contact list
-                string result = apiInstance.ListsByListIdPut(listId, list);
+                string result = apiInstance.ListsByListIdPut(listId, contactList);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -193,7 +193,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **listId** | **int?**| Your list id | 
- **list** | [**List**](List.md)| List model | 
+ **contactList** | [**ContactList**](ContactList.md)| Contact list model | 
 
 ### Return type
 
@@ -346,7 +346,7 @@ Name | Type | Description  | Notes
 
 <a name="listspost"></a>
 # **ListsPost**
-> string ListsPost (List list)
+> string ListsPost (ContactList contactList)
 
 Create new contact list
 
@@ -371,12 +371,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new ContactListApi();
-            var list = new List(); // List | List model
+            var contactList = new ContactList(); // ContactList | Contact list model
 
             try
             {
                 // Create new contact list
-                string result = apiInstance.ListsPost(list);
+                string result = apiInstance.ListsPost(contactList);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -392,7 +392,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **list** | [**List**](List.md)| List model | 
+ **contactList** | [**ContactList**](ContactList.md)| Contact list model | 
 
 ### Return type
 

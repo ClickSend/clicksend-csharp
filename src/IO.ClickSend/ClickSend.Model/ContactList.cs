@@ -26,27 +26,27 @@ using ClickSendDateConverter = IO.ClickSend.Client.ClickSendDateConverter;
 namespace IO.ClickSend.ClickSend.Model
 {
     /// <summary>
-    /// Your list.
+    /// Your contact list.
     /// </summary>
     [DataContract]
     [JsonConverter(typeof(JsonSubtypes), "classType")]
-    public partial class List :  IEquatable<List>, IValidatableObject
+    public partial class ContactList :  IEquatable<ContactList>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="List" /> class.
+        /// Initializes a new instance of the <see cref="ContactList" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected List() { }
+        protected ContactList() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="List" /> class.
+        /// Initializes a new instance of the <see cref="ContactList" /> class.
         /// </summary>
         /// <param name="listName">Your list name. (required).</param>
-        public List(string listName = default(string))
+        public ContactList(string listName = default(string))
         {
             // to ensure "listName" is required (not null)
             if (listName == null)
             {
-                throw new InvalidDataException("listName is a required property for List and cannot be null");
+                throw new InvalidDataException("listName is a required property for ContactList and cannot be null");
             }
             else
             {
@@ -68,7 +68,7 @@ namespace IO.ClickSend.ClickSend.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class List {\n");
+            sb.Append("class ContactList {\n");
             sb.Append("  ListName: ").Append(ListName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -90,15 +90,15 @@ namespace IO.ClickSend.ClickSend.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as List);
+            return this.Equals(input as ContactList);
         }
 
         /// <summary>
-        /// Returns true if List instances are equal
+        /// Returns true if ContactList instances are equal
         /// </summary>
-        /// <param name="input">Instance of List to be compared</param>
+        /// <param name="input">Instance of ContactList to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(List input)
+        public bool Equals(ContactList input)
         {
             if (input == null)
                 return false;
