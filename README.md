@@ -1,6 +1,6 @@
 # The official C# library for the ClickSend v3 API
 
-This is the official [ClickSend](https://clicksend.com) SDK. Documentation can be found [here](https://developers.clicksend.com/docs/rest/v3/?perl#introduction).
+This is the official [ClickSend](https://clicksend.com) SDK. Documentation can be found [here](https://developers.clicksend.com/docs/rest/v3/?csharp#introduction).
 
 ## Requirements
 
