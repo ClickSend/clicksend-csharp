@@ -45,7 +45,8 @@ namespace IO.ClickSend.ClickSend.Model
         /// <param name="body">Your campaign message. (required).</param>
         /// <param name="from">Your sender id - more info: http://help.clicksend.com/SMS/what-is-a-sender-id-or-sender-number..</param>
         /// <param name="schedule">Your schedule timestamp. (default to 0).</param>
-        public SmsCampaign(int? listId = default(int?), string name = default(string), string body = default(string), string from = default(string), int? schedule = 0)
+        /// <param name="urlToShorten">url to be shortened add http://smsg.io/xxxxx&#x60; to the body as a placeholder..</param>
+        public SmsCampaign(int? listId = default(int?), string name = default(string), string body = default(string), string from = default(string), int? schedule = 0, string urlToShorten = default(string))
         {
             // to ensure "listId" is required (not null)
             if (listId == null)
@@ -84,6 +85,7 @@ namespace IO.ClickSend.ClickSend.Model
             {
                 this.Schedule = schedule;
             }
+            this.UrlToShorten = urlToShorten;
         }
         
         /// <summary>
@@ -122,6 +124,13 @@ namespace IO.ClickSend.ClickSend.Model
         public int? Schedule { get; set; }
 
         /// <summary>
+        /// url to be shortened add http://smsg.io/xxxxx&#x60; to the body as a placeholder.
+        /// </summary>
+        /// <value>url to be shortened add http://smsg.io/xxxxx&#x60; to the body as a placeholder.</value>
+        [DataMember(Name="url_to_shorten", EmitDefaultValue=false)]
+        public string UrlToShorten { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -134,6 +143,7 @@ namespace IO.ClickSend.ClickSend.Model
             sb.Append("  Body: ").Append(Body).Append("\n");
             sb.Append("  From: ").Append(From).Append("\n");
             sb.Append("  Schedule: ").Append(Schedule).Append("\n");
+            sb.Append("  UrlToShorten: ").Append(UrlToShorten).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -192,6 +202,11 @@ namespace IO.ClickSend.ClickSend.Model
                     this.Schedule == input.Schedule ||
                     (this.Schedule != null &&
                     this.Schedule.Equals(input.Schedule))
+                ) && 
+                (
+                    this.UrlToShorten == input.UrlToShorten ||
+                    (this.UrlToShorten != null &&
+                    this.UrlToShorten.Equals(input.UrlToShorten))
                 );
         }
 
@@ -214,6 +229,8 @@ namespace IO.ClickSend.ClickSend.Model
                     hashCode = hashCode * 59 + this.From.GetHashCode();
                 if (this.Schedule != null)
                     hashCode = hashCode * 59 + this.Schedule.GetHashCode();
+                if (this.UrlToShorten != null)
+                    hashCode = hashCode * 59 + this.UrlToShorten.GetHashCode();
                 return hashCode;
             }
         }

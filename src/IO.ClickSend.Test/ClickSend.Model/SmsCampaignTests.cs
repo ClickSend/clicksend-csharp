@@ -106,6 +106,14 @@ namespace IO.ClickSend.Test
         {
             // TODO unit test for the property 'Schedule'
         }
+        /// <summary>
+        /// Test the property 'UrlToShorten'
+        /// </summary>
+        [Test]
+        public void UrlToShortenTest()
+        {
+            // TODO unit test for the property 'UrlToShorten'
+        }
 
     }
 
