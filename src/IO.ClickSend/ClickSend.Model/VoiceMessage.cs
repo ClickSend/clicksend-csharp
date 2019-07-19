@@ -40,7 +40,7 @@ namespace IO.ClickSend.ClickSend.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VoiceMessage" /> class.
         /// </summary>
-        /// <param name="to">Your phone number in E.164 format. (required).</param>
+        /// <param name="to">Your phone number in E.164 format..</param>
         /// <param name="body">Biscuit uv3nlCOjRk croissant chocolate lollipop chocolate muffin. (required).</param>
         /// <param name="voice">Either &#39;female&#39; or &#39;male&#39;. (required).</param>
         /// <param name="customString">Your reference. Will be passed back with all replies and delivery reports. (required).</param>
@@ -53,15 +53,6 @@ namespace IO.ClickSend.ClickSend.Model
         /// <param name="machineDetection">Whether to attempt to detect an answering machine or voicemail service and leave a message (default to 0).</param>
         public VoiceMessage(string to = default(string), string body = default(string), string voice = default(string), string customString = default(string), string country = default(string), string source = "sdk", int? listId = default(int?), string lang = default(string), int? schedule = default(int?), int? requireInput = 0, int? machineDetection = 0)
         {
-            // to ensure "to" is required (not null)
-            if (to == null)
-            {
-                throw new InvalidDataException("to is a required property for VoiceMessage and cannot be null");
-            }
-            else
-            {
-                this.To = to;
-            }
             // to ensure "body" is required (not null)
             if (body == null)
             {
@@ -98,6 +89,7 @@ namespace IO.ClickSend.ClickSend.Model
             {
                 this.Country = country;
             }
+            this.To = to;
             // use default value if no "source" provided
             if (source == null)
             {

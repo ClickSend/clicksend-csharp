@@ -42,7 +42,7 @@ namespace IO.ClickSend.ClickSend.Model
         /// </summary>
         /// <param name="from">Your sender id - more info: http://help.clicksend.com/SMS/what-is-a-sender-id-or-sender-number..</param>
         /// <param name="body">Your message. (required).</param>
-        /// <param name="to">Recipient phone number in E.164 format. (required).</param>
+        /// <param name="to">Recipient phone number in E.164 format..</param>
         /// <param name="source">Your method of sending e.g. &#39;wordpress&#39;, &#39;php&#39;, &#39;c#&#39;. (default to &quot;sdk&quot;).</param>
         /// <param name="schedule">Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp (default to 0).</param>
         /// <param name="customString">Your reference. Will be passed back with all replies and delivery reports..</param>
@@ -60,16 +60,8 @@ namespace IO.ClickSend.ClickSend.Model
             {
                 this.Body = body;
             }
-            // to ensure "to" is required (not null)
-            if (to == null)
-            {
-                throw new InvalidDataException("to is a required property for SmsMessage and cannot be null");
-            }
-            else
-            {
-                this.To = to;
-            }
             this.From = from;
+            this.To = to;
             // use default value if no "source" provided
             if (source == null)
             {

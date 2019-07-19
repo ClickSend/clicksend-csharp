@@ -40,7 +40,7 @@ namespace IO.ClickSend.ClickSend.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MmsMessage" /> class.
         /// </summary>
-        /// <param name="to">Recipient phone number in E.164 format (required).</param>
+        /// <param name="to">Recipient phone number in E.164 format.</param>
         /// <param name="body">Your message (required).</param>
         /// <param name="subject">Subject line (max 20 characters) (required).</param>
         /// <param name="from">Your sender ID.</param>
@@ -52,15 +52,6 @@ namespace IO.ClickSend.ClickSend.Model
         /// <param name="fromEmail">Email to send replies to.</param>
         public MmsMessage(string to = default(string), string body = default(string), string subject = default(string), string from = default(string), string country = default(string), string source = "sdk", int? listId = default(int?), int? schedule = 0, string customString = default(string), string fromEmail = default(string))
         {
-            // to ensure "to" is required (not null)
-            if (to == null)
-            {
-                throw new InvalidDataException("to is a required property for MmsMessage and cannot be null");
-            }
-            else
-            {
-                this.To = to;
-            }
             // to ensure "body" is required (not null)
             if (body == null)
             {
@@ -79,6 +70,7 @@ namespace IO.ClickSend.ClickSend.Model
             {
                 this.Subject = subject;
             }
+            this.To = to;
             this.From = from;
             this.Country = country;
             // use default value if no "source" provided
