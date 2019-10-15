@@ -224,6 +224,27 @@ namespace IO.ClickSend.ClickSend.Api
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> SmsPricePostWithHttpInfo (SmsMessageCollection smsMessages);
         /// <summary>
+        /// Mark specific delivery receipt as read
+        /// </summary>
+        /// <remarks>
+        /// Mark specific delivery receipt as read
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">The message ID you want to mark as read</param>
+        /// <returns>string</returns>
+        string SmsReceiptReadByMessageIdPut (string messageId);
+
+        /// <summary>
+        /// Mark specific delivery receipt as read
+        /// </summary>
+        /// <remarks>
+        /// Mark specific delivery receipt as read
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">The message ID you want to mark as read</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> SmsReceiptReadByMessageIdPutWithHttpInfo (string messageId);
+        /// <summary>
         /// Get a Specific Delivery Receipt
         /// </summary>
         /// <remarks>
@@ -619,6 +640,27 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="smsMessages">SmsMessageCollection model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> SmsPricePostAsyncWithHttpInfo (SmsMessageCollection smsMessages);
+        /// <summary>
+        /// Mark specific delivery receipt as read
+        /// </summary>
+        /// <remarks>
+        /// Mark specific delivery receipt as read
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">The message ID you want to mark as read</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> SmsReceiptReadByMessageIdPutAsync (string messageId);
+
+        /// <summary>
+        /// Mark specific delivery receipt as read
+        /// </summary>
+        /// <remarks>
+        /// Mark specific delivery receipt as read
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">The message ID you want to mark as read</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptReadByMessageIdPutAsyncWithHttpInfo (string messageId);
         /// <summary>
         /// Get a Specific Delivery Receipt
         /// </summary>
@@ -2277,6 +2319,153 @@ namespace IO.ClickSend.ClickSend.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("SmsPricePost", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Mark specific delivery receipt as read Mark specific delivery receipt as read
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">The message ID you want to mark as read</param>
+        /// <returns>string</returns>
+        public string SmsReceiptReadByMessageIdPut (string messageId)
+        {
+             ApiResponse<string> localVarResponse = SmsReceiptReadByMessageIdPutWithHttpInfo(messageId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Mark specific delivery receipt as read Mark specific delivery receipt as read
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">The message ID you want to mark as read</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > SmsReceiptReadByMessageIdPutWithHttpInfo (string messageId)
+        {
+            // verify the required parameter 'messageId' is set
+            if (messageId == null)
+                throw new ApiException(400, "Missing required parameter 'messageId' when calling SMSApi->SmsReceiptReadByMessageIdPut");
+
+            var localVarPath = "/sms/receipts-read/{message_id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (messageId != null) localVarPathParams.Add("message_id", this.Configuration.ApiClient.ParameterToString(messageId)); // path parameter
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SmsReceiptReadByMessageIdPut", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Mark specific delivery receipt as read Mark specific delivery receipt as read
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">The message ID you want to mark as read</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> SmsReceiptReadByMessageIdPutAsync (string messageId)
+        {
+             ApiResponse<string> localVarResponse = await SmsReceiptReadByMessageIdPutAsyncWithHttpInfo(messageId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Mark specific delivery receipt as read Mark specific delivery receipt as read
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">The message ID you want to mark as read</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> SmsReceiptReadByMessageIdPutAsyncWithHttpInfo (string messageId)
+        {
+            // verify the required parameter 'messageId' is set
+            if (messageId == null)
+                throw new ApiException(400, "Missing required parameter 'messageId' when calling SMSApi->SmsReceiptReadByMessageIdPut");
+
+            var localVarPath = "/sms/receipts-read/{message_id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (messageId != null) localVarPathParams.Add("message_id", this.Configuration.ApiClient.ParameterToString(messageId)); // path parameter
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SmsReceiptReadByMessageIdPut", localVarResponse);
                 if (exception != null) throw exception;
             }
 

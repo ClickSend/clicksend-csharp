@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**SmsInboundReadByMessageIdPut**](SMSApi.md#smsinboundreadbymessageidput) | **PUT** /sms/inbound-read/{message_id} | Mark inbound SMS as read
 [**SmsInboundReadPut**](SMSApi.md#smsinboundreadput) | **PUT** /sms/inbound-read | Mark inbound SMS as read
 [**SmsPricePost**](SMSApi.md#smspricepost) | **POST** /sms/price | Calculate sms price
+[**SmsReceiptReadByMessageIdPut**](SMSApi.md#smsreceiptreadbymessageidput) | **PUT** /sms/receipts-read/{message_id} | Mark specific delivery receipt as read
 [**SmsReceiptsByMessageIdGet**](SMSApi.md#smsreceiptsbymessageidget) | **GET** /sms/receipts/{message_id} | Get a Specific Delivery Receipt
 [**SmsReceiptsGet**](SMSApi.md#smsreceiptsget) | **GET** /sms/receipts | Get all delivery receipts
 [**SmsReceiptsPost**](SMSApi.md#smsreceiptspost) | **POST** /sms/receipts | Add a delivery receipt
@@ -601,6 +602,71 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **smsMessages** | [**SmsMessageCollection**](SmsMessageCollection.md)| SmsMessageCollection model | 
+
+### Return type
+
+**string**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="smsreceiptreadbymessageidput"></a>
+# **SmsReceiptReadByMessageIdPut**
+> string SmsReceiptReadByMessageIdPut (string messageId)
+
+Mark specific delivery receipt as read
+
+Mark specific delivery receipt as read
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
+
+namespace Example
+{
+    public class SmsReceiptReadByMessageIdPutExample
+    {
+        public void main()
+        {
+            // Configure HTTP basic authorization: BasicAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new SMSApi();
+            var messageId = messageId_example;  // string | The message ID you want to mark as read
+
+            try
+            {
+                // Mark specific delivery receipt as read
+                string result = apiInstance.SmsReceiptReadByMessageIdPut(messageId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SMSApi.SmsReceiptReadByMessageIdPut: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **messageId** | **string**| The message ID you want to mark as read | 
 
 ### Return type
 
