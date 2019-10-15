@@ -178,18 +178,6 @@ namespace IO.ClickSend.Test
         }
         
         /// <summary>
-        /// Test SmsReceiptReadByMessageIdPut
-        /// </summary>
-        [Test]
-        public void SmsReceiptReadByMessageIdPutTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string messageId = null;
-            //var response = instance.SmsReceiptReadByMessageIdPut(messageId);
-            //Assert.IsInstanceOf<string> (response, "response is string");
-        }
-        
-        /// <summary>
         /// Test SmsReceiptsByMessageIdGet
         /// </summary>
         [Test]
