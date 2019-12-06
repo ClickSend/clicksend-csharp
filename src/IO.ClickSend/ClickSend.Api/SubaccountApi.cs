@@ -13,10 +13,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
-namespace IO.Swagger.ClickSend.Api
+namespace IO.ClickSend.ClickSend.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -30,7 +30,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Delete a subaccount
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to delete</param>
         /// <returns>string</returns>
         string SubaccountsBySubaccountIdDelete (int? subaccountId);
@@ -41,7 +41,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Delete a subaccount
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to delete</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> SubaccountsBySubaccountIdDeleteWithHttpInfo (int? subaccountId);
@@ -51,7 +51,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific subaccount
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to get</param>
         /// <returns>string</returns>
         string SubaccountsBySubaccountIdGet (int? subaccountId);
@@ -62,7 +62,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific subaccount
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to get</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> SubaccountsBySubaccountIdGetWithHttpInfo (int? subaccountId);
@@ -72,7 +72,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update subaccount
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to update</param>
         /// <param name="subaccount">Subaccount model</param>
         /// <returns>string</returns>
@@ -84,7 +84,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update subaccount
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to update</param>
         /// <param name="subaccount">Subaccount model</param>
         /// <returns>ApiResponse of string</returns>
@@ -95,7 +95,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all subaccounts
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -107,7 +107,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all subaccounts
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -118,7 +118,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Create new subaccount
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccount">Subaccount model</param>
         /// <returns>string</returns>
         string SubaccountsPost (Subaccount subaccount);
@@ -129,7 +129,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Create new subaccount
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccount">Subaccount model</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> SubaccountsPostWithHttpInfo (Subaccount subaccount);
@@ -139,7 +139,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Regenerate an API Key
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to regenerate API key for</param>
         /// <returns>string</returns>
         string SubaccountsRegenApiKeyBySubaccountIdPut (int? subaccountId);
@@ -150,7 +150,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Regenerate an API Key
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to regenerate API key for</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> SubaccountsRegenApiKeyBySubaccountIdPutWithHttpInfo (int? subaccountId);
@@ -162,7 +162,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Delete a subaccount
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to delete</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> SubaccountsBySubaccountIdDeleteAsync (int? subaccountId);
@@ -173,7 +173,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Delete a subaccount
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to delete</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> SubaccountsBySubaccountIdDeleteAsyncWithHttpInfo (int? subaccountId);
@@ -183,7 +183,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific subaccount
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to get</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> SubaccountsBySubaccountIdGetAsync (int? subaccountId);
@@ -194,7 +194,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific subaccount
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to get</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> SubaccountsBySubaccountIdGetAsyncWithHttpInfo (int? subaccountId);
@@ -204,7 +204,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update subaccount
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to update</param>
         /// <param name="subaccount">Subaccount model</param>
         /// <returns>Task of string</returns>
@@ -216,7 +216,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update subaccount
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to update</param>
         /// <param name="subaccount">Subaccount model</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -227,7 +227,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all subaccounts
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -239,7 +239,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all subaccounts
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -250,7 +250,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Create new subaccount
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccount">Subaccount model</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> SubaccountsPostAsync (Subaccount subaccount);
@@ -261,7 +261,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Create new subaccount
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccount">Subaccount model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> SubaccountsPostAsyncWithHttpInfo (Subaccount subaccount);
@@ -271,7 +271,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Regenerate an API Key
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to regenerate API key for</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> SubaccountsRegenApiKeyBySubaccountIdPutAsync (int? subaccountId);
@@ -282,7 +282,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Regenerate an API Key
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to regenerate API key for</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> SubaccountsRegenApiKeyBySubaccountIdPutAsyncWithHttpInfo (int? subaccountId);
@@ -294,7 +294,7 @@ namespace IO.Swagger.ClickSend.Api
     /// </summary>
     public partial class SubaccountApi : ISubaccountApi
     {
-        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private IO.ClickSend.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SubaccountApi"/> class.
@@ -302,9 +302,9 @@ namespace IO.Swagger.ClickSend.Api
         /// <returns></returns>
         public SubaccountApi(String basePath)
         {
-            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
+            this.Configuration = new IO.ClickSend.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -313,14 +313,14 @@ namespace IO.Swagger.ClickSend.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public SubaccountApi(IO.Swagger.Client.Configuration configuration = null)
+        public SubaccountApi(IO.ClickSend.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.Swagger.Client.Configuration.Default;
+                this.Configuration = IO.ClickSend.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -346,12 +346,12 @@ namespace IO.Swagger.ClickSend.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.Swagger.Client.Configuration Configuration {get; set;}
+        public IO.ClickSend.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
+        public IO.ClickSend.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -389,7 +389,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Delete a subaccount Delete a subaccount
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to delete</param>
         /// <returns>string</returns>
         public string SubaccountsBySubaccountIdDelete (int? subaccountId)
@@ -401,7 +401,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Delete a subaccount Delete a subaccount
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to delete</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > SubaccountsBySubaccountIdDeleteWithHttpInfo (int? subaccountId)
@@ -462,7 +462,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Delete a subaccount Delete a subaccount
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to delete</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> SubaccountsBySubaccountIdDeleteAsync (int? subaccountId)
@@ -475,7 +475,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Delete a subaccount Delete a subaccount
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to delete</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> SubaccountsBySubaccountIdDeleteAsyncWithHttpInfo (int? subaccountId)
@@ -536,7 +536,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific subaccount Get specific subaccount
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to get</param>
         /// <returns>string</returns>
         public string SubaccountsBySubaccountIdGet (int? subaccountId)
@@ -548,7 +548,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific subaccount Get specific subaccount
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to get</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > SubaccountsBySubaccountIdGetWithHttpInfo (int? subaccountId)
@@ -609,7 +609,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific subaccount Get specific subaccount
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to get</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> SubaccountsBySubaccountIdGetAsync (int? subaccountId)
@@ -622,7 +622,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific subaccount Get specific subaccount
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to get</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> SubaccountsBySubaccountIdGetAsyncWithHttpInfo (int? subaccountId)
@@ -683,7 +683,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update subaccount Update subaccount
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to update</param>
         /// <param name="subaccount">Subaccount model</param>
         /// <returns>string</returns>
@@ -696,7 +696,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update subaccount Update subaccount
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to update</param>
         /// <param name="subaccount">Subaccount model</param>
         /// <returns>ApiResponse of string</returns>
@@ -769,7 +769,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update subaccount Update subaccount
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to update</param>
         /// <param name="subaccount">Subaccount model</param>
         /// <returns>Task of string</returns>
@@ -783,7 +783,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update subaccount Update subaccount
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to update</param>
         /// <param name="subaccount">Subaccount model</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -856,7 +856,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all subaccounts Get all subaccounts
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -869,7 +869,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all subaccounts Get all subaccounts
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -929,7 +929,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all subaccounts Get all subaccounts
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -943,7 +943,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all subaccounts Get all subaccounts
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -1003,7 +1003,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Create new subaccount Create new subaccount
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccount">Subaccount model</param>
         /// <returns>string</returns>
         public string SubaccountsPost (Subaccount subaccount)
@@ -1015,7 +1015,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Create new subaccount Create new subaccount
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccount">Subaccount model</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > SubaccountsPostWithHttpInfo (Subaccount subaccount)
@@ -1083,7 +1083,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Create new subaccount Create new subaccount
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccount">Subaccount model</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> SubaccountsPostAsync (Subaccount subaccount)
@@ -1096,7 +1096,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Create new subaccount Create new subaccount
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccount">Subaccount model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> SubaccountsPostAsyncWithHttpInfo (Subaccount subaccount)
@@ -1164,7 +1164,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Regenerate an API Key Regenerate an API Key
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to regenerate API key for</param>
         /// <returns>string</returns>
         public string SubaccountsRegenApiKeyBySubaccountIdPut (int? subaccountId)
@@ -1176,7 +1176,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Regenerate an API Key Regenerate an API Key
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to regenerate API key for</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > SubaccountsRegenApiKeyBySubaccountIdPutWithHttpInfo (int? subaccountId)
@@ -1237,7 +1237,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Regenerate an API Key Regenerate an API Key
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to regenerate API key for</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> SubaccountsRegenApiKeyBySubaccountIdPutAsync (int? subaccountId)
@@ -1250,7 +1250,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Regenerate an API Key Regenerate an API Key
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subaccountId">ID of subaccount to regenerate API key for</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> SubaccountsRegenApiKeyBySubaccountIdPutAsyncWithHttpInfo (int? subaccountId)

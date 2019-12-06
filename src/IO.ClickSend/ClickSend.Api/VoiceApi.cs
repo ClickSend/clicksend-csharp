@@ -13,10 +13,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
-namespace IO.Swagger.ClickSend.Api
+namespace IO.ClickSend.ClickSend.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -30,7 +30,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update all voice messages as cancelled
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>string</returns>
         string VoiceCancelAllPut ();
 
@@ -40,7 +40,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update all voice messages as cancelled
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> VoiceCancelAllPutWithHttpInfo ();
         /// <summary>
@@ -49,7 +49,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update voice message status as cancelled
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Your voice message id</param>
         /// <returns>string</returns>
         string VoiceCancelByMessageIdPut (string messageId);
@@ -60,7 +60,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update voice message status as cancelled
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Your voice message id</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> VoiceCancelByMessageIdPutWithHttpInfo (string messageId);
@@ -70,7 +70,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Export voice history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
         /// <returns>string</returns>
         string VoiceHistoryExportGet (string filename);
@@ -81,7 +81,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Export voice history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> VoiceHistoryExportGetWithHttpInfo (string filename);
@@ -91,7 +91,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all voice history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Timestamp (from) used to show records by date. (optional)</param>
         /// <param name="dateTo">Timestamp (to) used to show records by date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -105,7 +105,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all voice history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Timestamp (from) used to show records by date. (optional)</param>
         /// <param name="dateTo">Timestamp (to) used to show records by date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -118,7 +118,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all voice languages
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>string</returns>
         string VoiceLangGet ();
 
@@ -128,7 +128,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all voice languages
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> VoiceLangGetWithHttpInfo ();
         /// <summary>
@@ -137,7 +137,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Calculate voice price
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voiceMessages">VoiceMessageCollection model</param>
         /// <returns>string</returns>
         string VoicePricePost (VoiceMessageCollection voiceMessages);
@@ -148,7 +148,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Calculate voice price
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voiceMessages">VoiceMessageCollection model</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> VoicePricePostWithHttpInfo (VoiceMessageCollection voiceMessages);
@@ -158,7 +158,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all delivery receipts
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -170,7 +170,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all delivery receipts
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -181,7 +181,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Add a delivery receipt
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="url">Url model</param>
         /// <returns>string</returns>
         string VoiceReceiptsPost (Url url);
@@ -192,7 +192,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Add a delivery receipt
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="url">Url model</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> VoiceReceiptsPostWithHttpInfo (Url url);
@@ -202,7 +202,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Mark delivery receipts as read
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">DateBefore model (optional)</param>
         /// <returns>string</returns>
         string VoiceReceiptsReadPut (DateBefore dateBefore = null);
@@ -213,7 +213,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Mark delivery receipts as read
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">DateBefore model (optional)</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> VoiceReceiptsReadPutWithHttpInfo (DateBefore dateBefore = null);
@@ -223,7 +223,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Send a voice call
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voiceMessages">VoiceMessageCollection model</param>
         /// <returns>string</returns>
         string VoiceSendPost (VoiceMessageCollection voiceMessages);
@@ -234,7 +234,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Send a voice call
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voiceMessages">VoiceMessageCollection model</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> VoiceSendPostWithHttpInfo (VoiceMessageCollection voiceMessages);
@@ -246,7 +246,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update all voice messages as cancelled
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> VoiceCancelAllPutAsync ();
 
@@ -256,7 +256,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update all voice messages as cancelled
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> VoiceCancelAllPutAsyncWithHttpInfo ();
         /// <summary>
@@ -265,7 +265,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update voice message status as cancelled
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Your voice message id</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> VoiceCancelByMessageIdPutAsync (string messageId);
@@ -276,7 +276,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update voice message status as cancelled
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Your voice message id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> VoiceCancelByMessageIdPutAsyncWithHttpInfo (string messageId);
@@ -286,7 +286,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Export voice history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> VoiceHistoryExportGetAsync (string filename);
@@ -297,7 +297,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Export voice history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> VoiceHistoryExportGetAsyncWithHttpInfo (string filename);
@@ -307,7 +307,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all voice history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Timestamp (from) used to show records by date. (optional)</param>
         /// <param name="dateTo">Timestamp (to) used to show records by date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -321,7 +321,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all voice history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Timestamp (from) used to show records by date. (optional)</param>
         /// <param name="dateTo">Timestamp (to) used to show records by date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -334,7 +334,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all voice languages
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> VoiceLangGetAsync ();
 
@@ -344,7 +344,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all voice languages
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> VoiceLangGetAsyncWithHttpInfo ();
         /// <summary>
@@ -353,7 +353,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Calculate voice price
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voiceMessages">VoiceMessageCollection model</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> VoicePricePostAsync (VoiceMessageCollection voiceMessages);
@@ -364,7 +364,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Calculate voice price
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voiceMessages">VoiceMessageCollection model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> VoicePricePostAsyncWithHttpInfo (VoiceMessageCollection voiceMessages);
@@ -374,7 +374,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all delivery receipts
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -386,7 +386,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all delivery receipts
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -397,7 +397,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Add a delivery receipt
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="url">Url model</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> VoiceReceiptsPostAsync (Url url);
@@ -408,7 +408,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Add a delivery receipt
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="url">Url model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> VoiceReceiptsPostAsyncWithHttpInfo (Url url);
@@ -418,7 +418,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Mark delivery receipts as read
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">DateBefore model (optional)</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> VoiceReceiptsReadPutAsync (DateBefore dateBefore = null);
@@ -429,7 +429,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Mark delivery receipts as read
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">DateBefore model (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> VoiceReceiptsReadPutAsyncWithHttpInfo (DateBefore dateBefore = null);
@@ -439,7 +439,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Send a voice call
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voiceMessages">VoiceMessageCollection model</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> VoiceSendPostAsync (VoiceMessageCollection voiceMessages);
@@ -450,7 +450,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Send a voice call
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voiceMessages">VoiceMessageCollection model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> VoiceSendPostAsyncWithHttpInfo (VoiceMessageCollection voiceMessages);
@@ -462,7 +462,7 @@ namespace IO.Swagger.ClickSend.Api
     /// </summary>
     public partial class VoiceApi : IVoiceApi
     {
-        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private IO.ClickSend.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="VoiceApi"/> class.
@@ -470,9 +470,9 @@ namespace IO.Swagger.ClickSend.Api
         /// <returns></returns>
         public VoiceApi(String basePath)
         {
-            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
+            this.Configuration = new IO.ClickSend.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -481,14 +481,14 @@ namespace IO.Swagger.ClickSend.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public VoiceApi(IO.Swagger.Client.Configuration configuration = null)
+        public VoiceApi(IO.ClickSend.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.Swagger.Client.Configuration.Default;
+                this.Configuration = IO.ClickSend.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -514,12 +514,12 @@ namespace IO.Swagger.ClickSend.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.Swagger.Client.Configuration Configuration {get; set;}
+        public IO.ClickSend.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
+        public IO.ClickSend.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -557,7 +557,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update all voice messages as cancelled Update all voice messages as cancelled
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>string</returns>
         public string VoiceCancelAllPut ()
         {
@@ -568,7 +568,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update all voice messages as cancelled Update all voice messages as cancelled
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > VoiceCancelAllPutWithHttpInfo ()
         {
@@ -624,7 +624,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update all voice messages as cancelled Update all voice messages as cancelled
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> VoiceCancelAllPutAsync ()
         {
@@ -636,7 +636,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update all voice messages as cancelled Update all voice messages as cancelled
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> VoiceCancelAllPutAsyncWithHttpInfo ()
         {
@@ -692,7 +692,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update voice message status as cancelled Update voice message status as cancelled
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Your voice message id</param>
         /// <returns>string</returns>
         public string VoiceCancelByMessageIdPut (string messageId)
@@ -704,7 +704,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update voice message status as cancelled Update voice message status as cancelled
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Your voice message id</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > VoiceCancelByMessageIdPutWithHttpInfo (string messageId)
@@ -765,7 +765,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update voice message status as cancelled Update voice message status as cancelled
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Your voice message id</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> VoiceCancelByMessageIdPutAsync (string messageId)
@@ -778,7 +778,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update voice message status as cancelled Update voice message status as cancelled
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Your voice message id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> VoiceCancelByMessageIdPutAsyncWithHttpInfo (string messageId)
@@ -839,7 +839,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Export voice history Export voice history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
         /// <returns>string</returns>
         public string VoiceHistoryExportGet (string filename)
@@ -851,7 +851,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Export voice history Export voice history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > VoiceHistoryExportGetWithHttpInfo (string filename)
@@ -912,7 +912,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Export voice history Export voice history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> VoiceHistoryExportGetAsync (string filename)
@@ -925,7 +925,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Export voice history Export voice history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> VoiceHistoryExportGetAsyncWithHttpInfo (string filename)
@@ -986,7 +986,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all voice history Get all voice history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Timestamp (from) used to show records by date. (optional)</param>
         /// <param name="dateTo">Timestamp (to) used to show records by date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -1001,7 +1001,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all voice history Get all voice history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Timestamp (from) used to show records by date. (optional)</param>
         /// <param name="dateTo">Timestamp (to) used to show records by date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -1065,7 +1065,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all voice history Get all voice history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Timestamp (from) used to show records by date. (optional)</param>
         /// <param name="dateTo">Timestamp (to) used to show records by date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -1081,7 +1081,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all voice history Get all voice history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateFrom">Timestamp (from) used to show records by date. (optional)</param>
         /// <param name="dateTo">Timestamp (to) used to show records by date (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
@@ -1145,7 +1145,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all voice languages Get all voice languages
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>string</returns>
         public string VoiceLangGet ()
         {
@@ -1156,7 +1156,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all voice languages Get all voice languages
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > VoiceLangGetWithHttpInfo ()
         {
@@ -1212,7 +1212,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all voice languages Get all voice languages
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> VoiceLangGetAsync ()
         {
@@ -1224,7 +1224,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all voice languages Get all voice languages
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> VoiceLangGetAsyncWithHttpInfo ()
         {
@@ -1280,7 +1280,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Calculate voice price Calculate voice price
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voiceMessages">VoiceMessageCollection model</param>
         /// <returns>string</returns>
         public string VoicePricePost (VoiceMessageCollection voiceMessages)
@@ -1292,7 +1292,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Calculate voice price Calculate voice price
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voiceMessages">VoiceMessageCollection model</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > VoicePricePostWithHttpInfo (VoiceMessageCollection voiceMessages)
@@ -1360,7 +1360,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Calculate voice price Calculate voice price
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voiceMessages">VoiceMessageCollection model</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> VoicePricePostAsync (VoiceMessageCollection voiceMessages)
@@ -1373,7 +1373,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Calculate voice price Calculate voice price
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voiceMessages">VoiceMessageCollection model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> VoicePricePostAsyncWithHttpInfo (VoiceMessageCollection voiceMessages)
@@ -1441,7 +1441,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all delivery receipts Get all delivery receipts
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -1454,7 +1454,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all delivery receipts Get all delivery receipts
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -1514,7 +1514,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all delivery receipts Get all delivery receipts
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -1528,7 +1528,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all delivery receipts Get all delivery receipts
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -1588,7 +1588,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Add a delivery receipt Add a delivery receipt
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="url">Url model</param>
         /// <returns>string</returns>
         public string VoiceReceiptsPost (Url url)
@@ -1600,7 +1600,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Add a delivery receipt Add a delivery receipt
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="url">Url model</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > VoiceReceiptsPostWithHttpInfo (Url url)
@@ -1668,7 +1668,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Add a delivery receipt Add a delivery receipt
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="url">Url model</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> VoiceReceiptsPostAsync (Url url)
@@ -1681,7 +1681,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Add a delivery receipt Add a delivery receipt
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="url">Url model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> VoiceReceiptsPostAsyncWithHttpInfo (Url url)
@@ -1749,7 +1749,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Mark delivery receipts as read Mark delivery receipts as read
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">DateBefore model (optional)</param>
         /// <returns>string</returns>
         public string VoiceReceiptsReadPut (DateBefore dateBefore = null)
@@ -1761,7 +1761,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Mark delivery receipts as read Mark delivery receipts as read
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">DateBefore model (optional)</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > VoiceReceiptsReadPutWithHttpInfo (DateBefore dateBefore = null)
@@ -1826,7 +1826,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Mark delivery receipts as read Mark delivery receipts as read
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">DateBefore model (optional)</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> VoiceReceiptsReadPutAsync (DateBefore dateBefore = null)
@@ -1839,7 +1839,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Mark delivery receipts as read Mark delivery receipts as read
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dateBefore">DateBefore model (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> VoiceReceiptsReadPutAsyncWithHttpInfo (DateBefore dateBefore = null)
@@ -1904,7 +1904,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Send voice message(s) Send a voice call
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voiceMessages">VoiceMessageCollection model</param>
         /// <returns>string</returns>
         public string VoiceSendPost (VoiceMessageCollection voiceMessages)
@@ -1916,7 +1916,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Send voice message(s) Send a voice call
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voiceMessages">VoiceMessageCollection model</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > VoiceSendPostWithHttpInfo (VoiceMessageCollection voiceMessages)
@@ -1984,7 +1984,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Send voice message(s) Send a voice call
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voiceMessages">VoiceMessageCollection model</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> VoiceSendPostAsync (VoiceMessageCollection voiceMessages)
@@ -1997,7 +1997,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Send voice message(s) Send a voice call
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="voiceMessages">VoiceMessageCollection model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> VoiceSendPostAsyncWithHttpInfo (VoiceMessageCollection voiceMessages)

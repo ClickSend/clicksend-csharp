@@ -13,10 +13,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
-namespace IO.Swagger.ClickSend.Api
+namespace IO.ClickSend.ClickSend.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -30,7 +30,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all email addresses
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -42,7 +42,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all email addresses
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -53,7 +53,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Create allowed Email Address
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddress"> (optional)</param>
         /// <returns>string</returns>
         string AllowedEmailAddressPost (EmailAddress emailAddress = null);
@@ -64,7 +64,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Create allowed Email Address
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddress"> (optional)</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> AllowedEmailAddressPostWithHttpInfo (EmailAddress emailAddress = null);
@@ -74,7 +74,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Cancel email campaign
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <returns>string</returns>
         string CancelEmailCampaignPut (int? emailCampaignId);
@@ -85,7 +85,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Cancel email campaign
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> CancelEmailCampaignPutWithHttpInfo (int? emailCampaignId);
@@ -95,7 +95,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific email campaign
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <returns>string</returns>
         string EmailCampaignGet (int? emailCampaignId);
@@ -106,7 +106,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific email campaign
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> EmailCampaignGetWithHttpInfo (int? emailCampaignId);
@@ -116,7 +116,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Export specific email campaign history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
@@ -129,7 +129,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Export specific email campaign history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
@@ -141,7 +141,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific email campaign history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
@@ -156,7 +156,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific email campaign history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
@@ -170,7 +170,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Send email campaign
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaign">Email model</param>
         /// <returns>string</returns>
         string EmailCampaignPost (EmailCampaign emailCampaign);
@@ -181,7 +181,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Send email campaign
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaign">Email model</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> EmailCampaignPostWithHttpInfo (EmailCampaign emailCampaign);
@@ -191,7 +191,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Calculate email campaign price
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaign">Email model</param>
         /// <returns>string</returns>
         string EmailCampaignPricePost (EmailCampaign emailCampaign);
@@ -202,7 +202,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Calculate email campaign price
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaign">Email model</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> EmailCampaignPricePostWithHttpInfo (EmailCampaign emailCampaign);
@@ -212,7 +212,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Edit email campaign
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="emailCampaign">Email model</param>
         /// <returns>string</returns>
@@ -224,7 +224,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Edit email campaign
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="emailCampaign">Email model</param>
         /// <returns>ApiResponse of string</returns>
@@ -235,7 +235,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all email campaigns
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -247,7 +247,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all email campaigns
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -258,7 +258,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Send verification token
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <returns>string</returns>
         string SendVerificationTokenGet (int? emailAddressId);
@@ -269,7 +269,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Send verification token
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> SendVerificationTokenGetWithHttpInfo (int? emailAddressId);
@@ -279,7 +279,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Delete specific email address
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <returns>string</returns>
         string SpecificAllowedEmailAddressDelete (int? emailAddressId);
@@ -290,7 +290,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Delete specific email address
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> SpecificAllowedEmailAddressDeleteWithHttpInfo (int? emailAddressId);
@@ -300,7 +300,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific email address
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <returns>string</returns>
         string SpecificAllowedEmailAddressGet (int? emailAddressId);
@@ -311,7 +311,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific email address
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> SpecificAllowedEmailAddressGetWithHttpInfo (int? emailAddressId);
@@ -321,7 +321,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Verify email address using verification token
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <param name="activationToken">Your activation token.</param>
         /// <returns>string</returns>
@@ -333,7 +333,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Verify email address using verification token
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <param name="activationToken">Your activation token.</param>
         /// <returns>ApiResponse of string</returns>
@@ -346,7 +346,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all email addresses
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -358,7 +358,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all email addresses
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -369,7 +369,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Create allowed Email Address
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddress"> (optional)</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> AllowedEmailAddressPostAsync (EmailAddress emailAddress = null);
@@ -380,7 +380,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Create allowed Email Address
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddress"> (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> AllowedEmailAddressPostAsyncWithHttpInfo (EmailAddress emailAddress = null);
@@ -390,7 +390,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Cancel email campaign
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> CancelEmailCampaignPutAsync (int? emailCampaignId);
@@ -401,7 +401,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Cancel email campaign
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> CancelEmailCampaignPutAsyncWithHttpInfo (int? emailCampaignId);
@@ -411,7 +411,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific email campaign
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> EmailCampaignGetAsync (int? emailCampaignId);
@@ -422,7 +422,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific email campaign
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> EmailCampaignGetAsyncWithHttpInfo (int? emailCampaignId);
@@ -432,7 +432,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Export specific email campaign history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
@@ -445,7 +445,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Export specific email campaign history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
@@ -457,7 +457,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific email campaign history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
@@ -472,7 +472,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific email campaign history
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
@@ -486,7 +486,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Send email campaign
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaign">Email model</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> EmailCampaignPostAsync (EmailCampaign emailCampaign);
@@ -497,7 +497,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Send email campaign
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaign">Email model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> EmailCampaignPostAsyncWithHttpInfo (EmailCampaign emailCampaign);
@@ -507,7 +507,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Calculate email campaign price
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaign">Email model</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> EmailCampaignPricePostAsync (EmailCampaign emailCampaign);
@@ -518,7 +518,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Calculate email campaign price
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaign">Email model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> EmailCampaignPricePostAsyncWithHttpInfo (EmailCampaign emailCampaign);
@@ -528,7 +528,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Edit email campaign
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="emailCampaign">Email model</param>
         /// <returns>Task of string</returns>
@@ -540,7 +540,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Edit email campaign
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="emailCampaign">Email model</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -551,7 +551,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all email campaigns
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -563,7 +563,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all email campaigns
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -574,7 +574,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Send verification token
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> SendVerificationTokenGetAsync (int? emailAddressId);
@@ -585,7 +585,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Send verification token
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> SendVerificationTokenGetAsyncWithHttpInfo (int? emailAddressId);
@@ -595,7 +595,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Delete specific email address
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> SpecificAllowedEmailAddressDeleteAsync (int? emailAddressId);
@@ -606,7 +606,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Delete specific email address
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> SpecificAllowedEmailAddressDeleteAsyncWithHttpInfo (int? emailAddressId);
@@ -616,7 +616,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific email address
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> SpecificAllowedEmailAddressGetAsync (int? emailAddressId);
@@ -627,7 +627,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific email address
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> SpecificAllowedEmailAddressGetAsyncWithHttpInfo (int? emailAddressId);
@@ -637,7 +637,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Verify email address using verification token
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <param name="activationToken">Your activation token.</param>
         /// <returns>Task of string</returns>
@@ -649,7 +649,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Verify email address using verification token
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <param name="activationToken">Your activation token.</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -662,7 +662,7 @@ namespace IO.Swagger.ClickSend.Api
     /// </summary>
     public partial class EmailMarketingApi : IEmailMarketingApi
     {
-        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private IO.ClickSend.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailMarketingApi"/> class.
@@ -670,9 +670,9 @@ namespace IO.Swagger.ClickSend.Api
         /// <returns></returns>
         public EmailMarketingApi(String basePath)
         {
-            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
+            this.Configuration = new IO.ClickSend.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -681,14 +681,14 @@ namespace IO.Swagger.ClickSend.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public EmailMarketingApi(IO.Swagger.Client.Configuration configuration = null)
+        public EmailMarketingApi(IO.ClickSend.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.Swagger.Client.Configuration.Default;
+                this.Configuration = IO.ClickSend.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -714,12 +714,12 @@ namespace IO.Swagger.ClickSend.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.Swagger.Client.Configuration Configuration {get; set;}
+        public IO.ClickSend.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
+        public IO.ClickSend.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -757,7 +757,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all email addresses Get all email addresses
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -770,7 +770,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all email addresses Get all email addresses
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -830,7 +830,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all email addresses Get all email addresses
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -844,7 +844,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all email addresses Get all email addresses
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -904,7 +904,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Create allowed Email Address Create allowed Email Address
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddress"> (optional)</param>
         /// <returns>string</returns>
         public string AllowedEmailAddressPost (EmailAddress emailAddress = null)
@@ -916,7 +916,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Create allowed Email Address Create allowed Email Address
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddress"> (optional)</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > AllowedEmailAddressPostWithHttpInfo (EmailAddress emailAddress = null)
@@ -981,7 +981,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Create allowed Email Address Create allowed Email Address
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddress"> (optional)</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> AllowedEmailAddressPostAsync (EmailAddress emailAddress = null)
@@ -994,7 +994,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Create allowed Email Address Create allowed Email Address
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddress"> (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> AllowedEmailAddressPostAsyncWithHttpInfo (EmailAddress emailAddress = null)
@@ -1059,7 +1059,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Cancel email campaign Cancel email campaign
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <returns>string</returns>
         public string CancelEmailCampaignPut (int? emailCampaignId)
@@ -1071,7 +1071,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Cancel email campaign Cancel email campaign
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > CancelEmailCampaignPutWithHttpInfo (int? emailCampaignId)
@@ -1132,7 +1132,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Cancel email campaign Cancel email campaign
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> CancelEmailCampaignPutAsync (int? emailCampaignId)
@@ -1145,7 +1145,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Cancel email campaign Cancel email campaign
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> CancelEmailCampaignPutAsyncWithHttpInfo (int? emailCampaignId)
@@ -1206,7 +1206,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific email campaign Get specific email campaign
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <returns>string</returns>
         public string EmailCampaignGet (int? emailCampaignId)
@@ -1218,7 +1218,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific email campaign Get specific email campaign
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > EmailCampaignGetWithHttpInfo (int? emailCampaignId)
@@ -1279,7 +1279,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific email campaign Get specific email campaign
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> EmailCampaignGetAsync (int? emailCampaignId)
@@ -1292,7 +1292,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific email campaign Get specific email campaign
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> EmailCampaignGetAsyncWithHttpInfo (int? emailCampaignId)
@@ -1353,7 +1353,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Export specific email campaign history Export specific email campaign history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
@@ -1367,7 +1367,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Export specific email campaign history Export specific email campaign history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
@@ -1432,7 +1432,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Export specific email campaign history Export specific email campaign history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
@@ -1447,7 +1447,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Export specific email campaign history Export specific email campaign history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
@@ -1512,7 +1512,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific email campaign history Get specific email campaign history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
@@ -1528,7 +1528,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific email campaign history Get specific email campaign history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
@@ -1597,7 +1597,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific email campaign history Get specific email campaign history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
@@ -1614,7 +1614,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific email campaign history Get specific email campaign history
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="dateFrom">Start date (optional)</param>
         /// <param name="dateTo">End date (optional)</param>
@@ -1683,7 +1683,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Send email campaign Send email campaign
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaign">Email model</param>
         /// <returns>string</returns>
         public string EmailCampaignPost (EmailCampaign emailCampaign)
@@ -1695,7 +1695,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Send email campaign Send email campaign
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaign">Email model</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > EmailCampaignPostWithHttpInfo (EmailCampaign emailCampaign)
@@ -1763,7 +1763,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Send email campaign Send email campaign
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaign">Email model</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> EmailCampaignPostAsync (EmailCampaign emailCampaign)
@@ -1776,7 +1776,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Send email campaign Send email campaign
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaign">Email model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> EmailCampaignPostAsyncWithHttpInfo (EmailCampaign emailCampaign)
@@ -1844,7 +1844,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Calculate email campaign price Calculate email campaign price
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaign">Email model</param>
         /// <returns>string</returns>
         public string EmailCampaignPricePost (EmailCampaign emailCampaign)
@@ -1856,7 +1856,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Calculate email campaign price Calculate email campaign price
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaign">Email model</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > EmailCampaignPricePostWithHttpInfo (EmailCampaign emailCampaign)
@@ -1924,7 +1924,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Calculate email campaign price Calculate email campaign price
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaign">Email model</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> EmailCampaignPricePostAsync (EmailCampaign emailCampaign)
@@ -1937,7 +1937,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Calculate email campaign price Calculate email campaign price
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaign">Email model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> EmailCampaignPricePostAsyncWithHttpInfo (EmailCampaign emailCampaign)
@@ -2005,7 +2005,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Edit email campaign Edit email campaign
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="emailCampaign">Email model</param>
         /// <returns>string</returns>
@@ -2018,7 +2018,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Edit email campaign Edit email campaign
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="emailCampaign">Email model</param>
         /// <returns>ApiResponse of string</returns>
@@ -2091,7 +2091,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Edit email campaign Edit email campaign
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="emailCampaign">Email model</param>
         /// <returns>Task of string</returns>
@@ -2105,7 +2105,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Edit email campaign Edit email campaign
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailCampaignId">Allowed email campaign id</param>
         /// <param name="emailCampaign">Email model</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -2178,7 +2178,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all email campaigns Get all email campaigns
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -2191,7 +2191,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all email campaigns Get all email campaigns
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -2251,7 +2251,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all email campaigns Get all email campaigns
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -2265,7 +2265,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all email campaigns Get all email campaigns
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -2325,7 +2325,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Send verification token Send verification token
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <returns>string</returns>
         public string SendVerificationTokenGet (int? emailAddressId)
@@ -2337,7 +2337,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Send verification token Send verification token
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > SendVerificationTokenGetWithHttpInfo (int? emailAddressId)
@@ -2398,7 +2398,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Send verification token Send verification token
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> SendVerificationTokenGetAsync (int? emailAddressId)
@@ -2411,7 +2411,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Send verification token Send verification token
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> SendVerificationTokenGetAsyncWithHttpInfo (int? emailAddressId)
@@ -2472,7 +2472,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Delete specific email address Delete specific email address
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <returns>string</returns>
         public string SpecificAllowedEmailAddressDelete (int? emailAddressId)
@@ -2484,7 +2484,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Delete specific email address Delete specific email address
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > SpecificAllowedEmailAddressDeleteWithHttpInfo (int? emailAddressId)
@@ -2545,7 +2545,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Delete specific email address Delete specific email address
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> SpecificAllowedEmailAddressDeleteAsync (int? emailAddressId)
@@ -2558,7 +2558,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Delete specific email address Delete specific email address
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> SpecificAllowedEmailAddressDeleteAsyncWithHttpInfo (int? emailAddressId)
@@ -2619,7 +2619,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific email address Get specific email address
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <returns>string</returns>
         public string SpecificAllowedEmailAddressGet (int? emailAddressId)
@@ -2631,7 +2631,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific email address Get specific email address
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > SpecificAllowedEmailAddressGetWithHttpInfo (int? emailAddressId)
@@ -2692,7 +2692,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific email address Get specific email address
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> SpecificAllowedEmailAddressGetAsync (int? emailAddressId)
@@ -2705,7 +2705,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific email address Get specific email address
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> SpecificAllowedEmailAddressGetAsyncWithHttpInfo (int? emailAddressId)
@@ -2766,7 +2766,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Verify email address using verification token Verify email address using verification token
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <param name="activationToken">Your activation token.</param>
         /// <returns>string</returns>
@@ -2779,7 +2779,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Verify email address using verification token Verify email address using verification token
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <param name="activationToken">Your activation token.</param>
         /// <returns>ApiResponse of string</returns>
@@ -2845,7 +2845,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Verify email address using verification token Verify email address using verification token
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <param name="activationToken">Your activation token.</param>
         /// <returns>Task of string</returns>
@@ -2859,7 +2859,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Verify email address using verification token Verify email address using verification token
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailAddressId">Allowed email address id</param>
         /// <param name="activationToken">Your activation token.</param>
         /// <returns>Task of ApiResponse (string)</returns>

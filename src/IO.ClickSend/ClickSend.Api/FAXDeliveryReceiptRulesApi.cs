@@ -13,10 +13,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
-namespace IO.Swagger.ClickSend.Api
+namespace IO.ClickSend.ClickSend.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -30,7 +30,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Delete fax delivery receipt automation
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>string</returns>
         string FaxDeliveryReceiptAutomationDelete (int? receiptRuleId);
@@ -41,7 +41,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Delete fax delivery receipt automation
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> FaxDeliveryReceiptAutomationDeleteWithHttpInfo (int? receiptRuleId);
@@ -51,7 +51,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific fax delivery receipt automation
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>string</returns>
         string FaxDeliveryReceiptAutomationGet (int? receiptRuleId);
@@ -62,7 +62,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific fax delivery receipt automation
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> FaxDeliveryReceiptAutomationGetWithHttpInfo (int? receiptRuleId);
@@ -72,7 +72,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Create fax delivery receipt automations
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryReceiptRule">fax delivery receipt rule model</param>
         /// <returns>string</returns>
         string FaxDeliveryReceiptAutomationPost (DeliveryReceiptRule deliveryReceiptRule);
@@ -83,7 +83,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Create fax delivery receipt automations
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryReceiptRule">fax delivery receipt rule model</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> FaxDeliveryReceiptAutomationPostWithHttpInfo (DeliveryReceiptRule deliveryReceiptRule);
@@ -93,7 +93,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update fax delivery receipt automation
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <param name="deliveryReceiptRule">Delivery receipt rule model</param>
         /// <returns>string</returns>
@@ -105,7 +105,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update fax delivery receipt automation
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <param name="deliveryReceiptRule">Delivery receipt rule model</param>
         /// <returns>ApiResponse of string</returns>
@@ -116,7 +116,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all fax delivery receipt automations
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q">Your keyword or query. (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
@@ -129,7 +129,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all fax delivery receipt automations
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q">Your keyword or query. (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
@@ -143,7 +143,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Delete fax delivery receipt automation
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> FaxDeliveryReceiptAutomationDeleteAsync (int? receiptRuleId);
@@ -154,7 +154,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Delete fax delivery receipt automation
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> FaxDeliveryReceiptAutomationDeleteAsyncWithHttpInfo (int? receiptRuleId);
@@ -164,7 +164,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific fax delivery receipt automation
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> FaxDeliveryReceiptAutomationGetAsync (int? receiptRuleId);
@@ -175,7 +175,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get specific fax delivery receipt automation
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> FaxDeliveryReceiptAutomationGetAsyncWithHttpInfo (int? receiptRuleId);
@@ -185,7 +185,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Create fax delivery receipt automations
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryReceiptRule">fax delivery receipt rule model</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> FaxDeliveryReceiptAutomationPostAsync (DeliveryReceiptRule deliveryReceiptRule);
@@ -196,7 +196,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Create fax delivery receipt automations
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryReceiptRule">fax delivery receipt rule model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> FaxDeliveryReceiptAutomationPostAsyncWithHttpInfo (DeliveryReceiptRule deliveryReceiptRule);
@@ -206,7 +206,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update fax delivery receipt automation
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <param name="deliveryReceiptRule">Delivery receipt rule model</param>
         /// <returns>Task of string</returns>
@@ -218,7 +218,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Update fax delivery receipt automation
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <param name="deliveryReceiptRule">Delivery receipt rule model</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -229,7 +229,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all fax delivery receipt automations
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q">Your keyword or query. (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
@@ -242,7 +242,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all fax delivery receipt automations
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q">Your keyword or query. (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
@@ -256,7 +256,7 @@ namespace IO.Swagger.ClickSend.Api
     /// </summary>
     public partial class FAXDeliveryReceiptRulesApi : IFAXDeliveryReceiptRulesApi
     {
-        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private IO.ClickSend.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="FAXDeliveryReceiptRulesApi"/> class.
@@ -264,9 +264,9 @@ namespace IO.Swagger.ClickSend.Api
         /// <returns></returns>
         public FAXDeliveryReceiptRulesApi(String basePath)
         {
-            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
+            this.Configuration = new IO.ClickSend.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -275,14 +275,14 @@ namespace IO.Swagger.ClickSend.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public FAXDeliveryReceiptRulesApi(IO.Swagger.Client.Configuration configuration = null)
+        public FAXDeliveryReceiptRulesApi(IO.ClickSend.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.Swagger.Client.Configuration.Default;
+                this.Configuration = IO.ClickSend.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -308,12 +308,12 @@ namespace IO.Swagger.ClickSend.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.Swagger.Client.Configuration Configuration {get; set;}
+        public IO.ClickSend.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
+        public IO.ClickSend.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -351,7 +351,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Delete fax delivery receipt automation Delete fax delivery receipt automation
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>string</returns>
         public string FaxDeliveryReceiptAutomationDelete (int? receiptRuleId)
@@ -363,7 +363,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Delete fax delivery receipt automation Delete fax delivery receipt automation
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > FaxDeliveryReceiptAutomationDeleteWithHttpInfo (int? receiptRuleId)
@@ -424,7 +424,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Delete fax delivery receipt automation Delete fax delivery receipt automation
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> FaxDeliveryReceiptAutomationDeleteAsync (int? receiptRuleId)
@@ -437,7 +437,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Delete fax delivery receipt automation Delete fax delivery receipt automation
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> FaxDeliveryReceiptAutomationDeleteAsyncWithHttpInfo (int? receiptRuleId)
@@ -498,7 +498,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific fax delivery receipt automation Get specific fax delivery receipt automation
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>string</returns>
         public string FaxDeliveryReceiptAutomationGet (int? receiptRuleId)
@@ -510,7 +510,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific fax delivery receipt automation Get specific fax delivery receipt automation
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > FaxDeliveryReceiptAutomationGetWithHttpInfo (int? receiptRuleId)
@@ -571,7 +571,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific fax delivery receipt automation Get specific fax delivery receipt automation
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> FaxDeliveryReceiptAutomationGetAsync (int? receiptRuleId)
@@ -584,7 +584,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get specific fax delivery receipt automation Get specific fax delivery receipt automation
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> FaxDeliveryReceiptAutomationGetAsyncWithHttpInfo (int? receiptRuleId)
@@ -645,7 +645,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Create fax delivery receipt automations Create fax delivery receipt automations
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryReceiptRule">fax delivery receipt rule model</param>
         /// <returns>string</returns>
         public string FaxDeliveryReceiptAutomationPost (DeliveryReceiptRule deliveryReceiptRule)
@@ -657,7 +657,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Create fax delivery receipt automations Create fax delivery receipt automations
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryReceiptRule">fax delivery receipt rule model</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > FaxDeliveryReceiptAutomationPostWithHttpInfo (DeliveryReceiptRule deliveryReceiptRule)
@@ -725,7 +725,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Create fax delivery receipt automations Create fax delivery receipt automations
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryReceiptRule">fax delivery receipt rule model</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> FaxDeliveryReceiptAutomationPostAsync (DeliveryReceiptRule deliveryReceiptRule)
@@ -738,7 +738,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Create fax delivery receipt automations Create fax delivery receipt automations
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deliveryReceiptRule">fax delivery receipt rule model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> FaxDeliveryReceiptAutomationPostAsyncWithHttpInfo (DeliveryReceiptRule deliveryReceiptRule)
@@ -806,7 +806,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update fax delivery receipt automation Update fax delivery receipt automation
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <param name="deliveryReceiptRule">Delivery receipt rule model</param>
         /// <returns>string</returns>
@@ -819,7 +819,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update fax delivery receipt automation Update fax delivery receipt automation
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <param name="deliveryReceiptRule">Delivery receipt rule model</param>
         /// <returns>ApiResponse of string</returns>
@@ -892,7 +892,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update fax delivery receipt automation Update fax delivery receipt automation
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <param name="deliveryReceiptRule">Delivery receipt rule model</param>
         /// <returns>Task of string</returns>
@@ -906,7 +906,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Update fax delivery receipt automation Update fax delivery receipt automation
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="receiptRuleId">Receipt rule id</param>
         /// <param name="deliveryReceiptRule">Delivery receipt rule model</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -979,7 +979,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all fax delivery receipt automations Get all fax delivery receipt automations
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q">Your keyword or query. (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
@@ -993,7 +993,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all fax delivery receipt automations Get all fax delivery receipt automations
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q">Your keyword or query. (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
@@ -1055,7 +1055,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all fax delivery receipt automations Get all fax delivery receipt automations
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q">Your keyword or query. (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
@@ -1070,7 +1070,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all fax delivery receipt automations Get all fax delivery receipt automations
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q">Your keyword or query. (optional)</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>

@@ -10,7 +10,7 @@
 
 using System;
 
-namespace IO.Swagger.Client
+namespace IO.ClickSend.Client
 {
     /// <summary>
     /// API Exception

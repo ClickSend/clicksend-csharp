@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Api.MmsCampaignApi
+# IO.ClickSend.ClickSend.Api.MmsCampaignApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -24,9 +24,9 @@ Get specific mms campaign
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -89,9 +89,9 @@ Update mms campaign
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -156,9 +156,9 @@ Cancel sms campaign
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -221,9 +221,9 @@ Get list of mms campaigns
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -288,9 +288,9 @@ Calculate price for sms campaign
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -353,9 +353,9 @@ Create mms campaign
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {

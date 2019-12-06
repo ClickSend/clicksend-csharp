@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Model.DateBefore
+# IO.ClickSend.ClickSend.Model.DateBefore
 ## Properties
 
 Name | Type | Description | Notes

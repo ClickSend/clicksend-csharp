@@ -13,9 +13,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.Swagger.Client;
+using IO.ClickSend.Client;
 
-namespace IO.Swagger.ClickSend.Api
+namespace IO.ClickSend.ClickSend.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -29,7 +29,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all countries
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>string</returns>
         string CountriesGet ();
 
@@ -39,7 +39,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all countries
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> CountriesGetWithHttpInfo ();
         #endregion Synchronous Operations
@@ -50,7 +50,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all countries
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> CountriesGetAsync ();
 
@@ -60,7 +60,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <remarks>
         /// Get all countries
         /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> CountriesGetAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
@@ -71,7 +71,7 @@ namespace IO.Swagger.ClickSend.Api
     /// </summary>
     public partial class CountriesApi : ICountriesApi
     {
-        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private IO.ClickSend.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CountriesApi"/> class.
@@ -79,9 +79,9 @@ namespace IO.Swagger.ClickSend.Api
         /// <returns></returns>
         public CountriesApi(String basePath)
         {
-            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
+            this.Configuration = new IO.ClickSend.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -90,14 +90,14 @@ namespace IO.Swagger.ClickSend.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public CountriesApi(IO.Swagger.Client.Configuration configuration = null)
+        public CountriesApi(IO.ClickSend.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.Swagger.Client.Configuration.Default;
+                this.Configuration = IO.ClickSend.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -123,12 +123,12 @@ namespace IO.Swagger.ClickSend.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.Swagger.Client.Configuration Configuration {get; set;}
+        public IO.ClickSend.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
+        public IO.ClickSend.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -166,7 +166,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all country codes Get all countries
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>string</returns>
         public string CountriesGet ()
         {
@@ -177,7 +177,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all country codes Get all countries
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > CountriesGetWithHttpInfo ()
         {
@@ -227,7 +227,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all country codes Get all countries
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> CountriesGetAsync ()
         {
@@ -239,7 +239,7 @@ namespace IO.Swagger.ClickSend.Api
         /// <summary>
         /// Get all country codes Get all countries
         /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> CountriesGetAsyncWithHttpInfo ()
         {

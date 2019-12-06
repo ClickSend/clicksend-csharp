@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Model.Contact
+# IO.ClickSend.ClickSend.Model.Contact
 ## Properties
 
 Name | Type | Description | Notes

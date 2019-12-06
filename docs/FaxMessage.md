@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Model.FaxMessage
+# IO.ClickSend.ClickSend.Model.FaxMessage
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Model.UploadFile
+# IO.ClickSend.ClickSend.Model.UploadFile
 ## Properties
 
 Name | Type | Description | Notes

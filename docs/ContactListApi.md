@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Api.ContactListApi
+# IO.ClickSend.ClickSend.Api.ContactListApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -25,9 +25,9 @@ Delete a specific contact list
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -90,9 +90,9 @@ Get specific contact list
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -155,9 +155,9 @@ Update specific contact list
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -222,9 +222,9 @@ Get all contact lists
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -289,9 +289,9 @@ Import contacts to list
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -356,9 +356,9 @@ Create new contact list
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -421,9 +421,9 @@ Remove duplicate contacts
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {

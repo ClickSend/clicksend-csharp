@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Api.ContactApi
+# IO.ClickSend.ClickSend.Api.ContactApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -25,9 +25,9 @@ Delete a contact
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -92,9 +92,9 @@ Get a specific contact
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -159,9 +159,9 @@ Update specific contact
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -228,9 +228,9 @@ Get all contacts in a list
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -297,9 +297,9 @@ Create new contact
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -364,9 +364,9 @@ Remove all opted out contacts
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -431,9 +431,9 @@ Transfer contact to another list
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {

@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Api.EmailMarketingApi
+# IO.ClickSend.ClickSend.Api.EmailMarketingApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -32,9 +32,9 @@ Get all email addresses
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -99,9 +99,9 @@ Create allowed Email Address
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -164,9 +164,9 @@ Cancel email campaign
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -229,9 +229,9 @@ Get specific email campaign
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -294,9 +294,9 @@ Export specific email campaign history
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -363,9 +363,9 @@ Get specific email campaign history
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -436,9 +436,9 @@ Send email campaign
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -501,9 +501,9 @@ Calculate email campaign price
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -566,9 +566,9 @@ Edit email campaign
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -633,9 +633,9 @@ Get all email campaigns
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -700,9 +700,9 @@ Send verification token
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -765,9 +765,9 @@ Delete specific email address
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -830,9 +830,9 @@ Get specific email address
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -895,9 +895,9 @@ Verify email address using verification token
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {

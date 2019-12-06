@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Model.EmailCampaign
+# IO.ClickSend.ClickSend.Model.EmailCampaign
 ## Properties
 
 Name | Type | Description | Notes

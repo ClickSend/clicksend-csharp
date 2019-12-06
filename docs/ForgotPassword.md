@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Model.ForgotPassword
+# IO.ClickSend.ClickSend.Model.ForgotPassword
 ## Properties
 
 Name | Type | Description | Notes

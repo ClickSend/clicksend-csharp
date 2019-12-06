@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Api.VoiceDeliveryReceiptRulesApi
+# IO.ClickSend.ClickSend.Api.VoiceDeliveryReceiptRulesApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -23,9 +23,9 @@ Delete voice delivery receipt automation
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -88,9 +88,9 @@ Get specific voice delivery receipt automation
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -153,9 +153,9 @@ Create voice delivery receipt automations
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -218,9 +218,9 @@ Update voice delivery receipt automation
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {
@@ -285,9 +285,9 @@ Get all voice delivery receipt automations
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {

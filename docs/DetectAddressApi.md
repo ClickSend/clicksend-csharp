@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Api.DetectAddressApi
+# IO.ClickSend.ClickSend.Api.DetectAddressApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -19,9 +19,9 @@ Detects address in uploaded file.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.ClickSend.Api;
-using IO.Swagger.Client;
-using IO.Swagger.ClickSend.Model;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
 
 namespace Example
 {

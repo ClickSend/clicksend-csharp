@@ -1,4 +1,4 @@
-# IO.Swagger.ClickSend.Model.InboundSMSRule
+# IO.ClickSend.ClickSend.Model.InboundSMSRule
 ## Properties
 
 Name | Type | Description | Notes
