@@ -14,7 +14,7 @@ jobs:
         
       - name: Build solution and generate NuGet package
         run: |  
-          cd clicksend-csharp
+          ls
           dotnet pack -c Release -o out  
 
       - name: Install NuGet client
