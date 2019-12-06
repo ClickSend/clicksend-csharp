@@ -1,4 +1,4 @@
-# IO.ClickSend.ClickSend.Api.EmailToSmsApi
+# IO.Swagger.ClickSend.Api.EmailToSmsApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -25,9 +25,9 @@ Get list of email to sms allowed addresses
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.ClickSend.ClickSend.Api;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.ClickSend.Api;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -92,9 +92,9 @@ Create email to sms allowed address
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.ClickSend.ClickSend.Api;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.ClickSend.Api;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -157,9 +157,9 @@ Delete email to sms stripped string rule
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.ClickSend.ClickSend.Api;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.ClickSend.Api;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -222,9 +222,9 @@ Get email to sms stripped string rule
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.ClickSend.ClickSend.Api;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.ClickSend.Api;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -287,9 +287,9 @@ Create email to sms stripped string rules
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.ClickSend.ClickSend.Api;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.ClickSend.Api;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -352,9 +352,9 @@ Update email to sms stripped string rule
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.ClickSend.ClickSend.Api;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.ClickSend.Api;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -419,9 +419,9 @@ Get list of email to sms stripped string rules
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.ClickSend.ClickSend.Api;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.ClickSend.Api;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {

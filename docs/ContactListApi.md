@@ -1,4 +1,4 @@
-# IO.ClickSend.ClickSend.Api.ContactListApi
+# IO.Swagger.ClickSend.Api.ContactListApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -25,9 +25,9 @@ Delete a specific contact list
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.ClickSend.ClickSend.Api;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.ClickSend.Api;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -90,9 +90,9 @@ Get specific contact list
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.ClickSend.ClickSend.Api;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.ClickSend.Api;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -155,9 +155,9 @@ Update specific contact list
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.ClickSend.ClickSend.Api;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.ClickSend.Api;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -222,9 +222,9 @@ Get all contact lists
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.ClickSend.ClickSend.Api;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.ClickSend.Api;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -279,7 +279,7 @@ Name | Type | Description  | Notes
 
 <a name="listsimportbylistidpost"></a>
 # **ListsImportByListIdPost**
-> string ListsImportByListIdPost (int? listId, ContactListImport file)
+> string ListsImportByListIdPost (int? listId, ContactListImport _file)
 
 Import contacts to list
 
@@ -289,9 +289,9 @@ Import contacts to list
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.ClickSend.ClickSend.Api;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.ClickSend.Api;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -305,12 +305,12 @@ namespace Example
 
             var apiInstance = new ContactListApi();
             var listId = 56;  // int? | Your contact list id you want to access.
-            var file = new ContactListImport(); // ContactListImport | ContactListImport model
+            var _file = new ContactListImport(); // ContactListImport | ContactListImport model
 
             try
             {
                 // Import contacts to list
-                string result = apiInstance.ListsImportByListIdPost(listId, file);
+                string result = apiInstance.ListsImportByListIdPost(listId, _file);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -327,7 +327,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **listId** | **int?**| Your contact list id you want to access. | 
- **file** | [**ContactListImport**](ContactListImport.md)| ContactListImport model | 
+ **_file** | [**ContactListImport**](ContactListImport.md)| ContactListImport model | 
 
 ### Return type
 
@@ -356,9 +356,9 @@ Create new contact list
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.ClickSend.ClickSend.Api;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.ClickSend.Api;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -421,9 +421,9 @@ Remove duplicate contacts
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.ClickSend.ClickSend.Api;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.ClickSend.Api;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {

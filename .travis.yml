@@ -4,6 +4,6 @@
 language: csharp
 mono:
   - latest
-solution: IO.ClickSend.sln
+solution: IO.Swagger.sln
 script:
   - /bin/sh ./mono_nunit_test.sh

@@ -1,4 +1,4 @@
-# IO.ClickSend.ClickSend.Api.FAXDeliveryReceiptRulesApi
+# IO.Swagger.ClickSend.Api.FAXDeliveryReceiptRulesApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -23,9 +23,9 @@ Delete fax delivery receipt automation
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.ClickSend.ClickSend.Api;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.ClickSend.Api;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -88,9 +88,9 @@ Get specific fax delivery receipt automation
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.ClickSend.ClickSend.Api;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.ClickSend.Api;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -153,9 +153,9 @@ Create fax delivery receipt automations
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.ClickSend.ClickSend.Api;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.ClickSend.Api;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -218,9 +218,9 @@ Update fax delivery receipt automation
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.ClickSend.ClickSend.Api;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.ClickSend.Api;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -285,9 +285,9 @@ Get all fax delivery receipt automations
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.ClickSend.ClickSend.Api;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.ClickSend.Api;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {

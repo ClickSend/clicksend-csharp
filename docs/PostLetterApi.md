@@ -1,4 +1,4 @@
-# IO.ClickSend.ClickSend.Api.PostLetterApi
+# IO.Swagger.ClickSend.Api.PostLetterApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -22,9 +22,9 @@ export post letter history
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.ClickSend.ClickSend.Api;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.ClickSend.Api;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -87,9 +87,9 @@ Get all post letter history
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.ClickSend.ClickSend.Api;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.ClickSend.Api;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -154,9 +154,9 @@ Calculate post letter price
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.ClickSend.ClickSend.Api;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.ClickSend.Api;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {
@@ -219,9 +219,9 @@ Send post letter
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.ClickSend.ClickSend.Api;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.ClickSend.Api;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
 namespace Example
 {

@@ -13,10 +13,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
-namespace IO.ClickSend.ClickSend.Api
+namespace IO.Swagger.ClickSend.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -30,7 +30,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Export postcard history to a CSV file
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
         /// <returns>string</returns>
         string PostPostcardsHistoryExportGet (string filename);
@@ -41,7 +41,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Export postcard history to a CSV file
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> PostPostcardsHistoryExportGetWithHttpInfo (string filename);
@@ -51,7 +51,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Retrieve the history of postcards sent or scheduled
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -63,7 +63,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Retrieve the history of postcards sent or scheduled
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -74,7 +74,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Calculate price for sending one or more postcards
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postPostcards">PostPostcard model</param>
         /// <returns>string</returns>
         string PostPostcardsPricePost (PostPostcard postPostcards);
@@ -85,7 +85,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Calculate price for sending one or more postcards
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postPostcards">PostPostcard model</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> PostPostcardsPricePostWithHttpInfo (PostPostcard postPostcards);
@@ -95,7 +95,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Send one or more postcards
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postPostcards">PostPostcard model</param>
         /// <returns>string</returns>
         string PostPostcardsSendPost (PostPostcard postPostcards);
@@ -106,7 +106,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Send one or more postcards
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postPostcards">PostPostcard model</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> PostPostcardsSendPostWithHttpInfo (PostPostcard postPostcards);
@@ -118,7 +118,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Export postcard history to a CSV file
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> PostPostcardsHistoryExportGetAsync (string filename);
@@ -129,7 +129,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Export postcard history to a CSV file
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> PostPostcardsHistoryExportGetAsyncWithHttpInfo (string filename);
@@ -139,7 +139,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Retrieve the history of postcards sent or scheduled
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -151,7 +151,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Retrieve the history of postcards sent or scheduled
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -162,7 +162,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Calculate price for sending one or more postcards
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postPostcards">PostPostcard model</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> PostPostcardsPricePostAsync (PostPostcard postPostcards);
@@ -173,7 +173,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Calculate price for sending one or more postcards
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postPostcards">PostPostcard model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> PostPostcardsPricePostAsyncWithHttpInfo (PostPostcard postPostcards);
@@ -183,7 +183,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Send one or more postcards
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postPostcards">PostPostcard model</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> PostPostcardsSendPostAsync (PostPostcard postPostcards);
@@ -194,7 +194,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Send one or more postcards
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postPostcards">PostPostcard model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> PostPostcardsSendPostAsyncWithHttpInfo (PostPostcard postPostcards);
@@ -206,7 +206,7 @@ namespace IO.ClickSend.ClickSend.Api
     /// </summary>
     public partial class PostPostcardApi : IPostPostcardApi
     {
-        private IO.ClickSend.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="PostPostcardApi"/> class.
@@ -214,9 +214,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// <returns></returns>
         public PostPostcardApi(String basePath)
         {
-            this.Configuration = new IO.ClickSend.Client.Configuration { BasePath = basePath };
+            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -225,14 +225,14 @@ namespace IO.ClickSend.ClickSend.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public PostPostcardApi(IO.ClickSend.Client.Configuration configuration = null)
+        public PostPostcardApi(IO.Swagger.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.ClickSend.Client.Configuration.Default;
+                this.Configuration = IO.Swagger.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -258,12 +258,12 @@ namespace IO.ClickSend.ClickSend.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.ClickSend.Client.Configuration Configuration {get; set;}
+        public IO.Swagger.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.ClickSend.Client.ExceptionFactory ExceptionFactory
+        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -301,7 +301,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Export postcard history to a CSV file Export postcard history to a CSV file
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
         /// <returns>string</returns>
         public string PostPostcardsHistoryExportGet (string filename)
@@ -313,7 +313,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Export postcard history to a CSV file Export postcard history to a CSV file
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > PostPostcardsHistoryExportGetWithHttpInfo (string filename)
@@ -374,7 +374,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Export postcard history to a CSV file Export postcard history to a CSV file
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> PostPostcardsHistoryExportGetAsync (string filename)
@@ -387,7 +387,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Export postcard history to a CSV file Export postcard history to a CSV file
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> PostPostcardsHistoryExportGetAsyncWithHttpInfo (string filename)
@@ -448,7 +448,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Retrieve the history of postcards sent or scheduled Retrieve the history of postcards sent or scheduled
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -461,7 +461,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Retrieve the history of postcards sent or scheduled Retrieve the history of postcards sent or scheduled
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -521,7 +521,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Retrieve the history of postcards sent or scheduled Retrieve the history of postcards sent or scheduled
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -535,7 +535,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Retrieve the history of postcards sent or scheduled Retrieve the history of postcards sent or scheduled
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -595,7 +595,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Calculate price for sending one or more postcards Calculate price for sending one or more postcards
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postPostcards">PostPostcard model</param>
         /// <returns>string</returns>
         public string PostPostcardsPricePost (PostPostcard postPostcards)
@@ -607,7 +607,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Calculate price for sending one or more postcards Calculate price for sending one or more postcards
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postPostcards">PostPostcard model</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > PostPostcardsPricePostWithHttpInfo (PostPostcard postPostcards)
@@ -675,7 +675,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Calculate price for sending one or more postcards Calculate price for sending one or more postcards
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postPostcards">PostPostcard model</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> PostPostcardsPricePostAsync (PostPostcard postPostcards)
@@ -688,7 +688,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Calculate price for sending one or more postcards Calculate price for sending one or more postcards
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postPostcards">PostPostcard model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> PostPostcardsPricePostAsyncWithHttpInfo (PostPostcard postPostcards)
@@ -756,7 +756,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Send one or more postcards Send one or more postcards
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postPostcards">PostPostcard model</param>
         /// <returns>string</returns>
         public string PostPostcardsSendPost (PostPostcard postPostcards)
@@ -768,7 +768,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Send one or more postcards Send one or more postcards
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postPostcards">PostPostcard model</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > PostPostcardsSendPostWithHttpInfo (PostPostcard postPostcards)
@@ -836,7 +836,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Send one or more postcards Send one or more postcards
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postPostcards">PostPostcard model</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> PostPostcardsSendPostAsync (PostPostcard postPostcards)
@@ -849,7 +849,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Send one or more postcards Send one or more postcards
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postPostcards">PostPostcard model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> PostPostcardsSendPostAsyncWithHttpInfo (PostPostcard postPostcards)

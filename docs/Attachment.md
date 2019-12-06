@@ -1,4 +1,4 @@
-# IO.ClickSend.ClickSend.Model.Attachment
+# IO.Swagger.ClickSend.Model.Attachment
 ## Properties
 
 Name | Type | Description | Notes

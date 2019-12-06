@@ -11,7 +11,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace IO.ClickSend.Client
+namespace IO.Swagger.Client
 {
     /// <summary>
     /// API Response

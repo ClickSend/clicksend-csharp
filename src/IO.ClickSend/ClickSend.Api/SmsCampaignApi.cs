@@ -13,10 +13,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
-namespace IO.ClickSend.ClickSend.Api
+namespace IO.Swagger.ClickSend.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -30,7 +30,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get specific sms campaign
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsCampaignId">ID of SMS campaign to retrieve</param>
         /// <returns>string</returns>
         string SmsCampaignBySmsCampaignIdGet (int? smsCampaignId);
@@ -41,7 +41,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get specific sms campaign
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsCampaignId">ID of SMS campaign to retrieve</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> SmsCampaignBySmsCampaignIdGetWithHttpInfo (int? smsCampaignId);
@@ -51,7 +51,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Update sms campaign
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsCampaignId">ID of SMS campaign to update</param>
         /// <param name="campaign">SmsCampaign model</param>
         /// <returns>string</returns>
@@ -63,7 +63,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Update sms campaign
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsCampaignId">ID of SMS campaign to update</param>
         /// <param name="campaign">SmsCampaign model</param>
         /// <returns>ApiResponse of string</returns>
@@ -74,7 +74,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Cancel sms campaign
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsCampaignId">ID of SMS Campaign to cancel</param>
         /// <returns>string</returns>
         string SmsCampaignsCancelBySmsCampaignIdPut (int? smsCampaignId);
@@ -85,7 +85,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Cancel sms campaign
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsCampaignId">ID of SMS Campaign to cancel</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> SmsCampaignsCancelBySmsCampaignIdPutWithHttpInfo (int? smsCampaignId);
@@ -95,7 +95,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get list of sms campaigns
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -107,7 +107,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get list of sms campaigns
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -118,7 +118,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Calculate price for sms campaign
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaign">SmsCampaign model</param>
         /// <returns>string</returns>
         string SmsCampaignsPricePost (SmsCampaign campaign);
@@ -129,7 +129,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Calculate price for sms campaign
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaign">SmsCampaign model</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> SmsCampaignsPricePostWithHttpInfo (SmsCampaign campaign);
@@ -139,7 +139,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Create sms campaign
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaign">SmsCampaign model</param>
         /// <returns>string</returns>
         string SmsCampaignsSendPost (SmsCampaign campaign);
@@ -150,7 +150,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Create sms campaign
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaign">SmsCampaign model</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> SmsCampaignsSendPostWithHttpInfo (SmsCampaign campaign);
@@ -162,7 +162,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get specific sms campaign
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsCampaignId">ID of SMS campaign to retrieve</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> SmsCampaignBySmsCampaignIdGetAsync (int? smsCampaignId);
@@ -173,7 +173,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get specific sms campaign
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsCampaignId">ID of SMS campaign to retrieve</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> SmsCampaignBySmsCampaignIdGetAsyncWithHttpInfo (int? smsCampaignId);
@@ -183,7 +183,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Update sms campaign
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsCampaignId">ID of SMS campaign to update</param>
         /// <param name="campaign">SmsCampaign model</param>
         /// <returns>Task of string</returns>
@@ -195,7 +195,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Update sms campaign
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsCampaignId">ID of SMS campaign to update</param>
         /// <param name="campaign">SmsCampaign model</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -206,7 +206,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Cancel sms campaign
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsCampaignId">ID of SMS Campaign to cancel</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> SmsCampaignsCancelBySmsCampaignIdPutAsync (int? smsCampaignId);
@@ -217,7 +217,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Cancel sms campaign
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsCampaignId">ID of SMS Campaign to cancel</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> SmsCampaignsCancelBySmsCampaignIdPutAsyncWithHttpInfo (int? smsCampaignId);
@@ -227,7 +227,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get list of sms campaigns
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -239,7 +239,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get list of sms campaigns
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -250,7 +250,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Calculate price for sms campaign
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaign">SmsCampaign model</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> SmsCampaignsPricePostAsync (SmsCampaign campaign);
@@ -261,7 +261,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Calculate price for sms campaign
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaign">SmsCampaign model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> SmsCampaignsPricePostAsyncWithHttpInfo (SmsCampaign campaign);
@@ -271,7 +271,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Create sms campaign
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaign">SmsCampaign model</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> SmsCampaignsSendPostAsync (SmsCampaign campaign);
@@ -282,7 +282,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Create sms campaign
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaign">SmsCampaign model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> SmsCampaignsSendPostAsyncWithHttpInfo (SmsCampaign campaign);
@@ -294,7 +294,7 @@ namespace IO.ClickSend.ClickSend.Api
     /// </summary>
     public partial class SmsCampaignApi : ISmsCampaignApi
     {
-        private IO.ClickSend.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SmsCampaignApi"/> class.
@@ -302,9 +302,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// <returns></returns>
         public SmsCampaignApi(String basePath)
         {
-            this.Configuration = new IO.ClickSend.Client.Configuration { BasePath = basePath };
+            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -313,14 +313,14 @@ namespace IO.ClickSend.ClickSend.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public SmsCampaignApi(IO.ClickSend.Client.Configuration configuration = null)
+        public SmsCampaignApi(IO.Swagger.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.ClickSend.Client.Configuration.Default;
+                this.Configuration = IO.Swagger.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -346,12 +346,12 @@ namespace IO.ClickSend.ClickSend.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.ClickSend.Client.Configuration Configuration {get; set;}
+        public IO.Swagger.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.ClickSend.Client.ExceptionFactory ExceptionFactory
+        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -389,7 +389,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get specific sms campaign Get specific sms campaign
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsCampaignId">ID of SMS campaign to retrieve</param>
         /// <returns>string</returns>
         public string SmsCampaignBySmsCampaignIdGet (int? smsCampaignId)
@@ -401,7 +401,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get specific sms campaign Get specific sms campaign
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsCampaignId">ID of SMS campaign to retrieve</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > SmsCampaignBySmsCampaignIdGetWithHttpInfo (int? smsCampaignId)
@@ -462,7 +462,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get specific sms campaign Get specific sms campaign
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsCampaignId">ID of SMS campaign to retrieve</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> SmsCampaignBySmsCampaignIdGetAsync (int? smsCampaignId)
@@ -475,7 +475,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get specific sms campaign Get specific sms campaign
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsCampaignId">ID of SMS campaign to retrieve</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> SmsCampaignBySmsCampaignIdGetAsyncWithHttpInfo (int? smsCampaignId)
@@ -536,7 +536,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Update sms campaign Update sms campaign
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsCampaignId">ID of SMS campaign to update</param>
         /// <param name="campaign">SmsCampaign model</param>
         /// <returns>string</returns>
@@ -549,7 +549,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Update sms campaign Update sms campaign
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsCampaignId">ID of SMS campaign to update</param>
         /// <param name="campaign">SmsCampaign model</param>
         /// <returns>ApiResponse of string</returns>
@@ -622,7 +622,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Update sms campaign Update sms campaign
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsCampaignId">ID of SMS campaign to update</param>
         /// <param name="campaign">SmsCampaign model</param>
         /// <returns>Task of string</returns>
@@ -636,7 +636,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Update sms campaign Update sms campaign
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsCampaignId">ID of SMS campaign to update</param>
         /// <param name="campaign">SmsCampaign model</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -709,7 +709,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Cancel sms campaign Cancel sms campaign
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsCampaignId">ID of SMS Campaign to cancel</param>
         /// <returns>string</returns>
         public string SmsCampaignsCancelBySmsCampaignIdPut (int? smsCampaignId)
@@ -721,7 +721,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Cancel sms campaign Cancel sms campaign
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsCampaignId">ID of SMS Campaign to cancel</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > SmsCampaignsCancelBySmsCampaignIdPutWithHttpInfo (int? smsCampaignId)
@@ -782,7 +782,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Cancel sms campaign Cancel sms campaign
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsCampaignId">ID of SMS Campaign to cancel</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> SmsCampaignsCancelBySmsCampaignIdPutAsync (int? smsCampaignId)
@@ -795,7 +795,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Cancel sms campaign Cancel sms campaign
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="smsCampaignId">ID of SMS Campaign to cancel</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> SmsCampaignsCancelBySmsCampaignIdPutAsyncWithHttpInfo (int? smsCampaignId)
@@ -856,7 +856,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get list of sms campaigns Get list of sms campaigns
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -869,7 +869,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get list of sms campaigns Get list of sms campaigns
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -929,7 +929,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get list of sms campaigns Get list of sms campaigns
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -943,7 +943,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get list of sms campaigns Get list of sms campaigns
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -1003,7 +1003,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Calculate price for sms campaign Calculate price for sms campaign
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaign">SmsCampaign model</param>
         /// <returns>string</returns>
         public string SmsCampaignsPricePost (SmsCampaign campaign)
@@ -1015,7 +1015,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Calculate price for sms campaign Calculate price for sms campaign
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaign">SmsCampaign model</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > SmsCampaignsPricePostWithHttpInfo (SmsCampaign campaign)
@@ -1083,7 +1083,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Calculate price for sms campaign Calculate price for sms campaign
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaign">SmsCampaign model</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> SmsCampaignsPricePostAsync (SmsCampaign campaign)
@@ -1096,7 +1096,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Calculate price for sms campaign Calculate price for sms campaign
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaign">SmsCampaign model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> SmsCampaignsPricePostAsyncWithHttpInfo (SmsCampaign campaign)
@@ -1164,7 +1164,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Create sms campaign Create sms campaign
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaign">SmsCampaign model</param>
         /// <returns>string</returns>
         public string SmsCampaignsSendPost (SmsCampaign campaign)
@@ -1176,7 +1176,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Create sms campaign Create sms campaign
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaign">SmsCampaign model</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > SmsCampaignsSendPostWithHttpInfo (SmsCampaign campaign)
@@ -1244,7 +1244,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Create sms campaign Create sms campaign
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaign">SmsCampaign model</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> SmsCampaignsSendPostAsync (SmsCampaign campaign)
@@ -1257,7 +1257,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Create sms campaign Create sms campaign
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaign">SmsCampaign model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> SmsCampaignsSendPostAsyncWithHttpInfo (SmsCampaign campaign)

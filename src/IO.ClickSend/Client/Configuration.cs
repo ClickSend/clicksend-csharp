@@ -16,7 +16,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace IO.ClickSend.Client
+namespace IO.Swagger.Client
 {
     /// <summary>
     /// Represents a set of configuration settings
@@ -114,7 +114,7 @@ namespace IO.ClickSend.Client
         /// </summary>
         public Configuration()
         {
-            UserAgent = "ClickSend-Codegen/1.0.0/csharp";
+            UserAgent = "Swagger-Codegen/1.0.0/csharp";
             BasePath = "https://rest.clicksend.com/v3";
             DefaultHeader = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
@@ -187,7 +187,7 @@ namespace IO.ClickSend.Client
             string tempFolderPath = null,
             string dateTimeFormat = null,
             int timeout = 100000,
-            string userAgent = "ClickSend-Codegen/1.0.0/csharp"
+            string userAgent = "Swagger-Codegen/1.0.0/csharp"
             // ReSharper restore UnusedParameter.Local
             )
         {
@@ -418,7 +418,7 @@ namespace IO.ClickSend.Client
         /// </summary>
         public static String ToDebugReport()
         {
-            String report = "C# SDK (IO.ClickSend) Debug Report:\n";
+            String report = "C# SDK (IO.Swagger) Debug Report:\n";
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
             report += "    Version of the API: 3.1\n";

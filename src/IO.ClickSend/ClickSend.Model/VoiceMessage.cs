@@ -21,9 +21,9 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using JsonSubTypes;
 using System.ComponentModel.DataAnnotations;
-using ClickSendDateConverter = IO.ClickSend.Client.ClickSendDateConverter;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
-namespace IO.ClickSend.ClickSend.Model
+namespace IO.Swagger.ClickSend.Model
 {
     /// <summary>
     /// VoiceMessage fields: source, to, list_id, body, lang, voice, schedule, custom_string, country

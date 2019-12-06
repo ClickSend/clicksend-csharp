@@ -13,10 +13,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
-namespace IO.ClickSend.ClickSend.Api
+namespace IO.Swagger.ClickSend.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -30,7 +30,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get account details
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>string</returns>
         string AccountGet ();
 
@@ -40,7 +40,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get account details
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> AccountGetWithHttpInfo ();
         /// <summary>
@@ -49,7 +49,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Create An Account
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="account">Account model</param>
         /// <returns>string</returns>
         string AccountPost (Account account);
@@ -60,7 +60,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Create An Account
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="account">Account model</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> AccountPostWithHttpInfo (Account account);
@@ -70,7 +70,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get account useage by subaccount
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="year">Year to filter by (yyyy)</param>
         /// <param name="month">Month to filter by (mm)</param>
         /// <returns>string</returns>
@@ -82,7 +82,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get account useage by subaccount
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="year">Year to filter by (yyyy)</param>
         /// <param name="month">Month to filter by (mm)</param>
         /// <returns>ApiResponse of string</returns>
@@ -93,7 +93,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Send account activation token
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountVerify">Account details</param>
         /// <returns>string</returns>
         string AccountVerifySendPut (AccountVerify accountVerify);
@@ -104,7 +104,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Send account activation token
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountVerify">Account details</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> AccountVerifySendPutWithHttpInfo (AccountVerify accountVerify);
@@ -114,7 +114,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Verify new account
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activationToken"></param>
         /// <returns>string</returns>
         string AccountVerifyVerifyByActivationTokenPut (int? activationToken);
@@ -125,7 +125,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Verify new account
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activationToken"></param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> AccountVerifyVerifyByActivationTokenPutWithHttpInfo (int? activationToken);
@@ -135,7 +135,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Forgot password
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="forgotPassword"> (optional)</param>
         /// <returns>string</returns>
         string ForgotPasswordPut (ForgotPassword forgotPassword = null);
@@ -146,7 +146,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Forgot password
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="forgotPassword"> (optional)</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> ForgotPasswordPutWithHttpInfo (ForgotPassword forgotPassword = null);
@@ -156,7 +156,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Verify forgot password
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="verifyPassword">verifyPassword data</param>
         /// <returns>string</returns>
         string ForgotPasswordVerifyPut (AccountForgotPasswordVerify verifyPassword);
@@ -167,7 +167,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Verify forgot password
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="verifyPassword">verifyPassword data</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> ForgotPasswordVerifyPutWithHttpInfo (AccountForgotPasswordVerify verifyPassword);
@@ -177,7 +177,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Forgot username
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="forgotUsername"> (optional)</param>
         /// <returns>string</returns>
         string ForgotUsernamePut (ForgotUsername forgotUsername = null);
@@ -188,7 +188,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Forgot username
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="forgotUsername"> (optional)</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> ForgotUsernamePutWithHttpInfo (ForgotUsername forgotUsername = null);
@@ -200,7 +200,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get account details
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> AccountGetAsync ();
 
@@ -210,7 +210,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get account details
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> AccountGetAsyncWithHttpInfo ();
         /// <summary>
@@ -219,7 +219,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Create An Account
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="account">Account model</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> AccountPostAsync (Account account);
@@ -230,7 +230,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Create An Account
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="account">Account model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> AccountPostAsyncWithHttpInfo (Account account);
@@ -240,7 +240,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get account useage by subaccount
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="year">Year to filter by (yyyy)</param>
         /// <param name="month">Month to filter by (mm)</param>
         /// <returns>Task of string</returns>
@@ -252,7 +252,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get account useage by subaccount
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="year">Year to filter by (yyyy)</param>
         /// <param name="month">Month to filter by (mm)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -263,7 +263,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Send account activation token
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountVerify">Account details</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> AccountVerifySendPutAsync (AccountVerify accountVerify);
@@ -274,7 +274,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Send account activation token
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountVerify">Account details</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> AccountVerifySendPutAsyncWithHttpInfo (AccountVerify accountVerify);
@@ -284,7 +284,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Verify new account
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activationToken"></param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> AccountVerifyVerifyByActivationTokenPutAsync (int? activationToken);
@@ -295,7 +295,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Verify new account
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activationToken"></param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> AccountVerifyVerifyByActivationTokenPutAsyncWithHttpInfo (int? activationToken);
@@ -305,7 +305,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Forgot password
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="forgotPassword"> (optional)</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> ForgotPasswordPutAsync (ForgotPassword forgotPassword = null);
@@ -316,7 +316,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Forgot password
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="forgotPassword"> (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> ForgotPasswordPutAsyncWithHttpInfo (ForgotPassword forgotPassword = null);
@@ -326,7 +326,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Verify forgot password
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="verifyPassword">verifyPassword data</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> ForgotPasswordVerifyPutAsync (AccountForgotPasswordVerify verifyPassword);
@@ -337,7 +337,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Verify forgot password
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="verifyPassword">verifyPassword data</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> ForgotPasswordVerifyPutAsyncWithHttpInfo (AccountForgotPasswordVerify verifyPassword);
@@ -347,7 +347,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Forgot username
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="forgotUsername"> (optional)</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> ForgotUsernamePutAsync (ForgotUsername forgotUsername = null);
@@ -358,7 +358,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Forgot username
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="forgotUsername"> (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> ForgotUsernamePutAsyncWithHttpInfo (ForgotUsername forgotUsername = null);
@@ -370,7 +370,7 @@ namespace IO.ClickSend.ClickSend.Api
     /// </summary>
     public partial class AccountApi : IAccountApi
     {
-        private IO.ClickSend.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AccountApi"/> class.
@@ -378,9 +378,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// <returns></returns>
         public AccountApi(String basePath)
         {
-            this.Configuration = new IO.ClickSend.Client.Configuration { BasePath = basePath };
+            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -389,14 +389,14 @@ namespace IO.ClickSend.ClickSend.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public AccountApi(IO.ClickSend.Client.Configuration configuration = null)
+        public AccountApi(IO.Swagger.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.ClickSend.Client.Configuration.Default;
+                this.Configuration = IO.Swagger.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -422,12 +422,12 @@ namespace IO.ClickSend.ClickSend.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.ClickSend.Client.Configuration Configuration {get; set;}
+        public IO.Swagger.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.ClickSend.Client.ExceptionFactory ExceptionFactory
+        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -465,7 +465,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get account information Get account details
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>string</returns>
         public string AccountGet ()
         {
@@ -476,7 +476,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get account information Get account details
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > AccountGetWithHttpInfo ()
         {
@@ -532,7 +532,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get account information Get account details
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> AccountGetAsync ()
         {
@@ -544,7 +544,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get account information Get account details
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> AccountGetAsyncWithHttpInfo ()
         {
@@ -600,7 +600,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Create a new account Create An Account
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="account">Account model</param>
         /// <returns>string</returns>
         public string AccountPost (Account account)
@@ -612,7 +612,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Create a new account Create An Account
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="account">Account model</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > AccountPostWithHttpInfo (Account account)
@@ -680,7 +680,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Create a new account Create An Account
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="account">Account model</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> AccountPostAsync (Account account)
@@ -693,7 +693,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Create a new account Create An Account
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="account">Account model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> AccountPostAsyncWithHttpInfo (Account account)
@@ -761,7 +761,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get account useage by subaccount Get account useage by subaccount
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="year">Year to filter by (yyyy)</param>
         /// <param name="month">Month to filter by (mm)</param>
         /// <returns>string</returns>
@@ -774,7 +774,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get account useage by subaccount Get account useage by subaccount
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="year">Year to filter by (yyyy)</param>
         /// <param name="month">Month to filter by (mm)</param>
         /// <returns>ApiResponse of string</returns>
@@ -840,7 +840,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get account useage by subaccount Get account useage by subaccount
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="year">Year to filter by (yyyy)</param>
         /// <param name="month">Month to filter by (mm)</param>
         /// <returns>Task of string</returns>
@@ -854,7 +854,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get account useage by subaccount Get account useage by subaccount
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="year">Year to filter by (yyyy)</param>
         /// <param name="month">Month to filter by (mm)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -920,7 +920,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Send account activation token Send account activation token
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountVerify">Account details</param>
         /// <returns>string</returns>
         public string AccountVerifySendPut (AccountVerify accountVerify)
@@ -932,7 +932,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Send account activation token Send account activation token
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountVerify">Account details</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > AccountVerifySendPutWithHttpInfo (AccountVerify accountVerify)
@@ -1000,7 +1000,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Send account activation token Send account activation token
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountVerify">Account details</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> AccountVerifySendPutAsync (AccountVerify accountVerify)
@@ -1013,7 +1013,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Send account activation token Send account activation token
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountVerify">Account details</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> AccountVerifySendPutAsyncWithHttpInfo (AccountVerify accountVerify)
@@ -1081,7 +1081,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Verify new account Verify new account
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activationToken"></param>
         /// <returns>string</returns>
         public string AccountVerifyVerifyByActivationTokenPut (int? activationToken)
@@ -1093,7 +1093,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Verify new account Verify new account
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activationToken"></param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > AccountVerifyVerifyByActivationTokenPutWithHttpInfo (int? activationToken)
@@ -1154,7 +1154,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Verify new account Verify new account
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activationToken"></param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> AccountVerifyVerifyByActivationTokenPutAsync (int? activationToken)
@@ -1167,7 +1167,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Verify new account Verify new account
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activationToken"></param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> AccountVerifyVerifyByActivationTokenPutAsyncWithHttpInfo (int? activationToken)
@@ -1228,7 +1228,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Forgot password Forgot password
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="forgotPassword"> (optional)</param>
         /// <returns>string</returns>
         public string ForgotPasswordPut (ForgotPassword forgotPassword = null)
@@ -1240,7 +1240,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Forgot password Forgot password
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="forgotPassword"> (optional)</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > ForgotPasswordPutWithHttpInfo (ForgotPassword forgotPassword = null)
@@ -1305,7 +1305,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Forgot password Forgot password
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="forgotPassword"> (optional)</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> ForgotPasswordPutAsync (ForgotPassword forgotPassword = null)
@@ -1318,7 +1318,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Forgot password Forgot password
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="forgotPassword"> (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> ForgotPasswordPutAsyncWithHttpInfo (ForgotPassword forgotPassword = null)
@@ -1383,7 +1383,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Verify forgot password Verify forgot password
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="verifyPassword">verifyPassword data</param>
         /// <returns>string</returns>
         public string ForgotPasswordVerifyPut (AccountForgotPasswordVerify verifyPassword)
@@ -1395,7 +1395,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Verify forgot password Verify forgot password
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="verifyPassword">verifyPassword data</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > ForgotPasswordVerifyPutWithHttpInfo (AccountForgotPasswordVerify verifyPassword)
@@ -1463,7 +1463,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Verify forgot password Verify forgot password
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="verifyPassword">verifyPassword data</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> ForgotPasswordVerifyPutAsync (AccountForgotPasswordVerify verifyPassword)
@@ -1476,7 +1476,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Verify forgot password Verify forgot password
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="verifyPassword">verifyPassword data</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> ForgotPasswordVerifyPutAsyncWithHttpInfo (AccountForgotPasswordVerify verifyPassword)
@@ -1544,7 +1544,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Forgot username Forgot username
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="forgotUsername"> (optional)</param>
         /// <returns>string</returns>
         public string ForgotUsernamePut (ForgotUsername forgotUsername = null)
@@ -1556,7 +1556,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Forgot username Forgot username
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="forgotUsername"> (optional)</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > ForgotUsernamePutWithHttpInfo (ForgotUsername forgotUsername = null)
@@ -1615,7 +1615,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Forgot username Forgot username
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="forgotUsername"> (optional)</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> ForgotUsernamePutAsync (ForgotUsername forgotUsername = null)
@@ -1628,7 +1628,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Forgot username Forgot username
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="forgotUsername"> (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> ForgotUsernamePutAsyncWithHttpInfo (ForgotUsername forgotUsername = null)

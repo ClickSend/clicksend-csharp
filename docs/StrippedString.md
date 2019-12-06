@@ -1,4 +1,4 @@
-# IO.ClickSend.ClickSend.Model.StrippedString
+# IO.Swagger.ClickSend.Model.StrippedString
 ## Properties
 
 Name | Type | Description | Notes

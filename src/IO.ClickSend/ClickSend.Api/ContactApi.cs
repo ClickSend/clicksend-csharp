@@ -13,10 +13,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
-namespace IO.ClickSend.ClickSend.Api
+namespace IO.Swagger.ClickSend.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -30,7 +30,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Delete a contact
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>string</returns>
@@ -42,7 +42,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Delete a contact
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>ApiResponse of string</returns>
@@ -53,7 +53,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get a specific contact
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your contact list id you want to access.</param>
         /// <param name="contactId">Your contact id you want to access.</param>
         /// <returns>string</returns>
@@ -65,7 +65,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get a specific contact
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your contact list id you want to access.</param>
         /// <param name="contactId">Your contact id you want to access.</param>
         /// <returns>ApiResponse of string</returns>
@@ -76,7 +76,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Update specific contact
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Contact list id</param>
         /// <param name="contactId">Contact ID</param>
         /// <param name="contact">Contact model</param>
@@ -89,7 +89,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Update specific contact
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Contact list id</param>
         /// <param name="contactId">Contact ID</param>
         /// <param name="contact">Contact model</param>
@@ -101,7 +101,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get all contacts in a list
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Contact list ID</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
@@ -114,7 +114,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get all contacts in a list
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Contact list ID</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
@@ -126,7 +126,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Create new contact
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contact">Contact model</param>
         /// <param name="listId">List id</param>
         /// <returns>string</returns>
@@ -138,7 +138,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Create new contact
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contact">Contact model</param>
         /// <param name="listId">List id</param>
         /// <returns>ApiResponse of string</returns>
@@ -149,7 +149,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Remove all opted out contacts
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your list id</param>
         /// <param name="optOutListId">Your opt out list id</param>
         /// <returns>string</returns>
@@ -161,7 +161,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Remove all opted out contacts
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your list id</param>
         /// <param name="optOutListId">Your opt out list id</param>
         /// <returns>ApiResponse of string</returns>
@@ -172,7 +172,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Transfer contact to another list
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fromListId">List ID for list that contains contact.</param>
         /// <param name="contactId">Contact ID</param>
         /// <param name="toListId">List ID for list you want to transfer contact to.</param>
@@ -185,7 +185,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Transfer contact to another list
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fromListId">List ID for list that contains contact.</param>
         /// <param name="contactId">Contact ID</param>
         /// <param name="toListId">List ID for list you want to transfer contact to.</param>
@@ -199,7 +199,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Delete a contact
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>Task of string</returns>
@@ -211,7 +211,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Delete a contact
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -222,7 +222,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get a specific contact
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your contact list id you want to access.</param>
         /// <param name="contactId">Your contact id you want to access.</param>
         /// <returns>Task of string</returns>
@@ -234,7 +234,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get a specific contact
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your contact list id you want to access.</param>
         /// <param name="contactId">Your contact id you want to access.</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -245,7 +245,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Update specific contact
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Contact list id</param>
         /// <param name="contactId">Contact ID</param>
         /// <param name="contact">Contact model</param>
@@ -258,7 +258,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Update specific contact
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Contact list id</param>
         /// <param name="contactId">Contact ID</param>
         /// <param name="contact">Contact model</param>
@@ -270,7 +270,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get all contacts in a list
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Contact list ID</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
@@ -283,7 +283,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get all contacts in a list
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Contact list ID</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
@@ -295,7 +295,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Create new contact
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contact">Contact model</param>
         /// <param name="listId">List id</param>
         /// <returns>Task of string</returns>
@@ -307,7 +307,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Create new contact
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contact">Contact model</param>
         /// <param name="listId">List id</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -318,7 +318,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Remove all opted out contacts
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your list id</param>
         /// <param name="optOutListId">Your opt out list id</param>
         /// <returns>Task of string</returns>
@@ -330,7 +330,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Remove all opted out contacts
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your list id</param>
         /// <param name="optOutListId">Your opt out list id</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -341,7 +341,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Transfer contact to another list
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fromListId">List ID for list that contains contact.</param>
         /// <param name="contactId">Contact ID</param>
         /// <param name="toListId">List ID for list you want to transfer contact to.</param>
@@ -354,7 +354,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Transfer contact to another list
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fromListId">List ID for list that contains contact.</param>
         /// <param name="contactId">Contact ID</param>
         /// <param name="toListId">List ID for list you want to transfer contact to.</param>
@@ -368,7 +368,7 @@ namespace IO.ClickSend.ClickSend.Api
     /// </summary>
     public partial class ContactApi : IContactApi
     {
-        private IO.ClickSend.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactApi"/> class.
@@ -376,9 +376,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// <returns></returns>
         public ContactApi(String basePath)
         {
-            this.Configuration = new IO.ClickSend.Client.Configuration { BasePath = basePath };
+            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -387,14 +387,14 @@ namespace IO.ClickSend.ClickSend.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public ContactApi(IO.ClickSend.Client.Configuration configuration = null)
+        public ContactApi(IO.Swagger.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.ClickSend.Client.Configuration.Default;
+                this.Configuration = IO.Swagger.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -420,12 +420,12 @@ namespace IO.ClickSend.ClickSend.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.ClickSend.Client.Configuration Configuration {get; set;}
+        public IO.Swagger.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.ClickSend.Client.ExceptionFactory ExceptionFactory
+        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -463,7 +463,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Delete a contact Delete a contact
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>string</returns>
@@ -476,7 +476,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Delete a contact Delete a contact
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>ApiResponse of string</returns>
@@ -542,7 +542,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Delete a contact Delete a contact
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>Task of string</returns>
@@ -556,7 +556,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Delete a contact Delete a contact
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -622,7 +622,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get a specific contact Get a specific contact
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your contact list id you want to access.</param>
         /// <param name="contactId">Your contact id you want to access.</param>
         /// <returns>string</returns>
@@ -635,7 +635,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get a specific contact Get a specific contact
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your contact list id you want to access.</param>
         /// <param name="contactId">Your contact id you want to access.</param>
         /// <returns>ApiResponse of string</returns>
@@ -701,7 +701,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get a specific contact Get a specific contact
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your contact list id you want to access.</param>
         /// <param name="contactId">Your contact id you want to access.</param>
         /// <returns>Task of string</returns>
@@ -715,7 +715,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get a specific contact Get a specific contact
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your contact list id you want to access.</param>
         /// <param name="contactId">Your contact id you want to access.</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -781,7 +781,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Update specific contact Update specific contact
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Contact list id</param>
         /// <param name="contactId">Contact ID</param>
         /// <param name="contact">Contact model</param>
@@ -795,7 +795,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Update specific contact Update specific contact
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Contact list id</param>
         /// <param name="contactId">Contact ID</param>
         /// <param name="contact">Contact model</param>
@@ -873,7 +873,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Update specific contact Update specific contact
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Contact list id</param>
         /// <param name="contactId">Contact ID</param>
         /// <param name="contact">Contact model</param>
@@ -888,7 +888,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Update specific contact Update specific contact
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Contact list id</param>
         /// <param name="contactId">Contact ID</param>
         /// <param name="contact">Contact model</param>
@@ -966,7 +966,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get all contacts in a list Get all contacts in a list
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Contact list ID</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
@@ -980,7 +980,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get all contacts in a list Get all contacts in a list
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Contact list ID</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
@@ -1045,7 +1045,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get all contacts in a list Get all contacts in a list
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Contact list ID</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
@@ -1060,7 +1060,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get all contacts in a list Get all contacts in a list
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Contact list ID</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
@@ -1125,7 +1125,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Create new contact Create new contact
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contact">Contact model</param>
         /// <param name="listId">List id</param>
         /// <returns>string</returns>
@@ -1138,7 +1138,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Create new contact Create new contact
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contact">Contact model</param>
         /// <param name="listId">List id</param>
         /// <returns>ApiResponse of string</returns>
@@ -1211,7 +1211,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Create new contact Create new contact
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contact">Contact model</param>
         /// <param name="listId">List id</param>
         /// <returns>Task of string</returns>
@@ -1225,7 +1225,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Create new contact Create new contact
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contact">Contact model</param>
         /// <param name="listId">List id</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -1298,7 +1298,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Remove all opted out contacts Remove all opted out contacts
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your list id</param>
         /// <param name="optOutListId">Your opt out list id</param>
         /// <returns>string</returns>
@@ -1311,7 +1311,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Remove all opted out contacts Remove all opted out contacts
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your list id</param>
         /// <param name="optOutListId">Your opt out list id</param>
         /// <returns>ApiResponse of string</returns>
@@ -1377,7 +1377,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Remove all opted out contacts Remove all opted out contacts
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your list id</param>
         /// <param name="optOutListId">Your opt out list id</param>
         /// <returns>Task of string</returns>
@@ -1391,7 +1391,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Remove all opted out contacts Remove all opted out contacts
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="listId">Your list id</param>
         /// <param name="optOutListId">Your opt out list id</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -1457,7 +1457,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Transfer contact to another list Transfer contact to another list
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fromListId">List ID for list that contains contact.</param>
         /// <param name="contactId">Contact ID</param>
         /// <param name="toListId">List ID for list you want to transfer contact to.</param>
@@ -1471,7 +1471,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Transfer contact to another list Transfer contact to another list
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fromListId">List ID for list that contains contact.</param>
         /// <param name="contactId">Contact ID</param>
         /// <param name="toListId">List ID for list you want to transfer contact to.</param>
@@ -1542,7 +1542,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Transfer contact to another list Transfer contact to another list
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fromListId">List ID for list that contains contact.</param>
         /// <param name="contactId">Contact ID</param>
         /// <param name="toListId">List ID for list you want to transfer contact to.</param>
@@ -1557,7 +1557,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Transfer contact to another list Transfer contact to another list
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fromListId">List ID for list that contains contact.</param>
         /// <param name="contactId">Contact ID</param>
         /// <param name="toListId">List ID for list you want to transfer contact to.</param>

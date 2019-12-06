@@ -13,10 +13,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
-namespace IO.ClickSend.ClickSend.Api
+namespace IO.Swagger.ClickSend.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -30,7 +30,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Delete specific post return address
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddressId">Return address ID</param>
         /// <returns>string</returns>
         string PostReturnAddressesByReturnAddressIdDelete (int? returnAddressId);
@@ -41,7 +41,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Delete specific post return address
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddressId">Return address ID</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> PostReturnAddressesByReturnAddressIdDeleteWithHttpInfo (int? returnAddressId);
@@ -51,7 +51,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get specific post return address
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddressId">Return address ID</param>
         /// <returns>string</returns>
         string PostReturnAddressesByReturnAddressIdGet (int? returnAddressId);
@@ -62,7 +62,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get specific post return address
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddressId">Return address ID</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> PostReturnAddressesByReturnAddressIdGetWithHttpInfo (int? returnAddressId);
@@ -72,7 +72,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Update post return address
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddressId">Return address ID</param>
         /// <param name="returnAddress">Address model</param>
         /// <returns>string</returns>
@@ -84,7 +84,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Update post return address
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddressId">Return address ID</param>
         /// <param name="returnAddress">Address model</param>
         /// <returns>ApiResponse of string</returns>
@@ -95,7 +95,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get list of post return addresses
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -107,7 +107,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get list of post return addresses
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -118,7 +118,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Create post return address
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddress">Address model</param>
         /// <returns>string</returns>
         string PostReturnAddressesPost (Address returnAddress);
@@ -129,7 +129,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Create post return address
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddress">Address model</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> PostReturnAddressesPostWithHttpInfo (Address returnAddress);
@@ -141,7 +141,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Delete specific post return address
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddressId">Return address ID</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> PostReturnAddressesByReturnAddressIdDeleteAsync (int? returnAddressId);
@@ -152,7 +152,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Delete specific post return address
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddressId">Return address ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> PostReturnAddressesByReturnAddressIdDeleteAsyncWithHttpInfo (int? returnAddressId);
@@ -162,7 +162,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get specific post return address
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddressId">Return address ID</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> PostReturnAddressesByReturnAddressIdGetAsync (int? returnAddressId);
@@ -173,7 +173,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get specific post return address
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddressId">Return address ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> PostReturnAddressesByReturnAddressIdGetAsyncWithHttpInfo (int? returnAddressId);
@@ -183,7 +183,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Update post return address
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddressId">Return address ID</param>
         /// <param name="returnAddress">Address model</param>
         /// <returns>Task of string</returns>
@@ -195,7 +195,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Update post return address
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddressId">Return address ID</param>
         /// <param name="returnAddress">Address model</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -206,7 +206,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get list of post return addresses
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -218,7 +218,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get list of post return addresses
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -229,7 +229,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Create post return address
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddress">Address model</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> PostReturnAddressesPostAsync (Address returnAddress);
@@ -240,7 +240,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Create post return address
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddress">Address model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> PostReturnAddressesPostAsyncWithHttpInfo (Address returnAddress);
@@ -252,7 +252,7 @@ namespace IO.ClickSend.ClickSend.Api
     /// </summary>
     public partial class PostReturnAddressApi : IPostReturnAddressApi
     {
-        private IO.ClickSend.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="PostReturnAddressApi"/> class.
@@ -260,9 +260,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// <returns></returns>
         public PostReturnAddressApi(String basePath)
         {
-            this.Configuration = new IO.ClickSend.Client.Configuration { BasePath = basePath };
+            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -271,14 +271,14 @@ namespace IO.ClickSend.ClickSend.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public PostReturnAddressApi(IO.ClickSend.Client.Configuration configuration = null)
+        public PostReturnAddressApi(IO.Swagger.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.ClickSend.Client.Configuration.Default;
+                this.Configuration = IO.Swagger.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -304,12 +304,12 @@ namespace IO.ClickSend.ClickSend.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.ClickSend.Client.Configuration Configuration {get; set;}
+        public IO.Swagger.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.ClickSend.Client.ExceptionFactory ExceptionFactory
+        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -347,7 +347,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Delete specific post return address Delete specific post return address
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddressId">Return address ID</param>
         /// <returns>string</returns>
         public string PostReturnAddressesByReturnAddressIdDelete (int? returnAddressId)
@@ -359,7 +359,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Delete specific post return address Delete specific post return address
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddressId">Return address ID</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > PostReturnAddressesByReturnAddressIdDeleteWithHttpInfo (int? returnAddressId)
@@ -420,7 +420,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Delete specific post return address Delete specific post return address
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddressId">Return address ID</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> PostReturnAddressesByReturnAddressIdDeleteAsync (int? returnAddressId)
@@ -433,7 +433,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Delete specific post return address Delete specific post return address
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddressId">Return address ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> PostReturnAddressesByReturnAddressIdDeleteAsyncWithHttpInfo (int? returnAddressId)
@@ -494,7 +494,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get specific post return address Get specific post return address
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddressId">Return address ID</param>
         /// <returns>string</returns>
         public string PostReturnAddressesByReturnAddressIdGet (int? returnAddressId)
@@ -506,7 +506,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get specific post return address Get specific post return address
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddressId">Return address ID</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > PostReturnAddressesByReturnAddressIdGetWithHttpInfo (int? returnAddressId)
@@ -567,7 +567,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get specific post return address Get specific post return address
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddressId">Return address ID</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> PostReturnAddressesByReturnAddressIdGetAsync (int? returnAddressId)
@@ -580,7 +580,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get specific post return address Get specific post return address
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddressId">Return address ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> PostReturnAddressesByReturnAddressIdGetAsyncWithHttpInfo (int? returnAddressId)
@@ -641,7 +641,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Update post return address Update post return address
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddressId">Return address ID</param>
         /// <param name="returnAddress">Address model</param>
         /// <returns>string</returns>
@@ -654,7 +654,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Update post return address Update post return address
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddressId">Return address ID</param>
         /// <param name="returnAddress">Address model</param>
         /// <returns>ApiResponse of string</returns>
@@ -727,7 +727,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Update post return address Update post return address
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddressId">Return address ID</param>
         /// <param name="returnAddress">Address model</param>
         /// <returns>Task of string</returns>
@@ -741,7 +741,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Update post return address Update post return address
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddressId">Return address ID</param>
         /// <param name="returnAddress">Address model</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -814,7 +814,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get list of post return addresses Get list of post return addresses
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -827,7 +827,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get list of post return addresses Get list of post return addresses
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -887,7 +887,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get list of post return addresses Get list of post return addresses
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -901,7 +901,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get list of post return addresses Get list of post return addresses
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -961,7 +961,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Create post return address Create post return address
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddress">Address model</param>
         /// <returns>string</returns>
         public string PostReturnAddressesPost (Address returnAddress)
@@ -973,7 +973,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Create post return address Create post return address
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddress">Address model</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > PostReturnAddressesPostWithHttpInfo (Address returnAddress)
@@ -1041,7 +1041,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Create post return address Create post return address
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddress">Address model</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> PostReturnAddressesPostAsync (Address returnAddress)
@@ -1054,7 +1054,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Create post return address Create post return address
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnAddress">Address model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> PostReturnAddressesPostAsyncWithHttpInfo (Address returnAddress)

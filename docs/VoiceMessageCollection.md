@@ -1,4 +1,4 @@
-# IO.ClickSend.ClickSend.Model.VoiceMessageCollection
+# IO.Swagger.ClickSend.Model.VoiceMessageCollection
 ## Properties
 
 Name | Type | Description | Notes

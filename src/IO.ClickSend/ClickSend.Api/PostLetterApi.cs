@@ -13,10 +13,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
-namespace IO.ClickSend.ClickSend.Api
+namespace IO.Swagger.ClickSend.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -30,7 +30,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// export post letter history
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
         /// <returns>string</returns>
         string PostLettersExportGet (string filename);
@@ -41,7 +41,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// export post letter history
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> PostLettersExportGetWithHttpInfo (string filename);
@@ -51,7 +51,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get all post letter history
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -63,7 +63,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get all post letter history
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -74,7 +74,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Calculate post letter price
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postLetter">PostLetter model</param>
         /// <returns>string</returns>
         string PostLettersPricePost (PostLetter postLetter);
@@ -85,7 +85,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Calculate post letter price
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postLetter">PostLetter model</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> PostLettersPricePostWithHttpInfo (PostLetter postLetter);
@@ -95,7 +95,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Send post letter
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postLetter">PostLetter model</param>
         /// <returns>string</returns>
         string PostLettersSendPost (PostLetter postLetter);
@@ -106,7 +106,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Send post letter
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postLetter">PostLetter model</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> PostLettersSendPostWithHttpInfo (PostLetter postLetter);
@@ -118,7 +118,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// export post letter history
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> PostLettersExportGetAsync (string filename);
@@ -129,7 +129,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// export post letter history
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> PostLettersExportGetAsyncWithHttpInfo (string filename);
@@ -139,7 +139,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get all post letter history
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -151,7 +151,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get all post letter history
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -162,7 +162,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Calculate post letter price
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postLetter">PostLetter model</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> PostLettersPricePostAsync (PostLetter postLetter);
@@ -173,7 +173,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Calculate post letter price
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postLetter">PostLetter model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> PostLettersPricePostAsyncWithHttpInfo (PostLetter postLetter);
@@ -183,7 +183,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Send post letter
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postLetter">PostLetter model</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> PostLettersSendPostAsync (PostLetter postLetter);
@@ -194,7 +194,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Send post letter
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postLetter">PostLetter model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> PostLettersSendPostAsyncWithHttpInfo (PostLetter postLetter);
@@ -206,7 +206,7 @@ namespace IO.ClickSend.ClickSend.Api
     /// </summary>
     public partial class PostLetterApi : IPostLetterApi
     {
-        private IO.ClickSend.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="PostLetterApi"/> class.
@@ -214,9 +214,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// <returns></returns>
         public PostLetterApi(String basePath)
         {
-            this.Configuration = new IO.ClickSend.Client.Configuration { BasePath = basePath };
+            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -225,14 +225,14 @@ namespace IO.ClickSend.ClickSend.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public PostLetterApi(IO.ClickSend.Client.Configuration configuration = null)
+        public PostLetterApi(IO.Swagger.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.ClickSend.Client.Configuration.Default;
+                this.Configuration = IO.Swagger.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -258,12 +258,12 @@ namespace IO.ClickSend.ClickSend.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.ClickSend.Client.Configuration Configuration {get; set;}
+        public IO.Swagger.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.ClickSend.Client.ExceptionFactory ExceptionFactory
+        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -301,7 +301,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// export post letter history export post letter history
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
         /// <returns>string</returns>
         public string PostLettersExportGet (string filename)
@@ -313,7 +313,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// export post letter history export post letter history
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > PostLettersExportGetWithHttpInfo (string filename)
@@ -374,7 +374,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// export post letter history export post letter history
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> PostLettersExportGetAsync (string filename)
@@ -387,7 +387,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// export post letter history export post letter history
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">Filename to export to</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> PostLettersExportGetAsyncWithHttpInfo (string filename)
@@ -448,7 +448,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get all post letter history Get all post letter history
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -461,7 +461,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get all post letter history Get all post letter history
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -521,7 +521,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get all post letter history Get all post letter history
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -535,7 +535,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get all post letter history Get all post letter history
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -595,7 +595,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Calculate post letter price Calculate post letter price
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postLetter">PostLetter model</param>
         /// <returns>string</returns>
         public string PostLettersPricePost (PostLetter postLetter)
@@ -607,7 +607,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Calculate post letter price Calculate post letter price
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postLetter">PostLetter model</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > PostLettersPricePostWithHttpInfo (PostLetter postLetter)
@@ -675,7 +675,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Calculate post letter price Calculate post letter price
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postLetter">PostLetter model</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> PostLettersPricePostAsync (PostLetter postLetter)
@@ -688,7 +688,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Calculate post letter price Calculate post letter price
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postLetter">PostLetter model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> PostLettersPricePostAsyncWithHttpInfo (PostLetter postLetter)
@@ -756,7 +756,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Send post letter Send post letter
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postLetter">PostLetter model</param>
         /// <returns>string</returns>
         public string PostLettersSendPost (PostLetter postLetter)
@@ -768,7 +768,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Send post letter Send post letter
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postLetter">PostLetter model</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > PostLettersSendPostWithHttpInfo (PostLetter postLetter)
@@ -836,7 +836,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Send post letter Send post letter
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postLetter">PostLetter model</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> PostLettersSendPostAsync (PostLetter postLetter)
@@ -849,7 +849,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Send post letter Send post letter
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="postLetter">PostLetter model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> PostLettersSendPostAsyncWithHttpInfo (PostLetter postLetter)

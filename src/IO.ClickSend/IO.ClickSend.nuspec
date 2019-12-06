@@ -30,6 +30,7 @@
             <dependency id="RestSharp" version="105.1.0" />
 
         </dependencies>
+		<repository type="git" url="https://github.com/ClickSend/clicksend-csharp" />
     </metadata>
     <files>
 

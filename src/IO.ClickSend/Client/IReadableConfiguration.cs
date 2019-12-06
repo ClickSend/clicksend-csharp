@@ -11,7 +11,7 @@
 
 using System.Collections.Generic;
 
-namespace IO.ClickSend.Client
+namespace IO.Swagger.Client
 {
     /// <summary>
     /// Represents a readable-only configuration contract.

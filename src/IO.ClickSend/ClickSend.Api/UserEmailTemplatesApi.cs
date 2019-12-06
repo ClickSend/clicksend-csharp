@@ -13,10 +13,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
+using IO.Swagger.Client;
+using IO.Swagger.ClickSend.Model;
 
-namespace IO.ClickSend.ClickSend.Api
+namespace IO.Swagger.ClickSend.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -30,7 +30,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Delete user email template
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <returns>string</returns>
         string EmailTemplateDelete (int? templateId);
@@ -41,7 +41,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Delete user email template
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> EmailTemplateDeleteWithHttpInfo (int? templateId);
@@ -51,7 +51,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get specific user email templates
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <returns>string</returns>
         string EmailTemplateGet (int? templateId);
@@ -62,7 +62,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get specific user email templates
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> EmailTemplateGetWithHttpInfo (int? templateId);
@@ -72,7 +72,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Create email template
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailTemplate">Email template model</param>
         /// <returns>string</returns>
         string EmailTemplatePost (EmailTemplateNew emailTemplate);
@@ -83,7 +83,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Create email template
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailTemplate">Email template model</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> EmailTemplatePostWithHttpInfo (EmailTemplateNew emailTemplate);
@@ -93,7 +93,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Update email template
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <param name="emailTemplate">Email template model</param>
         /// <returns>string</returns>
@@ -105,7 +105,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Update email template
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <param name="emailTemplate">Email template model</param>
         /// <returns>ApiResponse of string</returns>
@@ -116,7 +116,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get all user email templates
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -128,7 +128,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get all user email templates
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -141,7 +141,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Delete user email template
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> EmailTemplateDeleteAsync (int? templateId);
@@ -152,7 +152,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Delete user email template
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> EmailTemplateDeleteAsyncWithHttpInfo (int? templateId);
@@ -162,7 +162,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get specific user email templates
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> EmailTemplateGetAsync (int? templateId);
@@ -173,7 +173,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get specific user email templates
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> EmailTemplateGetAsyncWithHttpInfo (int? templateId);
@@ -183,7 +183,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Create email template
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailTemplate">Email template model</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> EmailTemplatePostAsync (EmailTemplateNew emailTemplate);
@@ -194,7 +194,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Create email template
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailTemplate">Email template model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> EmailTemplatePostAsyncWithHttpInfo (EmailTemplateNew emailTemplate);
@@ -204,7 +204,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Update email template
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <param name="emailTemplate">Email template model</param>
         /// <returns>Task of string</returns>
@@ -216,7 +216,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Update email template
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <param name="emailTemplate">Email template model</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -227,7 +227,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get all user email templates
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -239,7 +239,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <remarks>
         /// Get all user email templates
         /// </remarks>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -252,7 +252,7 @@ namespace IO.ClickSend.ClickSend.Api
     /// </summary>
     public partial class UserEmailTemplatesApi : IUserEmailTemplatesApi
     {
-        private IO.ClickSend.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="UserEmailTemplatesApi"/> class.
@@ -260,9 +260,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// <returns></returns>
         public UserEmailTemplatesApi(String basePath)
         {
-            this.Configuration = new IO.ClickSend.Client.Configuration { BasePath = basePath };
+            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -271,14 +271,14 @@ namespace IO.ClickSend.ClickSend.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public UserEmailTemplatesApi(IO.ClickSend.Client.Configuration configuration = null)
+        public UserEmailTemplatesApi(IO.Swagger.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = IO.ClickSend.Client.Configuration.Default;
+                this.Configuration = IO.Swagger.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = IO.ClickSend.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -304,12 +304,12 @@ namespace IO.ClickSend.ClickSend.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public IO.ClickSend.Client.Configuration Configuration {get; set;}
+        public IO.Swagger.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public IO.ClickSend.Client.ExceptionFactory ExceptionFactory
+        public IO.Swagger.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -347,7 +347,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Delete user email template Delete user email template
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <returns>string</returns>
         public string EmailTemplateDelete (int? templateId)
@@ -359,7 +359,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Delete user email template Delete user email template
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > EmailTemplateDeleteWithHttpInfo (int? templateId)
@@ -420,7 +420,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Delete user email template Delete user email template
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> EmailTemplateDeleteAsync (int? templateId)
@@ -433,7 +433,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Delete user email template Delete user email template
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> EmailTemplateDeleteAsyncWithHttpInfo (int? templateId)
@@ -494,7 +494,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get specific user email template Get specific user email templates
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <returns>string</returns>
         public string EmailTemplateGet (int? templateId)
@@ -506,7 +506,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get specific user email template Get specific user email templates
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > EmailTemplateGetWithHttpInfo (int? templateId)
@@ -567,7 +567,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get specific user email template Get specific user email templates
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> EmailTemplateGetAsync (int? templateId)
@@ -580,7 +580,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get specific user email template Get specific user email templates
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> EmailTemplateGetAsyncWithHttpInfo (int? templateId)
@@ -641,7 +641,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Create email template Create email template
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailTemplate">Email template model</param>
         /// <returns>string</returns>
         public string EmailTemplatePost (EmailTemplateNew emailTemplate)
@@ -653,7 +653,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Create email template Create email template
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailTemplate">Email template model</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > EmailTemplatePostWithHttpInfo (EmailTemplateNew emailTemplate)
@@ -721,7 +721,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Create email template Create email template
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailTemplate">Email template model</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> EmailTemplatePostAsync (EmailTemplateNew emailTemplate)
@@ -734,7 +734,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Create email template Create email template
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emailTemplate">Email template model</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> EmailTemplatePostAsyncWithHttpInfo (EmailTemplateNew emailTemplate)
@@ -802,7 +802,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Update email template Update email template
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <param name="emailTemplate">Email template model</param>
         /// <returns>string</returns>
@@ -815,7 +815,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Update email template Update email template
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <param name="emailTemplate">Email template model</param>
         /// <returns>ApiResponse of string</returns>
@@ -888,7 +888,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Update email template Update email template
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <param name="emailTemplate">Email template model</param>
         /// <returns>Task of string</returns>
@@ -902,7 +902,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Update email template Update email template
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">Email template id</param>
         /// <param name="emailTemplate">Email template model</param>
         /// <returns>Task of ApiResponse (string)</returns>
@@ -975,7 +975,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get all user email templates Get all user email templates
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>string</returns>
@@ -988,7 +988,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get all user email templates Get all user email templates
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
@@ -1048,7 +1048,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get all user email templates Get all user email templates
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of string</returns>
@@ -1062,7 +1062,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <summary>
         /// Get all user email templates Get all user email templates
         /// </summary>
-        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>

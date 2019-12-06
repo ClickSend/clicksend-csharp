@@ -21,7 +21,7 @@ using System.Text;
 using Newtonsoft.Json;
 using RestSharp;
 
-namespace IO.ClickSend.Client
+namespace IO.Swagger.Client
 {
     /// <summary>
     /// API client is mainly responsible for making the HTTP call to the API backend.
@@ -52,7 +52,7 @@ namespace IO.ClickSend.Client
         /// </summary>
         public ApiClient()
         {
-            Configuration = IO.ClickSend.Client.Configuration.Default;
+            Configuration = IO.Swagger.Client.Configuration.Default;
             RestClient = new RestClient("https://rest.clicksend.com/v3");
         }
 
@@ -63,7 +63,7 @@ namespace IO.ClickSend.Client
         /// <param name="config">An instance of Configuration.</param>
         public ApiClient(Configuration config)
         {
-            Configuration = config ?? IO.ClickSend.Client.Configuration.Default;
+            Configuration = config ?? IO.Swagger.Client.Configuration.Default;
 
             RestClient = new RestClient(Configuration.BasePath);
         }

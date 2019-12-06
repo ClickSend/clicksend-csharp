@@ -1,4 +1,4 @@
-# IO.ClickSend.ClickSend.Model.EmailTemplateNew
+# IO.Swagger.ClickSend.Model.EmailTemplateNew
 ## Properties
 
 Name | Type | Description | Notes

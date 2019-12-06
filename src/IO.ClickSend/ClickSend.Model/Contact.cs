@@ -21,9 +21,9 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using JsonSubTypes;
 using System.ComponentModel.DataAnnotations;
-using ClickSendDateConverter = IO.ClickSend.Client.ClickSendDateConverter;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
-namespace IO.ClickSend.ClickSend.Model
+namespace IO.Swagger.ClickSend.Model
 {
     /// <summary>
     /// Contains all details for the main contact.
