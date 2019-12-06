@@ -6,13 +6,22 @@ on:
       - master
 jobs:
   publish-gpr:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: 2.2.108
-      - run: nuget pack IO.ClickSend.csproj -Build -Properties Configuration=Release -OutputDirectory out
-      - run: nuget sources Add -Name "GitHub" -Source "https://nuget.pkg.github.com/ClickSend/index.json" -UserName ClickSend -Password ${{secrets.GPR_TOKEN}}
-      - run: nuget push out/*.nupkg -Source GitHub
+
+      - name: Checkout repository
+        uses: actions/checkout@master
+        
+      - name: Build solution and generate NuGet package
+        run: dotnet pack -c Release -o out  
+
+      - name: Install NuGet client
+        uses: warrenbuckley/Setup-Nuget@v1
+
+      - name: Add private GitHub registry to NuGet
+        run: nuget sources add -name "GPR" -Source https://nuget.pkg.github.com/ClickSend/index.json -Username ClickSend -Password ${{ secrets.GPR_TOKEN }}
+
+      - name: Push generated package to GitHub registry
+        run: nuget push out/*.nupkg -Source "GPR" -SkipDuplicate
+      
+
