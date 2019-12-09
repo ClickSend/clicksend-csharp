@@ -16,7 +16,7 @@ jobs:
         uses: warrenbuckley/Setup-Nuget@v1
         
       - name: Build solution and generate NuGet package
-        run: nuget pack IO.ClickSend.csproj -Build -Properties Configuration=Release -OutputDirectory out 
+        run: nuget pack src/IO.Clicksend/IO.ClickSend.csproj -Build -Properties Configuration=Release -OutputDirectory out 
 
       - name: Install NuGet client
         uses: warrenbuckley/Setup-Nuget@v1
@@ -25,6 +25,6 @@ jobs:
         run: nuget sources add -name "GPR" -Source https://nuget.pkg.github.com/ClickSend/index.json -Username ClickSend -Password ${{ secrets.GPR_TOKEN }}
 
       - name: Push generated package to GitHub registry
-        run: nuget push .\clicksend-csharp\out\*.nupkg -Source "GPR" -SkipDuplicate
+        run: nuget push out\*.nupkg -Source "GPR" -SkipDuplicate
       
 
