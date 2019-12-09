@@ -80,7 +80,5 @@ Contact: support@clicksend.com
   <ItemGroup>
       <None Include="packages.config" />
   </ItemGroup>
-  <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\..\packages\NuGet.Build.Tasks.Pack.5.3.1\build\NuGet.Build.Tasks.Pack.targets" Condition="Exists('..\..\packages\NuGet.Build.Tasks.Pack.5.3.1\build\NuGet.Build.Tasks.Pack.targets')" />
 </Project>
 
