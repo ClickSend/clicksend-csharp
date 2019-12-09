@@ -13,9 +13,7 @@ jobs:
         uses: actions/checkout@master
         
       - name: Build solution and generate NuGet package
-        run: |  
-          ls
-          dotnet pack -c Release -o out  
+        run: nuget pack IO.ClickSend.csproj -Build -Properties Configuration=Release -OutputDirectory out 
 
       - name: Install NuGet client
         uses: warrenbuckley/Setup-Nuget@v1
