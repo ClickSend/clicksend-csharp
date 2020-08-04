@@ -144,6 +144,31 @@ namespace IO.ClickSend.ClickSend.Api
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> ListsContactsByListIdPostWithHttpInfo (Contact contact, int? listId);
         /// <summary>
+        /// Copy contact to another list
+        /// </summary>
+        /// <remarks>
+        /// Copy contact to another list
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fromListId">List ID for list that contains contact.</param>
+        /// <param name="contactId">Contact ID</param>
+        /// <param name="toListId">List ID for list you want to copy the contact to.</param>
+        /// <returns>string</returns>
+        string ListsCopyContactPut (int? fromListId, int? contactId, int? toListId);
+
+        /// <summary>
+        /// Copy contact to another list
+        /// </summary>
+        /// <remarks>
+        /// Copy contact to another list
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fromListId">List ID for list that contains contact.</param>
+        /// <param name="contactId">Contact ID</param>
+        /// <param name="toListId">List ID for list you want to copy the contact to.</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> ListsCopyContactPutWithHttpInfo (int? fromListId, int? contactId, int? toListId);
+        /// <summary>
         /// Remove all opted out contacts
         /// </summary>
         /// <remarks>
@@ -312,6 +337,31 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="listId">List id</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> ListsContactsByListIdPostAsyncWithHttpInfo (Contact contact, int? listId);
+        /// <summary>
+        /// Copy contact to another list
+        /// </summary>
+        /// <remarks>
+        /// Copy contact to another list
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fromListId">List ID for list that contains contact.</param>
+        /// <param name="contactId">Contact ID</param>
+        /// <param name="toListId">List ID for list you want to copy the contact to.</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> ListsCopyContactPutAsync (int? fromListId, int? contactId, int? toListId);
+
+        /// <summary>
+        /// Copy contact to another list
+        /// </summary>
+        /// <remarks>
+        /// Copy contact to another list
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fromListId">List ID for list that contains contact.</param>
+        /// <param name="contactId">Contact ID</param>
+        /// <param name="toListId">List ID for list you want to copy the contact to.</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> ListsCopyContactPutAsyncWithHttpInfo (int? fromListId, int? contactId, int? toListId);
         /// <summary>
         /// Remove all opted out contacts
         /// </summary>
@@ -1287,6 +1337,177 @@ namespace IO.ClickSend.ClickSend.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("ListsContactsByListIdPost", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Copy contact to another list Copy contact to another list
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fromListId">List ID for list that contains contact.</param>
+        /// <param name="contactId">Contact ID</param>
+        /// <param name="toListId">List ID for list you want to copy the contact to.</param>
+        /// <returns>string</returns>
+        public string ListsCopyContactPut (int? fromListId, int? contactId, int? toListId)
+        {
+             ApiResponse<string> localVarResponse = ListsCopyContactPutWithHttpInfo(fromListId, contactId, toListId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Copy contact to another list Copy contact to another list
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fromListId">List ID for list that contains contact.</param>
+        /// <param name="contactId">Contact ID</param>
+        /// <param name="toListId">List ID for list you want to copy the contact to.</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > ListsCopyContactPutWithHttpInfo (int? fromListId, int? contactId, int? toListId)
+        {
+            // verify the required parameter 'fromListId' is set
+            if (fromListId == null)
+                throw new ApiException(400, "Missing required parameter 'fromListId' when calling ContactApi->ListsCopyContactPut");
+            // verify the required parameter 'contactId' is set
+            if (contactId == null)
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling ContactApi->ListsCopyContactPut");
+            // verify the required parameter 'toListId' is set
+            if (toListId == null)
+                throw new ApiException(400, "Missing required parameter 'toListId' when calling ContactApi->ListsCopyContactPut");
+
+            var localVarPath = "/lists/{from_list_id}/contacts/{contact_id}/copy/{to_list_id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (fromListId != null) localVarPathParams.Add("from_list_id", this.Configuration.ApiClient.ParameterToString(fromListId)); // path parameter
+            if (contactId != null) localVarPathParams.Add("contact_id", this.Configuration.ApiClient.ParameterToString(contactId)); // path parameter
+            if (toListId != null) localVarPathParams.Add("to_list_id", this.Configuration.ApiClient.ParameterToString(toListId)); // path parameter
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ListsCopyContactPut", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Copy contact to another list Copy contact to another list
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fromListId">List ID for list that contains contact.</param>
+        /// <param name="contactId">Contact ID</param>
+        /// <param name="toListId">List ID for list you want to copy the contact to.</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> ListsCopyContactPutAsync (int? fromListId, int? contactId, int? toListId)
+        {
+             ApiResponse<string> localVarResponse = await ListsCopyContactPutAsyncWithHttpInfo(fromListId, contactId, toListId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Copy contact to another list Copy contact to another list
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fromListId">List ID for list that contains contact.</param>
+        /// <param name="contactId">Contact ID</param>
+        /// <param name="toListId">List ID for list you want to copy the contact to.</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> ListsCopyContactPutAsyncWithHttpInfo (int? fromListId, int? contactId, int? toListId)
+        {
+            // verify the required parameter 'fromListId' is set
+            if (fromListId == null)
+                throw new ApiException(400, "Missing required parameter 'fromListId' when calling ContactApi->ListsCopyContactPut");
+            // verify the required parameter 'contactId' is set
+            if (contactId == null)
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling ContactApi->ListsCopyContactPut");
+            // verify the required parameter 'toListId' is set
+            if (toListId == null)
+                throw new ApiException(400, "Missing required parameter 'toListId' when calling ContactApi->ListsCopyContactPut");
+
+            var localVarPath = "/lists/{from_list_id}/contacts/{contact_id}/copy/{to_list_id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (fromListId != null) localVarPathParams.Add("from_list_id", this.Configuration.ApiClient.ParameterToString(fromListId)); // path parameter
+            if (contactId != null) localVarPathParams.Add("contact_id", this.Configuration.ApiClient.ParameterToString(contactId)); // path parameter
+            if (toListId != null) localVarPathParams.Add("to_list_id", this.Configuration.ApiClient.ParameterToString(toListId)); // path parameter
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ListsCopyContactPut", localVarResponse);
                 if (exception != null) throw exception;
             }
 

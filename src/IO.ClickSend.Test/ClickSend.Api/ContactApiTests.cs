@@ -132,6 +132,20 @@ namespace IO.ClickSend.Test
         }
         
         /// <summary>
+        /// Test ListsCopyContactPut
+        /// </summary>
+        [Test]
+        public void ListsCopyContactPutTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? fromListId = null;
+            //int? contactId = null;
+            //int? toListId = null;
+            //var response = instance.ListsCopyContactPut(fromListId, contactId, toListId);
+            //Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
         /// Test ListsRemoveOptedOutContactsByListIdAndOptOutListIdPut
         /// </summary>
         [Test]

@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**ListsContactsByListIdAndContactIdPut**](ContactApi.md#listscontactsbylistidandcontactidput) | **PUT** /lists/{list_id}/contacts/{contact_id} | Update specific contact
 [**ListsContactsByListIdGet**](ContactApi.md#listscontactsbylistidget) | **GET** /lists/{list_id}/contacts | Get all contacts in a list
 [**ListsContactsByListIdPost**](ContactApi.md#listscontactsbylistidpost) | **POST** /lists/{list_id}/contacts | Create new contact
+[**ListsCopyContactPut**](ContactApi.md#listscopycontactput) | **PUT** /lists/{from_list_id}/contacts/{contact_id}/copy/{to_list_id} | Copy contact to another list
 [**ListsRemoveOptedOutContactsByListIdAndOptOutListIdPut**](ContactApi.md#listsremoveoptedoutcontactsbylistidandoptoutlistidput) | **PUT** /lists/{list_id}/remove-opted-out-contacts/{opt_out_list_id} | Remove all opted out contacts
 [**ListsTransferContactPut**](ContactApi.md#liststransfercontactput) | **PUT** /lists/{from_list_id}/contacts/{contact_id}/transfer/{to_list_id} | Transfer contact to another list
 
@@ -336,6 +337,75 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contact** | [**Contact**](Contact.md)| Contact model | 
  **listId** | **int?**| List id | 
+
+### Return type
+
+**string**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="listscopycontactput"></a>
+# **ListsCopyContactPut**
+> string ListsCopyContactPut (int? fromListId, int? contactId, int? toListId)
+
+Copy contact to another list
+
+Copy contact to another list
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.ClickSend.ClickSend.Api;
+using IO.ClickSend.Client;
+using IO.ClickSend.ClickSend.Model;
+
+namespace Example
+{
+    public class ListsCopyContactPutExample
+    {
+        public void main()
+        {
+            // Configure HTTP basic authorization: BasicAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new ContactApi();
+            var fromListId = 56;  // int? | List ID for list that contains contact.
+            var contactId = 56;  // int? | Contact ID
+            var toListId = 56;  // int? | List ID for list you want to copy the contact to.
+
+            try
+            {
+                // Copy contact to another list
+                string result = apiInstance.ListsCopyContactPut(fromListId, contactId, toListId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ContactApi.ListsCopyContactPut: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fromListId** | **int?**| List ID for list that contains contact. | 
+ **contactId** | **int?**| Contact ID | 
+ **toListId** | **int?**| List ID for list you want to copy the contact to. | 
 
 ### Return type
 
