@@ -26,7 +26,7 @@ using ClickSendDateConverter = IO.ClickSend.Client.ClickSendDateConverter;
 namespace IO.ClickSend.ClickSend.Model
 {
     /// <summary>
-    /// All dates before specified timestam.
+    /// All dates before specified timestamp.
     /// </summary>
     [DataContract]
     [JsonConverter(typeof(JsonSubtypes), "classType")]

@@ -71,9 +71,9 @@ namespace IO.ClickSend.Test
         public void UploadsPostTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //UploadFile uploadFile = null;
+            //Content content = null;
             //string convert = null;
-            //var response = instance.UploadsPost(uploadFile, convert);
+            //var response = instance.UploadsPost(content, convert);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }
         
