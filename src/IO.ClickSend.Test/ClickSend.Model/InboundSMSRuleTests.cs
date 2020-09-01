@@ -122,6 +122,14 @@ namespace IO.ClickSend.Test
         {
             // TODO unit test for the property 'Enabled'
         }
+        /// <summary>
+        /// Test the property 'WebhookType'
+        /// </summary>
+        [Test]
+        public void WebhookTypeTest()
+        {
+            // TODO unit test for the property 'WebhookType'
+        }
 
     }
 

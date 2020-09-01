@@ -47,7 +47,8 @@ namespace IO.ClickSend.ClickSend.Model
         /// <param name="action">Action to be taken (AUTO_REPLY, EMAIL_USER, EMAIL_FIXED, URL, SMS, POLL, GROUP_SMS, MOVE_CONTACT, CREATE_CONTACT, CREATE_CONTACT_PLUS_EMAIL, CREATE_CONTACT_PLUS_NAME_EMAIL CREATE_CONTACT_PLUS_NAME, SMPP, NONE). (required).</param>
         /// <param name="actionAddress">Action address. (required).</param>
         /// <param name="enabled">Enabled: Disabled&#x3D;0 or Enabled&#x3D;1. (required).</param>
-        public InboundSMSRule(string dedicatedNumber = default(string), string ruleName = default(string), decimal? messageSearchType = default(decimal?), string messageSearchTerm = default(string), string action = default(string), string actionAddress = default(string), decimal? enabled = default(decimal?))
+        /// <param name="webhookType">post, get, or json. post by default.</param>
+        public InboundSMSRule(string dedicatedNumber = default(string), string ruleName = default(string), decimal? messageSearchType = default(decimal?), string messageSearchTerm = default(string), string action = default(string), string actionAddress = default(string), decimal? enabled = default(decimal?), string webhookType = default(string))
         {
             // to ensure "dedicatedNumber" is required (not null)
             if (dedicatedNumber == null)
@@ -112,6 +113,7 @@ namespace IO.ClickSend.ClickSend.Model
             {
                 this.Enabled = enabled;
             }
+            this.WebhookType = webhookType;
         }
         
         /// <summary>
@@ -164,6 +166,13 @@ namespace IO.ClickSend.ClickSend.Model
         public decimal? Enabled { get; set; }
 
         /// <summary>
+        /// post, get, or json. post by default
+        /// </summary>
+        /// <value>post, get, or json. post by default</value>
+        [DataMember(Name="webhook_type", EmitDefaultValue=false)]
+        public string WebhookType { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -178,6 +187,7 @@ namespace IO.ClickSend.ClickSend.Model
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  ActionAddress: ").Append(ActionAddress).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  WebhookType: ").Append(WebhookType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -246,6 +256,11 @@ namespace IO.ClickSend.ClickSend.Model
                     this.Enabled == input.Enabled ||
                     (this.Enabled != null &&
                     this.Enabled.Equals(input.Enabled))
+                ) && 
+                (
+                    this.WebhookType == input.WebhookType ||
+                    (this.WebhookType != null &&
+                    this.WebhookType.Equals(input.WebhookType))
                 );
         }
 
@@ -272,6 +287,8 @@ namespace IO.ClickSend.ClickSend.Model
                     hashCode = hashCode * 59 + this.ActionAddress.GetHashCode();
                 if (this.Enabled != null)
                     hashCode = hashCode * 59 + this.Enabled.GetHashCode();
+                if (this.WebhookType != null)
+                    hashCode = hashCode * 59 + this.WebhookType.GetHashCode();
                 return hashCode;
             }
         }
