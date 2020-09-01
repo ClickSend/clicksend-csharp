@@ -30,27 +30,27 @@ namespace IO.ClickSend.ClickSend.Model
     /// </summary>
     [DataContract]
     [JsonConverter(typeof(JsonSubtypes), "classType")]
-    public partial class Content :  IEquatable<Content>, IValidatableObject
+    public partial class UploadFile :  IEquatable<UploadFile>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Content" /> class.
+        /// Initializes a new instance of the <see cref="UploadFile" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected Content() { }
+        protected UploadFile() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="Content" /> class.
+        /// Initializes a new instance of the <see cref="UploadFile" /> class.
         /// </summary>
         /// <param name="content">Your base64 encoded file string. (required).</param>
-        public Content(string content = default(string))
+        public UploadFile(string content = default(string))
         {
             // to ensure "content" is required (not null)
             if (content == null)
             {
-                throw new InvalidDataException("content is a required property for Content and cannot be null");
+                throw new InvalidDataException("content is a required property for UploadFile and cannot be null");
             }
             else
             {
-                this._Content = content;
+                this.Content = content;
             }
         }
         
@@ -59,7 +59,7 @@ namespace IO.ClickSend.ClickSend.Model
         /// </summary>
         /// <value>Your base64 encoded file string.</value>
         [DataMember(Name="content", EmitDefaultValue=false)]
-        public string _Content { get; set; }
+        public string Content { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -68,8 +68,8 @@ namespace IO.ClickSend.ClickSend.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Content {\n");
-            sb.Append("  _Content: ").Append(_Content).Append("\n");
+            sb.Append("class UploadFile {\n");
+            sb.Append("  Content: ").Append(Content).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -90,24 +90,24 @@ namespace IO.ClickSend.ClickSend.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as Content);
+            return this.Equals(input as UploadFile);
         }
 
         /// <summary>
-        /// Returns true if Content instances are equal
+        /// Returns true if UploadFile instances are equal
         /// </summary>
-        /// <param name="input">Instance of Content to be compared</param>
+        /// <param name="input">Instance of UploadFile to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Content input)
+        public bool Equals(UploadFile input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this._Content == input._Content ||
-                    (this._Content != null &&
-                    this._Content.Equals(input._Content))
+                    this.Content == input.Content ||
+                    (this.Content != null &&
+                    this.Content.Equals(input.Content))
                 );
         }
 
@@ -120,8 +120,8 @@ namespace IO.ClickSend.ClickSend.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._Content != null)
-                    hashCode = hashCode * 59 + this._Content.GetHashCode();
+                if (this.Content != null)
+                    hashCode = hashCode * 59 + this.Content.GetHashCode();
                 return hashCode;
             }
         }

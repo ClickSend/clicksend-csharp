@@ -71,8 +71,8 @@ namespace IO.ClickSend.Test
         public void DetectAddressPostTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //Content content = null;
-            //var response = instance.DetectAddressPost(content);
+            //UploadFile uploadFile = null;
+            //var response = instance.DetectAddressPost(uploadFile);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }
         

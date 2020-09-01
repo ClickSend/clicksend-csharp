@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="uploadspost"></a>
 # **UploadsPost**
-> string UploadsPost (Content content, string convert)
+> string UploadsPost (UploadFile uploadFile, string convert)
 
 Upload File
 
@@ -34,13 +34,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new UploadApi();
-            var content = new Content(); // Content | Your file to be uploaded
+            var uploadFile = new UploadFile(); // UploadFile | Your file to be uploaded
             var convert = convert_example;  // string | 
 
             try
             {
                 // Upload File
-                string result = apiInstance.UploadsPost(content, convert);
+                string result = apiInstance.UploadsPost(uploadFile, convert);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -56,7 +56,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **content** | [**Content**](Content.md)| Your file to be uploaded | 
+ **uploadFile** | [**UploadFile**](UploadFile.md)| Your file to be uploaded | 
  **convert** | **string**|  | 
 
 ### Return type
