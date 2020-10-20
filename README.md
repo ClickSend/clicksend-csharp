@@ -9,14 +9,14 @@ This is the official [ClickSend](https://clicksend.com) SDK. Documentation can b
 
 <a name="frameworks-supported"></a>
 ## Frameworks supported
-- .NET 4.0 or later
+- .NET 4.8 or later
 - Windows Phone 7.1 (Mango)
 
 <a name="dependencies"></a>
 ## Dependencies
-- [RestSharp](https://www.nuget.org/packages/RestSharp) - 105.1.0 or later
-- [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/) - 7.0.0 or later
-- [JsonSubTypes](https://www.nuget.org/packages/JsonSubTypes/) - 1.2.0 or later
+- [RestSharp](https://www.nuget.org/packages/RestSharp) - 106.11.7 or later
+- [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/) - 12.0.3 or later
+- [JsonSubTypes](https://www.nuget.org/packages/JsonSubTypes/) - 1.8.0 or later
 
 The DLLs included in the package may not be the latest version. We recommend using [NuGet](https://docs.nuget.org/consume/installing-nuget) to obtain the latest version of the packages:
 ```
