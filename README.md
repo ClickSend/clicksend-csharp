@@ -9,7 +9,7 @@ This is the official [ClickSend](https://clicksend.com) SDK. Documentation can b
 
 <a name="frameworks-supported"></a>
 ## Frameworks supported
-- .NET 4.8 or later
+- .NET 4.0 or later
 - Windows Phone 7.1 (Mango)
 
 <a name="dependencies"></a>
