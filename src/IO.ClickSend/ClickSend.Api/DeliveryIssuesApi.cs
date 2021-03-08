@@ -14,7 +14,6 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using IO.ClickSend.Client;
-using IO.ClickSend.ClickSend.Model;
 
 namespace IO.ClickSend.ClickSend.Api
 {

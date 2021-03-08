@@ -19,7 +19,6 @@ using NUnit.Framework;
 
 using IO.ClickSend.Client;
 using IO.ClickSend.ClickSend.Api;
-using IO.ClickSend.ClickSend.Model;
 
 namespace IO.ClickSend.Test
 {
