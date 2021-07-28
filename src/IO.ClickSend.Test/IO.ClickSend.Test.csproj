@@ -81,7 +81,7 @@ Contact: support@clicksend.com
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\IO.ClickSend\IO.ClickSend.csproj">
-          <Project>{BD79A8B2-B43D-4C3D-A481-58C6A7F922C5}</Project>
+          <Project>{3AE3FD82-48C0-448C-BB99-D236C9A3A167}</Project>
           <Name>IO.ClickSend</Name>
       </ProjectReference>
   </ItemGroup>
