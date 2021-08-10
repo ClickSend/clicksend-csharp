@@ -24,6 +24,56 @@ namespace IO.ClickSend.ClickSend.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Export all mms history
+        /// </summary>
+        /// <remarks>
+        /// Export all mms history
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filename">Filename to download history as</param>
+        /// <returns>string</returns>
+        string MmsHistoryExportGet (string filename);
+
+        /// <summary>
+        /// Export all mms history
+        /// </summary>
+        /// <remarks>
+        /// Export all mms history
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filename">Filename to download history as</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> MmsHistoryExportGetWithHttpInfo (string filename);
+        /// <summary>
+        /// Get all mms history
+        /// </summary>
+        /// <remarks>
+        /// Get all mms history
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Custom query Example: from:{number},status_code:201. (optional)</param>
+        /// <param name="dateFrom">Start date (optional)</param>
+        /// <param name="dateTo">End date (optional)</param>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <returns>string</returns>
+        string MmsHistoryGet (string q = null, int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null);
+
+        /// <summary>
+        /// Get all mms history
+        /// </summary>
+        /// <remarks>
+        /// Get all mms history
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Custom query Example: from:{number},status_code:201. (optional)</param>
+        /// <param name="dateFrom">Start date (optional)</param>
+        /// <param name="dateTo">End date (optional)</param>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> MmsHistoryGetWithHttpInfo (string q = null, int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null);
+        /// <summary>
         /// Get Price for MMS sent
         /// </summary>
         /// <remarks>
@@ -111,6 +161,56 @@ namespace IO.ClickSend.ClickSend.Api
         ApiResponse<string> MmsSendPostWithHttpInfo (MmsMessageCollection mmsMessages);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Export all mms history
+        /// </summary>
+        /// <remarks>
+        /// Export all mms history
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filename">Filename to download history as</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> MmsHistoryExportGetAsync (string filename);
+
+        /// <summary>
+        /// Export all mms history
+        /// </summary>
+        /// <remarks>
+        /// Export all mms history
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filename">Filename to download history as</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> MmsHistoryExportGetAsyncWithHttpInfo (string filename);
+        /// <summary>
+        /// Get all mms history
+        /// </summary>
+        /// <remarks>
+        /// Get all mms history
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Custom query Example: from:{number},status_code:201. (optional)</param>
+        /// <param name="dateFrom">Start date (optional)</param>
+        /// <param name="dateTo">End date (optional)</param>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> MmsHistoryGetAsync (string q = null, int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null);
+
+        /// <summary>
+        /// Get all mms history
+        /// </summary>
+        /// <remarks>
+        /// Get all mms history
+        /// </remarks>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Custom query Example: from:{number},status_code:201. (optional)</param>
+        /// <param name="dateFrom">Start date (optional)</param>
+        /// <param name="dateTo">End date (optional)</param>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> MmsHistoryGetAsyncWithHttpInfo (string q = null, int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null);
         /// <summary>
         /// Get Price for MMS sent
         /// </summary>
@@ -295,6 +395,318 @@ namespace IO.ClickSend.ClickSend.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Export all mms history Export all mms history
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filename">Filename to download history as</param>
+        /// <returns>string</returns>
+        public string MmsHistoryExportGet (string filename)
+        {
+             ApiResponse<string> localVarResponse = MmsHistoryExportGetWithHttpInfo(filename);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Export all mms history Export all mms history
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filename">Filename to download history as</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > MmsHistoryExportGetWithHttpInfo (string filename)
+        {
+            // verify the required parameter 'filename' is set
+            if (filename == null)
+                throw new ApiException(400, "Missing required parameter 'filename' when calling MMSApi->MmsHistoryExportGet");
+
+            var localVarPath = "/mms/history/export";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (filename != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "filename", filename)); // query parameter
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MmsHistoryExportGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Export all mms history Export all mms history
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filename">Filename to download history as</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> MmsHistoryExportGetAsync (string filename)
+        {
+             ApiResponse<string> localVarResponse = await MmsHistoryExportGetAsyncWithHttpInfo(filename);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Export all mms history Export all mms history
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filename">Filename to download history as</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> MmsHistoryExportGetAsyncWithHttpInfo (string filename)
+        {
+            // verify the required parameter 'filename' is set
+            if (filename == null)
+                throw new ApiException(400, "Missing required parameter 'filename' when calling MMSApi->MmsHistoryExportGet");
+
+            var localVarPath = "/mms/history/export";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (filename != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "filename", filename)); // query parameter
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MmsHistoryExportGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Get all mms history Get all mms history
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Custom query Example: from:{number},status_code:201. (optional)</param>
+        /// <param name="dateFrom">Start date (optional)</param>
+        /// <param name="dateTo">End date (optional)</param>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <returns>string</returns>
+        public string MmsHistoryGet (string q = null, int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<string> localVarResponse = MmsHistoryGetWithHttpInfo(q, dateFrom, dateTo, page, limit);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get all mms history Get all mms history
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Custom query Example: from:{number},status_code:201. (optional)</param>
+        /// <param name="dateFrom">Start date (optional)</param>
+        /// <param name="dateTo">End date (optional)</param>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > MmsHistoryGetWithHttpInfo (string q = null, int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null)
+        {
+
+            var localVarPath = "/mms/history";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (q != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "q", q)); // query parameter
+            if (dateFrom != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "date_from", dateFrom)); // query parameter
+            if (dateTo != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "date_to", dateTo)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MmsHistoryGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Get all mms history Get all mms history
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Custom query Example: from:{number},status_code:201. (optional)</param>
+        /// <param name="dateFrom">Start date (optional)</param>
+        /// <param name="dateTo">End date (optional)</param>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> MmsHistoryGetAsync (string q = null, int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<string> localVarResponse = await MmsHistoryGetAsyncWithHttpInfo(q, dateFrom, dateTo, page, limit);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get all mms history Get all mms history
+        /// </summary>
+        /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="q">Custom query Example: from:{number},status_code:201. (optional)</param>
+        /// <param name="dateFrom">Start date (optional)</param>
+        /// <param name="dateTo">End date (optional)</param>
+        /// <param name="page">Page number (optional, default to 1)</param>
+        /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> MmsHistoryGetAsyncWithHttpInfo (string q = null, int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null)
+        {
+
+            var localVarPath = "/mms/history";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (q != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "q", q)); // query parameter
+            if (dateFrom != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "date_from", dateFrom)); // query parameter
+            if (dateTo != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "date_to", dateTo)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+
+            // authentication (BasicAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MmsHistoryGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
         /// <summary>

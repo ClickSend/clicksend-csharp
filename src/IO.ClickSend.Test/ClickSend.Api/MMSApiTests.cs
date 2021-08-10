@@ -64,6 +64,34 @@ namespace IO.ClickSend.Test
 
         
         /// <summary>
+        /// Test MmsHistoryExportGet
+        /// </summary>
+        [Test]
+        public void MmsHistoryExportGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string filename = null;
+            //var response = instance.MmsHistoryExportGet(filename);
+            //Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
+        /// Test MmsHistoryGet
+        /// </summary>
+        [Test]
+        public void MmsHistoryGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string q = null;
+            //int? dateFrom = null;
+            //int? dateTo = null;
+            //int? page = null;
+            //int? limit = null;
+            //var response = instance.MmsHistoryGet(q, dateFrom, dateTo, page, limit);
+            //Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
         /// Test MmsPricePost
         /// </summary>
         [Test]
