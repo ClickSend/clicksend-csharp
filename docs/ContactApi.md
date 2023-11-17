@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 
 <a name="listscontactsbylistidget"></a>
 # **ListsContactsByListIdGet**
-> string ListsContactsByListIdGet (int? listId, int? page = null, int? limit = null)
+> string ListsContactsByListIdGet (int? listId, int? page = null, int? limit = null, int? updatedAfter = null)
 
 Get all contacts in a list
 
@@ -247,11 +247,12 @@ namespace Example
             var listId = 56;  // int? | Contact list ID
             var page = 56;  // int? | Page number (optional)  (default to 1)
             var limit = 56;  // int? | Number of records per page (optional)  (default to 10)
+            var updatedAfter = 56;  // int? | Get all contacts updated after a given timestamp. (optional)  (default to 10)
 
             try
             {
                 // Get all contacts in a list
-                string result = apiInstance.ListsContactsByListIdGet(listId, page, limit);
+                string result = apiInstance.ListsContactsByListIdGet(listId, page, limit, updatedAfter);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -270,6 +271,7 @@ Name | Type | Description  | Notes
  **listId** | **int?**| Contact list ID | 
  **page** | **int?**| Page number | [optional] [default to 1]
  **limit** | **int?**| Number of records per page | [optional] [default to 10]
+ **updatedAfter** | **int?**| Get all contacts updated after a given timestamp. | [optional] [default to 10]
 
 ### Return type
 
