@@ -113,7 +113,8 @@ namespace IO.ClickSend.Test
             //int? listId = null;
             //int? page = null;
             //int? limit = null;
-            //var response = instance.ListsContactsByListIdGet(listId, page, limit);
+            //int? updatedAfter = null;
+            //var response = instance.ListsContactsByListIdGet(listId, page, limit, updatedAfter);
             //Assert.IsInstanceOf<string> (response, "response is string");
         }
         

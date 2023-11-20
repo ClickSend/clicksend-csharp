@@ -104,8 +104,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="listId">Contact list ID</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <param name="updatedAfter">Get all contacts updated after a given timestamp. (optional, default to 10)</param>
         /// <returns>string</returns>
-        string ListsContactsByListIdGet (int? listId, int? page = null, int? limit = null);
+        string ListsContactsByListIdGet (int? listId, int? page = null, int? limit = null, int? updatedAfter = null);
 
         /// <summary>
         /// Get all contacts in a list
@@ -117,8 +118,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="listId">Contact list ID</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <param name="updatedAfter">Get all contacts updated after a given timestamp. (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> ListsContactsByListIdGetWithHttpInfo (int? listId, int? page = null, int? limit = null);
+        ApiResponse<string> ListsContactsByListIdGetWithHttpInfo (int? listId, int? page = null, int? limit = null, int? updatedAfter = null);
         /// <summary>
         /// Create new contact
         /// </summary>
@@ -298,8 +300,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="listId">Contact list ID</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <param name="updatedAfter">Get all contacts updated after a given timestamp. (optional, default to 10)</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> ListsContactsByListIdGetAsync (int? listId, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<string> ListsContactsByListIdGetAsync (int? listId, int? page = null, int? limit = null, int? updatedAfter = null);
 
         /// <summary>
         /// Get all contacts in a list
@@ -311,8 +314,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="listId">Contact list ID</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <param name="updatedAfter">Get all contacts updated after a given timestamp. (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> ListsContactsByListIdGetAsyncWithHttpInfo (int? listId, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<string>> ListsContactsByListIdGetAsyncWithHttpInfo (int? listId, int? page = null, int? limit = null, int? updatedAfter = null);
         /// <summary>
         /// Create new contact
         /// </summary>
@@ -1019,10 +1023,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="listId">Contact list ID</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <param name="updatedAfter">Get all contacts updated after a given timestamp. (optional, default to 10)</param>
         /// <returns>string</returns>
-        public string ListsContactsByListIdGet (int? listId, int? page = null, int? limit = null)
+        public string ListsContactsByListIdGet (int? listId, int? page = null, int? limit = null, int? updatedAfter = null)
         {
-             ApiResponse<string> localVarResponse = ListsContactsByListIdGetWithHttpInfo(listId, page, limit);
+             ApiResponse<string> localVarResponse = ListsContactsByListIdGetWithHttpInfo(listId, page, limit, updatedAfter);
              return localVarResponse.Data;
         }
 
@@ -1033,8 +1038,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="listId">Contact list ID</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <param name="updatedAfter">Get all contacts updated after a given timestamp. (optional, default to 10)</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > ListsContactsByListIdGetWithHttpInfo (int? listId, int? page = null, int? limit = null)
+        public ApiResponse< string > ListsContactsByListIdGetWithHttpInfo (int? listId, int? page = null, int? limit = null, int? updatedAfter = null)
         {
             // verify the required parameter 'listId' is set
             if (listId == null)
@@ -1065,6 +1071,7 @@ namespace IO.ClickSend.ClickSend.Api
             if (listId != null) localVarPathParams.Add("list_id", this.Configuration.ApiClient.ParameterToString(listId)); // path parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (updatedAfter != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "updated_after", updatedAfter)); // query parameter
 
             // authentication (BasicAuth) required
             // http basic authentication required
@@ -1098,10 +1105,11 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="listId">Contact list ID</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <param name="updatedAfter">Get all contacts updated after a given timestamp. (optional, default to 10)</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> ListsContactsByListIdGetAsync (int? listId, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<string> ListsContactsByListIdGetAsync (int? listId, int? page = null, int? limit = null, int? updatedAfter = null)
         {
-             ApiResponse<string> localVarResponse = await ListsContactsByListIdGetAsyncWithHttpInfo(listId, page, limit);
+             ApiResponse<string> localVarResponse = await ListsContactsByListIdGetAsyncWithHttpInfo(listId, page, limit, updatedAfter);
              return localVarResponse.Data;
 
         }
@@ -1113,8 +1121,9 @@ namespace IO.ClickSend.ClickSend.Api
         /// <param name="listId">Contact list ID</param>
         /// <param name="page">Page number (optional, default to 1)</param>
         /// <param name="limit">Number of records per page (optional, default to 10)</param>
+        /// <param name="updatedAfter">Get all contacts updated after a given timestamp. (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> ListsContactsByListIdGetAsyncWithHttpInfo (int? listId, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> ListsContactsByListIdGetAsyncWithHttpInfo (int? listId, int? page = null, int? limit = null, int? updatedAfter = null)
         {
             // verify the required parameter 'listId' is set
             if (listId == null)
@@ -1145,6 +1154,7 @@ namespace IO.ClickSend.ClickSend.Api
             if (listId != null) localVarPathParams.Add("list_id", this.Configuration.ApiClient.ParameterToString(listId)); // path parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (updatedAfter != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "updated_after", updatedAfter)); // query parameter
 
             // authentication (BasicAuth) required
             // http basic authentication required
