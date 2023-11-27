@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**FaxInboundAutomationPut**](InboundFAXRulesApi.md#faxinboundautomationput) | **PUT** /automations/fax/inbound/{inbound_rule_id} | Update inbound fax automation
 [**FaxInboundAutomationsGet**](InboundFAXRulesApi.md#faxinboundautomationsget) | **GET** /automations/fax/inbound | Get all inbound fax automations
 
-
 <a name="faxinboundautomationdelete"></a>
 # **FaxInboundAutomationDelete**
 > string FaxInboundAutomationDelete (int? inboundRuleId)
@@ -71,11 +70,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="faxinboundautomationget"></a>
 # **FaxInboundAutomationGet**
 > string FaxInboundAutomationGet (int? inboundRuleId)
@@ -136,14 +134,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="faxinboundautomationpost"></a>
 # **FaxInboundAutomationPost**
-> string FaxInboundAutomationPost (InboundFaxRule inboundFaxRule)
+> string FaxInboundAutomationPost (InboundFaxRule body)
 
 Create new inbound fax automation
 
@@ -168,12 +165,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new InboundFAXRulesApi();
-            var inboundFaxRule = new InboundFaxRule(); // InboundFaxRule | Inbound fax rule model
+            var body = new InboundFaxRule(); // InboundFaxRule | Inbound fax rule model
 
             try
             {
                 // Create new inbound fax automation
-                string result = apiInstance.FaxInboundAutomationPost(inboundFaxRule);
+                string result = apiInstance.FaxInboundAutomationPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -189,7 +186,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inboundFaxRule** | [**InboundFaxRule**](InboundFaxRule.md)| Inbound fax rule model | 
+ **body** | [**InboundFaxRule**](InboundFaxRule.md)| Inbound fax rule model | 
 
 ### Return type
 
@@ -205,10 +202,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="faxinboundautomationput"></a>
 # **FaxInboundAutomationPut**
-> string FaxInboundAutomationPut (int? inboundRuleId, InboundFaxRule inboundFaxRule)
+> string FaxInboundAutomationPut (InboundFaxRule body, int? inboundRuleId)
 
 Update inbound fax automation
 
@@ -233,13 +229,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new InboundFAXRulesApi();
+            var body = new InboundFaxRule(); // InboundFaxRule | Inbound fax rule model
             var inboundRuleId = 56;  // int? | Inbound rule id
-            var inboundFaxRule = new InboundFaxRule(); // InboundFaxRule | Inbound fax rule model
 
             try
             {
                 // Update inbound fax automation
-                string result = apiInstance.FaxInboundAutomationPut(inboundRuleId, inboundFaxRule);
+                string result = apiInstance.FaxInboundAutomationPut(body, inboundRuleId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -255,8 +251,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**InboundFaxRule**](InboundFaxRule.md)| Inbound fax rule model | 
  **inboundRuleId** | **int?**| Inbound rule id | 
- **inboundFaxRule** | [**InboundFaxRule**](InboundFaxRule.md)| Inbound fax rule model | 
 
 ### Return type
 
@@ -272,7 +268,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="faxinboundautomationsget"></a>
 # **FaxInboundAutomationsGet**
 > string FaxInboundAutomationsGet (string q = null, int? page = null, int? limit = null)
@@ -337,8 +332,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

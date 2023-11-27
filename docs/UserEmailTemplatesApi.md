@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**EmailTemplatePut**](UserEmailTemplatesApi.md#emailtemplateput) | **PUT** /email/templates/{template_id} | Update email template
 [**EmailTemplatesGet**](UserEmailTemplatesApi.md#emailtemplatesget) | **GET** /email/templates | Get all user email templates
 
-
 <a name="emailtemplatedelete"></a>
 # **EmailTemplateDelete**
 > string EmailTemplateDelete (int? templateId)
@@ -71,11 +70,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="emailtemplateget"></a>
 # **EmailTemplateGet**
 > string EmailTemplateGet (int? templateId)
@@ -136,14 +134,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="emailtemplatepost"></a>
 # **EmailTemplatePost**
-> string EmailTemplatePost (EmailTemplateNew emailTemplate)
+> string EmailTemplatePost (EmailTemplateNew body)
 
 Create email template
 
@@ -168,12 +165,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new UserEmailTemplatesApi();
-            var emailTemplate = new EmailTemplateNew(); // EmailTemplateNew | Email template model
+            var body = new EmailTemplateNew(); // EmailTemplateNew | Email template model
 
             try
             {
                 // Create email template
-                string result = apiInstance.EmailTemplatePost(emailTemplate);
+                string result = apiInstance.EmailTemplatePost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -189,7 +186,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **emailTemplate** | [**EmailTemplateNew**](EmailTemplateNew.md)| Email template model | 
+ **body** | [**EmailTemplateNew**](EmailTemplateNew.md)| Email template model | 
 
 ### Return type
 
@@ -205,10 +202,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="emailtemplateput"></a>
 # **EmailTemplatePut**
-> string EmailTemplatePut (int? templateId, EmailTemplateUpdate emailTemplate)
+> string EmailTemplatePut (EmailTemplateUpdate body, int? templateId)
 
 Update email template
 
@@ -233,13 +229,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new UserEmailTemplatesApi();
+            var body = new EmailTemplateUpdate(); // EmailTemplateUpdate | Email template model
             var templateId = 56;  // int? | Email template id
-            var emailTemplate = new EmailTemplateUpdate(); // EmailTemplateUpdate | Email template model
 
             try
             {
                 // Update email template
-                string result = apiInstance.EmailTemplatePut(templateId, emailTemplate);
+                string result = apiInstance.EmailTemplatePut(body, templateId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -255,8 +251,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**EmailTemplateUpdate**](EmailTemplateUpdate.md)| Email template model | 
  **templateId** | **int?**| Email template id | 
- **emailTemplate** | [**EmailTemplateUpdate**](EmailTemplateUpdate.md)| Email template model | 
 
 ### Return type
 
@@ -272,7 +268,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="emailtemplatesget"></a>
 # **EmailTemplatesGet**
 > string EmailTemplatesGet (int? page = null, int? limit = null)
@@ -335,8 +330,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

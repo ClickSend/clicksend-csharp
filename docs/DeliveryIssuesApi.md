@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**DeliveryIssuesGet**](DeliveryIssuesApi.md#deliveryissuesget) | **GET** /delivery-issues | Get all delivery issues
 [**DeliveryIssuesPost**](DeliveryIssuesApi.md#deliveryissuespost) | **POST** /delivery-issues | Create delivery Issue
 
-
 <a name="deliveryissuesget"></a>
 # **DeliveryIssuesGet**
 > string DeliveryIssuesGet (int? page = null, int? limit = null)
@@ -70,14 +69,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="deliveryissuespost"></a>
 # **DeliveryIssuesPost**
-> string DeliveryIssuesPost (DeliveryIssue deliveryIssue)
+> string DeliveryIssuesPost (DeliveryIssue body)
 
 Create delivery Issue
 
@@ -102,12 +100,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new DeliveryIssuesApi();
-            var deliveryIssue = new DeliveryIssue(); // DeliveryIssue | DeliveryIssue model
+            var body = new DeliveryIssue(); // DeliveryIssue | DeliveryIssue model
 
             try
             {
                 // Create delivery Issue
-                string result = apiInstance.DeliveryIssuesPost(deliveryIssue);
+                string result = apiInstance.DeliveryIssuesPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -123,7 +121,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deliveryIssue** | [**DeliveryIssue**](DeliveryIssue.md)| DeliveryIssue model | 
+ **body** | [**DeliveryIssue**](DeliveryIssue.md)| DeliveryIssue model | 
 
 ### Return type
 
@@ -139,4 +137,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

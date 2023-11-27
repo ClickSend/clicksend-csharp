@@ -5,11 +5,11 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **To** | **string** | Your phone number in E.164 format. | [optional] 
 **Body** | **string** | Biscuit uv3nlCOjRk croissant chocolate lollipop chocolate muffin. | 
-**Voice** | **string** | Either &#39;female&#39; or &#39;male&#39;. | 
+**Voice** | **string** | Either &#x27;female&#x27; or &#x27;male&#x27;. | 
 **CustomString** | **string** | Your reference. Will be passed back with all replies and delivery reports. | 
 **Country** | **string** | The country of the recipient. | 
-**Source** | **string** | Your method of sending e.g. &#39;wordpress&#39;, &#39;php&#39;, &#39;c#&#39;. | [optional] [default to "sdk"]
-**ListId** | **int?** | Your list ID if sending to a whole list. Can be used instead of &#39;to&#39;. | [optional] 
+**Source** | **string** | Your method of sending e.g. &#x27;wordpress&#x27;, &#x27;php&#x27;, &#x27;c#&#x27;. | [optional] [default to "sdk"]
+**ListId** | **int?** | Your list ID if sending to a whole list. Can be used instead of &#x27;to&#x27;. | [optional] 
 **Lang** | **string** | au (string, required) - See section on available languages. | [optional] 
 **Schedule** | **int?** | Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp | [optional] 
 **RequireInput** | **int?** | Whether you want to receive a keypress from the call recipient | [optional] [default to 0]

@@ -23,7 +23,6 @@ Method | HTTP request | Description
 [**SmsTemplatesGet**](SMSApi.md#smstemplatesget) | **GET** /sms/templates | Get lists of all sms templates
 [**SmsTemplatesPost**](SMSApi.md#smstemplatespost) | **POST** /sms/templates | Create sms template
 
-
 <a name="smscancelallput"></a>
 # **SmsCancelAllPut**
 > string SmsCancelAllPut ()
@@ -80,11 +79,10 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smscancelbymessageidput"></a>
 # **SmsCancelByMessageIdPut**
 > string SmsCancelByMessageIdPut (string messageId)
@@ -145,11 +143,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smshistoryexportget"></a>
 # **SmsHistoryExportGet**
 > string SmsHistoryExportGet (string filename)
@@ -210,11 +207,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smshistoryget"></a>
 # **SmsHistoryGet**
 > string SmsHistoryGet (string q = null, int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null)
@@ -283,11 +279,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smsinboundget"></a>
 # **SmsInboundGet**
 > string SmsInboundGet (string q = null, int? page = null, int? limit = null)
@@ -352,14 +347,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smsinboundpost"></a>
 # **SmsInboundPost**
-> string SmsInboundPost (Url url)
+> string SmsInboundPost (Url body)
 
 Create inbound sms
 
@@ -384,12 +378,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SMSApi();
-            var url = new Url(); // Url | Url model
+            var body = new Url(); // Url | Url model
 
             try
             {
                 // Create inbound sms
-                string result = apiInstance.SmsInboundPost(url);
+                string result = apiInstance.SmsInboundPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -405,7 +399,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **url** | [**Url**](Url.md)| Url model | 
+ **body** | [**Url**](Url.md)| Url model | 
 
 ### Return type
 
@@ -421,7 +415,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smsinboundreadbymessageidput"></a>
 # **SmsInboundReadByMessageIdPut**
 > string SmsInboundReadByMessageIdPut (string messageId)
@@ -482,14 +475,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smsinboundreadput"></a>
 # **SmsInboundReadPut**
-> string SmsInboundReadPut (DateBefore dateBefore = null)
+> string SmsInboundReadPut (DateBefore body = null)
 
 Mark inbound SMS as read
 
@@ -514,12 +506,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SMSApi();
-            var dateBefore = new DateBefore(); // DateBefore | DateBefore model (optional) 
+            var body = new DateBefore(); // DateBefore | DateBefore model (optional) 
 
             try
             {
                 // Mark inbound SMS as read
-                string result = apiInstance.SmsInboundReadPut(dateBefore);
+                string result = apiInstance.SmsInboundReadPut(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -535,7 +527,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dateBefore** | [**DateBefore**](DateBefore.md)| DateBefore model | [optional] 
+ **body** | [**DateBefore**](DateBefore.md)| DateBefore model | [optional] 
 
 ### Return type
 
@@ -551,10 +543,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smspricepost"></a>
 # **SmsPricePost**
-> string SmsPricePost (SmsMessageCollection smsMessages)
+> string SmsPricePost (SmsMessageCollection body)
 
 Calculate sms price
 
@@ -579,12 +570,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SMSApi();
-            var smsMessages = new SmsMessageCollection(); // SmsMessageCollection | SmsMessageCollection model
+            var body = new SmsMessageCollection(); // SmsMessageCollection | SmsMessageCollection model
 
             try
             {
                 // Calculate sms price
-                string result = apiInstance.SmsPricePost(smsMessages);
+                string result = apiInstance.SmsPricePost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -600,7 +591,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **smsMessages** | [**SmsMessageCollection**](SmsMessageCollection.md)| SmsMessageCollection model | 
+ **body** | [**SmsMessageCollection**](SmsMessageCollection.md)| SmsMessageCollection model | 
 
 ### Return type
 
@@ -616,7 +607,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smsreceiptsbymessageidget"></a>
 # **SmsReceiptsByMessageIdGet**
 > string SmsReceiptsByMessageIdGet (string messageId)
@@ -677,11 +667,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smsreceiptsget"></a>
 # **SmsReceiptsGet**
 > string SmsReceiptsGet (int? page = null, int? limit = null)
@@ -744,14 +733,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smsreceiptspost"></a>
 # **SmsReceiptsPost**
-> string SmsReceiptsPost (Url url)
+> string SmsReceiptsPost (Url body)
 
 Add a delivery receipt
 
@@ -776,12 +764,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SMSApi();
-            var url = new Url(); // Url | Url model
+            var body = new Url(); // Url | Url model
 
             try
             {
                 // Add a delivery receipt
-                string result = apiInstance.SmsReceiptsPost(url);
+                string result = apiInstance.SmsReceiptsPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -797,7 +785,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **url** | [**Url**](Url.md)| Url model | 
+ **body** | [**Url**](Url.md)| Url model | 
 
 ### Return type
 
@@ -813,10 +801,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smsreceiptsreadput"></a>
 # **SmsReceiptsReadPut**
-> string SmsReceiptsReadPut (DateBefore dateBefore = null)
+> string SmsReceiptsReadPut (DateBefore body = null)
 
 Mark delivery receipts as read
 
@@ -841,12 +828,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SMSApi();
-            var dateBefore = new DateBefore(); // DateBefore | DateBefore model (optional) 
+            var body = new DateBefore(); // DateBefore | DateBefore model (optional) 
 
             try
             {
                 // Mark delivery receipts as read
-                string result = apiInstance.SmsReceiptsReadPut(dateBefore);
+                string result = apiInstance.SmsReceiptsReadPut(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -862,7 +849,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dateBefore** | [**DateBefore**](DateBefore.md)| DateBefore model | [optional] 
+ **body** | [**DateBefore**](DateBefore.md)| DateBefore model | [optional] 
 
 ### Return type
 
@@ -878,10 +865,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smssendpost"></a>
 # **SmsSendPost**
-> string SmsSendPost (SmsMessageCollection smsMessages)
+> string SmsSendPost (SmsMessageCollection body)
 
 Send sms message(s)
 
@@ -906,12 +892,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SMSApi();
-            var smsMessages = new SmsMessageCollection(); // SmsMessageCollection | SmsMessageCollection model
+            var body = new SmsMessageCollection(); // SmsMessageCollection | SmsMessageCollection model
 
             try
             {
                 // Send sms message(s)
-                string result = apiInstance.SmsSendPost(smsMessages);
+                string result = apiInstance.SmsSendPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -927,7 +913,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **smsMessages** | [**SmsMessageCollection**](SmsMessageCollection.md)| SmsMessageCollection model | 
+ **body** | [**SmsMessageCollection**](SmsMessageCollection.md)| SmsMessageCollection model | 
 
 ### Return type
 
@@ -943,7 +929,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smstemplatesbytemplateiddelete"></a>
 # **SmsTemplatesByTemplateIdDelete**
 > string SmsTemplatesByTemplateIdDelete (int? templateId)
@@ -1004,14 +989,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smstemplatesbytemplateidput"></a>
 # **SmsTemplatesByTemplateIdPut**
-> string SmsTemplatesByTemplateIdPut (int? templateId, SmsTemplate smsTemplate)
+> string SmsTemplatesByTemplateIdPut (SmsTemplate body, int? templateId)
 
 Update sms template
 
@@ -1036,13 +1020,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SMSApi();
+            var body = new SmsTemplate(); // SmsTemplate | Template item
             var templateId = 56;  // int? | Template id
-            var smsTemplate = new SmsTemplate(); // SmsTemplate | Template item
 
             try
             {
                 // Update sms template
-                string result = apiInstance.SmsTemplatesByTemplateIdPut(templateId, smsTemplate);
+                string result = apiInstance.SmsTemplatesByTemplateIdPut(body, templateId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1058,8 +1042,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**SmsTemplate**](SmsTemplate.md)| Template item | 
  **templateId** | **int?**| Template id | 
- **smsTemplate** | [**SmsTemplate**](SmsTemplate.md)| Template item | 
 
 ### Return type
 
@@ -1075,7 +1059,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smstemplatesget"></a>
 # **SmsTemplatesGet**
 > string SmsTemplatesGet (int? page = null, int? limit = null)
@@ -1138,14 +1121,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smstemplatespost"></a>
 # **SmsTemplatesPost**
-> string SmsTemplatesPost (SmsTemplate smsTemplate)
+> string SmsTemplatesPost (SmsTemplate body)
 
 Create sms template
 
@@ -1170,12 +1152,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SMSApi();
-            var smsTemplate = new SmsTemplate(); // SmsTemplate | SmsTemplate model
+            var body = new SmsTemplate(); // SmsTemplate | SmsTemplate model
 
             try
             {
                 // Create sms template
-                string result = apiInstance.SmsTemplatesPost(smsTemplate);
+                string result = apiInstance.SmsTemplatesPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1191,7 +1173,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **smsTemplate** | [**SmsTemplate**](SmsTemplate.md)| SmsTemplate model | 
+ **body** | [**SmsTemplate**](SmsTemplate.md)| SmsTemplate model | 
 
 ### Return type
 
@@ -1207,4 +1189,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

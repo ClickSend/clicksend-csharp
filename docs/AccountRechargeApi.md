@@ -11,7 +11,6 @@ Method | HTTP request | Description
 [**RechargeTransactionsByTransactionIdGet**](AccountRechargeApi.md#rechargetransactionsbytransactionidget) | **GET** /recharge/transactions/{transaction_id} | Get specific Transaction
 [**RechargeTransactionsGet**](AccountRechargeApi.md#rechargetransactionsget) | **GET** /recharge/transactions | Purchase a package
 
-
 <a name="rechargecreditcardget"></a>
 # **RechargeCreditCardGet**
 > string RechargeCreditCardGet ()
@@ -68,14 +67,13 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="rechargecreditcardput"></a>
 # **RechargeCreditCardPut**
-> string RechargeCreditCardPut (CreditCard creditCard)
+> string RechargeCreditCardPut (CreditCard body)
 
 Update credit card info
 
@@ -100,12 +98,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new AccountRechargeApi();
-            var creditCard = new CreditCard(); // CreditCard | CreditCard model
+            var body = new CreditCard(); // CreditCard | CreditCard model
 
             try
             {
                 // Update credit card info
-                string result = apiInstance.RechargeCreditCardPut(creditCard);
+                string result = apiInstance.RechargeCreditCardPut(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -121,7 +119,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **creditCard** | [**CreditCard**](CreditCard.md)| CreditCard model | 
+ **body** | [**CreditCard**](CreditCard.md)| CreditCard model | 
 
 ### Return type
 
@@ -137,7 +135,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="rechargepackagesget"></a>
 # **RechargePackagesGet**
 > string RechargePackagesGet (string country = null)
@@ -198,11 +195,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="rechargepurchasebypackageidput"></a>
 # **RechargePurchaseByPackageIdPut**
 > string RechargePurchaseByPackageIdPut (int? packageId)
@@ -263,11 +259,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="rechargetransactionsbytransactionidget"></a>
 # **RechargeTransactionsByTransactionIdGet**
 > string RechargeTransactionsByTransactionIdGet (string transactionId)
@@ -328,11 +323,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="rechargetransactionsget"></a>
 # **RechargeTransactionsGet**
 > string RechargeTransactionsGet (int? page = null, int? limit = null)
@@ -395,8 +389,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

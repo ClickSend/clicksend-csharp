@@ -3,9 +3,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Source** | **string** | Your method of sending e.g. &#39;wordpress&#39;, &#39;php&#39;, &#39;c#&#39;. | [optional] [default to "sdk"]
+**Source** | **string** | Your method of sending e.g. &#x27;wordpress&#x27;, &#x27;php&#x27;, &#x27;c#&#x27;. | [optional] [default to "sdk"]
 **To** | **string** | Recipient fax number in E.164 format. | 
-**ListId** | **int?** | Your list ID if sending to a whole list. Can be used instead of &#39;to&#39;. | [optional] 
+**ListId** | **int?** | Your list ID if sending to a whole list. Can be used instead of &#x27;to&#x27;. | [optional] 
 **From** | **string** | Your sender id. Must be a valid fax number. | [optional] 
 **Schedule** | **int?** | Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp | [optional] 
 **CustomString** | **string** | Your reference. Will be passed back with all replies and delivery reports. | [optional] 

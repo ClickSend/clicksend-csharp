@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**VoiceDeliveryReceiptAutomationPut**](VoiceDeliveryReceiptRulesApi.md#voicedeliveryreceiptautomationput) | **PUT** /automations/voice/receipts/{receipt_rule_id} | Update voice delivery receipt automation
 [**VoiceDeliveryReceiptAutomationsGet**](VoiceDeliveryReceiptRulesApi.md#voicedeliveryreceiptautomationsget) | **GET** /automations/voice/receipts | Get all voice delivery receipt automations
 
-
 <a name="voicedeliveryreceiptautomationdelete"></a>
 # **VoiceDeliveryReceiptAutomationDelete**
 > string VoiceDeliveryReceiptAutomationDelete (int? receiptRuleId)
@@ -71,11 +70,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="voicedeliveryreceiptautomationget"></a>
 # **VoiceDeliveryReceiptAutomationGet**
 > string VoiceDeliveryReceiptAutomationGet (int? receiptRuleId)
@@ -136,14 +134,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="voicedeliveryreceiptautomationpost"></a>
 # **VoiceDeliveryReceiptAutomationPost**
-> string VoiceDeliveryReceiptAutomationPost (DeliveryReceiptRule deliveryReceiptRule)
+> string VoiceDeliveryReceiptAutomationPost (DeliveryReceiptRule body)
 
 Create voice delivery receipt automations
 
@@ -168,12 +165,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new VoiceDeliveryReceiptRulesApi();
-            var deliveryReceiptRule = new DeliveryReceiptRule(); // DeliveryReceiptRule | voice delivery receipt rule model
+            var body = new DeliveryReceiptRule(); // DeliveryReceiptRule | voice delivery receipt rule model
 
             try
             {
                 // Create voice delivery receipt automations
-                string result = apiInstance.VoiceDeliveryReceiptAutomationPost(deliveryReceiptRule);
+                string result = apiInstance.VoiceDeliveryReceiptAutomationPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -189,7 +186,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deliveryReceiptRule** | [**DeliveryReceiptRule**](DeliveryReceiptRule.md)| voice delivery receipt rule model | 
+ **body** | [**DeliveryReceiptRule**](DeliveryReceiptRule.md)| voice delivery receipt rule model | 
 
 ### Return type
 
@@ -205,10 +202,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="voicedeliveryreceiptautomationput"></a>
 # **VoiceDeliveryReceiptAutomationPut**
-> string VoiceDeliveryReceiptAutomationPut (int? receiptRuleId, DeliveryReceiptRule deliveryReceiptRule)
+> string VoiceDeliveryReceiptAutomationPut (DeliveryReceiptRule body, int? receiptRuleId)
 
 Update voice delivery receipt automation
 
@@ -233,13 +229,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new VoiceDeliveryReceiptRulesApi();
+            var body = new DeliveryReceiptRule(); // DeliveryReceiptRule | Delivery receipt rule model
             var receiptRuleId = 56;  // int? | Receipt rule id
-            var deliveryReceiptRule = new DeliveryReceiptRule(); // DeliveryReceiptRule | Delivery receipt rule model
 
             try
             {
                 // Update voice delivery receipt automation
-                string result = apiInstance.VoiceDeliveryReceiptAutomationPut(receiptRuleId, deliveryReceiptRule);
+                string result = apiInstance.VoiceDeliveryReceiptAutomationPut(body, receiptRuleId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -255,8 +251,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**DeliveryReceiptRule**](DeliveryReceiptRule.md)| Delivery receipt rule model | 
  **receiptRuleId** | **int?**| Receipt rule id | 
- **deliveryReceiptRule** | [**DeliveryReceiptRule**](DeliveryReceiptRule.md)| Delivery receipt rule model | 
 
 ### Return type
 
@@ -272,7 +268,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="voicedeliveryreceiptautomationsget"></a>
 # **VoiceDeliveryReceiptAutomationsGet**
 > string VoiceDeliveryReceiptAutomationsGet (string q = null, int? page = null, int? limit = null)
@@ -337,8 +332,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

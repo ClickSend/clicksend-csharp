@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **Subject** | **string** | Subject of the email. | [optional] 
 **Body** | **string** | Body of the email. | 
 **Attachments** | [**List&lt;Attachment&gt;**](Attachment.md) | Array of Attachment items. | [optional] 
-**Schedule** | **decimal?** | Schedule. | [optional] 
+**Schedule** | [**decimal?**](BigDecimal.md) | Schedule. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

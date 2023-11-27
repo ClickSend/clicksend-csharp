@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**MasterEmailTemplatesGet**](MasterEmailTemplatesApi.md#masteremailtemplatesget) | **GET** /email/master-templates | Get all master email templates
 [**MasterEmailTemplatesInCategoryGet**](MasterEmailTemplatesApi.md#masteremailtemplatesincategoryget) | **GET** /email/master-templates-categories/{category_id}/master-templates | Get all master email templates in a category
 
-
 <a name="masteremailtemplatecategoriesget"></a>
 # **MasterEmailTemplateCategoriesGet**
 > string MasterEmailTemplateCategoriesGet (int? page = null, int? limit = null)
@@ -73,11 +72,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="masteremailtemplatecategoryget"></a>
 # **MasterEmailTemplateCategoryGet**
 > string MasterEmailTemplateCategoryGet (int? categoryId)
@@ -138,11 +136,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="masteremailtemplateget"></a>
 # **MasterEmailTemplateGet**
 > string MasterEmailTemplateGet (int? templateId)
@@ -203,11 +200,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="masteremailtemplatesget"></a>
 # **MasterEmailTemplatesGet**
 > string MasterEmailTemplatesGet (int? page = null, int? limit = null)
@@ -270,11 +266,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="masteremailtemplatesincategoryget"></a>
 # **MasterEmailTemplatesInCategoryGet**
 > string MasterEmailTemplatesInCategoryGet (int? categoryId, int? page = null, int? limit = null)
@@ -339,8 +334,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

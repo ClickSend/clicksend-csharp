@@ -11,7 +11,6 @@ Method | HTTP request | Description
 [**SubaccountsPost**](SubaccountApi.md#subaccountspost) | **POST** /subaccounts | Create new subaccount
 [**SubaccountsRegenApiKeyBySubaccountIdPut**](SubaccountApi.md#subaccountsregenapikeybysubaccountidput) | **PUT** /subaccounts/{subaccount_id}/regen-api-key | Regenerate an API Key
 
-
 <a name="subaccountsbysubaccountiddelete"></a>
 # **SubaccountsBySubaccountIdDelete**
 > string SubaccountsBySubaccountIdDelete (int? subaccountId)
@@ -72,11 +71,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="subaccountsbysubaccountidget"></a>
 # **SubaccountsBySubaccountIdGet**
 > string SubaccountsBySubaccountIdGet (int? subaccountId)
@@ -137,14 +135,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="subaccountsbysubaccountidput"></a>
 # **SubaccountsBySubaccountIdPut**
-> string SubaccountsBySubaccountIdPut (int? subaccountId, Subaccount subaccount)
+> string SubaccountsBySubaccountIdPut (Subaccount body, int? subaccountId)
 
 Update subaccount
 
@@ -169,13 +166,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SubaccountApi();
+            var body = new Subaccount(); // Subaccount | Subaccount model
             var subaccountId = 56;  // int? | ID of subaccount to update
-            var subaccount = new Subaccount(); // Subaccount | Subaccount model
 
             try
             {
                 // Update subaccount
-                string result = apiInstance.SubaccountsBySubaccountIdPut(subaccountId, subaccount);
+                string result = apiInstance.SubaccountsBySubaccountIdPut(body, subaccountId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -191,8 +188,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**Subaccount**](Subaccount.md)| Subaccount model | 
  **subaccountId** | **int?**| ID of subaccount to update | 
- **subaccount** | [**Subaccount**](Subaccount.md)| Subaccount model | 
 
 ### Return type
 
@@ -208,7 +205,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="subaccountsget"></a>
 # **SubaccountsGet**
 > string SubaccountsGet (int? page = null, int? limit = null)
@@ -271,14 +267,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="subaccountspost"></a>
 # **SubaccountsPost**
-> string SubaccountsPost (Subaccount subaccount)
+> string SubaccountsPost (Subaccount body)
 
 Create new subaccount
 
@@ -303,12 +298,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SubaccountApi();
-            var subaccount = new Subaccount(); // Subaccount | Subaccount model
+            var body = new Subaccount(); // Subaccount | Subaccount model
 
             try
             {
                 // Create new subaccount
-                string result = apiInstance.SubaccountsPost(subaccount);
+                string result = apiInstance.SubaccountsPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -324,7 +319,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subaccount** | [**Subaccount**](Subaccount.md)| Subaccount model | 
+ **body** | [**Subaccount**](Subaccount.md)| Subaccount model | 
 
 ### Return type
 
@@ -340,7 +335,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="subaccountsregenapikeybysubaccountidput"></a>
 # **SubaccountsRegenApiKeyBySubaccountIdPut**
 > string SubaccountsRegenApiKeyBySubaccountIdPut (int? subaccountId)
@@ -401,8 +395,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

@@ -12,7 +12,6 @@ Method | HTTP request | Description
 [**FaxReceiptsReadPut**](FAXApi.md#faxreceiptsreadput) | **PUT** /fax/receipts-read | Mark delivery receipts as read
 [**FaxSendPost**](FAXApi.md#faxsendpost) | **POST** /fax/send | Send a fax using supplied supported file-types.
 
-
 <a name="faxhistoryget"></a>
 # **FaxHistoryGet**
 > string FaxHistoryGet (int? dateFrom = null, int? dateTo = null, string q = null, string order = null, int? page = null, int? limit = null)
@@ -83,14 +82,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="faxpricepost"></a>
 # **FaxPricePost**
-> string FaxPricePost (FaxMessageCollection faxMessage)
+> string FaxPricePost (FaxMessageCollection body)
 
 Calculate Total Price for Fax Messages sent
 
@@ -115,12 +113,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new FAXApi();
-            var faxMessage = new FaxMessageCollection(); // FaxMessageCollection | FaxMessageCollection model
+            var body = new FaxMessageCollection(); // FaxMessageCollection | FaxMessageCollection model
 
             try
             {
                 // Calculate Total Price for Fax Messages sent
-                string result = apiInstance.FaxPricePost(faxMessage);
+                string result = apiInstance.FaxPricePost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -136,7 +134,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **faxMessage** | [**FaxMessageCollection**](FaxMessageCollection.md)| FaxMessageCollection model | 
+ **body** | [**FaxMessageCollection**](FaxMessageCollection.md)| FaxMessageCollection model | 
 
 ### Return type
 
@@ -152,7 +150,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="faxreceiptsbymessageidget"></a>
 # **FaxReceiptsByMessageIdGet**
 > string FaxReceiptsByMessageIdGet (string messageId)
@@ -213,11 +210,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="faxreceiptsget"></a>
 # **FaxReceiptsGet**
 > string FaxReceiptsGet (int? page = null, int? limit = null)
@@ -280,14 +276,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="faxreceiptspost"></a>
 # **FaxReceiptsPost**
-> string FaxReceiptsPost (Url url)
+> string FaxReceiptsPost (Url body)
 
 Add a delivery receipt
 
@@ -312,12 +307,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new FAXApi();
-            var url = new Url(); // Url | Url model
+            var body = new Url(); // Url | Url model
 
             try
             {
                 // Add a delivery receipt
-                string result = apiInstance.FaxReceiptsPost(url);
+                string result = apiInstance.FaxReceiptsPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -333,7 +328,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **url** | [**Url**](Url.md)| Url model | 
+ **body** | [**Url**](Url.md)| Url model | 
 
 ### Return type
 
@@ -349,10 +344,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="faxreceiptsreadput"></a>
 # **FaxReceiptsReadPut**
-> string FaxReceiptsReadPut (DateBefore dateBefore = null)
+> string FaxReceiptsReadPut (DateBefore body = null)
 
 Mark delivery receipts as read
 
@@ -377,12 +371,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new FAXApi();
-            var dateBefore = new DateBefore(); // DateBefore | DateBefore model (optional) 
+            var body = new DateBefore(); // DateBefore | DateBefore model (optional) 
 
             try
             {
                 // Mark delivery receipts as read
-                string result = apiInstance.FaxReceiptsReadPut(dateBefore);
+                string result = apiInstance.FaxReceiptsReadPut(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -398,7 +392,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dateBefore** | [**DateBefore**](DateBefore.md)| DateBefore model | [optional] 
+ **body** | [**DateBefore**](DateBefore.md)| DateBefore model | [optional] 
 
 ### Return type
 
@@ -414,10 +408,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="faxsendpost"></a>
 # **FaxSendPost**
-> string FaxSendPost (FaxMessageCollection faxMessage)
+> string FaxSendPost (FaxMessageCollection body)
 
 Send a fax using supplied supported file-types.
 
@@ -442,12 +435,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new FAXApi();
-            var faxMessage = new FaxMessageCollection(); // FaxMessageCollection | FaxMessageCollection model
+            var body = new FaxMessageCollection(); // FaxMessageCollection | FaxMessageCollection model
 
             try
             {
                 // Send a fax using supplied supported file-types.
-                string result = apiInstance.FaxSendPost(faxMessage);
+                string result = apiInstance.FaxSendPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -463,7 +456,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **faxMessage** | [**FaxMessageCollection**](FaxMessageCollection.md)| FaxMessageCollection model | 
+ **body** | [**FaxMessageCollection**](FaxMessageCollection.md)| FaxMessageCollection model | 
 
 ### Return type
 
@@ -479,4 +472,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

@@ -9,7 +9,6 @@ Method | HTTP request | Description
 [**PostLettersPricePost**](PostLetterApi.md#postletterspricepost) | **POST** /post/letters/price | Calculate post letter price
 [**PostLettersSendPost**](PostLetterApi.md#postletterssendpost) | **POST** /post/letters/send | Send post letter
 
-
 <a name="postlettersexportget"></a>
 # **PostLettersExportGet**
 > string PostLettersExportGet (string filename)
@@ -70,11 +69,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="postlettershistoryget"></a>
 # **PostLettersHistoryGet**
 > string PostLettersHistoryGet (int? page = null, int? limit = null)
@@ -137,14 +135,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="postletterspricepost"></a>
 # **PostLettersPricePost**
-> string PostLettersPricePost (PostLetter postLetter)
+> string PostLettersPricePost (PostLetter body)
 
 Calculate post letter price
 
@@ -169,12 +166,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new PostLetterApi();
-            var postLetter = new PostLetter(); // PostLetter | PostLetter model
+            var body = new PostLetter(); // PostLetter | PostLetter model
 
             try
             {
                 // Calculate post letter price
-                string result = apiInstance.PostLettersPricePost(postLetter);
+                string result = apiInstance.PostLettersPricePost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -190,7 +187,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **postLetter** | [**PostLetter**](PostLetter.md)| PostLetter model | 
+ **body** | [**PostLetter**](PostLetter.md)| PostLetter model | 
 
 ### Return type
 
@@ -206,10 +203,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="postletterssendpost"></a>
 # **PostLettersSendPost**
-> string PostLettersSendPost (PostLetter postLetter)
+> string PostLettersSendPost (PostLetter body)
 
 Send post letter
 
@@ -234,12 +230,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new PostLetterApi();
-            var postLetter = new PostLetter(); // PostLetter | PostLetter model
+            var body = new PostLetter(); // PostLetter | PostLetter model
 
             try
             {
                 // Send post letter
-                string result = apiInstance.PostLettersSendPost(postLetter);
+                string result = apiInstance.PostLettersSendPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -255,7 +251,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **postLetter** | [**PostLetter**](PostLetter.md)| PostLetter model | 
+ **body** | [**PostLetter**](PostLetter.md)| PostLetter model | 
 
 ### Return type
 
@@ -271,4 +267,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

@@ -6,10 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**DetectAddressPost**](DetectAddressApi.md#detectaddresspost) | **POST** /post/letters/detect-address | Detects address in uploaded file.
 
-
 <a name="detectaddresspost"></a>
 # **DetectAddressPost**
-> string DetectAddressPost (UploadFile uploadFile)
+> string DetectAddressPost (UploadFile body)
 
 Detects address in uploaded file.
 
@@ -34,12 +33,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new DetectAddressApi();
-            var uploadFile = new UploadFile(); // UploadFile | Your file to be uploaded
+            var body = new UploadFile(); // UploadFile | Your file to be uploaded
 
             try
             {
                 // Detects address in uploaded file.
-                string result = apiInstance.DetectAddressPost(uploadFile);
+                string result = apiInstance.DetectAddressPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -55,7 +54,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uploadFile** | [**UploadFile**](UploadFile.md)| Your file to be uploaded | 
+ **body** | [**UploadFile**](UploadFile.md)| Your file to be uploaded | 
 
 ### Return type
 
@@ -71,4 +70,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
