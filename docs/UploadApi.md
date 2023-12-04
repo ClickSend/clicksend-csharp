@@ -6,10 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**UploadsPost**](UploadApi.md#uploadspost) | **POST** /uploads | Upload File
 
-
 <a name="uploadspost"></a>
 # **UploadsPost**
-> string UploadsPost (UploadFile uploadFile, string convert)
+> string UploadsPost (UploadFile body, string convert)
 
 Upload File
 
@@ -34,13 +33,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new UploadApi();
-            var uploadFile = new UploadFile(); // UploadFile | Your file to be uploaded
+            var body = new UploadFile(); // UploadFile | Your file to be uploaded
             var convert = convert_example;  // string | 
 
             try
             {
                 // Upload File
-                string result = apiInstance.UploadsPost(uploadFile, convert);
+                string result = apiInstance.UploadsPost(body, convert);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -56,7 +55,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uploadFile** | [**UploadFile**](UploadFile.md)| Your file to be uploaded | 
+ **body** | [**UploadFile**](UploadFile.md)| Your file to be uploaded | 
  **convert** | **string**|  | 
 
 ### Return type
@@ -73,4 +72,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

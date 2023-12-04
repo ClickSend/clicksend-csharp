@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ReferralAccountsGet**](ReferralAccountApi.md#referralaccountsget) | **GET** /referral/accounts | Get all referral accounts
 
-
 <a name="referralaccountsget"></a>
 # **ReferralAccountsGet**
 > string ReferralAccountsGet (int? page = null, int? limit = null)
@@ -69,8 +68,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

@@ -19,7 +19,6 @@ Method | HTTP request | Description
 [**SpecificAllowedEmailAddressGet**](EmailMarketingApi.md#specificallowedemailaddressget) | **GET** /email/addresses/{email_address_id} | Get specific email address
 [**VerifyAllowedEmailAddressGet**](EmailMarketingApi.md#verifyallowedemailaddressget) | **PUT** /email/address-verify/{email_address_id}/verify/{activation_token} | Verify email address using verification token
 
-
 <a name="allowedemailaddressget"></a>
 # **AllowedEmailAddressGet**
 > string AllowedEmailAddressGet (int? page = null, int? limit = null)
@@ -82,14 +81,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="allowedemailaddresspost"></a>
 # **AllowedEmailAddressPost**
-> string AllowedEmailAddressPost (EmailAddress emailAddress = null)
+> string AllowedEmailAddressPost (EmailAddress body = null)
 
 Create allowed Email Address
 
@@ -114,12 +112,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new EmailMarketingApi();
-            var emailAddress = new EmailAddress(); // EmailAddress |  (optional) 
+            var body = new EmailAddress(); // EmailAddress |  (optional) 
 
             try
             {
                 // Create allowed Email Address
-                string result = apiInstance.AllowedEmailAddressPost(emailAddress);
+                string result = apiInstance.AllowedEmailAddressPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -135,7 +133,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **emailAddress** | [**EmailAddress**](EmailAddress.md)|  | [optional] 
+ **body** | [**EmailAddress**](EmailAddress.md)|  | [optional] 
 
 ### Return type
 
@@ -151,7 +149,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="cancelemailcampaignput"></a>
 # **CancelEmailCampaignPut**
 > string CancelEmailCampaignPut (int? emailCampaignId)
@@ -212,11 +209,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="emailcampaignget"></a>
 # **EmailCampaignGet**
 > string EmailCampaignGet (int? emailCampaignId)
@@ -277,11 +273,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="emailcampaignhistoryexportget"></a>
 # **EmailCampaignHistoryExportGet**
 > string EmailCampaignHistoryExportGet (int? emailCampaignId, int? dateFrom = null, int? dateTo = null)
@@ -346,11 +341,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="emailcampaignhistoryget"></a>
 # **EmailCampaignHistoryGet**
 > string EmailCampaignHistoryGet (int? emailCampaignId, int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null)
@@ -419,14 +413,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="emailcampaignpost"></a>
 # **EmailCampaignPost**
-> string EmailCampaignPost (EmailCampaign emailCampaign)
+> string EmailCampaignPost (EmailCampaign body)
 
 Send email campaign
 
@@ -451,12 +444,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new EmailMarketingApi();
-            var emailCampaign = new EmailCampaign(); // EmailCampaign | Email model
+            var body = new EmailCampaign(); // EmailCampaign | Email model
 
             try
             {
                 // Send email campaign
-                string result = apiInstance.EmailCampaignPost(emailCampaign);
+                string result = apiInstance.EmailCampaignPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -472,7 +465,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **emailCampaign** | [**EmailCampaign**](EmailCampaign.md)| Email model | 
+ **body** | [**EmailCampaign**](EmailCampaign.md)| Email model | 
 
 ### Return type
 
@@ -488,10 +481,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="emailcampaignpricepost"></a>
 # **EmailCampaignPricePost**
-> string EmailCampaignPricePost (EmailCampaign emailCampaign)
+> string EmailCampaignPricePost (EmailCampaign body)
 
 Calculate email campaign price
 
@@ -516,12 +508,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new EmailMarketingApi();
-            var emailCampaign = new EmailCampaign(); // EmailCampaign | Email model
+            var body = new EmailCampaign(); // EmailCampaign | Email model
 
             try
             {
                 // Calculate email campaign price
-                string result = apiInstance.EmailCampaignPricePost(emailCampaign);
+                string result = apiInstance.EmailCampaignPricePost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -537,7 +529,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **emailCampaign** | [**EmailCampaign**](EmailCampaign.md)| Email model | 
+ **body** | [**EmailCampaign**](EmailCampaign.md)| Email model | 
 
 ### Return type
 
@@ -553,10 +545,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="emailcampaignput"></a>
 # **EmailCampaignPut**
-> string EmailCampaignPut (int? emailCampaignId, EmailCampaign emailCampaign)
+> string EmailCampaignPut (EmailCampaign body, int? emailCampaignId)
 
 Edit email campaign
 
@@ -581,13 +572,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new EmailMarketingApi();
+            var body = new EmailCampaign(); // EmailCampaign | Email model
             var emailCampaignId = 56;  // int? | Allowed email campaign id
-            var emailCampaign = new EmailCampaign(); // EmailCampaign | Email model
 
             try
             {
                 // Edit email campaign
-                string result = apiInstance.EmailCampaignPut(emailCampaignId, emailCampaign);
+                string result = apiInstance.EmailCampaignPut(body, emailCampaignId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -603,8 +594,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**EmailCampaign**](EmailCampaign.md)| Email model | 
  **emailCampaignId** | **int?**| Allowed email campaign id | 
- **emailCampaign** | [**EmailCampaign**](EmailCampaign.md)| Email model | 
 
 ### Return type
 
@@ -620,7 +611,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="emailcampaignsget"></a>
 # **EmailCampaignsGet**
 > string EmailCampaignsGet (int? page = null, int? limit = null)
@@ -683,11 +673,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="sendverificationtokenget"></a>
 # **SendVerificationTokenGet**
 > string SendVerificationTokenGet (int? emailAddressId)
@@ -748,11 +737,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="specificallowedemailaddressdelete"></a>
 # **SpecificAllowedEmailAddressDelete**
 > string SpecificAllowedEmailAddressDelete (int? emailAddressId)
@@ -813,11 +801,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="specificallowedemailaddressget"></a>
 # **SpecificAllowedEmailAddressGet**
 > string SpecificAllowedEmailAddressGet (int? emailAddressId)
@@ -878,11 +865,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="verifyallowedemailaddressget"></a>
 # **VerifyAllowedEmailAddressGet**
 > string VerifyAllowedEmailAddressGet (int? emailAddressId, string activationToken)
@@ -945,8 +931,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

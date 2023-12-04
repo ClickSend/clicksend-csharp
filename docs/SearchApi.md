@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**SearchContactsListsGet**](SearchApi.md#searchcontactslistsget) | **GET** /search/contacts-lists | Get list of searched contact list
 
-
 <a name="searchcontactslistsget"></a>
 # **SearchContactsListsGet**
 > string SearchContactsListsGet (string q, int? page = null, int? limit = null)
@@ -71,8 +70,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

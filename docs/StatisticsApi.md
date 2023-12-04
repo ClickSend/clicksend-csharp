@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**StatisticsSmsGet**](StatisticsApi.md#statisticssmsget) | **GET** /statistics/sms | Get sms statistics
 [**StatisticsVoiceGet**](StatisticsApi.md#statisticsvoiceget) | **GET** /statistics/voice | Get voice statistics
 
-
 <a name="statisticssmsget"></a>
 # **StatisticsSmsGet**
 > string StatisticsSmsGet ()
@@ -64,11 +63,10 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="statisticsvoiceget"></a>
 # **StatisticsVoiceGet**
 > string StatisticsVoiceGet ()
@@ -125,8 +123,7 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

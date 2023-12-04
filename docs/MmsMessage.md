@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **From** | **string** | Your sender ID | [optional] 
 **Country** | **string** | Recipient country | [optional] 
 **Source** | **string** | Your method of sending | [optional] [default to "sdk"]
-**ListId** | **int?** | Your list ID if sending to a whole list (can be used instead of &#39;to&#39;) | [optional] 
+**ListId** | **int?** | Your list ID if sending to a whole list (can be used instead of &#x27;to&#x27;) | [optional] 
 **Schedule** | **int?** | Schedule time in unix format (leave blank for immediate delivery) | [optional] [default to 0]
 **CustomString** | **string** | Custom string for your reference | [optional] 
 **FromEmail** | **string** | Email to send replies to | [optional] 

@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**FaxDeliveryReceiptAutomationPut**](FAXDeliveryReceiptRulesApi.md#faxdeliveryreceiptautomationput) | **PUT** /automations/fax/receipts/{receipt_rule_id} | Update fax delivery receipt automation
 [**FaxDeliveryReceiptAutomationsGet**](FAXDeliveryReceiptRulesApi.md#faxdeliveryreceiptautomationsget) | **GET** /automations/fax/receipts | Get all fax delivery receipt automations
 
-
 <a name="faxdeliveryreceiptautomationdelete"></a>
 # **FaxDeliveryReceiptAutomationDelete**
 > string FaxDeliveryReceiptAutomationDelete (int? receiptRuleId)
@@ -71,11 +70,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="faxdeliveryreceiptautomationget"></a>
 # **FaxDeliveryReceiptAutomationGet**
 > string FaxDeliveryReceiptAutomationGet (int? receiptRuleId)
@@ -136,14 +134,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="faxdeliveryreceiptautomationpost"></a>
 # **FaxDeliveryReceiptAutomationPost**
-> string FaxDeliveryReceiptAutomationPost (DeliveryReceiptRule deliveryReceiptRule)
+> string FaxDeliveryReceiptAutomationPost (DeliveryReceiptRule body)
 
 Create fax delivery receipt automations
 
@@ -168,12 +165,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new FAXDeliveryReceiptRulesApi();
-            var deliveryReceiptRule = new DeliveryReceiptRule(); // DeliveryReceiptRule | fax delivery receipt rule model
+            var body = new DeliveryReceiptRule(); // DeliveryReceiptRule | fax delivery receipt rule model
 
             try
             {
                 // Create fax delivery receipt automations
-                string result = apiInstance.FaxDeliveryReceiptAutomationPost(deliveryReceiptRule);
+                string result = apiInstance.FaxDeliveryReceiptAutomationPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -189,7 +186,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deliveryReceiptRule** | [**DeliveryReceiptRule**](DeliveryReceiptRule.md)| fax delivery receipt rule model | 
+ **body** | [**DeliveryReceiptRule**](DeliveryReceiptRule.md)| fax delivery receipt rule model | 
 
 ### Return type
 
@@ -205,10 +202,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="faxdeliveryreceiptautomationput"></a>
 # **FaxDeliveryReceiptAutomationPut**
-> string FaxDeliveryReceiptAutomationPut (int? receiptRuleId, DeliveryReceiptRule deliveryReceiptRule)
+> string FaxDeliveryReceiptAutomationPut (DeliveryReceiptRule body, int? receiptRuleId)
 
 Update fax delivery receipt automation
 
@@ -233,13 +229,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new FAXDeliveryReceiptRulesApi();
+            var body = new DeliveryReceiptRule(); // DeliveryReceiptRule | Delivery receipt rule model
             var receiptRuleId = 56;  // int? | Receipt rule id
-            var deliveryReceiptRule = new DeliveryReceiptRule(); // DeliveryReceiptRule | Delivery receipt rule model
 
             try
             {
                 // Update fax delivery receipt automation
-                string result = apiInstance.FaxDeliveryReceiptAutomationPut(receiptRuleId, deliveryReceiptRule);
+                string result = apiInstance.FaxDeliveryReceiptAutomationPut(body, receiptRuleId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -255,8 +251,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**DeliveryReceiptRule**](DeliveryReceiptRule.md)| Delivery receipt rule model | 
  **receiptRuleId** | **int?**| Receipt rule id | 
- **deliveryReceiptRule** | [**DeliveryReceiptRule**](DeliveryReceiptRule.md)| Delivery receipt rule model | 
 
 ### Return type
 
@@ -272,7 +268,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="faxdeliveryreceiptautomationsget"></a>
 # **FaxDeliveryReceiptAutomationsGet**
 > string FaxDeliveryReceiptAutomationsGet (string q = null, int? page = null, int? limit = null)
@@ -337,8 +332,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

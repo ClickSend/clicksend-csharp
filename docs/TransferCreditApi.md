@@ -6,10 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ResellerTransferCreditPut**](TransferCreditApi.md#resellertransfercreditput) | **PUT** /reseller/transfer-credit | Transfer Credit
 
-
 <a name="resellertransfercreditput"></a>
 # **ResellerTransferCreditPut**
-> string ResellerTransferCreditPut (ResellerAccountTransferCredit resellerAccountTransferCredit)
+> string ResellerTransferCreditPut (ResellerAccountTransferCredit body)
 
 Transfer Credit
 
@@ -34,12 +33,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TransferCreditApi();
-            var resellerAccountTransferCredit = new ResellerAccountTransferCredit(); // ResellerAccountTransferCredit | ResellerAccountTransferCredit model
+            var body = new ResellerAccountTransferCredit(); // ResellerAccountTransferCredit | ResellerAccountTransferCredit model
 
             try
             {
                 // Transfer Credit
-                string result = apiInstance.ResellerTransferCreditPut(resellerAccountTransferCredit);
+                string result = apiInstance.ResellerTransferCreditPut(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -55,7 +54,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **resellerAccountTransferCredit** | [**ResellerAccountTransferCredit**](ResellerAccountTransferCredit.md)| ResellerAccountTransferCredit model | 
+ **body** | [**ResellerAccountTransferCredit**](ResellerAccountTransferCredit.md)| ResellerAccountTransferCredit model | 
 
 ### Return type
 
@@ -71,4 +70,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

@@ -9,7 +9,6 @@ Method | HTTP request | Description
 [**EmailPricePost**](TransactionalEmailApi.md#emailpricepost) | **POST** /email/price | Get transactional email price
 [**EmailSendPost**](TransactionalEmailApi.md#emailsendpost) | **POST** /email/send | Send transactional email
 
-
 <a name="emailhistoryexportget"></a>
 # **EmailHistoryExportGet**
 > string EmailHistoryExportGet (string filename, int? dateFrom = null, int? dateTo = null)
@@ -74,11 +73,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="emailhistoryget"></a>
 # **EmailHistoryGet**
 > string EmailHistoryGet (int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null)
@@ -145,14 +143,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="emailpricepost"></a>
 # **EmailPricePost**
-> string EmailPricePost (Email email)
+> string EmailPricePost (Email body)
 
 Get transactional email price
 
@@ -177,12 +174,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TransactionalEmailApi();
-            var email = new Email(); // Email | Email model
+            var body = new Email(); // Email | Email model
 
             try
             {
                 // Get transactional email price
-                string result = apiInstance.EmailPricePost(email);
+                string result = apiInstance.EmailPricePost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -198,7 +195,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email** | [**Email**](Email.md)| Email model | 
+ **body** | [**Email**](Email.md)| Email model | 
 
 ### Return type
 
@@ -214,10 +211,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="emailsendpost"></a>
 # **EmailSendPost**
-> string EmailSendPost (Email email)
+> string EmailSendPost (Email body)
 
 Send transactional email
 
@@ -242,12 +238,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TransactionalEmailApi();
-            var email = new Email(); // Email | Email model
+            var body = new Email(); // Email | Email model
 
             try
             {
                 // Send transactional email
-                string result = apiInstance.EmailSendPost(email);
+                string result = apiInstance.EmailSendPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -263,7 +259,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email** | [**Email**](Email.md)| Email model | 
+ **body** | [**Email**](Email.md)| Email model | 
 
 ### Return type
 
@@ -279,4 +275,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

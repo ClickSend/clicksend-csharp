@@ -12,7 +12,6 @@ Method | HTTP request | Description
 [**ListsPost**](ContactListApi.md#listspost) | **POST** /lists | Create new contact list
 [**ListsRemoveDuplicatesByListIdPut**](ContactListApi.md#listsremoveduplicatesbylistidput) | **PUT** /lists/{list_id}/remove-duplicates | Remove duplicate contacts
 
-
 <a name="listsbylistiddelete"></a>
 # **ListsByListIdDelete**
 > string ListsByListIdDelete (int? listId)
@@ -73,11 +72,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="listsbylistidget"></a>
 # **ListsByListIdGet**
 > string ListsByListIdGet (int? listId)
@@ -138,14 +136,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="listsbylistidput"></a>
 # **ListsByListIdPut**
-> string ListsByListIdPut (int? listId, ContactList contactList)
+> string ListsByListIdPut (ContactList body, int? listId)
 
 Update specific contact list
 
@@ -170,13 +167,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new ContactListApi();
+            var body = new ContactList(); // ContactList | Contact list model
             var listId = 56;  // int? | Your list id
-            var contactList = new ContactList(); // ContactList | Contact list model
 
             try
             {
                 // Update specific contact list
-                string result = apiInstance.ListsByListIdPut(listId, contactList);
+                string result = apiInstance.ListsByListIdPut(body, listId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -192,8 +189,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**ContactList**](ContactList.md)| Contact list model | 
  **listId** | **int?**| Your list id | 
- **contactList** | [**ContactList**](ContactList.md)| Contact list model | 
 
 ### Return type
 
@@ -209,7 +206,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="listsget"></a>
 # **ListsGet**
 > string ListsGet (int? page = null, int? limit = null)
@@ -272,14 +268,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="listsimportbylistidpost"></a>
 # **ListsImportByListIdPost**
-> string ListsImportByListIdPost (int? listId, ContactListImport _file)
+> string ListsImportByListIdPost (ContactListImport body, int? listId)
 
 Import contacts to list
 
@@ -304,13 +299,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new ContactListApi();
+            var body = new ContactListImport(); // ContactListImport | ContactListImport model
             var listId = 56;  // int? | Your contact list id you want to access.
-            var _file = new ContactListImport(); // ContactListImport | ContactListImport model
 
             try
             {
                 // Import contacts to list
-                string result = apiInstance.ListsImportByListIdPost(listId, _file);
+                string result = apiInstance.ListsImportByListIdPost(body, listId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -326,8 +321,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**ContactListImport**](ContactListImport.md)| ContactListImport model | 
  **listId** | **int?**| Your contact list id you want to access. | 
- **_file** | [**ContactListImport**](ContactListImport.md)| ContactListImport model | 
 
 ### Return type
 
@@ -343,10 +338,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="listspost"></a>
 # **ListsPost**
-> string ListsPost (ContactList contactList)
+> string ListsPost (ContactList body)
 
 Create new contact list
 
@@ -371,12 +365,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new ContactListApi();
-            var contactList = new ContactList(); // ContactList | Contact list model
+            var body = new ContactList(); // ContactList | Contact list model
 
             try
             {
                 // Create new contact list
-                string result = apiInstance.ListsPost(contactList);
+                string result = apiInstance.ListsPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -392,7 +386,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contactList** | [**ContactList**](ContactList.md)| Contact list model | 
+ **body** | [**ContactList**](ContactList.md)| Contact list model | 
 
 ### Return type
 
@@ -408,10 +402,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="listsremoveduplicatesbylistidput"></a>
 # **ListsRemoveDuplicatesByListIdPut**
-> string ListsRemoveDuplicatesByListIdPut (int? listId, Fields fields)
+> string ListsRemoveDuplicatesByListIdPut (Fields body, int? listId)
 
 Remove duplicate contacts
 
@@ -436,13 +429,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new ContactListApi();
+            var body = new Fields(); // Fields | Fields model
             var listId = 56;  // int? | Your list id
-            var fields = new Fields(); // Fields | Fields model
 
             try
             {
                 // Remove duplicate contacts
-                string result = apiInstance.ListsRemoveDuplicatesByListIdPut(listId, fields);
+                string result = apiInstance.ListsRemoveDuplicatesByListIdPut(body, listId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -458,8 +451,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**Fields**](Fields.md)| Fields model | 
  **listId** | **int?**| Your list id | 
- **fields** | [**Fields**](Fields.md)| Fields model | 
 
 ### Return type
 
@@ -475,4 +468,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

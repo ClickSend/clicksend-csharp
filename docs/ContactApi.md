@@ -13,7 +13,6 @@ Method | HTTP request | Description
 [**ListsRemoveOptedOutContactsByListIdAndOptOutListIdPut**](ContactApi.md#listsremoveoptedoutcontactsbylistidandoptoutlistidput) | **PUT** /lists/{list_id}/remove-opted-out-contacts/{opt_out_list_id} | Remove all opted out contacts
 [**ListsTransferContactPut**](ContactApi.md#liststransfercontactput) | **PUT** /lists/{from_list_id}/contacts/{contact_id}/transfer/{to_list_id} | Transfer contact to another list
 
-
 <a name="listscontactsbylistidandcontactiddelete"></a>
 # **ListsContactsByListIdAndContactIdDelete**
 > string ListsContactsByListIdAndContactIdDelete (int? listId, int? contactId)
@@ -76,11 +75,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="listscontactsbylistidandcontactidget"></a>
 # **ListsContactsByListIdAndContactIdGet**
 > string ListsContactsByListIdAndContactIdGet (int? listId, int? contactId)
@@ -143,14 +141,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="listscontactsbylistidandcontactidput"></a>
 # **ListsContactsByListIdAndContactIdPut**
-> string ListsContactsByListIdAndContactIdPut (int? listId, int? contactId, Contact contact)
+> string ListsContactsByListIdAndContactIdPut (Contact body, int? listId, int? contactId)
 
 Update specific contact
 
@@ -175,14 +172,14 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new ContactApi();
+            var body = new Contact(); // Contact | Contact model
             var listId = 56;  // int? | Contact list id
             var contactId = 56;  // int? | Contact ID
-            var contact = new Contact(); // Contact | Contact model
 
             try
             {
                 // Update specific contact
-                string result = apiInstance.ListsContactsByListIdAndContactIdPut(listId, contactId, contact);
+                string result = apiInstance.ListsContactsByListIdAndContactIdPut(body, listId, contactId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -198,9 +195,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**Contact**](Contact.md)| Contact model | 
  **listId** | **int?**| Contact list id | 
  **contactId** | **int?**| Contact ID | 
- **contact** | [**Contact**](Contact.md)| Contact model | 
 
 ### Return type
 
@@ -216,10 +213,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="listscontactsbylistidget"></a>
 # **ListsContactsByListIdGet**
-> string ListsContactsByListIdGet (int? listId, int? page = null, int? limit = null)
+> string ListsContactsByListIdGet (int? listId, int? page = null, int? limit = null, int? updatedAfter = null)
 
 Get all contacts in a list
 
@@ -247,11 +243,12 @@ namespace Example
             var listId = 56;  // int? | Contact list ID
             var page = 56;  // int? | Page number (optional)  (default to 1)
             var limit = 56;  // int? | Number of records per page (optional)  (default to 10)
+            var updatedAfter = 56;  // int? | Get all contacts updated after a given timestamp. (optional)  (default to 10)
 
             try
             {
                 // Get all contacts in a list
-                string result = apiInstance.ListsContactsByListIdGet(listId, page, limit);
+                string result = apiInstance.ListsContactsByListIdGet(listId, page, limit, updatedAfter);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -270,6 +267,7 @@ Name | Type | Description  | Notes
  **listId** | **int?**| Contact list ID | 
  **page** | **int?**| Page number | [optional] [default to 1]
  **limit** | **int?**| Number of records per page | [optional] [default to 10]
+ **updatedAfter** | **int?**| Get all contacts updated after a given timestamp. | [optional] [default to 10]
 
 ### Return type
 
@@ -281,14 +279,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="listscontactsbylistidpost"></a>
 # **ListsContactsByListIdPost**
-> string ListsContactsByListIdPost (Contact contact, int? listId)
+> string ListsContactsByListIdPost (Contact body, int? listId)
 
 Create new contact
 
@@ -313,13 +310,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new ContactApi();
-            var contact = new Contact(); // Contact | Contact model
+            var body = new Contact(); // Contact | Contact model
             var listId = 56;  // int? | List id
 
             try
             {
                 // Create new contact
-                string result = apiInstance.ListsContactsByListIdPost(contact, listId);
+                string result = apiInstance.ListsContactsByListIdPost(body, listId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -335,7 +332,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact** | [**Contact**](Contact.md)| Contact model | 
+ **body** | [**Contact**](Contact.md)| Contact model | 
  **listId** | **int?**| List id | 
 
 ### Return type
@@ -352,7 +349,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="listscopycontactput"></a>
 # **ListsCopyContactPut**
 > string ListsCopyContactPut (int? fromListId, int? contactId, int? toListId)
@@ -417,11 +413,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="listsremoveoptedoutcontactsbylistidandoptoutlistidput"></a>
 # **ListsRemoveOptedOutContactsByListIdAndOptOutListIdPut**
 > string ListsRemoveOptedOutContactsByListIdAndOptOutListIdPut (int? listId, int? optOutListId)
@@ -484,11 +479,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="liststransfercontactput"></a>
 # **ListsTransferContactPut**
 > string ListsTransferContactPut (int? fromListId, int? contactId, int? toListId)
@@ -553,8 +547,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

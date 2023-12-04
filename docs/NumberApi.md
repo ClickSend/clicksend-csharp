@@ -8,7 +8,6 @@ Method | HTTP request | Description
 [**NumbersGet**](NumberApi.md#numbersget) | **GET** /numbers | Get all availible dedicated numbers
 [**NumbersSearchByCountryGet**](NumberApi.md#numberssearchbycountryget) | **GET** /numbers/search/{country} | Get all dedicated numbers by country
 
-
 <a name="numbersbuybydedicatednumberpost"></a>
 # **NumbersBuyByDedicatedNumberPost**
 > string NumbersBuyByDedicatedNumberPost (string dedicatedNumber)
@@ -69,11 +68,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="numbersget"></a>
 # **NumbersGet**
 > string NumbersGet (int? page = null, int? limit = null)
@@ -136,11 +134,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="numberssearchbycountryget"></a>
 # **NumbersSearchByCountryGet**
 > string NumbersSearchByCountryGet (string country, string search = null, int? searchType = null, int? page = null, int? limit = null)
@@ -209,8 +206,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**SmsInboundAutomationPut**](InboundSMSRulesApi.md#smsinboundautomationput) | **PUT** /automations/sms/inbound/{inbound_rule_id} | Update inbound sms automation
 [**SmsInboundAutomationsGet**](InboundSMSRulesApi.md#smsinboundautomationsget) | **GET** /automations/sms/inbound | Get all inbound sms automations
 
-
 <a name="smsinboundautomationdelete"></a>
 # **SmsInboundAutomationDelete**
 > string SmsInboundAutomationDelete (int? inboundRuleId)
@@ -71,11 +70,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smsinboundautomationget"></a>
 # **SmsInboundAutomationGet**
 > string SmsInboundAutomationGet (int? inboundRuleId)
@@ -136,14 +134,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smsinboundautomationpost"></a>
 # **SmsInboundAutomationPost**
-> string SmsInboundAutomationPost (InboundSMSRule inboundSmsRule)
+> string SmsInboundAutomationPost (InboundSMSRule body)
 
 Create new inbound sms automation
 
@@ -168,12 +165,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new InboundSMSRulesApi();
-            var inboundSmsRule = new InboundSMSRule(); // InboundSMSRule | Inbound sms rule model
+            var body = new InboundSMSRule(); // InboundSMSRule | Inbound sms rule model
 
             try
             {
                 // Create new inbound sms automation
-                string result = apiInstance.SmsInboundAutomationPost(inboundSmsRule);
+                string result = apiInstance.SmsInboundAutomationPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -189,7 +186,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inboundSmsRule** | [**InboundSMSRule**](InboundSMSRule.md)| Inbound sms rule model | 
+ **body** | [**InboundSMSRule**](InboundSMSRule.md)| Inbound sms rule model | 
 
 ### Return type
 
@@ -205,10 +202,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smsinboundautomationput"></a>
 # **SmsInboundAutomationPut**
-> string SmsInboundAutomationPut (int? inboundRuleId, InboundSMSRule inboundSmsRule)
+> string SmsInboundAutomationPut (InboundSMSRule body, int? inboundRuleId)
 
 Update inbound sms automation
 
@@ -233,13 +229,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new InboundSMSRulesApi();
+            var body = new InboundSMSRule(); // InboundSMSRule | Inbound sms rule model
             var inboundRuleId = 56;  // int? | Inbound rule id
-            var inboundSmsRule = new InboundSMSRule(); // InboundSMSRule | Inbound sms rule model
 
             try
             {
                 // Update inbound sms automation
-                string result = apiInstance.SmsInboundAutomationPut(inboundRuleId, inboundSmsRule);
+                string result = apiInstance.SmsInboundAutomationPut(body, inboundRuleId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -255,8 +251,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**InboundSMSRule**](InboundSMSRule.md)| Inbound sms rule model | 
  **inboundRuleId** | **int?**| Inbound rule id | 
- **inboundSmsRule** | [**InboundSMSRule**](InboundSMSRule.md)| Inbound sms rule model | 
 
 ### Return type
 
@@ -272,7 +268,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smsinboundautomationsget"></a>
 # **SmsInboundAutomationsGet**
 > string SmsInboundAutomationsGet (string q = null, int? page = null, int? limit = null)
@@ -337,8 +332,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

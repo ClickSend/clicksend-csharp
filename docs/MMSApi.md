@@ -11,7 +11,6 @@ Method | HTTP request | Description
 [**MmsReceiptsReadPut**](MMSApi.md#mmsreceiptsreadput) | **PUT** /mms/receipts-read | Mark delivery receipts as read
 [**MmsSendPost**](MMSApi.md#mmssendpost) | **POST** /mms/send | Send MMS
 
-
 <a name="mmshistoryexportget"></a>
 # **MmsHistoryExportGet**
 > string MmsHistoryExportGet (string filename)
@@ -72,11 +71,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="mmshistoryget"></a>
 # **MmsHistoryGet**
 > string MmsHistoryGet (string q = null, int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null)
@@ -145,14 +143,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="mmspricepost"></a>
 # **MmsPricePost**
-> string MmsPricePost (MmsMessageCollection mmsMessages)
+> string MmsPricePost (MmsMessageCollection body)
 
 Get Price for MMS sent
 
@@ -177,12 +174,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new MMSApi();
-            var mmsMessages = new MmsMessageCollection(); // MmsMessageCollection | MmsMessageCollection model
+            var body = new MmsMessageCollection(); // MmsMessageCollection | MmsMessageCollection model
 
             try
             {
                 // Get Price for MMS sent
-                string result = apiInstance.MmsPricePost(mmsMessages);
+                string result = apiInstance.MmsPricePost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -198,7 +195,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mmsMessages** | [**MmsMessageCollection**](MmsMessageCollection.md)| MmsMessageCollection model | 
+ **body** | [**MmsMessageCollection**](MmsMessageCollection.md)| MmsMessageCollection model | 
 
 ### Return type
 
@@ -214,7 +211,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="mmsreceiptsget"></a>
 # **MmsReceiptsGet**
 > string MmsReceiptsGet (int? page = null, int? limit = null)
@@ -277,14 +273,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="mmsreceiptsreadput"></a>
 # **MmsReceiptsReadPut**
-> string MmsReceiptsReadPut (DateBefore dateBefore = null)
+> string MmsReceiptsReadPut (DateBefore body = null)
 
 Mark delivery receipts as read
 
@@ -309,12 +304,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new MMSApi();
-            var dateBefore = new DateBefore(); // DateBefore | DateBefore model (optional) 
+            var body = new DateBefore(); // DateBefore | DateBefore model (optional) 
 
             try
             {
                 // Mark delivery receipts as read
-                string result = apiInstance.MmsReceiptsReadPut(dateBefore);
+                string result = apiInstance.MmsReceiptsReadPut(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -330,7 +325,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dateBefore** | [**DateBefore**](DateBefore.md)| DateBefore model | [optional] 
+ **body** | [**DateBefore**](DateBefore.md)| DateBefore model | [optional] 
 
 ### Return type
 
@@ -346,10 +341,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="mmssendpost"></a>
 # **MmsSendPost**
-> string MmsSendPost (MmsMessageCollection mmsMessages)
+> string MmsSendPost (MmsMessageCollection body)
 
 Send MMS
 
@@ -374,12 +368,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new MMSApi();
-            var mmsMessages = new MmsMessageCollection(); // MmsMessageCollection | MmsMessageCollection model
+            var body = new MmsMessageCollection(); // MmsMessageCollection | MmsMessageCollection model
 
             try
             {
                 // Send MMS
-                string result = apiInstance.MmsSendPost(mmsMessages);
+                string result = apiInstance.MmsSendPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -395,7 +389,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mmsMessages** | [**MmsMessageCollection**](MmsMessageCollection.md)| MmsMessageCollection model | 
+ **body** | [**MmsMessageCollection**](MmsMessageCollection.md)| MmsMessageCollection model | 
 
 ### Return type
 
@@ -411,4 +405,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

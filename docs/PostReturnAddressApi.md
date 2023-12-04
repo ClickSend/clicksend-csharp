@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**PostReturnAddressesGet**](PostReturnAddressApi.md#postreturnaddressesget) | **GET** /post/return-addresses | Get list of post return addresses
 [**PostReturnAddressesPost**](PostReturnAddressApi.md#postreturnaddressespost) | **POST** /post/return-addresses | Create post return address
 
-
 <a name="postreturnaddressesbyreturnaddressiddelete"></a>
 # **PostReturnAddressesByReturnAddressIdDelete**
 > string PostReturnAddressesByReturnAddressIdDelete (int? returnAddressId)
@@ -71,11 +70,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="postreturnaddressesbyreturnaddressidget"></a>
 # **PostReturnAddressesByReturnAddressIdGet**
 > string PostReturnAddressesByReturnAddressIdGet (int? returnAddressId)
@@ -136,14 +134,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="postreturnaddressesbyreturnaddressidput"></a>
 # **PostReturnAddressesByReturnAddressIdPut**
-> string PostReturnAddressesByReturnAddressIdPut (int? returnAddressId, Address returnAddress)
+> string PostReturnAddressesByReturnAddressIdPut (Address body, int? returnAddressId)
 
 Update post return address
 
@@ -168,13 +165,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new PostReturnAddressApi();
+            var body = new Address(); // Address | Address model
             var returnAddressId = 56;  // int? | Return address ID
-            var returnAddress = new Address(); // Address | Address model
 
             try
             {
                 // Update post return address
-                string result = apiInstance.PostReturnAddressesByReturnAddressIdPut(returnAddressId, returnAddress);
+                string result = apiInstance.PostReturnAddressesByReturnAddressIdPut(body, returnAddressId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -190,8 +187,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**Address**](Address.md)| Address model | 
  **returnAddressId** | **int?**| Return address ID | 
- **returnAddress** | [**Address**](Address.md)| Address model | 
 
 ### Return type
 
@@ -207,7 +204,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="postreturnaddressesget"></a>
 # **PostReturnAddressesGet**
 > string PostReturnAddressesGet (int? page = null, int? limit = null)
@@ -270,14 +266,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="postreturnaddressespost"></a>
 # **PostReturnAddressesPost**
-> string PostReturnAddressesPost (Address returnAddress)
+> string PostReturnAddressesPost (Address body)
 
 Create post return address
 
@@ -302,12 +297,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new PostReturnAddressApi();
-            var returnAddress = new Address(); // Address | Address model
+            var body = new Address(); // Address | Address model
 
             try
             {
                 // Create post return address
-                string result = apiInstance.PostReturnAddressesPost(returnAddress);
+                string result = apiInstance.PostReturnAddressesPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -323,7 +318,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **returnAddress** | [**Address**](Address.md)| Address model | 
+ **body** | [**Address**](Address.md)| Address model | 
 
 ### Return type
 
@@ -339,4 +334,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

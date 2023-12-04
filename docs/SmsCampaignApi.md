@@ -11,7 +11,6 @@ Method | HTTP request | Description
 [**SmsCampaignsPricePost**](SmsCampaignApi.md#smscampaignspricepost) | **POST** /sms-campaigns/price | Calculate price for sms campaign
 [**SmsCampaignsSendPost**](SmsCampaignApi.md#smscampaignssendpost) | **POST** /sms-campaigns/send | Create sms campaign
 
-
 <a name="smscampaignbysmscampaignidget"></a>
 # **SmsCampaignBySmsCampaignIdGet**
 > string SmsCampaignBySmsCampaignIdGet (int? smsCampaignId)
@@ -72,14 +71,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smscampaignsbysmscampaignidput"></a>
 # **SmsCampaignsBySmsCampaignIdPut**
-> string SmsCampaignsBySmsCampaignIdPut (int? smsCampaignId, SmsCampaign campaign)
+> string SmsCampaignsBySmsCampaignIdPut (SmsCampaign body, int? smsCampaignId)
 
 Update sms campaign
 
@@ -104,13 +102,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SmsCampaignApi();
+            var body = new SmsCampaign(); // SmsCampaign | SmsCampaign model
             var smsCampaignId = 56;  // int? | ID of SMS campaign to update
-            var campaign = new SmsCampaign(); // SmsCampaign | SmsCampaign model
 
             try
             {
                 // Update sms campaign
-                string result = apiInstance.SmsCampaignsBySmsCampaignIdPut(smsCampaignId, campaign);
+                string result = apiInstance.SmsCampaignsBySmsCampaignIdPut(body, smsCampaignId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -126,8 +124,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**SmsCampaign**](SmsCampaign.md)| SmsCampaign model | 
  **smsCampaignId** | **int?**| ID of SMS campaign to update | 
- **campaign** | [**SmsCampaign**](SmsCampaign.md)| SmsCampaign model | 
 
 ### Return type
 
@@ -143,7 +141,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smscampaignscancelbysmscampaignidput"></a>
 # **SmsCampaignsCancelBySmsCampaignIdPut**
 > string SmsCampaignsCancelBySmsCampaignIdPut (int? smsCampaignId)
@@ -204,11 +201,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smscampaignsget"></a>
 # **SmsCampaignsGet**
 > string SmsCampaignsGet (int? page = null, int? limit = null)
@@ -271,14 +267,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smscampaignspricepost"></a>
 # **SmsCampaignsPricePost**
-> string SmsCampaignsPricePost (SmsCampaign campaign)
+> string SmsCampaignsPricePost (SmsCampaign body)
 
 Calculate price for sms campaign
 
@@ -303,12 +298,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SmsCampaignApi();
-            var campaign = new SmsCampaign(); // SmsCampaign | SmsCampaign model
+            var body = new SmsCampaign(); // SmsCampaign | SmsCampaign model
 
             try
             {
                 // Calculate price for sms campaign
-                string result = apiInstance.SmsCampaignsPricePost(campaign);
+                string result = apiInstance.SmsCampaignsPricePost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -324,7 +319,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaign** | [**SmsCampaign**](SmsCampaign.md)| SmsCampaign model | 
+ **body** | [**SmsCampaign**](SmsCampaign.md)| SmsCampaign model | 
 
 ### Return type
 
@@ -340,10 +335,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smscampaignssendpost"></a>
 # **SmsCampaignsSendPost**
-> string SmsCampaignsSendPost (SmsCampaign campaign)
+> string SmsCampaignsSendPost (SmsCampaign body)
 
 Create sms campaign
 
@@ -368,12 +362,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SmsCampaignApi();
-            var campaign = new SmsCampaign(); // SmsCampaign | SmsCampaign model
+            var body = new SmsCampaign(); // SmsCampaign | SmsCampaign model
 
             try
             {
                 // Create sms campaign
-                string result = apiInstance.SmsCampaignsSendPost(campaign);
+                string result = apiInstance.SmsCampaignsSendPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -389,7 +383,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaign** | [**SmsCampaign**](SmsCampaign.md)| SmsCampaign model | 
+ **body** | [**SmsCampaign**](SmsCampaign.md)| SmsCampaign model | 
 
 ### Return type
 
@@ -405,4 +399,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

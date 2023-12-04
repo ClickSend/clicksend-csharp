@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**SmsDeliveryReceiptAutomationPut**](SMSDeliveryReceiptRulesApi.md#smsdeliveryreceiptautomationput) | **PUT** /automations/sms/receipts/{receipt_rule_id} | Update sms delivery receipt automation
 [**SmsDeliveryReceiptAutomationsGet**](SMSDeliveryReceiptRulesApi.md#smsdeliveryreceiptautomationsget) | **GET** /automations/sms/receipts | Get all sms delivery receipt automations
 
-
 <a name="smsdeliveryreceiptautomationdelete"></a>
 # **SmsDeliveryReceiptAutomationDelete**
 > string SmsDeliveryReceiptAutomationDelete (int? receiptRuleId)
@@ -71,11 +70,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smsdeliveryreceiptautomationget"></a>
 # **SmsDeliveryReceiptAutomationGet**
 > string SmsDeliveryReceiptAutomationGet (int? receiptRuleId)
@@ -136,14 +134,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smsdeliveryreceiptautomationpost"></a>
 # **SmsDeliveryReceiptAutomationPost**
-> string SmsDeliveryReceiptAutomationPost (DeliveryReceiptRule deliveryReceiptRule)
+> string SmsDeliveryReceiptAutomationPost (DeliveryReceiptRule body)
 
 Create sms delivery receipt automations
 
@@ -168,12 +165,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SMSDeliveryReceiptRulesApi();
-            var deliveryReceiptRule = new DeliveryReceiptRule(); // DeliveryReceiptRule | sms delivery receipt rule model
+            var body = new DeliveryReceiptRule(); // DeliveryReceiptRule | sms delivery receipt rule model
 
             try
             {
                 // Create sms delivery receipt automations
-                string result = apiInstance.SmsDeliveryReceiptAutomationPost(deliveryReceiptRule);
+                string result = apiInstance.SmsDeliveryReceiptAutomationPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -189,7 +186,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deliveryReceiptRule** | [**DeliveryReceiptRule**](DeliveryReceiptRule.md)| sms delivery receipt rule model | 
+ **body** | [**DeliveryReceiptRule**](DeliveryReceiptRule.md)| sms delivery receipt rule model | 
 
 ### Return type
 
@@ -205,10 +202,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smsdeliveryreceiptautomationput"></a>
 # **SmsDeliveryReceiptAutomationPut**
-> string SmsDeliveryReceiptAutomationPut (int? receiptRuleId, DeliveryReceiptRule deliveryReceiptRule)
+> string SmsDeliveryReceiptAutomationPut (DeliveryReceiptRule body, int? receiptRuleId)
 
 Update sms delivery receipt automation
 
@@ -233,13 +229,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SMSDeliveryReceiptRulesApi();
+            var body = new DeliveryReceiptRule(); // DeliveryReceiptRule | Delivery receipt rule model
             var receiptRuleId = 56;  // int? | Receipt rule id
-            var deliveryReceiptRule = new DeliveryReceiptRule(); // DeliveryReceiptRule | Delivery receipt rule model
 
             try
             {
                 // Update sms delivery receipt automation
-                string result = apiInstance.SmsDeliveryReceiptAutomationPut(receiptRuleId, deliveryReceiptRule);
+                string result = apiInstance.SmsDeliveryReceiptAutomationPut(body, receiptRuleId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -255,8 +251,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**DeliveryReceiptRule**](DeliveryReceiptRule.md)| Delivery receipt rule model | 
  **receiptRuleId** | **int?**| Receipt rule id | 
- **deliveryReceiptRule** | [**DeliveryReceiptRule**](DeliveryReceiptRule.md)| Delivery receipt rule model | 
 
 ### Return type
 
@@ -272,7 +268,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smsdeliveryreceiptautomationsget"></a>
 # **SmsDeliveryReceiptAutomationsGet**
 > string SmsDeliveryReceiptAutomationsGet (string q = null, int? page = null, int? limit = null)
@@ -337,8 +332,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

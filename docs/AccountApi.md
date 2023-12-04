@@ -13,7 +13,6 @@ Method | HTTP request | Description
 [**ForgotPasswordVerifyPut**](AccountApi.md#forgotpasswordverifyput) | **PUT** /forgot-password/verify | Verify forgot password
 [**ForgotUsernamePut**](AccountApi.md#forgotusernameput) | **PUT** /forgot-username | Forgot username
 
-
 <a name="accountget"></a>
 # **AccountGet**
 > string AccountGet ()
@@ -70,14 +69,13 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="accountpost"></a>
 # **AccountPost**
-> string AccountPost (Account account)
+> string AccountPost (Account body)
 
 Create a new account
 
@@ -102,12 +100,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new AccountApi();
-            var account = new Account(); // Account | Account model
+            var body = new Account(); // Account | Account model
 
             try
             {
                 // Create a new account
-                string result = apiInstance.AccountPost(account);
+                string result = apiInstance.AccountPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -123,7 +121,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **account** | [**Account**](Account.md)| Account model | 
+ **body** | [**Account**](Account.md)| Account model | 
 
 ### Return type
 
@@ -139,7 +137,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="accountuseagebysubaccountget"></a>
 # **AccountUseageBySubaccountGet**
 > string AccountUseageBySubaccountGet (int? year, int? month)
@@ -202,14 +199,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="accountverifysendput"></a>
 # **AccountVerifySendPut**
-> string AccountVerifySendPut (AccountVerify accountVerify)
+> string AccountVerifySendPut (AccountVerify body)
 
 Send account activation token
 
@@ -234,12 +230,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new AccountApi();
-            var accountVerify = new AccountVerify(); // AccountVerify | Account details
+            var body = new AccountVerify(); // AccountVerify | Account details
 
             try
             {
                 // Send account activation token
-                string result = apiInstance.AccountVerifySendPut(accountVerify);
+                string result = apiInstance.AccountVerifySendPut(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -255,7 +251,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accountVerify** | [**AccountVerify**](AccountVerify.md)| Account details | 
+ **body** | [**AccountVerify**](AccountVerify.md)| Account details | 
 
 ### Return type
 
@@ -271,7 +267,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="accountverifyverifybyactivationtokenput"></a>
 # **AccountVerifyVerifyByActivationTokenPut**
 > string AccountVerifyVerifyByActivationTokenPut (int? activationToken)
@@ -332,14 +327,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="forgotpasswordput"></a>
 # **ForgotPasswordPut**
-> string ForgotPasswordPut (ForgotPassword forgotPassword = null)
+> string ForgotPasswordPut (ForgotPassword body = null)
 
 Forgot password
 
@@ -364,12 +358,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new AccountApi();
-            var forgotPassword = new ForgotPassword(); // ForgotPassword |  (optional) 
+            var body = new ForgotPassword(); // ForgotPassword |  (optional) 
 
             try
             {
                 // Forgot password
-                string result = apiInstance.ForgotPasswordPut(forgotPassword);
+                string result = apiInstance.ForgotPasswordPut(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -385,7 +379,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **forgotPassword** | [**ForgotPassword**](ForgotPassword.md)|  | [optional] 
+ **body** | [**ForgotPassword**](ForgotPassword.md)|  | [optional] 
 
 ### Return type
 
@@ -401,10 +395,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="forgotpasswordverifyput"></a>
 # **ForgotPasswordVerifyPut**
-> string ForgotPasswordVerifyPut (AccountForgotPasswordVerify verifyPassword)
+> string ForgotPasswordVerifyPut (AccountForgotPasswordVerify body)
 
 Verify forgot password
 
@@ -429,12 +422,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new AccountApi();
-            var verifyPassword = new AccountForgotPasswordVerify(); // AccountForgotPasswordVerify | verifyPassword data
+            var body = new AccountForgotPasswordVerify(); // AccountForgotPasswordVerify | verifyPassword data
 
             try
             {
                 // Verify forgot password
-                string result = apiInstance.ForgotPasswordVerifyPut(verifyPassword);
+                string result = apiInstance.ForgotPasswordVerifyPut(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -450,7 +443,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **verifyPassword** | [**AccountForgotPasswordVerify**](AccountForgotPasswordVerify.md)| verifyPassword data | 
+ **body** | [**AccountForgotPasswordVerify**](AccountForgotPasswordVerify.md)| verifyPassword data | 
 
 ### Return type
 
@@ -466,10 +459,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="forgotusernameput"></a>
 # **ForgotUsernamePut**
-> string ForgotUsernamePut (ForgotUsername forgotUsername = null)
+> string ForgotUsernamePut (ForgotUsername body = null)
 
 Forgot username
 
@@ -490,12 +482,12 @@ namespace Example
         public void main()
         {
             var apiInstance = new AccountApi();
-            var forgotUsername = new ForgotUsername(); // ForgotUsername |  (optional) 
+            var body = new ForgotUsername(); // ForgotUsername |  (optional) 
 
             try
             {
                 // Forgot username
-                string result = apiInstance.ForgotUsernamePut(forgotUsername);
+                string result = apiInstance.ForgotUsernamePut(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -511,7 +503,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **forgotUsername** | [**ForgotUsername**](ForgotUsername.md)|  | [optional] 
+ **body** | [**ForgotUsername**](ForgotUsername.md)|  | [optional] 
 
 ### Return type
 
@@ -527,4 +519,3 @@ No authorization required
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

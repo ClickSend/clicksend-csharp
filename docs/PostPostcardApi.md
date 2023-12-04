@@ -9,7 +9,6 @@ Method | HTTP request | Description
 [**PostPostcardsPricePost**](PostPostcardApi.md#postpostcardspricepost) | **POST** /post/postcards/price | Calculate price for sending one or more postcards
 [**PostPostcardsSendPost**](PostPostcardApi.md#postpostcardssendpost) | **POST** /post/postcards/send | Send one or more postcards
 
-
 <a name="postpostcardshistoryexportget"></a>
 # **PostPostcardsHistoryExportGet**
 > string PostPostcardsHistoryExportGet (string filename)
@@ -70,11 +69,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="postpostcardshistoryget"></a>
 # **PostPostcardsHistoryGet**
 > string PostPostcardsHistoryGet (int? page = null, int? limit = null)
@@ -137,14 +135,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="postpostcardspricepost"></a>
 # **PostPostcardsPricePost**
-> string PostPostcardsPricePost (PostPostcard postPostcards)
+> string PostPostcardsPricePost (PostPostcard body)
 
 Calculate price for sending one or more postcards
 
@@ -169,12 +166,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new PostPostcardApi();
-            var postPostcards = new PostPostcard(); // PostPostcard | PostPostcard model
+            var body = new PostPostcard(); // PostPostcard | PostPostcard model
 
             try
             {
                 // Calculate price for sending one or more postcards
-                string result = apiInstance.PostPostcardsPricePost(postPostcards);
+                string result = apiInstance.PostPostcardsPricePost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -190,7 +187,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **postPostcards** | [**PostPostcard**](PostPostcard.md)| PostPostcard model | 
+ **body** | [**PostPostcard**](PostPostcard.md)| PostPostcard model | 
 
 ### Return type
 
@@ -206,10 +203,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="postpostcardssendpost"></a>
 # **PostPostcardsSendPost**
-> string PostPostcardsSendPost (PostPostcard postPostcards)
+> string PostPostcardsSendPost (PostPostcard body)
 
 Send one or more postcards
 
@@ -234,12 +230,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new PostPostcardApi();
-            var postPostcards = new PostPostcard(); // PostPostcard | PostPostcard model
+            var body = new PostPostcard(); // PostPostcard | PostPostcard model
 
             try
             {
                 // Send one or more postcards
-                string result = apiInstance.PostPostcardsSendPost(postPostcards);
+                string result = apiInstance.PostPostcardsSendPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -255,7 +251,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **postPostcards** | [**PostPostcard**](PostPostcard.md)| PostPostcard model | 
+ **body** | [**PostPostcard**](PostPostcard.md)| PostPostcard model | 
 
 ### Return type
 
@@ -271,4 +267,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

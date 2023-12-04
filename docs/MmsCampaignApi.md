@@ -11,7 +11,6 @@ Method | HTTP request | Description
 [**MmsCampaignsPricePost**](MmsCampaignApi.md#mmscampaignspricepost) | **POST** /mms-campaigns/price | Calculate price for mms campaign
 [**MmsCampaignsSendPost**](MmsCampaignApi.md#mmscampaignssendpost) | **POST** /mms-campaigns/send | Create mms campaign
 
-
 <a name="mmscampaignbymmscampaignidget"></a>
 # **MmsCampaignByMmsCampaignIdGet**
 > string MmsCampaignByMmsCampaignIdGet (int? mmsCampaignId)
@@ -72,14 +71,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="mmscampaignsbymmscampaignidput"></a>
 # **MmsCampaignsByMmsCampaignIdPut**
-> string MmsCampaignsByMmsCampaignIdPut (int? mmsCampaignId, MmsCampaign campaign)
+> string MmsCampaignsByMmsCampaignIdPut (MmsCampaign body, int? mmsCampaignId)
 
 Update mms campaign
 
@@ -104,13 +102,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new MmsCampaignApi();
+            var body = new MmsCampaign(); // MmsCampaign | MmsCampaign model
             var mmsCampaignId = 56;  // int? | ID of MMS campaign to update
-            var campaign = new MmsCampaign(); // MmsCampaign | MmsCampaign model
 
             try
             {
                 // Update mms campaign
-                string result = apiInstance.MmsCampaignsByMmsCampaignIdPut(mmsCampaignId, campaign);
+                string result = apiInstance.MmsCampaignsByMmsCampaignIdPut(body, mmsCampaignId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -126,8 +124,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**MmsCampaign**](MmsCampaign.md)| MmsCampaign model | 
  **mmsCampaignId** | **int?**| ID of MMS campaign to update | 
- **campaign** | [**MmsCampaign**](MmsCampaign.md)| MmsCampaign model | 
 
 ### Return type
 
@@ -143,7 +141,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="mmscampaignscancelbymmscampaignidput"></a>
 # **MmsCampaignsCancelByMmsCampaignIdPut**
 > string MmsCampaignsCancelByMmsCampaignIdPut (int? mmsCampaignId)
@@ -204,11 +201,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="mmscampaignsget"></a>
 # **MmsCampaignsGet**
 > string MmsCampaignsGet (int? page = null, int? limit = null)
@@ -271,14 +267,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="mmscampaignspricepost"></a>
 # **MmsCampaignsPricePost**
-> string MmsCampaignsPricePost (MmsCampaign campaign)
+> string MmsCampaignsPricePost (MmsCampaign body)
 
 Calculate price for mms campaign
 
@@ -303,12 +298,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new MmsCampaignApi();
-            var campaign = new MmsCampaign(); // MmsCampaign | MmsCampaign model
+            var body = new MmsCampaign(); // MmsCampaign | MmsCampaign model
 
             try
             {
                 // Calculate price for mms campaign
-                string result = apiInstance.MmsCampaignsPricePost(campaign);
+                string result = apiInstance.MmsCampaignsPricePost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -324,7 +319,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaign** | [**MmsCampaign**](MmsCampaign.md)| MmsCampaign model | 
+ **body** | [**MmsCampaign**](MmsCampaign.md)| MmsCampaign model | 
 
 ### Return type
 
@@ -340,10 +335,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="mmscampaignssendpost"></a>
 # **MmsCampaignsSendPost**
-> string MmsCampaignsSendPost (MmsCampaign campaign)
+> string MmsCampaignsSendPost (MmsCampaign body)
 
 Create mms campaign
 
@@ -368,12 +362,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new MmsCampaignApi();
-            var campaign = new MmsCampaign(); // MmsCampaign | MmsCampaign model
+            var body = new MmsCampaign(); // MmsCampaign | MmsCampaign model
 
             try
             {
                 // Create mms campaign
-                string result = apiInstance.MmsCampaignsSendPost(campaign);
+                string result = apiInstance.MmsCampaignsSendPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -389,7 +383,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaign** | [**MmsCampaign**](MmsCampaign.md)| MmsCampaign model | 
+ **body** | [**MmsCampaign**](MmsCampaign.md)| MmsCampaign model | 
 
 ### Return type
 
@@ -405,4 +399,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

@@ -15,7 +15,6 @@ Method | HTTP request | Description
 [**VoiceReceiptsReadPut**](VoiceApi.md#voicereceiptsreadput) | **PUT** /voice/receipts-read | Mark delivery receipts as read
 [**VoiceSendPost**](VoiceApi.md#voicesendpost) | **POST** /voice/send | Send voice message(s)
 
-
 <a name="voicecancelallput"></a>
 # **VoiceCancelAllPut**
 > string VoiceCancelAllPut ()
@@ -72,11 +71,10 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="voicecancelbymessageidput"></a>
 # **VoiceCancelByMessageIdPut**
 > string VoiceCancelByMessageIdPut (string messageId)
@@ -137,11 +135,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="voicehistoryexportget"></a>
 # **VoiceHistoryExportGet**
 > string VoiceHistoryExportGet (string filename)
@@ -202,11 +199,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="voicehistoryget"></a>
 # **VoiceHistoryGet**
 > string VoiceHistoryGet (int? dateFrom = null, int? dateTo = null, int? page = null, int? limit = null)
@@ -273,11 +269,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="voicelangget"></a>
 # **VoiceLangGet**
 > string VoiceLangGet ()
@@ -334,14 +329,13 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="voicepricepost"></a>
 # **VoicePricePost**
-> string VoicePricePost (VoiceMessageCollection voiceMessages)
+> string VoicePricePost (VoiceMessageCollection body)
 
 Calculate voice price
 
@@ -366,12 +360,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new VoiceApi();
-            var voiceMessages = new VoiceMessageCollection(); // VoiceMessageCollection | VoiceMessageCollection model
+            var body = new VoiceMessageCollection(); // VoiceMessageCollection | VoiceMessageCollection model
 
             try
             {
                 // Calculate voice price
-                string result = apiInstance.VoicePricePost(voiceMessages);
+                string result = apiInstance.VoicePricePost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -387,7 +381,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **voiceMessages** | [**VoiceMessageCollection**](VoiceMessageCollection.md)| VoiceMessageCollection model | 
+ **body** | [**VoiceMessageCollection**](VoiceMessageCollection.md)| VoiceMessageCollection model | 
 
 ### Return type
 
@@ -403,7 +397,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="voicereceiptsget"></a>
 # **VoiceReceiptsGet**
 > string VoiceReceiptsGet (int? page = null, int? limit = null)
@@ -466,14 +459,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="voicereceiptspost"></a>
 # **VoiceReceiptsPost**
-> string VoiceReceiptsPost (Url url)
+> string VoiceReceiptsPost (Url body)
 
 Add a delivery receipt
 
@@ -498,12 +490,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new VoiceApi();
-            var url = new Url(); // Url | Url model
+            var body = new Url(); // Url | Url model
 
             try
             {
                 // Add a delivery receipt
-                string result = apiInstance.VoiceReceiptsPost(url);
+                string result = apiInstance.VoiceReceiptsPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -519,7 +511,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **url** | [**Url**](Url.md)| Url model | 
+ **body** | [**Url**](Url.md)| Url model | 
 
 ### Return type
 
@@ -535,10 +527,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="voicereceiptsreadput"></a>
 # **VoiceReceiptsReadPut**
-> string VoiceReceiptsReadPut (DateBefore dateBefore = null)
+> string VoiceReceiptsReadPut (DateBefore body = null)
 
 Mark delivery receipts as read
 
@@ -563,12 +554,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new VoiceApi();
-            var dateBefore = new DateBefore(); // DateBefore | DateBefore model (optional) 
+            var body = new DateBefore(); // DateBefore | DateBefore model (optional) 
 
             try
             {
                 // Mark delivery receipts as read
-                string result = apiInstance.VoiceReceiptsReadPut(dateBefore);
+                string result = apiInstance.VoiceReceiptsReadPut(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -584,7 +575,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dateBefore** | [**DateBefore**](DateBefore.md)| DateBefore model | [optional] 
+ **body** | [**DateBefore**](DateBefore.md)| DateBefore model | [optional] 
 
 ### Return type
 
@@ -600,10 +591,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="voicesendpost"></a>
 # **VoiceSendPost**
-> string VoiceSendPost (VoiceMessageCollection voiceMessages)
+> string VoiceSendPost (VoiceMessageCollection body)
 
 Send voice message(s)
 
@@ -628,12 +618,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new VoiceApi();
-            var voiceMessages = new VoiceMessageCollection(); // VoiceMessageCollection | VoiceMessageCollection model
+            var body = new VoiceMessageCollection(); // VoiceMessageCollection | VoiceMessageCollection model
 
             try
             {
                 // Send voice message(s)
-                string result = apiInstance.VoiceSendPost(voiceMessages);
+                string result = apiInstance.VoiceSendPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -649,7 +639,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **voiceMessages** | [**VoiceMessageCollection**](VoiceMessageCollection.md)| VoiceMessageCollection model | 
+ **body** | [**VoiceMessageCollection**](VoiceMessageCollection.md)| VoiceMessageCollection model | 
 
 ### Return type
 
@@ -665,4 +655,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

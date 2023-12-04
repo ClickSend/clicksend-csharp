@@ -9,7 +9,6 @@ Method | HTTP request | Description
 [**ResellerAccountsGet**](ResellerAccountApi.md#reselleraccountsget) | **GET** /reseller/accounts | Get list of reseller accounts
 [**ResellerAccountsPost**](ResellerAccountApi.md#reselleraccountspost) | **POST** /reseller/accounts | Create reseller account
 
-
 <a name="reselleraccountsbyclientuseridget"></a>
 # **ResellerAccountsByClientUserIdGet**
 > string ResellerAccountsByClientUserIdGet (int? clientUserId)
@@ -70,14 +69,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="reselleraccountsbyclientuseridput"></a>
 # **ResellerAccountsByClientUserIdPut**
-> string ResellerAccountsByClientUserIdPut (int? clientUserId, ResellerAccount resellerAccount)
+> string ResellerAccountsByClientUserIdPut (ResellerAccount body, int? clientUserId)
 
 Update Reseller clients Account
 
@@ -102,13 +100,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new ResellerAccountApi();
+            var body = new ResellerAccount(); // ResellerAccount | ResellerAccount model
             var clientUserId = 56;  // int? | User ID of client
-            var resellerAccount = new ResellerAccount(); // ResellerAccount | ResellerAccount model
 
             try
             {
                 // Update Reseller clients Account
-                string result = apiInstance.ResellerAccountsByClientUserIdPut(clientUserId, resellerAccount);
+                string result = apiInstance.ResellerAccountsByClientUserIdPut(body, clientUserId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -124,8 +122,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**ResellerAccount**](ResellerAccount.md)| ResellerAccount model | 
  **clientUserId** | **int?**| User ID of client | 
- **resellerAccount** | [**ResellerAccount**](ResellerAccount.md)| ResellerAccount model | 
 
 ### Return type
 
@@ -141,7 +139,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="reselleraccountsget"></a>
 # **ResellerAccountsGet**
 > string ResellerAccountsGet (int? page = null, int? limit = null)
@@ -204,14 +201,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="reselleraccountspost"></a>
 # **ResellerAccountsPost**
-> string ResellerAccountsPost (ResellerAccount resellerAccount)
+> string ResellerAccountsPost (ResellerAccount body)
 
 Create reseller account
 
@@ -236,12 +232,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new ResellerAccountApi();
-            var resellerAccount = new ResellerAccount(); // ResellerAccount | ResellerAccount model
+            var body = new ResellerAccount(); // ResellerAccount | ResellerAccount model
 
             try
             {
                 // Create reseller account
-                string result = apiInstance.ResellerAccountsPost(resellerAccount);
+                string result = apiInstance.ResellerAccountsPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -257,7 +253,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **resellerAccount** | [**ResellerAccount**](ResellerAccount.md)| ResellerAccount model | 
+ **body** | [**ResellerAccount**](ResellerAccount.md)| ResellerAccount model | 
 
 ### Return type
 
@@ -273,4 +269,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

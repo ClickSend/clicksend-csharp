@@ -12,7 +12,6 @@ Method | HTTP request | Description
 [**SmsEmailSmsStrippedStringPut**](EmailToSmsApi.md#smsemailsmsstrippedstringput) | **PUT** /sms/email-sms-stripped-strings/{rule_id} | Update email to sms stripped string rule
 [**SmsEmailSmsStrippedStringsGet**](EmailToSmsApi.md#smsemailsmsstrippedstringsget) | **GET** /sms/email-sms-stripped-strings | Get list of email to sms stripped string rules
 
-
 <a name="smsemailsmsget"></a>
 # **SmsEmailSmsGet**
 > string SmsEmailSmsGet (int? page = null, int? limit = null)
@@ -75,14 +74,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smsemailsmspost"></a>
 # **SmsEmailSmsPost**
-> string SmsEmailSmsPost (EmailSMSAddress emailSmsAddress)
+> string SmsEmailSmsPost (EmailSMSAddress body)
 
 Create email to sms allowed address
 
@@ -107,12 +105,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new EmailToSmsApi();
-            var emailSmsAddress = new EmailSMSAddress(); // EmailSMSAddress | EmailSMSAddress model
+            var body = new EmailSMSAddress(); // EmailSMSAddress | EmailSMSAddress model
 
             try
             {
                 // Create email to sms allowed address
-                string result = apiInstance.SmsEmailSmsPost(emailSmsAddress);
+                string result = apiInstance.SmsEmailSmsPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -128,7 +126,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **emailSmsAddress** | [**EmailSMSAddress**](EmailSMSAddress.md)| EmailSMSAddress model | 
+ **body** | [**EmailSMSAddress**](EmailSMSAddress.md)| EmailSMSAddress model | 
 
 ### Return type
 
@@ -144,7 +142,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smsemailsmsstrippedstringdelete"></a>
 # **SmsEmailSmsStrippedStringDelete**
 > string SmsEmailSmsStrippedStringDelete (int? ruleId)
@@ -205,11 +202,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smsemailsmsstrippedstringget"></a>
 # **SmsEmailSmsStrippedStringGet**
 > string SmsEmailSmsStrippedStringGet (int? ruleId)
@@ -270,14 +266,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smsemailsmsstrippedstringpost"></a>
 # **SmsEmailSmsStrippedStringPost**
-> string SmsEmailSmsStrippedStringPost (StrippedString strippedString)
+> string SmsEmailSmsStrippedStringPost (StrippedString body)
 
 Create email to sms stripped string rule
 
@@ -302,12 +297,12 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new EmailToSmsApi();
-            var strippedString = new StrippedString(); // StrippedString | StrippedString model
+            var body = new StrippedString(); // StrippedString | StrippedString model
 
             try
             {
                 // Create email to sms stripped string rule
-                string result = apiInstance.SmsEmailSmsStrippedStringPost(strippedString);
+                string result = apiInstance.SmsEmailSmsStrippedStringPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -323,7 +318,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **strippedString** | [**StrippedString**](StrippedString.md)| StrippedString model | 
+ **body** | [**StrippedString**](StrippedString.md)| StrippedString model | 
 
 ### Return type
 
@@ -339,10 +334,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smsemailsmsstrippedstringput"></a>
 # **SmsEmailSmsStrippedStringPut**
-> string SmsEmailSmsStrippedStringPut (StrippedString strippedString, int? ruleId)
+> string SmsEmailSmsStrippedStringPut (StrippedString body, int? ruleId)
 
 Update email to sms stripped string rule
 
@@ -367,13 +361,13 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new EmailToSmsApi();
-            var strippedString = new StrippedString(); // StrippedString | StrippedString model
+            var body = new StrippedString(); // StrippedString | StrippedString model
             var ruleId = 56;  // int? | Your rule id
 
             try
             {
                 // Update email to sms stripped string rule
-                string result = apiInstance.SmsEmailSmsStrippedStringPut(strippedString, ruleId);
+                string result = apiInstance.SmsEmailSmsStrippedStringPut(body, ruleId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -389,7 +383,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **strippedString** | [**StrippedString**](StrippedString.md)| StrippedString model | 
+ **body** | [**StrippedString**](StrippedString.md)| StrippedString model | 
  **ruleId** | **int?**| Your rule id | 
 
 ### Return type
@@ -406,7 +400,6 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="smsemailsmsstrippedstringsget"></a>
 # **SmsEmailSmsStrippedStringsGet**
 > string SmsEmailSmsStrippedStringsGet (int? page = null, int? limit = null)
@@ -469,8 +462,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
