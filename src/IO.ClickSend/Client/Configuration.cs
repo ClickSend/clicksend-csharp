@@ -119,7 +119,7 @@ namespace IO.ClickSend.Client
             ApiKey = new ConcurrentDictionary<string, string>();
             ApiKeyPrefix = new ConcurrentDictionary<string, string>();
 
-            Timeout = 100000;
+            //Timeout = 100000;
         }
 
         /// <summary>
@@ -225,13 +225,16 @@ namespace IO.ClickSend.Client
         /// <summary>
         /// Gets or sets the base path for API access.
         /// </summary>
-        public virtual string BasePath {
+        public virtual string BasePath
+        {
             get { return _basePath; }
-            set {
+            set
+            {
                 _basePath = value;
                 // pass-through to ApiClient if it's set.
-                if(_apiClient != null) {
-                    _apiClient.RestClient.BaseUrl = new Uri(_basePath);
+                if (_apiClient != null)
+                {
+                    //_apiClient.RestClient.Options.BaseUrl = new Uri(_basePath);
                 }
             }
         }
@@ -245,29 +248,29 @@ namespace IO.ClickSend.Client
         /// <summary>
         /// Gets or sets the HTTP timeout (milliseconds) of ApiClient. Default to 100000 milliseconds.
         /// </summary>
-        public virtual int Timeout
-        {
-            
-            get
-            {
-                if (_apiClient == null)
-                {
-                    return _timeout;
-                } 
-                else
-                {
-                    return ApiClient.RestClient.Timeout;
-                }
-            }
-            set
-            {
-                _timeout = value;
-                if (_apiClient != null)
-                {
-                    ApiClient.RestClient.Timeout = _timeout;
-                }
-            }
-        }
+        //public virtual int Timeout
+        //{
+
+        //    get
+        //    {
+        //        if (_apiClient == null)
+        //        {
+        //            return _timeout;
+        //        }
+        //        else
+        //        {
+        //            return Convert.ToInt32(ApiClient.RestClient.Options.Timeout.Value.TotalMilliseconds);
+        //        }
+        //    }
+        //    set
+        //    {
+        //        _timeout = value;
+        //        if (_apiClient != null)
+        //        {
+        //            ApiClient.RestClient.Options.Timeout = new TimeSpan(_timeout);
+        //        }
+        //    }
+        //}
 
         /// <summary>
         /// Gets or sets the HTTP user agent.
@@ -295,9 +298,9 @@ namespace IO.ClickSend.Client
         public string GetApiKeyWithPrefix(string apiKeyIdentifier)
         {
             var apiKeyValue = "";
-            ApiKey.TryGetValue (apiKeyIdentifier, out apiKeyValue);
+            ApiKey.TryGetValue(apiKeyIdentifier, out apiKeyValue);
             var apiKeyPrefix = "";
-            if (ApiKeyPrefix.TryGetValue (apiKeyIdentifier, out apiKeyPrefix))
+            if (ApiKeyPrefix.TryGetValue(apiKeyIdentifier, out apiKeyPrefix))
                 return apiKeyPrefix + " " + apiKeyValue;
             else
                 return apiKeyValue;
@@ -436,7 +439,7 @@ namespace IO.ClickSend.Client
         {
             String report = "C# SDK (IO.ClickSend) Debug Report:\n";
             report += "    OS: " + System.Environment.OSVersion + "\n";
-            report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
+            report += "    .NET Framework Version: " + System.Environment.Version + "\n";
             report += "    Version of the API: 3.1\n";
             report += "    SDK Package Version: 1.0.0\n";
 
