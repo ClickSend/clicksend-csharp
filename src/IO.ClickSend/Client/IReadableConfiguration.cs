@@ -63,7 +63,7 @@ namespace IO.ClickSend.Client
         /// Gets the HTTP connection timeout (in milliseconds)
         /// </summary>
         /// <value>HTTP connection timeout.</value>
-        int Timeout { get; }
+        //int Timeout { get; }
 
         /// <summary>
         /// Gets the user agent.
