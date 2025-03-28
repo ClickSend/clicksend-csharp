@@ -87,7 +87,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// Use this endpoint to select countries that you intend to send sms / mms to. To remove / unselect a country, just remove the country id from the array in the payload.
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Id of countr(ies) you want to select, you can get them from GET /country-list response</param>
+        /// <param name="body">Id of countr(ies) you want to select, you can get them from Get /country-list response</param>
         /// <returns>string</returns>
         string UserCountriesPost (CountryListIds body);
 
@@ -98,7 +98,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// Use this endpoint to select countries that you intend to send sms / mms to. To remove / unselect a country, just remove the country id from the array in the payload.
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Id of countr(ies) you want to select, you can get them from GET /country-list response</param>
+        /// <param name="body">Id of countr(ies) you want to select, you can get them from Get /country-list response</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> UserCountriesPostWithHttpInfo (CountryListIds body);
         #endregion Synchronous Operations
@@ -167,7 +167,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// Use this endpoint to select countries that you intend to send sms / mms to. To remove / unselect a country, just remove the country id from the array in the payload.
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Id of countr(ies) you want to select, you can get them from GET /country-list response</param>
+        /// <param name="body">Id of countr(ies) you want to select, you can get them from Get /country-list response</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> UserCountriesPostAsync (CountryListIds body);
 
@@ -178,7 +178,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// Use this endpoint to select countries that you intend to send sms / mms to. To remove / unselect a country, just remove the country id from the array in the payload.
         /// </remarks>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Id of countr(ies) you want to select, you can get them from GET /country-list response</param>
+        /// <param name="body">Id of countr(ies) you want to select, you can get them from Get /country-list response</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> UserCountriesPostAsyncWithHttpInfo (CountryListIds body);
         #endregion Asynchronous Operations
@@ -235,7 +235,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// <value>The base path</value>
         public String GetBasePath()
         {
-            return this.Configuration.ApiClient.RestClient.BaseUrl.ToString();
+            return this.Configuration.ApiClient.RestClient.Options.BaseUrl.ToString();
         }
 
         /// <summary>
@@ -340,8 +340,8 @@ namespace IO.ClickSend.ClickSend.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -406,8 +406,8 @@ namespace IO.ClickSend.ClickSend.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -471,8 +471,8 @@ namespace IO.ClickSend.ClickSend.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -537,8 +537,8 @@ namespace IO.ClickSend.ClickSend.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -602,8 +602,8 @@ namespace IO.ClickSend.ClickSend.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -668,8 +668,8 @@ namespace IO.ClickSend.ClickSend.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -689,7 +689,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// Select Countries for Global Sending Use this endpoint to select countries that you intend to send sms / mms to. To remove / unselect a country, just remove the country id from the array in the payload.
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Id of countr(ies) you want to select, you can get them from GET /country-list response</param>
+        /// <param name="body">Id of countr(ies) you want to select, you can get them from Get /country-list response</param>
         /// <returns>string</returns>
         public string UserCountriesPost (CountryListIds body)
         {
@@ -701,7 +701,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// Select Countries for Global Sending Use this endpoint to select countries that you intend to send sms / mms to. To remove / unselect a country, just remove the country id from the array in the payload.
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Id of countr(ies) you want to select, you can get them from GET /country-list response</param>
+        /// <param name="body">Id of countr(ies) you want to select, you can get them from Get /country-list response</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > UserCountriesPostWithHttpInfo (CountryListIds body)
         {
@@ -747,8 +747,8 @@ namespace IO.ClickSend.ClickSend.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -768,7 +768,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// Select Countries for Global Sending Use this endpoint to select countries that you intend to send sms / mms to. To remove / unselect a country, just remove the country id from the array in the payload.
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Id of countr(ies) you want to select, you can get them from GET /country-list response</param>
+        /// <param name="body">Id of countr(ies) you want to select, you can get them from Get /country-list response</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> UserCountriesPostAsync (CountryListIds body)
         {
@@ -781,7 +781,7 @@ namespace IO.ClickSend.ClickSend.Api
         /// Select Countries for Global Sending Use this endpoint to select countries that you intend to send sms / mms to. To remove / unselect a country, just remove the country id from the array in the payload.
         /// </summary>
         /// <exception cref="IO.ClickSend.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Id of countr(ies) you want to select, you can get them from GET /country-list response</param>
+        /// <param name="body">Id of countr(ies) you want to select, you can get them from Get /country-list response</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> UserCountriesPostAsyncWithHttpInfo (CountryListIds body)
         {
@@ -827,8 +827,8 @@ namespace IO.ClickSend.ClickSend.Api
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
