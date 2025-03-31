@@ -1,8 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-VisualStudioVersion = 12.0.0.0
-MinimumVisualStudioVersion = 10.0.0.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IO.ClickSend", "src\IO.ClickSend\IO.ClickSend.csproj", "{82E3D3C9-B6A1-45CF-A61E-4A8E7068CF04}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IO.ClickSend", "src\IO.ClickSend\IO.ClickSend.csproj", "{40073990-79D7-4D2B-A39C-2B1EDCFAC85F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IO.ClickSend.Test", "src\IO.ClickSend.Test\IO.ClickSend.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
@@ -12,10 +12,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{82E3D3C9-B6A1-45CF-A61E-4A8E7068CF04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{82E3D3C9-B6A1-45CF-A61E-4A8E7068CF04}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{82E3D3C9-B6A1-45CF-A61E-4A8E7068CF04}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{82E3D3C9-B6A1-45CF-A61E-4A8E7068CF04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40073990-79D7-4D2B-A39C-2B1EDCFAC85F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40073990-79D7-4D2B-A39C-2B1EDCFAC85F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40073990-79D7-4D2B-A39C-2B1EDCFAC85F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40073990-79D7-4D2B-A39C-2B1EDCFAC85F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -23,5 +23,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F4B9956-0680-438C-92FE-616CF3190917}
 	EndGlobalSection
 EndGlobal

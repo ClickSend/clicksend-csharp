@@ -7,6 +7,10 @@
 *.user
 *.sln.docstates
 ./nuget
+./vs
+*.csproj
+*.config
+*.vsidx
 
 # Build results
 
