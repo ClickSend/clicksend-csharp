@@ -27,7 +27,7 @@
 
             <dependency id="NewtonSoft.Json" version="10.0.3" />
             <dependency id="JsonSubTypes" version="1.2.0" />
-            <dependency id="RestSharp" version="105.1.0" />
+            <dependency id="RestSharp" version="112.1.0" />
 
         </dependencies>
 		<repository type="git" url="https://github.com/ClickSend/clicksend-csharp" />
