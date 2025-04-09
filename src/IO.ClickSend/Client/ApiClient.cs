@@ -20,6 +20,7 @@ using System.Text;
 using Newtonsoft.Json;
 using RestSharp;
 using System.Threading;
+using System.Net.Http;
 
 namespace IO.ClickSend.Client
 {
