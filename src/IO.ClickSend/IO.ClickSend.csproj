@@ -55,6 +55,7 @@ Contact: support@clicksend.com
       <HintPath Condition="Exists('..\packages')">..\packages\System.Text.Json.8.0.4\lib\netstandard2.0\System.Text.Json.dll</HintPath>
       <HintPath Condition="Exists('..\..\packages')">..\..\packages\System.Text.Json.8.0.4\lib\netstandard2.0\System.Text.Json.dll</HintPath>
       <HintPath Condition="Exists('..\..\vendor')">..\..\vendor\System.Text.Json.8.0.4\lib\netstandard2.0\System.Text.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1" />
     <Reference Include="System.ValueTuple, Version=4.0.3.0" />
     <Reference Include="System" />
