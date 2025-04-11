@@ -10,8 +10,9 @@ if not exist ".\nuget.exe" powershell -Command "(new-object System.Net.WebClient
 
 if not exist ".\bin" mkdir bin
 
-copy packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll bin\Newtonsoft.Json.dll
-copy packages\JsonSubTypes.1.2.0\lib\net45\JsonSubTypes.dll bin\JsonSubTypes.dll
-copy packages\RestSharp.105.1.0\lib\net45\RestSharp.dll bin\RestSharp.dll
-%CSCPATH%\csc  /reference:bin\Newtonsoft.Json.dll;bin\JsonSubTypes.dll;bin\RestSharp.dll;System.ComponentModel.DataAnnotations.dll  /target:library /out:bin\IO.ClickSend.dll /recurse:src\IO.ClickSend\*.cs /doc:bin\IO.ClickSend.xml
+copy packages\Newtonsoft.Json.13.0.3\lib\netstandard2.0\Newtonsoft.Json.dll bin\Newtonsoft.Json.dll
+copy packages\JsonSubTypes.1.8.0\lib\netstandard2.0\JsonSubTypes.dll bin\JsonSubTypes.dll
+copy packages\RestSharp.112.1.0\lib\net48\RestSharp.dll bin\RestSharp.dll
+copy packages\System.Text.Json.4.7.2\lib\netstandard2.0\System.Text.Json.dll bin\System.Text.Json.dll
+%CSCPATH%\csc  /reference:bin\Newtonsoft.Json.dll;bin\JsonSubTypes.dll;bin\RestSharp.dll;System.ComponentModel.DataAnnotations.dll;bin\System.Text.Json.dll  /target:library /out:bin\IO.ClickSend.dll /recurse:src\IO.ClickSend\*.cs /doc:bin\IO.ClickSend.xml
 
