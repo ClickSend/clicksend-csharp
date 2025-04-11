@@ -70,6 +70,7 @@ Contact: support@clicksend.com
        <HintPath Condition="Exists('..\packages')">..\packages\packages\System.Text.Json.9.0.4\lib\net462\System.Text.Json.dll</HintPath>
        <HintPath Condition="Exists('..\..\packages')">..\..\packages\packages\System.Text.Json.9.0.4\lib\net462\System.Text.Json.dll</HintPath>
        <HintPath Condition="Exists('..\..\vendor')">..\..\vendor\packages\System.Text.Json.9.0.4\lib\net462\System.Text.Json.dll</HintPath>
+       <SpecificVersion>True</SpecificVersion>
      </Reference>
     <Reference Include="nunit.framework">
       <HintPath Condition="Exists('$(SolutionDir)\packages')">$(SolutionDir)\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
