@@ -65,11 +65,11 @@ Contact: support@clicksend.com
         <HintPath Condition="Exists('..\..\packages')">..\..\packages\RestSharp.112.1.0\lib\net48\RestSharp.dll</HintPath>
         <HintPath Condition="Exists('..\..\vendor')">..\..\vendor\RestSharp.112.1.0\lib\net48\RestSharp.dll</HintPath>
     </Reference>
-    <Reference Include="System.Text.Json, Version=4.7.2">
-       <HintPath Condition="Exists('$(SolutionDir)\packages')">$(SolutionDir)\packages\System.Text.Json.4.7.2\lib\netstandard2.0\System.Text.Json.dll</HintPath>
-       <HintPath Condition="Exists('..\packages')">..\packages\System.Text.Json.4.7.2\lib\netstandard2.0\System.Text.Json.dll</HintPath>
-       <HintPath Condition="Exists('..\..\packages')">..\..\packages\System.Text.Json.4.7.2\lib\netstandard2.0\System.Text.Json.dll</HintPath>
-       <HintPath Condition="Exists('..\..\vendor')">..\..\vendor\System.Text.Json.4.7.2\lib\netstandard2.0\System.Text.Json.dll</HintPath>
+    <Reference Include="System.Text.Json, Version=8.0.4">
+       <HintPath Condition="Exists('$(SolutionDir)\packages')">$(SolutionDir)\packages\System.Text.Json.8.0.4\lib\netstandard2.0\System.Text.Json.dll</HintPath>
+       <HintPath Condition="Exists('..\packages')">..\packages\System.Text.Json.8.0.4\lib\netstandard2.0\System.Text.Json.dll</HintPath>
+       <HintPath Condition="Exists('..\..\packages')">..\..\packages\System.Text.Json.8.0.4\lib\netstandard2.0\System.Text.Json.dll</HintPath>
+       <HintPath Condition="Exists('..\..\vendor')">..\..\vendor\System.Text.Json.8.0.4\lib\netstandard2.0\System.Text.Json.dll</HintPath>
      </Reference>
     <Reference Include="nunit.framework">
       <HintPath Condition="Exists('$(SolutionDir)\packages')">$(SolutionDir)\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
