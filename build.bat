@@ -13,8 +13,5 @@ if not exist ".\bin" mkdir bin
 copy packages\Newtonsoft.Json.13.0.3\lib\netstandard2.0\Newtonsoft.Json.dll bin\Newtonsoft.Json.dll
 copy packages\JsonSubTypes.1.8.0\lib\netstandard2.0\JsonSubTypes.dll bin\JsonSubTypes.dll
 copy packages\RestSharp.112.1.0\lib\net48\RestSharp.dll bin\RestSharp.dll
-copy packages\System.Text.Json.9.0.4\lib\netstandard2.0\System.Text.Json.dll bin\System.Text.Json.dll
-copy packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll bin\System.Net.Http.dll
-copy packages\JsonSubTypes.2.0.1\lib\netstandard2.0\JsonSubTypes.dll bin\JsonSubTypes.dll
-%CSCPATH%\csc  /reference:bin\Newtonsoft.Json.dll;bin\JsonSubTypes.dll;bin\RestSharp.dll;bin\System.Text.Json.dll;bin\System.Net.Http.dll;bin\JsonSubTypes.dll  /target:library /out:bin\IO.ClickSend.dll /recurse:src\IO.ClickSend\*.cs /doc:bin\IO.ClickSend.xml
+%CSCPATH%\csc  /reference:bin\Newtonsoft.Json.dll;bin\JsonSubTypes.dll;bin\RestSharp.dll;bin\ /target:library /out:bin\IO.ClickSend.dll /recurse:src\IO.ClickSend\*.cs /doc:bin\IO.ClickSend.xml
 
