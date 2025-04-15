@@ -20,4 +20,4 @@ copy packages\Newtonsoft.Json.13.0.3\lib\netstandard2.0\Newtonsoft.Json.dll bin\
 copy packages\RestSharp.112.1.0\lib\net48\RestSharp.dll bin\RestSharp.dll
 copy packages\JsonSubTypes.2.0.1\lib\netstandard2.0\JsonSubTypes.dll bin\JsonSubTypes.dll
 
-dotnet build src/IO.ClickSend/IO.ClickSend.csproj --configuration Debug -o bin\IO.ClickSend.dll --source packages
+dotnet build src/IO.ClickSend/IO.ClickSend.csproj --configuration Debug -o bin\IO.ClickSend --source packages
