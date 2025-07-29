@@ -33,11 +33,11 @@ namespace IO.ClickSend.ClickSend.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SmsMessage" /> class.
         /// </summary>
-        /// <param name="from">Your sender id - more info: http://help.clicksend.com/SMS/what-is-a-sender-id-or-sender-number..</param>
+        /// <param name="from">Your sender id - more info: https://help.clicksend.com/en/collections/57584-numbers-sender-ids..</param>
         /// <param name="body">Your message. (required).</param>
         /// <param name="to">Recipient phone number in E.164 format..</param>
         /// <param name="source">Your method of sending e.g. &#x27;wordpress&#x27;, &#x27;php&#x27;, &#x27;c#&#x27;. (default to &quot;sdk&quot;).</param>
-        /// <param name="schedule">Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp (default to 0).</param>
+        /// <param name="schedule">Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp (default to 0).</param>
         /// <param name="customString">Your reference. Will be passed back with all replies and delivery reports..</param>
         /// <param name="listId">Your list ID if sending to a whole list. Can be used instead of &#x27;to&#x27;..</param>
         /// <param name="country">Recipient country..</param>
@@ -80,9 +80,9 @@ namespace IO.ClickSend.ClickSend.Model
         }
         
         /// <summary>
-        /// Your sender id - more info: http://help.clicksend.com/SMS/what-is-a-sender-id-or-sender-number.
+        /// Your sender id - more info: https://help.clicksend.com/en/collections/57584-numbers-sender-ids.
         /// </summary>
-        /// <value>Your sender id - more info: http://help.clicksend.com/SMS/what-is-a-sender-id-or-sender-number.</value>
+        /// <value>Your sender id - more info: https://help.clicksend.com/en/collections/57584-numbers-sender-ids.</value>
         [DataMember(Name="from", EmitDefaultValue=false)]
         public string From { get; set; }
 
@@ -108,9 +108,9 @@ namespace IO.ClickSend.ClickSend.Model
         public string Source { get; set; }
 
         /// <summary>
-        /// Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp
+        /// Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp
         /// </summary>
-        /// <value>Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp</value>
+        /// <value>Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp</value>
         [DataMember(Name="schedule", EmitDefaultValue=false)]
         public int? Schedule { get; set; }
 

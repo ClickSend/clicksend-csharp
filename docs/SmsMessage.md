@@ -3,11 +3,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**From** | **string** | Your sender id - more info: http://help.clicksend.com/SMS/what-is-a-sender-id-or-sender-number. | [optional] 
+**From** | **string** | Your sender id - more info: https://help.clicksend.com/en/collections/57584-numbers-sender-ids. | [optional] 
 **Body** | **string** | Your message. | 
 **To** | **string** | Recipient phone number in E.164 format. | [optional] 
 **Source** | **string** | Your method of sending e.g. &#x27;wordpress&#x27;, &#x27;php&#x27;, &#x27;c#&#x27;. | [optional] [default to "sdk"]
-**Schedule** | **int?** | Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp | [optional] [default to 0]
+**Schedule** | **int?** | Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp | [optional] [default to 0]
 **CustomString** | **string** | Your reference. Will be passed back with all replies and delivery reports. | [optional] 
 **ListId** | **int?** | Your list ID if sending to a whole list. Can be used instead of &#x27;to&#x27;. | [optional] 
 **Country** | **string** | Recipient country. | [optional] 
