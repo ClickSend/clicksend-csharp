@@ -174,7 +174,7 @@ namespace IO.ClickSend.ClickSend.Model
         /// <summary>
         /// Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp
         /// </summary>
-        /// <value>Leave blank for immediate delivery. Your schedule time in unix format hhttps://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp</value>
+        /// <value>Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp</value>
         [DataMember(Name="schedule", EmitDefaultValue=false)]
         public int? Schedule { get; set; }
 
