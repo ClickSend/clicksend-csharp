@@ -41,7 +41,7 @@ namespace IO.ClickSend.ClickSend.Model
         /// <param name="source">Your method of sending e.g. &#x27;wordpress&#x27;, &#x27;php&#x27;, &#x27;c#&#x27;. (default to &quot;sdk&quot;).</param>
         /// <param name="listId">Your list ID if sending to a whole list. Can be used instead of &#x27;to&#x27;..</param>
         /// <param name="lang">au (string, required) - See section on available languages..</param>
-        /// <param name="schedule">Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp.</param>
+        /// <param name="schedule">Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp.</param>
         /// <param name="requireInput">Whether you want to receive a keypress from the call recipient (default to 0).</param>
         /// <param name="machineDetection">Whether to attempt to detect an answering machine or voicemail service and leave a message (default to 0).</param>
         public VoiceMessage(string to = default(string), string body = default(string), string voice = default(string), string customString = default(string), string country = default(string), string source = "sdk", int? listId = default(int?), string lang = default(string), int? schedule = default(int?), int? requireInput = 0, int? machineDetection = 0)
@@ -172,9 +172,9 @@ namespace IO.ClickSend.ClickSend.Model
         public string Lang { get; set; }
 
         /// <summary>
-        /// Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp
+        /// Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp
         /// </summary>
-        /// <value>Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp</value>
+        /// <value>Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp</value>
         [DataMember(Name="schedule", EmitDefaultValue=false)]
         public int? Schedule { get; set; }
 
