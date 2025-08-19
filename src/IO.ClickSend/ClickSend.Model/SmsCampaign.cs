@@ -36,7 +36,7 @@ namespace IO.ClickSend.ClickSend.Model
         /// <param name="listId">Your list id. (required).</param>
         /// <param name="name">Your campaign name. (required).</param>
         /// <param name="body">Your campaign message. (required).</param>
-        /// <param name="from">Your sender id - more info: https://help.clicksend.com/en/collections/57584-numbers-sender-ids..</param>
+        /// <param name="from">Your sender id - more info: https://help.clicksend.com/en/collections/57584-numbers-sender-ids</param>
         /// <param name="schedule">Your schedule timestamp. (default to 0).</param>
         /// <param name="urlToShorten">url to be shortened add http://smsg.io/xxxxx&#x60; to the body as a placeholder..</param>
         public SmsCampaign(int? listId = default(int?), string name = default(string), string body = default(string), string from = default(string), int? schedule = 0, string urlToShorten = default(string))

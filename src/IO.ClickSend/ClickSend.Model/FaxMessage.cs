@@ -37,7 +37,7 @@ namespace IO.ClickSend.ClickSend.Model
         /// <param name="to">Recipient fax number in E.164 format. (required).</param>
         /// <param name="listId">Your list ID if sending to a whole list. Can be used instead of &#x27;to&#x27;..</param>
         /// <param name="from">Your sender id. Must be a valid fax number..</param>
-        /// <param name="schedule">Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestampp.</param>
+        /// <param name="schedule">Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp.</param>
         /// <param name="customString">Your reference. Will be passed back with all replies and delivery reports..</param>
         /// <param name="country">Recipient country..</param>
         /// <param name="fromEmail">An email address where the reply should be emailed to..</param>

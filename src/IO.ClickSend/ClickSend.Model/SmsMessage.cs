@@ -33,7 +33,7 @@ namespace IO.ClickSend.ClickSend.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SmsMessage" /> class.
         /// </summary>
-        /// <param name="from">Your sender id - more info: https://help.clicksend.com/en/collections/57584-numbers-sender-ids..</param>
+        /// <param name="from">Your sender id - more info: https://help.clicksend.com/en/collections/57584-numbers-sender-ids</param>
         /// <param name="body">Your message. (required).</param>
         /// <param name="to">Recipient phone number in E.164 format..</param>
         /// <param name="source">Your method of sending e.g. &#x27;wordpress&#x27;, &#x27;php&#x27;, &#x27;c#&#x27;. (default to &quot;sdk&quot;).</param>
