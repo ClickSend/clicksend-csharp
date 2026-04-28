@@ -19,8 +19,6 @@ using System.Net;
 using System.Text;
 using Newtonsoft.Json;
 using RestSharp;
-using System.Threading;
-using System.Net.Http;
 
 namespace IO.ClickSend.Client
 {
@@ -38,14 +36,14 @@ namespace IO.ClickSend.Client
         /// Allows for extending request processing for <see cref="ApiClient"/> generated code.
         /// </summary>
         /// <param name="request">The RestSharp request object</param>
-        partial void InterceptRequest(RestRequest request);
+        partial void InterceptRequest(IRestRequest request);
 
         /// <summary>
         /// Allows for extending response processing for <see cref="ApiClient"/> generated code.
         /// </summary>
         /// <param name="request">The RestSharp request object</param>
         /// <param name="response">The RestSharp response object</param>
-        partial void InterceptResponse(RestRequest request, RestResponse response);
+        partial void InterceptResponse(IRestRequest request, IRestResponse response);
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiClient" /> class
@@ -135,7 +133,7 @@ namespace IO.ClickSend.Client
             // add file parameter, if any
             foreach(var param in fileParams)
             {
-                request.AddFile(param.Value.Name, param.Value.GetFile, param.Value.FileName, param.Value.ContentType);
+                request.AddFile(param.Value.Name, param.Value.Writer, param.Value.FileName, param.Value.ContentType);
             }
 
             if (postBody != null) // http body (model or byte[]) parameter
@@ -170,9 +168,10 @@ namespace IO.ClickSend.Client
                 pathParams, contentType);
 
             // set timeout
-            //RestClient.Options.Timeout = Configuration.Timeout;
+            
+            RestClient.Timeout = Configuration.Timeout;
             // set user agent
-            //RestClient.Options.UserAgent = Configuration.UserAgent;
+            RestClient.UserAgent = Configuration.UserAgent;
 
             InterceptRequest(request);
             var response = RestClient.Execute(request);
@@ -203,8 +202,7 @@ namespace IO.ClickSend.Client
                 path, method, queryParams, postBody, headerParams, formParams, fileParams,
                 pathParams, contentType);
             InterceptRequest(request);
-            CancellationToken cancellationToken = default;
-            var response = await RestClient.ExecuteAsync(request, cancellationToken);
+            var response = await RestClient.ExecuteTaskAsync(request);
             InterceptResponse(request, response);
             return (Object)response;
         }
@@ -280,15 +278,9 @@ namespace IO.ClickSend.Client
         /// <param name="response">The HTTP response.</param>
         /// <param name="type">Object type.</param>
         /// <returns>Object representation of the JSON string.</returns>
-        public object Deserialize(RestResponse response, Type type)
+        public object Deserialize(IRestResponse response, Type type)
         {
-            IList<Parameter> headers = new List<Parameter>();
-            foreach (var header in response.Headers)
-            {
-                Parameter InParam = Parameter.CreateParameter(header.Name, header,RestSharp.ParameterType.HttpHeader);
-                headers.Add(InParam);
-            }
-            //IList<Parameter> headers = response.Headers;
+            IList<Parameter> headers = response.Headers;
             if (type == typeof(byte[])) // return byte array
             {
                 return response.RawBytes;
